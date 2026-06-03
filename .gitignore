@@ -1,0 +1,62 @@
+# ── Python ────────────────────────────────────────────────────────────────────
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+.venv/
+venv/
+.env
+.env.local
+
+# ── Jupyter ───────────────────────────────────────────────────────────────────
+*.ipynb
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/
+
+# ── Next.js / Node ────────────────────────────────────────────────────────────
+node_modules/
+.next/
+out/
+.vercel/
+dashboard/.env
+dashboard/.env.local
+dashboard/.env*.local
+dashboard/dev.log
+dashboard/dev.err
+
+# ── OS ────────────────────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# ── Large outputs (keep JSON results, skip plots) ─────────────────────────────
+*.png
+*.pdf
+!figures/*.png
+!biorxiv/figures/*.png
+!paper/*.pdf
+!biorxiv/*.pdf
+
+# LaTeX build artifacts
+*.aux
+*.bbl
+*.blg
+*.log
+*.out
+*.toc
+missfont.log
+
+# ── Word documents ────────────────────────────────────────────────────────────
+*.docx
+!paper/*.docx
+
+# ── Root-level JSX artifacts (backed up to E:\als_backup) ────────────────────
+/*.jsx
+/*.js
+
+# ── Claude Code local settings ────────────────────────────────────────────────
+.claude/

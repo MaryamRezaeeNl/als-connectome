@@ -1,0 +1,3733 @@
+{
+  "n_configs": 247,
+  "n_sim_seeds": 3,
+  "triage_accuracy": 0.4413,
+  "mean_alive_baseline": 18.68,
+  "mean_alive_twe": 48.99,
+  "mean_alive_oracle": 53.61,
+  "survival_gain_twe": 30.31,
+  "survival_gain_oracle": 34.93,
+  "decision_regret": 4.62,
+  "strategy_distribution": {
+    "A": 95,
+    "C": 60,
+    "D": 92
+  },
+  "match_by_subtype": {
+    "C0 (slow)": {
+      "n": 110,
+      "match_rate": 0.1364
+    },
+    "C1 (fast)": {
+      "n": 137,
+      "match_rate": 0.6861
+    }
+  },
+  "records": [
+    {
+      "config_id": 0,
+      "subtype": 1,
+      "twe_strategy": "A",
+      "opt_strategy": "A",
+      "alive_baseline": 11.67,
+      "alive_twe": 60.67,
+      "alive_oracle": 60.67,
+      "alive_by_strat": {
+        "A": 60.67,
+        "B": 14.33,
+        "C": 13.33,
+        "D": 30.67
+      }
+    },
+    {
+      "config_id": 1,
+      "subtype": 1,
+      "twe_strategy": "A",
+      "opt_strategy": "A",
+      "alive_baseline": 9.67,
+      "alive_twe": 61.0,
+      "alive_oracle": 61.0,
+      "alive_by_strat": {
+        "A": 61.0,
+        "B": 15.0,
+        "C": 12.67,
+        "D": 34.33
+      }
+    },
+    {
+      "config_id": 2,
+      "subtype": 0,
+      "twe_strategy": "C",
+      "opt_strategy": "B",
+      "alive_baseline": 57.0,
+      "alive_twe": 60.33,
+      "alive_oracle": 61.0,
+      "alive_by_strat": {
+        "A": 61.0,
+        "B": 61.0,
+        "C": 60.33,
+        "D": 61.0
+      }
+    },
+    {
+      "config_id": 6,
+      "subtype": 1,
+      "twe_strategy": "D",
+      "opt_strategy": "A",
+      "alive_baseline": 14.0,
+      "alive_twe": 55.67,
+      "alive_oracle": 61.0,
+      "alive_by_strat": {
+        "A": 61.0,
+        "B": 19.33,
+        "C": 14.0,
+        "D": 55.67
+      }
+    },
+    {
+      "config_id": 8,
+      "subtype": 0,
+      "twe_strategy": "C",
+      "opt_strategy": "D",
+      "alive_baseline": 41.67,
+      "alive_twe": 53.0,
+      "alive_oracle": 61.0,
+      "alive_by_strat": {
+        "A": 61.0,
+        "B": 58.67,
+        "C": 53.0,
+        "D": 61.0
+      }
+    },
+    {
+      "config_id": 9,
+      "subtype": 1,
+      "twe_strategy": "A",
+      "opt_strategy": "A",
+      "alive_baseline": 11.33,
+      "alive_twe": 55.0,
+      "alive_oracle": 55.0,
+      "alive_by_strat": {
+        "A": 55.0,
+        "B": 14.0,
+        "C": 13.33,
+        "D": 26.0
+      }
+    },
+    {
+      "config_id": 11,
+      "subtype": 1,
+      "twe_strategy": "D",
+      "opt_strategy": "A",
+      "alive_baseline": 14.0,
+      "alive_twe": 52.67,
+      "alive_oracle": 55.67,
+      "alive_by_strat": {
+        "A": 55.67,
+        "B": 19.0,
+        "C": 15.0,
+        "D": 52.67
+      }
+    },
+    {
+      "config_id": 13,
+      "subtype": 1,
+      "twe_strategy": "D",
+      "opt_strategy": "A",
+      "alive_baseline": 13.67,
+      "alive_twe": 56.33,
+      "alive_oracle": 60.67,
+      "alive_by_strat": {
+        "A": 60.67,
+        "B": 20.0,
+        "C": 14.33,
+        "D": 56.33
+      }
+    },
+    {
+      "config_id": 15,
+      "subtype": 1,
+      "twe_strategy": "D",
+      "opt_strategy": "A",
+      "alive_baseline": 13.0,
+      "alive_twe": 51.33,
+      "alive_oracle": 60.67,
+      "alive_by_strat": {
+        "A": 60.67,
+        "B": 19.0,
+        "C": 14.0,
+        "D": 51.33
+      }
+    },
+    {
+      "config_id": 17,
+      "subtype": 0,
+      "twe_strategy": "D",
+      "opt_strategy": "A",
+      "alive_baseline": 15.33,
+      "alive_twe": 57.67,
+      "alive_oracle": 60.33,
+      "alive_by_strat": {
+        "A": 60.33,
+        "B": 32.33,
+        "C": 20.0,
+        "D": 57.67
+      }
+    },
+    {
+      "config_id": 20,
+      "subtype": 0,
+      "twe_strategy": "C",
+      "opt_strategy": "D",
+      "alive_baseline": 32.67,
+      "alive_twe": 50.33,
+      "alive_oracle": 61.0,
+      "alive_by_strat": {
+        "A": 61.0,
+        "B": 60.0,
+        "C": 50.33,
+        "D": 61.0
+      }
+    },
+    {
+      "config_id": 21,
+      "subtype": 0,
+      "twe_strategy": "C",
+      "opt_strategy": "A",
+      "alive_baseline": 25.33,
+      "alive_twe": 41.67,
+      "alive_oracle": 61.0,
+      "alive_by_strat": {
+        "A": 61.0,
+        "B": 58.33,
+        "C": 41.67,
+        "D": 60.67
+      }
+    },
+    {
+      "config_id": 23,
+      "subtype": 1,
+      "twe_strategy": "A",
+      "opt_strategy": "A",
+      "alive_baseline": 6.0,
+      "alive_twe": 28.0,
+      "alive_oracle": 28.0,
+      "alive_by_strat": {
+        "A": 28.0,
+        "B": 9.0,
+        "C": 6.0,
+        "D": 14.0
+      }
+    },
+    {
+      "config_id": 26,
+      "subtype": 0,
+      "twe_strategy": "C",
+      "opt_strategy": "D",
+      "alive_baseline": 30.33,
+      "alive_twe": 47.0,
+      "alive_oracle": 61.0,
+      "alive_by_strat": {
+        "A": 61.0,
+        "B": 59.0,
+        "C": 47.0,
+        "D": 61.0
+      }
+    },
+    {
+      "config_id": 28,
+      "subtype": 0,
+      "twe_strategy": "D",
+      "opt_strategy": "A",
+      "alive_baseline": 15.0,
+      "alive_twe": 38.33,
+      "alive_oracle": 43.33,
+      "alive_by_strat": {
+        "A": 43.33,
+        "B": 24.67,
+        "C": 17.67,
+        "D": 38.33
+      }
+    },
+    {
+      "config_id": 30,
+      "subtype": 1,
+      "twe_strategy": "D",
+      "opt_strategy": "A",
+      "alive_baseline": 14.0,
+      "alive_twe": 33.67,
+      "alive_oracle": 41.0,
+      "alive_by_strat": {
+        "A": 41.0,
+        "B": 16.67,
+        "C": 14.0,
+        "D": 33.67
+      }
+    },
+    {
+      "config_id": 35,
+      "subtype": 1,
+      "twe_strategy": "A",
+      "opt_strategy": "A",
+      "alive_baseline": 6.0,
+      "alive_twe": 33.67,
+      "alive_oracle": 33.67,
+      "alive_by_strat": {
+        "A": 33.67,
+        "B": 13.33,
+        "C": 8.0,
+        "D": 15.0
+      }
+    },
+    {
+      "config_id": 36,
+      "subtype": 0,
+      "twe_strategy": "C",
+      "opt_strategy": "B",
+      "alive_baseline": 50.67,
+      "alive_twe": 59.33,
+      "alive_oracle": 61.0,
+      "alive_by_strat": {
+        "A": 61.0,
+        "B": 61.0,
+        "C": 59.33,
+        "D": 61.0
+      }
+    },
+    {
+      "config_id": 37,
+      "subtype": 0,
+      "twe_strategy": "D",
+      "opt_strategy": "D",
+      "alive_baseline": 19.67,
+      "alive_twe": 61.0,
+      "alive_oracle": 61.0,
+      "alive_by_strat": {
+        "A": 61.0,
+        "B": 53.0,
+        "C": 28.67,
+        "D": 61.0
+      }
+    },
+    {
+      "config_id": 39,
+      "subtype": 0,
+      "twe_strategy": "D",
+      "opt_strategy": "A",
+      "alive_baseline": 16.0,
+      "alive_twe": 48.33,
+      "alive_oracle": 56.33,
+      "alive_by_strat": {
+        "A": 56.33,
+        "B": 26.33,
+        "C": 18.0,
+        "D": 48.33
+      }
+    },
+    {
+      "config_id": 42,
+      "subtype": 1,
+      "twe_strategy": "A",
+      "opt_strategy": "A",
+      "alive_baseline": 6.33,
+      "alive_twe": 22.33,
+      "alive_oracle": 22.33,
+      "alive_by_strat": {
+        "A": 22.33,
+        "B": 14.0,
+        "C": 10.33,
+        "D": 17.33
+      }
+    },
+    {
+      "config_id": 49,
+      "subtype": 0,
+      "twe_strategy": "D",
+      "opt_strategy": "A",
+      "alive_baseline": 17.0,
+      "alive_twe": 37.0,
+      "alive_oracle": 45.33,
+      "alive_by_strat": {
+        "A": 45.33,
+        "B": 26.0,
+        "C": 18.33,
+        "D": 37.0
+      }
+    },
+    {
+      "config_id": 50,
+      "subtype": 0,
+      "twe_strategy": "D",
+      "opt_strategy": "D",
+      "alive_baseline": 17.67,
+      "alive_twe": 61.0,
+      "alive_oracle": 61.0,
+      "alive_by_strat": {
+        "A": 61.0,
+        "B": 46.33,
+        "C": 22.67,
+        "D": 61.0
+      }
+    },
+    {
+      "config_id": 51,
+      "subtype": 1,
+      "twe_strategy": "A",
+      "opt_strategy": "A",
+      "alive_baseline": 9.33,
+      "alive_twe": 55.33,
+      "alive_oracle": 55.33,
+      "alive_by_strat": {
+        "A": 55.33,
+        "B": 14.0,
+        "C": 13.33,
+        "D": 24.33
+      }
+    },
+    {
+      "config_id": 52,
+      "subtype": 1,
+      "twe_strategy": "D",
+      "opt_strategy": "A",
+      "alive_baseline": 14.0,
+      "alive_twe": 50.67,
+      "alive_oracle": 56.0,
+      "alive_by_strat": {
+        "A": 56.0,
+        "B": 21.67,
+        "C": 14.0,
+        "D": 50.67
+      }
+    },
+    {
+      "config_id": 54,
+      "subtype": 0,
+      "twe_strategy": "C",
+      "opt_strategy": "A",
+      "alive_baseline": 37.67,
+      "alive_twe": 43.33,
+      "alive_oracle": 53.67,
+      "alive_by_strat": {
+        "A": 53.67,
+        "B": 50.33,
+        "C": 43.33,
+        "D": 53.33
+      }
+    },
+    {
+      "config_id": 56,
+      "subtype": 0,
+      "twe_strategy": "D",
+      "opt_strategy": "A",
+      "alive_baseline": 16.67,
+      "alive_twe": 59.67,
+      "alive_oracle": 61.0,
+      "alive_by_strat": {
+        "A": 61.0,
+        "B": 39.33,
+        "C": 21.67,
+        "D": 59.67
+      }
+    },
+    {
+      "config_id": 57,
+      "subtype": 0,
+      "twe_strategy": "C",
+      "opt_strategy": "B",
+      "alive_baseline": 54.33,
+      "alive_twe": 59.33,
+      "alive_oracle": 61.0,
+      "alive_by_strat": {
+        "A": 61.0,
+        "B": 61.0,
+        "C": 59.33,
+        "D": 61.0
+      }
+    },
+    {
+      "config_id": 59,
+      "subtype": 1,
+      "twe_strategy": "A",
+      "opt_strategy": "A",
+      "alive_baseline": 6.0,
+      "alive_twe": 38.0,
+      "alive_oracle": 38.0,
+      "alive_by_strat": {
+        "A": 38.0,
+        "B": 12.0,
+        "C": 6.0,
+        "D": 17.67
+      }
+    },
+    {
+      "config_id": 60,
+      "subtype": 1,
+      "twe_strategy": "A",
+      "opt_strategy": "D",
+      "alive_baseline": 15.0,
+      "alive_twe": 61.0,
+      "alive_oracle": 61.0,
+      "alive_by_strat": {
+        "A": 61.0,
+        "B": 35.0,
+        "C": 20.0,
+        "D": 61.0
+      }
+    },
+    {
+      "config_id": 61,
+      "subtype": 1,
+      "twe_strategy": "A",
+      "opt_strategy": "A",
+      "alive_baseline": 6.0,
+      "alive_twe": 56.33,
+      "alive_oracle": 56.33,
+      "alive_by_strat": {
+        "A": 56.33,
+        "B": 13.67,
+        "C": 7.0,
+        "D": 24.33
+      }
+    },
+    {
+      "config_id": 67,
+      "subtype": 0,
+      "twe_strategy": "C",
+      "opt_strategy": "A",
+      "alive_baseline": 33.33,
+      "alive_twe": 50.33,
+      "alive_oracle": 61.0,
+      "alive_by_strat": {
+        "A": 61.0,
+        "B": 58.67,
+        "C": 50.33,
+        "D": 60.67
+      }
+    },
+    {
+      "config_id": 68,
+      "subtype": 0,
+      "twe_strategy": "C",
+      "opt_strategy": "A",
+      "alive_baseline": 49.33,
+      "alive_twe": 56.67,
+      "alive_oracle": 61.0,
+      "alive_by_strat": {
+        "A": 61.0,
+        "B": 59.67,
+        "C": 56.67,
+        "D": 60.67
+      }
+    },
+    {
+      "config_id": 70,
+      "subtype": 1,
+      "twe_strategy": "D",
+      "opt_strategy": "A",
+      "alive_baseline": 14.0,
+      "alive_twe": 39.0,
+      "alive_oracle": 54.67,
+      "alive_by_strat": {
+        "A": 54.67,
+        "B": 17.33,
+        "C": 14.0,
+        "D": 39.0
+      }
+    },
+    {
+      "config_id": 71,
+      "subtype": 0,
+      "twe_strategy": "D",
+      "opt_strategy": "A",
+      "alive_baseline": 14.67,
+      "alive_twe": 60.33,
+      "alive_oracle": 60.67,
+      "alive_by_strat": {
+        "A": 60.67,
+        "B": 38.67,
+        "C": 19.67,
+        "D": 60.33
+      }
+    },
+    {
+      "config_id": 72,
+      "subtype": 0,
+      "twe_strategy": "C",
+      "opt_strategy": "A",
+      "alive_baseline": 20.33,
+      "alive_twe": 28.33,
+      "alive_oracle": 60.33,
+      "alive_by_strat": {
+        "A": 60.33,
+        "B": 49.33,
+        "C": 28.33,
+        "D": 58.67
+      }
+    },
+    {
+      "config_id": 73,
+      "subtype": 1,
+      "twe_strategy": "A",
+      "opt_strategy": "A",
+      "alive_baseline": 6.33,
+      "alive_twe": 58.67,
+      "alive_oracle": 58.67,
+      "alive_by_strat": {
+        "A": 58.67,
+        "B": 14.0,
+        "C": 9.33,
+        "D": 23.67
+      }
+    },
+    {
+      "config_id": 77,
+      "subtype": 1,
+      "twe_strategy": "A",
+      "opt_strategy": "A",
+      "alive_baseline": 7.0,
+      "alive_twe": 24.67,
+      "alive_oracle": 24.67,
+      "alive_by_strat": {
+        "A": 24.67,
+        "B": 13.67,
+        "C": 10.67,
+        "D": 17.0
+      }
+    },
+    {
+      "config_id": 79,
+      "subtype": 1,
+      "twe_strategy": "A",
+      "opt_strategy": "A",
+      "alive_baseline": 6.0,
+      "alive_twe": 34.33,
+      "alive_oracle": 34.33,
+      "alive_by_strat": {
+        "A": 34.33,
+        "B": 9.0,
+        "C": 6.0,
+        "D": 17.67
+      }
+    },
+    {
+      "config_id": 82,
+      "subtype": 1,
+      "twe_strategy": "A",
+      "opt_strategy": "A",
+      "alive_baseline": 7.0,
+      "alive_twe": 40.67,
+      "alive_oracle": 40.67,
+      "alive_by_strat": {
+        "A": 40.67,
+        "B": 13.33,
+        "C": 9.67,
+        "D": 16.0
+      }
+    },
+    {
+      "config_id": 83,
+      "subtype": 0,
+      "twe_strategy": "C",
+      "opt_strategy": "D",
+      "alive_baseline": 33.0,
+      "alive_twe": 48.67,
+      "alive_oracle": 61.0,
+      "alive_by_strat": {
+        "A": 61.0,
+        "B": 60.67,
+        "C": 48.67,
+        "D": 61.0
+      }
+    },
+    {
+      "config_id": 86,
+      "subtype": 1,
+      "twe_strategy": "A",
+      "opt_strategy": "A",
+      "alive_baseline": 6.0,
+      "alive_twe": 21.67,
+      "alive_oracle": 21.67,
+      "alive_by_strat": {
+        "A": 21.67,
+        "B": 10.67,
+        "C": 6.0,
+        "D": 14.0
+      }
+    },
+    {
+      "config_id": 87,
+      "subtype": 0,
+      "twe_strategy": "C",
+      "opt_strategy": "A",
+      "alive_baseline": 42.33,
+      "alive_twe": 52.33,
+      "alive_oracle": 59.67,
+      "alive_by_strat": {
+        "A": 59.67,
+        "B": 56.0,
+        "C": 52.33,
+        "D": 58.0
+      }
+    },
+    {
+      "config_id": 88,
+      "subtype": 1,
+      "twe_strategy": "D",
+      "opt_strategy": "A",
+      "alive_baseline": 13.0,
+      "alive_twe": 42.33,
+      "alive_oracle": 60.67,
+      "alive_by_strat": {
+        "A": 60.67,
+        "B": 16.0,
+        "C": 14.0,
+        "D": 42.33
+      }
+    },
+    {
+      "config_id": 89,
+      "subtype": 0,
+      "twe_strategy": "C",
+      "opt_strategy": "A",
+      "alive_baseline": 26.0,
+      "alive_twe": 33.33,
+      "alive_oracle": 49.67,
+      "alive_by_strat": {
+        "A": 49.67,
+        "B": 43.33,
+        "C": 33.33,
+        "D": 48.33
+      }
+    },
+    {
+      "config_id": 90,
+      "subtype": 1,
+      "twe_strategy": "A",
+      "opt_strategy": "A",
+      "alive_baseline": 6.0,
+      "alive_twe": 23.33,
+      "alive_oracle": 23.33,
+      "alive_by_strat": {
+        "A": 23.33,
+        "B": 7.0,
+        "C": 6.0,
+        "D": 15.0
+      }
+    },
+    {
+      "config_id": 91,
+      "subtype": 1,
+      "twe_strategy": "A",
+      "opt_strategy": "A",
+      "alive_baseline": 14.0,
+      "alive_twe": 57.0,
+      "alive_oracle": 57.0,
+      "alive_by_strat": {
+        "A": 57.0,
+        "B": 15.67,
+        "C": 14.0,
+        "D": 40.33
+      }
+    },
+    {
+      "config_id": 92,
+      "subtype": 0,
+      "twe_strategy": "D",
+      "opt_strategy": "A",
+      "alive_baseline": 15.33,
+      "alive_twe": 49.33,
+      "alive_oracle": 55.33,
+      "alive_by_strat": {
+        "A": 55.33,
+        "B": 26.0,
+        "C": 18.67,
+        "D": 49.33
+      }
+    },
+    {
+      "config_id": 93,
+      "subtype": 1,
+      "twe_strategy": "A",
+      "opt_strategy": "A",
+      "alive_baseline": 6.0,
+      "alive_twe": 18.67,
+      "alive_oracle": 18.67,
+      "alive_by_strat": {
+        "A": 18.67,
+        "B": 11.0,
+        "C": 6.0,
+        "D": 14.0
+      }
+    },
+    {
+      "config_id": 94,
+      "subtype": 0,
+      "twe_strategy": "D",
+      "opt_strategy": "D",
+      "alive_baseline": 18.33,
+      "alive_twe": 61.0,
+      "alive_oracle": 61.0,
+      "alive_by_strat": {
+        "A": 61.0,
+        "B": 48.33,
+        "C": 25.33,
+        "D": 61.0
+      }
+    },
+    {
+      "config_id": 95,
+      "subtype": 1,
+      "twe_strategy": "A",
+      "opt_strategy": "A",
+      "alive_baseline": 13.67,
+      "alive_twe": 56.67,
+      "alive_oracle": 56.67,
+      "alive_by_strat": {
+        "A": 56.67,
+        "B": 18.67,
+        "C": 14.0,
+        "D": 41.33
+      }
+    },
+    {
+      "config_id": 101,
+      "subtype": 1,
+      "twe_strategy": "A",
+      "opt_strategy": "A",
+      "alive_baseline": 10.67,
+      "alive_twe": 50.0,
+      "alive_oracle": 50.0,
+      "alive_by_strat": {
+        "A": 50.0,
+        "B": 14.0,
+        "C": 13.67,
+        "D": 20.0
+      }
+    },
+    {
+      "config_id": 102,
+      "subtype": 1,
+      "twe_strategy": "A",
+      "opt_strategy": "A",
+      "alive_baseline": 10.67,
+      "alive_twe": 60.33,
+      "alive_oracle": 60.33,
+      "alive_by_strat": {
+        "A": 60.33,
+        "B": 14.0,
+        "C": 12.67,
+        "D": 33.33
+      }
+    },
+    {
+      "config_id": 103,
+      "subtype": 0,
+      "twe_strategy": "C",
+      "opt_strategy": "C",
+      "alive_baseline": 60.33,
+      "alive_twe": 61.0,
+      "alive_oracle": 61.0,
+      "alive_by_strat": {
+        "A": 61.0,
+        "B": 61.0,
+        "C": 61.0,
+        "D": 61.0
+      }
+    },
+    {
+      "config_id": 104,
+      "subtype": 0,
+      "twe_strategy": "A",
+      "opt_strategy": "A",
+      "alive_baseline": 47.33,
+      "alive_twe": 61.0,
+      "alive_oracle": 61.0,
+      "alive_by_strat": {
+        "A": 61.0,
+        "B": 60.0,
+        "C": 57.0,
+        "D": 60.67
+      }
+    },
+    {
+      "config_id": 105,
+      "subtype": 1,
+      "twe_strategy": "D",
+      "opt_strategy": "A",
+      "alive_baseline": 14.0,
+      "alive_twe": 58.67,
+      "alive_oracle": 61.0,
+      "alive_by_strat": {
+        "A": 61.0,
+        "B": 23.0,
+        "C": 16.67,
+        "D": 58.67
+      }
+    },
+    {
+      "config_id": 106,
+      "subtype": 1,
+      "twe_strategy": "A",
+      "opt_strategy": "A",
+      "alive_baseline": 6.0,
+      "alive_twe": 53.0,
+      "alive_oracle": 53.0,
+      "alive_by_strat": {
+        "A": 53.0,
+        "B": 13.33,
+        "C": 7.33,
+        "D": 21.33
+      }
+    },
+    {
+      "config_id": 107,
+      "subtype": 1,
+      "twe_strategy": "A",
+      "opt_strategy": "A",
+      "alive_baseline": 6.67,
+      "alive_twe": 54.0,
+      "alive_oracle": 54.0,
+      "alive_by_strat": {
+        "A": 54.0,
+        "B": 14.0,
+        "C": 9.67,
+        "D": 22.0
+      }
+    },
+    {
+      "config_id": 113,
+      "subtype": 0,
+      "twe_strategy": "C",
+      "opt_strategy": "B",
+      "alive_baseline": 58.0,
+      "alive_twe": 60.33,
+      "alive_oracle": 61.0,
+      "alive_by_strat": {
+        "A": 61.0,
+        "B": 61.0,
+        "C": 60.33,
+        "D": 61.0
+      }
+    },
+    {
+      "config_id": 114,
+      "subtype": 1,
+      "twe_strategy": "A",
+      "opt_strategy": "A",
+      "alive_baseline": 13.33,
+      "alive_twe": 53.33,
+      "alive_oracle": 53.33,
+      "alive_by_strat": {
+        "A": 53.33,
+        "B": 14.67,
+        "C": 13.33,
+        "D": 30.0
+      }
+    },
+    {
+      "config_id": 118,
+      "subtype": 0,
+      "twe_strategy": "D",
+      "opt_strategy": "A",
+      "alive_baseline": 19.33,
+      "alive_twe": 60.67,
+      "alive_oracle": 61.0,
+      "alive_by_strat": {
+        "A": 61.0,
+        "B": 51.0,
+        "C": 27.0,
+        "D": 60.67
+      }
+    },
+    {
+      "config_id": 119,
+      "subtype": 1,
+      "twe_strategy": "D",
+      "opt_strategy": "A",
+      "alive_baseline": 13.67,
+      "alive_twe": 30.67,
+      "alive_oracle": 40.67,
+      "alive_by_strat": {
+        "A": 40.67,
+        "B": 17.67,
+        "C": 13.67,
+        "D": 30.67
+      }
+    },
+    {
+      "config_id": 121,
+      "subtype": 1,
+      "twe_strategy": "D",
+      "opt_strategy": "A",
+      "alive_baseline": 14.33,
+      "alive_twe": 60.33,
+      "alive_oracle": 61.0,
+      "alive_by_strat": {
+        "A": 61.0,
+        "B": 25.67,
+        "C": 17.33,
+        "D": 60.33
+      }
+    },
+    {
+      "config_id": 123,
+      "subtype": 1,
+      "twe_strategy": "A",
+      "opt_strategy": "A",
+      "alive_baseline": 13.67,
+      "alive_twe": 53.33,
+      "alive_oracle": 53.33,
+      "alive_by_strat": {
+        "A": 53.33,
+        "B": 16.0,
+        "C": 14.0,
+        "D": 31.67
+      }
+    },
+    {
+      "config_id": 125,
+      "subtype": 1,
+      "twe_strategy": "A",
+      "opt_strategy": "A",
+      "alive_baseline": 6.0,
+      "alive_twe": 31.0,
+      "alive_oracle": 31.0,
+      "alive_by_strat": {
+        "A": 31.0,
+        "B": 11.33,
+        "C": 6.33,
+        "D": 14.0
+      }
+    },
+    {
+      "config_id": 127,
+      "subtype": 1,
+      "twe_strategy": "D",
+      "opt_strategy": "A",
+      "alive_baseline": 14.0,
+      "alive_twe": 57.33,
+      "alive_oracle": 61.0,
+      "alive_by_strat": {
+        "A": 61.0,
+        "B": 24.0,
+        "C": 14.33,
+        "D": 57.33
+      }
+    },
+    {
+      "config_id": 129,
+      "subtype": 0,
+      "twe_strategy": "C",
+      "opt_strategy": "A",
+      "alive_baseline": 28.0,
+      "alive_twe": 41.0,
+      "alive_oracle": 59.33,
+      "alive_by_strat": {
+        "A": 59.33,
+        "B": 53.33,
+        "C": 41.0,
+        "D": 57.67
+      }
+    },
+    {
+      "config_id": 130,
+      "subtype": 1,
+      "twe_strategy": "A",
+      "opt_strategy": "A",
+      "alive_baseline": 11.0,
+      "alive_twe": 26.67,
+      "alive_oracle": 26.67,
+      "alive_by_strat": {
+        "A": 26.67,
+        "B": 14.0,
+        "C": 14.0,
+        "D": 18.0
+      }
+    },
+    {
+      "config_id": 134,
+      "subtype": 1,
+      "twe_strategy": "A",
+      "opt_strategy": "A",
+      "alive_baseline": 6.0,
+      "alive_twe": 39.0,
+      "alive_oracle": 39.0,
+      "alive_by_strat": {
+        "A": 39.0,
+        "B": 10.67,
+        "C": 6.33,
+        "D": 16.33
+      }
+    },
+    {
+      "config_id": 137,
+      "subtype": 0,
+      "twe_strategy": "C",
+      "opt_strategy": "D",
+      "alive_baseline": 24.33,
+      "alive_twe": 42.33,
+      "alive_oracle": 60.67,
+      "alive_by_strat": {
+        "A": 60.67,
+        "B": 58.67,
+        "C": 42.33,
+        "D": 60.67
+      }
+    },
+    {
+      "config_id": 139,
+      "subtype": 1,
+      "twe_strategy": "A",
+      "opt_strategy": "A",
+      "alive_baseline": 6.0,
+      "alive_twe": 25.33,
+      "alive_oracle": 25.33,
+      "alive_by_strat": {
+        "A": 25.33,
+        "B": 10.0,
+        "C": 6.0,
+        "D": 14.0
+      }
+    },
+    {
+      "config_id": 142,
+      "subtype": 1,
+      "twe_strategy": "A",
+      "opt_strategy": "A",
+      "alive_baseline": 6.0,
+      "alive_twe": 25.67,
+      "alive_oracle": 25.67,
+      "alive_by_strat": {
+        "A": 25.67,
+        "B": 8.33,
+        "C": 6.0,
+        "D": 15.0
+      }
+    },
+    {
+      "config_id": 143,
+      "subtype": 0,
+      "twe_strategy": "C",
+      "opt_strategy": "B",
+      "alive_baseline": 54.0,
+      "alive_twe": 59.67,
+      "alive_oracle": 61.0,
+      "alive_by_strat": {
+        "A": 61.0,
+        "B": 61.0,
+        "C": 59.67,
+        "D": 61.0
+      }
+    },
+    {
+      "config_id": 144,
+      "subtype": 1,
+      "twe_strategy": "D",
+      "opt_strategy": "A",
+      "alive_baseline": 13.33,
+      "alive_twe": 39.0,
+      "alive_oracle": 55.67,
+      "alive_by_strat": {
+        "A": 55.67,
+        "B": 15.33,
+        "C": 14.0,
+        "D": 39.0
+      }
+    },
+    {
+      "config_id": 147,
+      "subtype": 0,
+      "twe_strategy": "A",
+      "opt_strategy": "A",
+      "alive_baseline": 54.67,
+      "alive_twe": 61.0,
+      "alive_oracle": 61.0,
+      "alive_by_strat": {
+        "A": 61.0,
+        "B": 60.0,
+        "C": 56.67,
+        "D": 60.67
+      }
+    },
+    {
+      "config_id": 149,
+      "subtype": 1,
+      "twe_strategy": "D",
+      "opt_strategy": "D",
+      "alive_baseline": 14.33,
+      "alive_twe": 61.0,
+      "alive_oracle": 61.0,
+      "alive_by_strat": {
+        "A": 61.0,
+        "B": 29.0,
+        "C": 17.33,
+        "D": 61.0
+      }
+    },
+    {
+      "config_id": 150,
+      "subtype": 1,
+      "twe_strategy": "D",
+      "opt_strategy": "A",
+      "alive_baseline": 14.33,
+      "alive_twe": 60.67,
+      "alive_oracle": 61.0,
+      "alive_by_strat": {
+        "A": 61.0,
+        "B": 28.67,
+        "C": 17.0,
+        "D": 60.67
+      }
+    },
+    {
+      "config_id": 153,
+      "subtype": 0,
+      "twe_strategy": "D",
+      "opt_strategy": "A",
+      "alive_baseline": 15.67,
+      "alive_twe": 58.0,
+      "alive_oracle": 60.67,
+      "alive_by_strat": {
+        "A": 60.67,
+        "B": 44.0,
+        "C": 21.33,
+        "D": 58.0
+      }
+    },
+    {
+      "config_id": 154,
+      "subtype": 0,
+      "twe_strategy": "D",
+      "opt_strategy": "D",
+      "alive_baseline": 14.33,
+      "alive_twe": 61.0,
+      "alive_oracle": 61.0,
+      "alive_by_strat": {
+        "A": 61.0,
+        "B": 31.33,
+        "C": 18.33,
+        "D": 61.0
+      }
+    },
+    {
+      "config_id": 155,
+      "subtype": 1,
+      "twe_strategy": "A",
+      "opt_strategy": "A",
+      "alive_baseline": 12.67,
+      "alive_twe": 55.67,
+      "alive_oracle": 55.67,
+      "alive_by_strat": {
+        "A": 55.67,
+        "B": 14.67,
+        "C": 14.0,
+        "D": 26.33
+      }
+    },
+    {
+      "config_id": 160,
+      "subtype": 1,
+      "twe_strategy": "D",
+      "opt_strategy": "D",
+      "alive_baseline": 14.33,
+      "alive_twe": 61.0,
+      "alive_oracle": 61.0,
+      "alive_by_strat": {
+        "A": 61.0,
+        "B": 27.0,
+        "C": 17.67,
+        "D": 61.0
+      }
+    },
+    {
+      "config_id": 161,
+      "subtype": 1,
+      "twe_strategy": "D",
+      "opt_strategy": "A",
+      "alive_baseline": 14.0,
+      "alive_twe": 41.67,
+      "alive_oracle": 54.33,
+      "alive_by_strat": {
+        "A": 54.33,
+        "B": 18.0,
+        "C": 14.33,
+        "D": 41.67
+      }
+    },
+    {
+      "config_id": 163,
+      "subtype": 1,
+      "twe_strategy": "A",
+      "opt_strategy": "A",
+      "alive_baseline": 10.33,
+      "alive_twe": 43.67,
+      "alive_oracle": 43.67,
+      "alive_by_strat": {
+        "A": 43.67,
+        "B": 14.0,
+        "C": 13.33,
+        "D": 18.0
+      }
+    },
+    {
+      "config_id": 164,
+      "subtype": 0,
+      "twe_strategy": "C",
+      "opt_strategy": "A",
+      "alive_baseline": 21.67,
+      "alive_twe": 37.67,
+      "alive_oracle": 60.0,
+      "alive_by_strat": {
+        "A": 60.0,
+        "B": 52.67,
+        "C": 37.67,
+        "D": 59.0
+      }
+    },
+    {
+      "config_id": 166,
+      "subtype": 1,
+      "twe_strategy": "A",
+      "opt_strategy": "A",
+      "alive_baseline": 6.67,
+      "alive_twe": 59.0,
+      "alive_oracle": 59.0,
+      "alive_by_strat": {
+        "A": 59.0,
+        "B": 13.67,
+        "C": 11.33,
+        "D": 25.33
+      }
+    },
+    {
+      "config_id": 168,
+      "subtype": 0,
+      "twe_strategy": "C",
+      "opt_strategy": "D",
+      "alive_baseline": 48.33,
+      "alive_twe": 56.0,
+      "alive_oracle": 61.0,
+      "alive_by_strat": {
+        "A": 61.0,
+        "B": 59.33,
+        "C": 56.0,
+        "D": 61.0
+      }
+    },
+    {
+      "config_id": 170,
+      "subtype": 0,
+      "twe_strategy": "C",
+      "opt_strategy": "D",
+      "alive_baseline": 38.0,
+      "alive_twe": 58.0,
+      "alive_oracle": 61.0,
+      "alive_by_strat": {
+        "A": 61.0,
+        "B": 60.67,
+        "C": 58.0,
+        "D": 61.0
+      }
+    },
+    {
+      "config_id": 171,
+      "subtype": 0,
+      "twe_strategy": "D",
+      "opt_strategy": "A",
+      "alive_baseline": 14.67,
+      "alive_twe": 59.67,
+      "alive_oracle": 61.0,
+      "alive_by_strat": {
+        "A": 61.0,
+        "B": 30.33,
+        "C": 16.33,
+        "D": 59.67
+      }
+    },
+    {
+      "config_id": 173,
+      "subtype": 1,
+      "twe_strategy": "A",
+      "opt_strategy": "A",
+      "alive_baseline": 7.67,
+      "alive_twe": 50.67,
+      "alive_oracle": 50.67,
+      "alive_by_strat": {
+        "A": 50.67,
+        "B": 13.67,
+        "C": 10.33,
+        "D": 20.67
+      }
+    },
+    {
+      "config_id": 174,
+      "subtype": 1,
+      "twe_strategy": "D",
+      "opt_strategy": "D",
+      "alive_baseline": 14.0,
+      "alive_twe": 61.0,
+      "alive_oracle": 61.0,
+      "alive_by_strat": {
+        "A": 61.0,
+        "B": 29.33,
+        "C": 16.67,
+        "D": 61.0
+      }
+    },
+    {
+      "config_id": 175,
+      "subtype": 1,
+      "twe_strategy": "A",
+      "opt_strategy": "A",
+      "alive_baseline": 6.0,
+      "alive_twe": 33.67,
+      "alive_oracle": 33.67,
+      "alive_by_strat": {
+        "A": 33.67,
+        "B": 11.0,
+        "C": 6.0,
+        "D": 15.0
+      }
+    },
+    {
+      "config_id": 178,
+      "subtype": 0,
+      "twe_strategy": "D",
+      "opt_strategy": "D",
+      "alive_baseline": 17.0,
+      "alive_twe": 61.0,
+      "alive_oracle": 61.0,
+      "alive_by_strat": {
+        "A": 61.0,
+        "B": 46.0,
+        "C": 26.0,
+        "D": 61.0
+      }
+    },
+    {
+      "config_id": 179,
+      "subtype": 0,
+      "twe_strategy": "D",
+      "opt_strategy": "D",
+      "alive_baseline": 16.0,
+      "alive_twe": 61.0,
+      "alive_oracle": 61.0,
+      "alive_by_strat": {
+        "A": 61.0,
+        "B": 45.67,
+        "C": 23.33,
+        "D": 61.0
+      }
+    },
+    {
+      "config_id": 183,
+      "subtype": 0,
+      "twe_strategy": "C",
+      "opt_strategy": "B",
+      "alive_baseline": 54.33,
+      "alive_twe": 60.0,
+      "alive_oracle": 61.0,
+      "alive_by_strat": {
+        "A": 61.0,
+        "B": 61.0,
+        "C": 60.0,
+        "D": 61.0
+      }
+    },
+    {
+      "config_id": 184,
+      "subtype": 0,
+      "twe_strategy": "C",
+      "opt_strategy": "A",
+      "alive_baseline": 46.33,
+      "alive_twe": 55.33,
+      "alive_oracle": 61.0,
+      "alive_by_strat": {
+        "A": 61.0,
+        "B": 59.67,
+        "C": 55.33,
+        "D": 60.67
+      }
+    },
+    {
+      "config_id": 186,
+      "subtype": 1,
+      "twe_strategy": "D",
+      "opt_strategy": "A",
+      "alive_baseline": 13.0,
+      "alive_twe": 43.67,
+      "alive_oracle": 60.67,
+      "alive_by_strat": {
+        "A": 60.67,
+        "B": 15.0,
+        "C": 13.33,
+        "D": 43.67
+      }
+    },
+    {
+      "config_id": 188,
+      "subtype": 0,
+      "twe_strategy": "C",
+      "opt_strategy": "D",
+      "alive_baseline": 24.33,
+      "alive_twe": 38.33,
+      "alive_oracle": 61.0,
+      "alive_by_strat": {
+        "A": 61.0,
+        "B": 58.67,
+        "C": 38.33,
+        "D": 61.0
+      }
+    },
+    {
+      "config_id": 189,
+      "subtype": 1,
+      "twe_strategy": "A",
+      "opt_strategy": "A",
+      "alive_baseline": 10.0,
+      "alive_twe": 60.0,
+      "alive_oracle": 60.0,
+      "alive_by_strat": {
+        "A": 60.0,
+        "B": 14.33,
+        "C": 12.67,
+        "D": 27.0
+      }
+    },
+    {
+      "config_id": 190,
+      "subtype": 1,
+      "twe_strategy": "A",
+      "opt_strategy": "A",
+      "alive_baseline": 11.33,
+      "alive_twe": 45.33,
+      "alive_oracle": 45.33,
+      "alive_by_strat": {
+        "A": 45.33,
+        "B": 14.0,
+        "C": 13.67,
+        "D": 21.0
+      }
+    },
+    {
+      "config_id": 191,
+      "subtype": 0,
+      "twe_strategy": "D",
+      "opt_strategy": "A",
+      "alive_baseline": 16.0,
+      "alive_twe": 56.0,
+      "alive_oracle": 59.0,
+      "alive_by_strat": {
+        "A": 59.0,
+        "B": 33.33,
+        "C": 19.33,
+        "D": 56.0
+      }
+    },
+    {
+      "config_id": 193,
+      "subtype": 1,
+      "twe_strategy": "A",
+      "opt_strategy": "A",
+      "alive_baseline": 6.33,
+      "alive_twe": 54.33,
+      "alive_oracle": 54.33,
+      "alive_by_strat": {
+        "A": 54.33,
+        "B": 13.33,
+        "C": 9.67,
+        "D": 22.33
+      }
+    },
+    {
+      "config_id": 194,
+      "subtype": 1,
+      "twe_strategy": "D",
+      "opt_strategy": "A",
+      "alive_baseline": 14.0,
+      "alive_twe": 60.67,
+      "alive_oracle": 61.0,
+      "alive_by_strat": {
+        "A": 61.0,
+        "B": 25.0,
+        "C": 16.33,
+        "D": 60.67
+      }
+    },
+    {
+      "config_id": 195,
+      "subtype": 0,
+      "twe_strategy": "C",
+      "opt_strategy": "D",
+      "alive_baseline": 30.0,
+      "alive_twe": 46.0,
+      "alive_oracle": 61.0,
+      "alive_by_strat": {
+        "A": 61.0,
+        "B": 60.33,
+        "C": 46.0,
+        "D": 61.0
+      }
+    },
+    {
+      "config_id": 198,
+      "subtype": 1,
+      "twe_strategy": "A",
+      "opt_strategy": "A",
+      "alive_baseline": 13.67,
+      "alive_twe": 61.0,
+      "alive_oracle": 61.0,
+      "alive_by_strat": {
+        "A": 61.0,
+        "B": 20.0,
+        "C": 14.0,
+        "D": 55.33
+      }
+    },
+    {
+      "config_id": 200,
+      "subtype": 0,
+      "twe_strategy": "C",
+      "opt_strategy": "B",
+      "alive_baseline": 58.33,
+      "alive_twe": 60.67,
+      "alive_oracle": 61.0,
+      "alive_by_strat": {
+        "A": 61.0,
+        "B": 61.0,
+        "C": 60.67,
+        "D": 61.0
+      }
+    },
+    {
+      "config_id": 203,
+      "subtype": 0,
+      "twe_strategy": "C",
+      "opt_strategy": "D",
+      "alive_baseline": 40.0,
+      "alive_twe": 54.67,
+      "alive_oracle": 61.0,
+      "alive_by_strat": {
+        "A": 61.0,
+        "B": 59.67,
+        "C": 54.67,
+        "D": 61.0
+      }
+    },
+    {
+      "config_id": 204,
+      "subtype": 1,
+      "twe_strategy": "A",
+      "opt_strategy": "A",
+      "alive_baseline": 12.0,
+      "alive_twe": 58.33,
+      "alive_oracle": 58.33,
+      "alive_by_strat": {
+        "A": 58.33,
+        "B": 15.33,
+        "C": 13.67,
+        "D": 30.67
+      }
+    },
+    {
+      "config_id": 212,
+      "subtype": 1,
+      "twe_strategy": "A",
+      "opt_strategy": "A",
+      "alive_baseline": 16.0,
+      "alive_twe": 61.0,
+      "alive_oracle": 61.0,
+      "alive_by_strat": {
+        "A": 61.0,
+        "B": 40.67,
+        "C": 22.0,
+        "D": 60.67
+      }
+    },
+    {
+      "config_id": 213,
+      "subtype": 1,
+      "twe_strategy": "A",
+      "opt_strategy": "A",
+      "alive_baseline": 7.33,
+      "alive_twe": 31.33,
+      "alive_oracle": 31.33,
+      "alive_by_strat": {
+        "A": 31.33,
+        "B": 14.0,
+        "C": 11.33,
+        "D": 17.67
+      }
+    },
+    {
+      "config_id": 215,
+      "subtype": 0,
+      "twe_strategy": "C",
+      "opt_strategy": "A",
+      "alive_baseline": 29.33,
+      "alive_twe": 43.0,
+      "alive_oracle": 60.33,
+      "alive_by_strat": {
+        "A": 60.33,
+        "B": 53.0,
+        "C": 43.0,
+        "D": 59.67
+      }
+    },
+    {
+      "config_id": 216,
+      "subtype": 0,
+      "twe_strategy": "D",
+      "opt_strategy": "A",
+      "alive_baseline": 14.33,
+      "alive_twe": 49.67,
+      "alive_oracle": 56.67,
+      "alive_by_strat": {
+        "A": 56.67,
+        "B": 24.0,
+        "C": 17.67,
+        "D": 49.67
+      }
+    },
+    {
+      "config_id": 219,
+      "subtype": 1,
+      "twe_strategy": "D",
+      "opt_strategy": "A",
+      "alive_baseline": 13.67,
+      "alive_twe": 59.33,
+      "alive_oracle": 61.0,
+      "alive_by_strat": {
+        "A": 61.0,
+        "B": 21.67,
+        "C": 15.33,
+        "D": 59.33
+      }
+    },
+    {
+      "config_id": 220,
+      "subtype": 1,
+      "twe_strategy": "A",
+      "opt_strategy": "A",
+      "alive_baseline": 7.0,
+      "alive_twe": 55.67,
+      "alive_oracle": 55.67,
+      "alive_by_strat": {
+        "A": 55.67,
+        "B": 13.67,
+        "C": 11.0,
+        "D": 25.33
+      }
+    },
+    {
+      "config_id": 221,
+      "subtype": 1,
+      "twe_strategy": "D",
+      "opt_strategy": "A",
+      "alive_baseline": 13.33,
+      "alive_twe": 48.0,
+      "alive_oracle": 60.33,
+      "alive_by_strat": {
+        "A": 60.33,
+        "B": 17.67,
+        "C": 13.67,
+        "D": 48.0
+      }
+    },
+    {
+      "config_id": 223,
+      "subtype": 0,
+      "twe_strategy": "D",
+      "opt_strategy": "A",
+      "alive_baseline": 15.0,
+      "alive_twe": 48.0,
+      "alive_oracle": 54.0,
+      "alive_by_strat": {
+        "A": 54.0,
+        "B": 22.33,
+        "C": 17.33,
+        "D": 48.0
+      }
+    },
+    {
+      "config_id": 224,
+      "subtype": 0,
+      "twe_strategy": "C",
+      "opt_strategy": "D",
+      "alive_baseline": 31.33,
+      "alive_twe": 47.33,
+      "alive_oracle": 58.0,
+      "alive_by_strat": {
+        "A": 58.0,
+        "B": 56.0,
+        "C": 47.33,
+        "D": 58.0
+      }
+    },
+    {
+      "config_id": 226,
+      "subtype": 0,
+      "twe_strategy": "C",
+      "opt_strategy": "C",
+      "alive_baseline": 60.33,
+      "alive_twe": 61.0,
+      "alive_oracle": 61.0,
+      "alive_by_strat": {
+        "A": 61.0,
+        "B": 61.0,
+        "C": 61.0,
+        "D": 61.0
+      }
+    },
+    {
+      "config_id": 229,
+      "subtype": 1,
+      "twe_strategy": "D",
+      "opt_strategy": "A",
+      "alive_baseline": 8.67,
+      "alive_twe": 28.67,
+      "alive_oracle": 59.0,
+      "alive_by_strat": {
+        "A": 59.0,
+        "B": 14.67,
+        "C": 12.0,
+        "D": 28.67
+      }
+    },
+    {
+      "config_id": 231,
+      "subtype": 0,
+      "twe_strategy": "D",
+      "opt_strategy": "A",
+      "alive_baseline": 17.67,
+      "alive_twe": 45.0,
+      "alive_oracle": 50.33,
+      "alive_by_strat": {
+        "A": 50.33,
+        "B": 30.33,
+        "C": 18.67,
+        "D": 45.0
+      }
+    },
+    {
+      "config_id": 232,
+      "subtype": 0,
+      "twe_strategy": "C",
+      "opt_strategy": "A",
+      "alive_baseline": 53.33,
+      "alive_twe": 55.0,
+      "alive_oracle": 60.0,
+      "alive_by_strat": {
+        "A": 60.0,
+        "B": 57.67,
+        "C": 55.0,
+        "D": 59.67
+      }
+    },
+    {
+      "config_id": 233,
+      "subtype": 1,
+      "twe_strategy": "A",
+      "opt_strategy": "A",
+      "alive_baseline": 6.0,
+      "alive_twe": 26.0,
+      "alive_oracle": 26.0,
+      "alive_by_strat": {
+        "A": 26.0,
+        "B": 12.33,
+        "C": 7.33,
+        "D": 16.33
+      }
+    },
+    {
+      "config_id": 235,
+      "subtype": 0,
+      "twe_strategy": "C",
+      "opt_strategy": "B",
+      "alive_baseline": 52.67,
+      "alive_twe": 59.67,
+      "alive_oracle": 61.0,
+      "alive_by_strat": {
+        "A": 61.0,
+        "B": 61.0,
+        "C": 59.67,
+        "D": 61.0
+      }
+    },
+    {
+      "config_id": 238,
+      "subtype": 1,
+      "twe_strategy": "A",
+      "opt_strategy": "A",
+      "alive_baseline": 6.0,
+      "alive_twe": 53.67,
+      "alive_oracle": 53.67,
+      "alive_by_strat": {
+        "A": 53.67,
+        "B": 13.67,
+        "C": 9.33,
+        "D": 19.33
+      }
+    },
+    {
+      "config_id": 240,
+      "subtype": 1,
+      "twe_strategy": "A",
+      "opt_strategy": "A",
+      "alive_baseline": 13.33,
+      "alive_twe": 56.33,
+      "alive_oracle": 56.33,
+      "alive_by_strat": {
+        "A": 56.33,
+        "B": 15.67,
+        "C": 14.33,
+        "D": 33.0
+      }
+    },
+    {
+      "config_id": 241,
+      "subtype": 0,
+      "twe_strategy": "C",
+      "opt_strategy": "A",
+      "alive_baseline": 25.33,
+      "alive_twe": 44.67,
+      "alive_oracle": 60.67,
+      "alive_by_strat": {
+        "A": 60.67,
+        "B": 57.0,
+        "C": 44.67,
+        "D": 60.33
+      }
+    },
+    {
+      "config_id": 242,
+      "subtype": 1,
+      "twe_strategy": "D",
+      "opt_strategy": "A",
+      "alive_baseline": 14.0,
+      "alive_twe": 45.33,
+      "alive_oracle": 56.33,
+      "alive_by_strat": {
+        "A": 56.33,
+        "B": 18.67,
+        "C": 14.0,
+        "D": 45.33
+      }
+    },
+    {
+      "config_id": 244,
+      "subtype": 1,
+      "twe_strategy": "A",
+      "opt_strategy": "A",
+      "alive_baseline": 6.0,
+      "alive_twe": 39.33,
+      "alive_oracle": 39.33,
+      "alive_by_strat": {
+        "A": 39.33,
+        "B": 11.67,
+        "C": 7.33,
+        "D": 15.67
+      }
+    },
+    {
+      "config_id": 245,
+      "subtype": 1,
+      "twe_strategy": "A",
+      "opt_strategy": "A",
+      "alive_baseline": 11.0,
+      "alive_twe": 60.33,
+      "alive_oracle": 60.33,
+      "alive_by_strat": {
+        "A": 60.33,
+        "B": 14.0,
+        "C": 12.67,
+        "D": 29.33
+      }
+    },
+    {
+      "config_id": 246,
+      "subtype": 1,
+      "twe_strategy": "D",
+      "opt_strategy": "A",
+      "alive_baseline": 13.67,
+      "alive_twe": 47.33,
+      "alive_oracle": 59.67,
+      "alive_by_strat": {
+        "A": 59.67,
+        "B": 16.67,
+        "C": 14.0,
+        "D": 47.33
+      }
+    },
+    {
+      "config_id": 248,
+      "subtype": 1,
+      "twe_strategy": "A",
+      "opt_strategy": "A",
+      "alive_baseline": 6.0,
+      "alive_twe": 40.33,
+      "alive_oracle": 40.33,
+      "alive_by_strat": {
+        "A": 40.33,
+        "B": 12.67,
+        "C": 6.33,
+        "D": 17.0
+      }
+    },
+    {
+      "config_id": 250,
+      "subtype": 0,
+      "twe_strategy": "D",
+      "opt_strategy": "A",
+      "alive_baseline": 14.0,
+      "alive_twe": 60.33,
+      "alive_oracle": 60.67,
+      "alive_by_strat": {
+        "A": 60.67,
+        "B": 37.33,
+        "C": 21.33,
+        "D": 60.33
+      }
+    },
+    {
+      "config_id": 253,
+      "subtype": 1,
+      "twe_strategy": "A",
+      "opt_strategy": "A",
+      "alive_baseline": 12.0,
+      "alive_twe": 47.67,
+      "alive_oracle": 47.67,
+      "alive_by_strat": {
+        "A": 47.67,
+        "B": 14.0,
+        "C": 14.0,
+        "D": 22.0
+      }
+    },
+    {
+      "config_id": 255,
+      "subtype": 1,
+      "twe_strategy": "A",
+      "opt_strategy": "A",
+      "alive_baseline": 6.0,
+      "alive_twe": 50.33,
+      "alive_oracle": 50.33,
+      "alive_by_strat": {
+        "A": 50.33,
+        "B": 13.67,
+        "C": 10.0,
+        "D": 20.33
+      }
+    },
+    {
+      "config_id": 257,
+      "subtype": 0,
+      "twe_strategy": "D",
+      "opt_strategy": "A",
+      "alive_baseline": 14.33,
+      "alive_twe": 59.33,
+      "alive_oracle": 60.33,
+      "alive_by_strat": {
+        "A": 60.33,
+        "B": 31.67,
+        "C": 18.67,
+        "D": 59.33
+      }
+    },
+    {
+      "config_id": 260,
+      "subtype": 1,
+      "twe_strategy": "A",
+      "opt_strategy": "A",
+      "alive_baseline": 6.0,
+      "alive_twe": 22.0,
+      "alive_oracle": 22.0,
+      "alive_by_strat": {
+        "A": 22.0,
+        "B": 8.33,
+        "C": 6.0,
+        "D": 14.33
+      }
+    },
+    {
+      "config_id": 263,
+      "subtype": 0,
+      "twe_strategy": "C",
+      "opt_strategy": "D",
+      "alive_baseline": 24.0,
+      "alive_twe": 36.0,
+      "alive_oracle": 61.0,
+      "alive_by_strat": {
+        "A": 61.0,
+        "B": 60.0,
+        "C": 36.0,
+        "D": 61.0
+      }
+    },
+    {
+      "config_id": 267,
+      "subtype": 1,
+      "twe_strategy": "A",
+      "opt_strategy": "A",
+      "alive_baseline": 6.33,
+      "alive_twe": 54.33,
+      "alive_oracle": 54.33,
+      "alive_by_strat": {
+        "A": 54.33,
+        "B": 13.0,
+        "C": 11.0,
+        "D": 19.33
+      }
+    },
+    {
+      "config_id": 269,
+      "subtype": 1,
+      "twe_strategy": "D",
+      "opt_strategy": "A",
+      "alive_baseline": 13.0,
+      "alive_twe": 43.0,
+      "alive_oracle": 60.33,
+      "alive_by_strat": {
+        "A": 60.33,
+        "B": 15.0,
+        "C": 14.0,
+        "D": 43.0
+      }
+    },
+    {
+      "config_id": 272,
+      "subtype": 0,
+      "twe_strategy": "D",
+      "opt_strategy": "D",
+      "alive_baseline": 16.0,
+      "alive_twe": 61.0,
+      "alive_oracle": 61.0,
+      "alive_by_strat": {
+        "A": 61.0,
+        "B": 41.0,
+        "C": 18.0,
+        "D": 61.0
+      }
+    },
+    {
+      "config_id": 274,
+      "subtype": 0,
+      "twe_strategy": "D",
+      "opt_strategy": "A",
+      "alive_baseline": 14.67,
+      "alive_twe": 51.67,
+      "alive_oracle": 56.0,
+      "alive_by_strat": {
+        "A": 56.0,
+        "B": 28.67,
+        "C": 18.33,
+        "D": 51.67
+      }
+    },
+    {
+      "config_id": 276,
+      "subtype": 1,
+      "twe_strategy": "A",
+      "opt_strategy": "A",
+      "alive_baseline": 12.33,
+      "alive_twe": 47.67,
+      "alive_oracle": 47.67,
+      "alive_by_strat": {
+        "A": 47.67,
+        "B": 14.0,
+        "C": 13.67,
+        "D": 22.33
+      }
+    },
+    {
+      "config_id": 280,
+      "subtype": 0,
+      "twe_strategy": "D",
+      "opt_strategy": "A",
+      "alive_baseline": 16.67,
+      "alive_twe": 60.33,
+      "alive_oracle": 60.67,
+      "alive_by_strat": {
+        "A": 60.67,
+        "B": 39.33,
+        "C": 21.0,
+        "D": 60.33
+      }
+    },
+    {
+      "config_id": 281,
+      "subtype": 1,
+      "twe_strategy": "A",
+      "opt_strategy": "A",
+      "alive_baseline": 6.0,
+      "alive_twe": 41.33,
+      "alive_oracle": 41.33,
+      "alive_by_strat": {
+        "A": 41.33,
+        "B": 14.0,
+        "C": 8.33,
+        "D": 17.0
+      }
+    },
+    {
+      "config_id": 285,
+      "subtype": 1,
+      "twe_strategy": "D",
+      "opt_strategy": "A",
+      "alive_baseline": 13.33,
+      "alive_twe": 44.67,
+      "alive_oracle": 60.67,
+      "alive_by_strat": {
+        "A": 60.67,
+        "B": 15.0,
+        "C": 14.0,
+        "D": 44.67
+      }
+    },
+    {
+      "config_id": 287,
+      "subtype": 1,
+      "twe_strategy": "D",
+      "opt_strategy": "A",
+      "alive_baseline": 14.0,
+      "alive_twe": 60.67,
+      "alive_oracle": 61.0,
+      "alive_by_strat": {
+        "A": 61.0,
+        "B": 25.67,
+        "C": 16.0,
+        "D": 60.67
+      }
+    },
+    {
+      "config_id": 300,
+      "subtype": 1,
+      "twe_strategy": "D",
+      "opt_strategy": "A",
+      "alive_baseline": 13.33,
+      "alive_twe": 46.0,
+      "alive_oracle": 60.67,
+      "alive_by_strat": {
+        "A": 60.67,
+        "B": 15.33,
+        "C": 14.0,
+        "D": 46.0
+      }
+    },
+    {
+      "config_id": 305,
+      "subtype": 0,
+      "twe_strategy": "C",
+      "opt_strategy": "A",
+      "alive_baseline": 27.67,
+      "alive_twe": 42.67,
+      "alive_oracle": 61.0,
+      "alive_by_strat": {
+        "A": 61.0,
+        "B": 57.67,
+        "C": 42.67,
+        "D": 60.67
+      }
+    },
+    {
+      "config_id": 306,
+      "subtype": 1,
+      "twe_strategy": "A",
+      "opt_strategy": "A",
+      "alive_baseline": 12.33,
+      "alive_twe": 25.67,
+      "alive_oracle": 25.67,
+      "alive_by_strat": {
+        "A": 25.67,
+        "B": 14.0,
+        "C": 14.0,
+        "D": 18.0
+      }
+    },
+    {
+      "config_id": 310,
+      "subtype": 0,
+      "twe_strategy": "C",
+      "opt_strategy": "B",
+      "alive_baseline": 59.67,
+      "alive_twe": 60.67,
+      "alive_oracle": 61.0,
+      "alive_by_strat": {
+        "A": 61.0,
+        "B": 61.0,
+        "C": 60.67,
+        "D": 61.0
+      }
+    },
+    {
+      "config_id": 311,
+      "subtype": 1,
+      "twe_strategy": "A",
+      "opt_strategy": "A",
+      "alive_baseline": 6.33,
+      "alive_twe": 57.0,
+      "alive_oracle": 57.0,
+      "alive_by_strat": {
+        "A": 57.0,
+        "B": 14.0,
+        "C": 11.0,
+        "D": 22.33
+      }
+    },
+    {
+      "config_id": 312,
+      "subtype": 0,
+      "twe_strategy": "C",
+      "opt_strategy": "D",
+      "alive_baseline": 30.67,
+      "alive_twe": 50.0,
+      "alive_oracle": 61.0,
+      "alive_by_strat": {
+        "A": 61.0,
+        "B": 59.67,
+        "C": 50.0,
+        "D": 61.0
+      }
+    },
+    {
+      "config_id": 313,
+      "subtype": 0,
+      "twe_strategy": "D",
+      "opt_strategy": "A",
+      "alive_baseline": 19.33,
+      "alive_twe": 59.33,
+      "alive_oracle": 61.0,
+      "alive_by_strat": {
+        "A": 61.0,
+        "B": 48.0,
+        "C": 22.67,
+        "D": 59.33
+      }
+    },
+    {
+      "config_id": 315,
+      "subtype": 0,
+      "twe_strategy": "D",
+      "opt_strategy": "A",
+      "alive_baseline": 16.0,
+      "alive_twe": 59.67,
+      "alive_oracle": 61.0,
+      "alive_by_strat": {
+        "A": 61.0,
+        "B": 40.0,
+        "C": 20.67,
+        "D": 59.67
+      }
+    },
+    {
+      "config_id": 316,
+      "subtype": 1,
+      "twe_strategy": "A",
+      "opt_strategy": "A",
+      "alive_baseline": 6.0,
+      "alive_twe": 36.33,
+      "alive_oracle": 36.33,
+      "alive_by_strat": {
+        "A": 36.33,
+        "B": 12.0,
+        "C": 6.33,
+        "D": 15.0
+      }
+    },
+    {
+      "config_id": 318,
+      "subtype": 1,
+      "twe_strategy": "D",
+      "opt_strategy": "A",
+      "alive_baseline": 13.33,
+      "alive_twe": 58.0,
+      "alive_oracle": 61.0,
+      "alive_by_strat": {
+        "A": 61.0,
+        "B": 23.67,
+        "C": 15.33,
+        "D": 58.0
+      }
+    },
+    {
+      "config_id": 321,
+      "subtype": 0,
+      "twe_strategy": "D",
+      "opt_strategy": "A",
+      "alive_baseline": 14.67,
+      "alive_twe": 60.33,
+      "alive_oracle": 61.0,
+      "alive_by_strat": {
+        "A": 61.0,
+        "B": 35.67,
+        "C": 19.67,
+        "D": 60.33
+      }
+    },
+    {
+      "config_id": 324,
+      "subtype": 1,
+      "twe_strategy": "A",
+      "opt_strategy": "A",
+      "alive_baseline": 13.67,
+      "alive_twe": 28.67,
+      "alive_oracle": 28.67,
+      "alive_by_strat": {
+        "A": 28.67,
+        "B": 15.33,
+        "C": 14.0,
+        "D": 21.33
+      }
+    },
+    {
+      "config_id": 328,
+      "subtype": 1,
+      "twe_strategy": "D",
+      "opt_strategy": "A",
+      "alive_baseline": 13.33,
+      "alive_twe": 55.67,
+      "alive_oracle": 61.0,
+      "alive_by_strat": {
+        "A": 61.0,
+        "B": 19.67,
+        "C": 14.0,
+        "D": 55.67
+      }
+    },
+    {
+      "config_id": 329,
+      "subtype": 0,
+      "twe_strategy": "C",
+      "opt_strategy": "D",
+      "alive_baseline": 38.0,
+      "alive_twe": 54.0,
+      "alive_oracle": 61.0,
+      "alive_by_strat": {
+        "A": 61.0,
+        "B": 59.67,
+        "C": 54.0,
+        "D": 61.0
+      }
+    },
+    {
+      "config_id": 331,
+      "subtype": 1,
+      "twe_strategy": "A",
+      "opt_strategy": "A",
+      "alive_baseline": 12.0,
+      "alive_twe": 59.0,
+      "alive_oracle": 59.0,
+      "alive_by_strat": {
+        "A": 59.0,
+        "B": 16.0,
+        "C": 13.67,
+        "D": 34.0
+      }
+    },
+    {
+      "config_id": 334,
+      "subtype": 0,
+      "twe_strategy": "C",
+      "opt_strategy": "D",
+      "alive_baseline": 24.0,
+      "alive_twe": 37.0,
+      "alive_oracle": 61.0,
+      "alive_by_strat": {
+        "A": 61.0,
+        "B": 59.67,
+        "C": 37.0,
+        "D": 61.0
+      }
+    },
+    {
+      "config_id": 340,
+      "subtype": 1,
+      "twe_strategy": "A",
+      "opt_strategy": "A",
+      "alive_baseline": 6.0,
+      "alive_twe": 50.0,
+      "alive_oracle": 50.0,
+      "alive_by_strat": {
+        "A": 50.0,
+        "B": 13.67,
+        "C": 8.0,
+        "D": 22.0
+      }
+    },
+    {
+      "config_id": 342,
+      "subtype": 0,
+      "twe_strategy": "D",
+      "opt_strategy": "A",
+      "alive_baseline": 17.0,
+      "alive_twe": 55.33,
+      "alive_oracle": 58.67,
+      "alive_by_strat": {
+        "A": 58.67,
+        "B": 33.33,
+        "C": 20.67,
+        "D": 55.33
+      }
+    },
+    {
+      "config_id": 343,
+      "subtype": 1,
+      "twe_strategy": "A",
+      "opt_strategy": "A",
+      "alive_baseline": 11.0,
+      "alive_twe": 43.0,
+      "alive_oracle": 43.0,
+      "alive_by_strat": {
+        "A": 43.0,
+        "B": 14.0,
+        "C": 13.67,
+        "D": 19.67
+      }
+    },
+    {
+      "config_id": 346,
+      "subtype": 1,
+      "twe_strategy": "D",
+      "opt_strategy": "A",
+      "alive_baseline": 12.67,
+      "alive_twe": 39.67,
+      "alive_oracle": 60.67,
+      "alive_by_strat": {
+        "A": 60.67,
+        "B": 17.0,
+        "C": 13.67,
+        "D": 39.67
+      }
+    },
+    {
+      "config_id": 347,
+      "subtype": 1,
+      "twe_strategy": "A",
+      "opt_strategy": "A",
+      "alive_baseline": 12.33,
+      "alive_twe": 30.0,
+      "alive_oracle": 30.0,
+      "alive_by_strat": {
+        "A": 30.0,
+        "B": 14.33,
+        "C": 13.67,
+        "D": 20.0
+      }
+    },
+    {
+      "config_id": 348,
+      "subtype": 0,
+      "twe_strategy": "D",
+      "opt_strategy": "A",
+      "alive_baseline": 17.0,
+      "alive_twe": 58.67,
+      "alive_oracle": 60.0,
+      "alive_by_strat": {
+        "A": 60.0,
+        "B": 37.33,
+        "C": 21.67,
+        "D": 58.67
+      }
+    },
+    {
+      "config_id": 349,
+      "subtype": 0,
+      "twe_strategy": "A",
+      "opt_strategy": "D",
+      "alive_baseline": 23.67,
+      "alive_twe": 60.67,
+      "alive_oracle": 60.67,
+      "alive_by_strat": {
+        "A": 60.67,
+        "B": 56.67,
+        "C": 37.67,
+        "D": 60.67
+      }
+    },
+    {
+      "config_id": 350,
+      "subtype": 0,
+      "twe_strategy": "D",
+      "opt_strategy": "A",
+      "alive_baseline": 14.0,
+      "alive_twe": 42.0,
+      "alive_oracle": 50.0,
+      "alive_by_strat": {
+        "A": 50.0,
+        "B": 19.67,
+        "C": 15.33,
+        "D": 42.0
+      }
+    },
+    {
+      "config_id": 353,
+      "subtype": 1,
+      "twe_strategy": "A",
+      "opt_strategy": "A",
+      "alive_baseline": 6.0,
+      "alive_twe": 35.67,
+      "alive_oracle": 35.67,
+      "alive_by_strat": {
+        "A": 35.67,
+        "B": 12.67,
+        "C": 7.67,
+        "D": 16.67
+      }
+    },
+    {
+      "config_id": 357,
+      "subtype": 0,
+      "twe_strategy": "C",
+      "opt_strategy": "B",
+      "alive_baseline": 43.67,
+      "alive_twe": 58.0,
+      "alive_oracle": 61.0,
+      "alive_by_strat": {
+        "A": 61.0,
+        "B": 61.0,
+        "C": 58.0,
+        "D": 61.0
+      }
+    },
+    {
+      "config_id": 361,
+      "subtype": 1,
+      "twe_strategy": "A",
+      "opt_strategy": "A",
+      "alive_baseline": 6.0,
+      "alive_twe": 19.0,
+      "alive_oracle": 19.0,
+      "alive_by_strat": {
+        "A": 19.0,
+        "B": 9.33,
+        "C": 6.0,
+        "D": 13.67
+      }
+    },
+    {
+      "config_id": 363,
+      "subtype": 0,
+      "twe_strategy": "C",
+      "opt_strategy": "D",
+      "alive_baseline": 53.33,
+      "alive_twe": 58.33,
+      "alive_oracle": 61.0,
+      "alive_by_strat": {
+        "A": 61.0,
+        "B": 60.67,
+        "C": 58.33,
+        "D": 61.0
+      }
+    },
+    {
+      "config_id": 365,
+      "subtype": 1,
+      "twe_strategy": "D",
+      "opt_strategy": "A",
+      "alive_baseline": 14.0,
+      "alive_twe": 59.33,
+      "alive_oracle": 61.0,
+      "alive_by_strat": {
+        "A": 61.0,
+        "B": 25.0,
+        "C": 16.67,
+        "D": 59.33
+      }
+    },
+    {
+      "config_id": 366,
+      "subtype": 1,
+      "twe_strategy": "A",
+      "opt_strategy": "A",
+      "alive_baseline": 13.67,
+      "alive_twe": 58.33,
+      "alive_oracle": 58.33,
+      "alive_by_strat": {
+        "A": 58.33,
+        "B": 16.67,
+        "C": 14.0,
+        "D": 42.67
+      }
+    },
+    {
+      "config_id": 368,
+      "subtype": 1,
+      "twe_strategy": "A",
+      "opt_strategy": "A",
+      "alive_baseline": 14.0,
+      "alive_twe": 46.0,
+      "alive_oracle": 46.0,
+      "alive_by_strat": {
+        "A": 46.0,
+        "B": 16.0,
+        "C": 14.0,
+        "D": 28.33
+      }
+    },
+    {
+      "config_id": 370,
+      "subtype": 1,
+      "twe_strategy": "A",
+      "opt_strategy": "A",
+      "alive_baseline": 12.67,
+      "alive_twe": 40.33,
+      "alive_oracle": 40.33,
+      "alive_by_strat": {
+        "A": 40.33,
+        "B": 14.33,
+        "C": 14.0,
+        "D": 19.33
+      }
+    },
+    {
+      "config_id": 371,
+      "subtype": 0,
+      "twe_strategy": "C",
+      "opt_strategy": "A",
+      "alive_baseline": 38.33,
+      "alive_twe": 45.0,
+      "alive_oracle": 57.0,
+      "alive_by_strat": {
+        "A": 57.0,
+        "B": 51.67,
+        "C": 45.0,
+        "D": 56.0
+      }
+    },
+    {
+      "config_id": 373,
+      "subtype": 1,
+      "twe_strategy": "A",
+      "opt_strategy": "A",
+      "alive_baseline": 7.0,
+      "alive_twe": 53.67,
+      "alive_oracle": 53.67,
+      "alive_by_strat": {
+        "A": 53.67,
+        "B": 14.33,
+        "C": 11.0,
+        "D": 22.67
+      }
+    },
+    {
+      "config_id": 374,
+      "subtype": 1,
+      "twe_strategy": "A",
+      "opt_strategy": "A",
+      "alive_baseline": 7.0,
+      "alive_twe": 23.0,
+      "alive_oracle": 23.0,
+      "alive_by_strat": {
+        "A": 23.0,
+        "B": 14.0,
+        "C": 10.67,
+        "D": 16.67
+      }
+    },
+    {
+      "config_id": 375,
+      "subtype": 0,
+      "twe_strategy": "C",
+      "opt_strategy": "D",
+      "alive_baseline": 54.0,
+      "alive_twe": 58.0,
+      "alive_oracle": 61.0,
+      "alive_by_strat": {
+        "A": 61.0,
+        "B": 60.33,
+        "C": 58.0,
+        "D": 61.0
+      }
+    },
+    {
+      "config_id": 376,
+      "subtype": 1,
+      "twe_strategy": "A",
+      "opt_strategy": "A",
+      "alive_baseline": 6.0,
+      "alive_twe": 28.0,
+      "alive_oracle": 28.0,
+      "alive_by_strat": {
+        "A": 28.0,
+        "B": 12.67,
+        "C": 6.33,
+        "D": 16.0
+      }
+    },
+    {
+      "config_id": 378,
+      "subtype": 1,
+      "twe_strategy": "A",
+      "opt_strategy": "A",
+      "alive_baseline": 13.67,
+      "alive_twe": 28.67,
+      "alive_oracle": 28.67,
+      "alive_by_strat": {
+        "A": 28.67,
+        "B": 14.33,
+        "C": 14.0,
+        "D": 24.67
+      }
+    },
+    {
+      "config_id": 379,
+      "subtype": 1,
+      "twe_strategy": "A",
+      "opt_strategy": "A",
+      "alive_baseline": 13.33,
+      "alive_twe": 60.33,
+      "alive_oracle": 60.33,
+      "alive_by_strat": {
+        "A": 60.33,
+        "B": 15.67,
+        "C": 14.0,
+        "D": 40.33
+      }
+    },
+    {
+      "config_id": 380,
+      "subtype": 1,
+      "twe_strategy": "A",
+      "opt_strategy": "A",
+      "alive_baseline": 6.33,
+      "alive_twe": 50.0,
+      "alive_oracle": 50.0,
+      "alive_by_strat": {
+        "A": 50.0,
+        "B": 13.33,
+        "C": 10.0,
+        "D": 20.33
+      }
+    },
+    {
+      "config_id": 382,
+      "subtype": 0,
+      "twe_strategy": "D",
+      "opt_strategy": "A",
+      "alive_baseline": 17.0,
+      "alive_twe": 60.67,
+      "alive_oracle": 61.0,
+      "alive_by_strat": {
+        "A": 61.0,
+        "B": 47.67,
+        "C": 21.33,
+        "D": 60.67
+      }
+    },
+    {
+      "config_id": 383,
+      "subtype": 1,
+      "twe_strategy": "A",
+      "opt_strategy": "A",
+      "alive_baseline": 6.0,
+      "alive_twe": 56.67,
+      "alive_oracle": 56.67,
+      "alive_by_strat": {
+        "A": 56.67,
+        "B": 13.67,
+        "C": 7.67,
+        "D": 22.33
+      }
+    },
+    {
+      "config_id": 387,
+      "subtype": 0,
+      "twe_strategy": "D",
+      "opt_strategy": "A",
+      "alive_baseline": 14.0,
+      "alive_twe": 41.67,
+      "alive_oracle": 48.67,
+      "alive_by_strat": {
+        "A": 48.67,
+        "B": 20.67,
+        "C": 16.33,
+        "D": 41.67
+      }
+    },
+    {
+      "config_id": 391,
+      "subtype": 0,
+      "twe_strategy": "C",
+      "opt_strategy": "D",
+      "alive_baseline": 21.67,
+      "alive_twe": 34.67,
+      "alive_oracle": 60.33,
+      "alive_by_strat": {
+        "A": 60.33,
+        "B": 52.67,
+        "C": 34.67,
+        "D": 60.33
+      }
+    },
+    {
+      "config_id": 393,
+      "subtype": 1,
+      "twe_strategy": "A",
+      "opt_strategy": "A",
+      "alive_baseline": 14.0,
+      "alive_twe": 25.67,
+      "alive_oracle": 25.67,
+      "alive_by_strat": {
+        "A": 25.67,
+        "B": 16.33,
+        "C": 14.0,
+        "D": 20.67
+      }
+    },
+    {
+      "config_id": 394,
+      "subtype": 1,
+      "twe_strategy": "D",
+      "opt_strategy": "A",
+      "alive_baseline": 14.0,
+      "alive_twe": 53.33,
+      "alive_oracle": 60.0,
+      "alive_by_strat": {
+        "A": 60.0,
+        "B": 20.0,
+        "C": 14.0,
+        "D": 53.33
+      }
+    },
+    {
+      "config_id": 396,
+      "subtype": 1,
+      "twe_strategy": "A",
+      "opt_strategy": "A",
+      "alive_baseline": 6.0,
+      "alive_twe": 42.67,
+      "alive_oracle": 42.67,
+      "alive_by_strat": {
+        "A": 42.67,
+        "B": 11.67,
+        "C": 6.33,
+        "D": 18.0
+      }
+    },
+    {
+      "config_id": 398,
+      "subtype": 1,
+      "twe_strategy": "A",
+      "opt_strategy": "A",
+      "alive_baseline": 14.0,
+      "alive_twe": 60.33,
+      "alive_oracle": 60.33,
+      "alive_by_strat": {
+        "A": 60.33,
+        "B": 23.33,
+        "C": 15.0,
+        "D": 55.67
+      }
+    },
+    {
+      "config_id": 401,
+      "subtype": 1,
+      "twe_strategy": "D",
+      "opt_strategy": "A",
+      "alive_baseline": 13.67,
+      "alive_twe": 54.0,
+      "alive_oracle": 60.33,
+      "alive_by_strat": {
+        "A": 60.33,
+        "B": 18.67,
+        "C": 14.0,
+        "D": 54.0
+      }
+    },
+    {
+      "config_id": 403,
+      "subtype": 1,
+      "twe_strategy": "D",
+      "opt_strategy": "A",
+      "alive_baseline": 14.67,
+      "alive_twe": 60.33,
+      "alive_oracle": 61.0,
+      "alive_by_strat": {
+        "A": 61.0,
+        "B": 27.33,
+        "C": 18.33,
+        "D": 60.33
+      }
+    },
+    {
+      "config_id": 404,
+      "subtype": 1,
+      "twe_strategy": "A",
+      "opt_strategy": "A",
+      "alive_baseline": 8.0,
+      "alive_twe": 41.67,
+      "alive_oracle": 41.67,
+      "alive_by_strat": {
+        "A": 41.67,
+        "B": 14.0,
+        "C": 12.0,
+        "D": 19.0
+      }
+    },
+    {
+      "config_id": 405,
+      "subtype": 0,
+      "twe_strategy": "D",
+      "opt_strategy": "A",
+      "alive_baseline": 14.33,
+      "alive_twe": 55.67,
+      "alive_oracle": 59.67,
+      "alive_by_strat": {
+        "A": 59.67,
+        "B": 23.67,
+        "C": 16.33,
+        "D": 55.67
+      }
+    },
+    {
+      "config_id": 406,
+      "subtype": 0,
+      "twe_strategy": "C",
+      "opt_strategy": "B",
+      "alive_baseline": 56.33,
+      "alive_twe": 60.67,
+      "alive_oracle": 61.0,
+      "alive_by_strat": {
+        "A": 61.0,
+        "B": 61.0,
+        "C": 60.67,
+        "D": 61.0
+      }
+    },
+    {
+      "config_id": 408,
+      "subtype": 1,
+      "twe_strategy": "D",
+      "opt_strategy": "A",
+      "alive_baseline": 14.0,
+      "alive_twe": 59.0,
+      "alive_oracle": 61.0,
+      "alive_by_strat": {
+        "A": 61.0,
+        "B": 26.0,
+        "C": 15.0,
+        "D": 59.0
+      }
+    },
+    {
+      "config_id": 410,
+      "subtype": 0,
+      "twe_strategy": "D",
+      "opt_strategy": "A",
+      "alive_baseline": 16.67,
+      "alive_twe": 60.0,
+      "alive_oracle": 61.0,
+      "alive_by_strat": {
+        "A": 61.0,
+        "B": 36.67,
+        "C": 22.0,
+        "D": 60.0
+      }
+    },
+    {
+      "config_id": 412,
+      "subtype": 0,
+      "twe_strategy": "C",
+      "opt_strategy": "D",
+      "alive_baseline": 23.67,
+      "alive_twe": 39.33,
+      "alive_oracle": 61.0,
+      "alive_by_strat": {
+        "A": 61.0,
+        "B": 60.33,
+        "C": 39.33,
+        "D": 61.0
+      }
+    },
+    {
+      "config_id": 414,
+      "subtype": 0,
+      "twe_strategy": "D",
+      "opt_strategy": "A",
+      "alive_baseline": 14.33,
+      "alive_twe": 58.0,
+      "alive_oracle": 60.67,
+      "alive_by_strat": {
+        "A": 60.67,
+        "B": 29.0,
+        "C": 17.67,
+        "D": 58.0
+      }
+    },
+    {
+      "config_id": 415,
+      "subtype": 1,
+      "twe_strategy": "D",
+      "opt_strategy": "A",
+      "alive_baseline": 14.0,
+      "alive_twe": 25.0,
+      "alive_oracle": 28.0,
+      "alive_by_strat": {
+        "A": 28.0,
+        "B": 18.33,
+        "C": 15.0,
+        "D": 25.0
+      }
+    },
+    {
+      "config_id": 416,
+      "subtype": 0,
+      "twe_strategy": "C",
+      "opt_strategy": "D",
+      "alive_baseline": 22.33,
+      "alive_twe": 32.0,
+      "alive_oracle": 61.0,
+      "alive_by_strat": {
+        "A": 61.0,
+        "B": 53.33,
+        "C": 32.0,
+        "D": 61.0
+      }
+    },
+    {
+      "config_id": 417,
+      "subtype": 1,
+      "twe_strategy": "A",
+      "opt_strategy": "A",
+      "alive_baseline": 13.67,
+      "alive_twe": 53.33,
+      "alive_oracle": 53.33,
+      "alive_by_strat": {
+        "A": 53.33,
+        "B": 18.67,
+        "C": 14.33,
+        "D": 41.67
+      }
+    },
+    {
+      "config_id": 418,
+      "subtype": 1,
+      "twe_strategy": "D",
+      "opt_strategy": "A",
+      "alive_baseline": 14.0,
+      "alive_twe": 52.67,
+      "alive_oracle": 59.0,
+      "alive_by_strat": {
+        "A": 59.0,
+        "B": 21.67,
+        "C": 14.0,
+        "D": 52.67
+      }
+    },
+    {
+      "config_id": 419,
+      "subtype": 1,
+      "twe_strategy": "A",
+      "opt_strategy": "A",
+      "alive_baseline": 6.0,
+      "alive_twe": 30.0,
+      "alive_oracle": 30.0,
+      "alive_by_strat": {
+        "A": 30.0,
+        "B": 11.33,
+        "C": 6.33,
+        "D": 16.67
+      }
+    },
+    {
+      "config_id": 421,
+      "subtype": 1,
+      "twe_strategy": "A",
+      "opt_strategy": "A",
+      "alive_baseline": 8.33,
+      "alive_twe": 45.0,
+      "alive_oracle": 45.0,
+      "alive_by_strat": {
+        "A": 45.0,
+        "B": 13.67,
+        "C": 10.33,
+        "D": 22.0
+      }
+    },
+    {
+      "config_id": 422,
+      "subtype": 0,
+      "twe_strategy": "C",
+      "opt_strategy": "A",
+      "alive_baseline": 30.0,
+      "alive_twe": 48.33,
+      "alive_oracle": 61.0,
+      "alive_by_strat": {
+        "A": 61.0,
+        "B": 59.33,
+        "C": 48.33,
+        "D": 60.33
+      }
+    },
+    {
+      "config_id": 424,
+      "subtype": 0,
+      "twe_strategy": "C",
+      "opt_strategy": "D",
+      "alive_baseline": 21.67,
+      "alive_twe": 30.67,
+      "alive_oracle": 61.0,
+      "alive_by_strat": {
+        "A": 61.0,
+        "B": 58.67,
+        "C": 30.67,
+        "D": 61.0
+      }
+    },
+    {
+      "config_id": 425,
+      "subtype": 1,
+      "twe_strategy": "A",
+      "opt_strategy": "A",
+      "alive_baseline": 8.0,
+      "alive_twe": 36.0,
+      "alive_oracle": 36.0,
+      "alive_by_strat": {
+        "A": 36.0,
+        "B": 13.67,
+        "C": 11.67,
+        "D": 17.67
+      }
+    },
+    {
+      "config_id": 427,
+      "subtype": 0,
+      "twe_strategy": "D",
+      "opt_strategy": "A",
+      "alive_baseline": 15.67,
+      "alive_twe": 57.67,
+      "alive_oracle": 58.67,
+      "alive_by_strat": {
+        "A": 58.67,
+        "B": 30.33,
+        "C": 18.0,
+        "D": 57.67
+      }
+    },
+    {
+      "config_id": 428,
+      "subtype": 1,
+      "twe_strategy": "D",
+      "opt_strategy": "A",
+      "alive_baseline": 14.0,
+      "alive_twe": 60.0,
+      "alive_oracle": 61.0,
+      "alive_by_strat": {
+        "A": 61.0,
+        "B": 28.0,
+        "C": 18.0,
+        "D": 60.0
+      }
+    },
+    {
+      "config_id": 429,
+      "subtype": 1,
+      "twe_strategy": "D",
+      "opt_strategy": "A",
+      "alive_baseline": 13.33,
+      "alive_twe": 53.33,
+      "alive_oracle": 60.67,
+      "alive_by_strat": {
+        "A": 60.67,
+        "B": 18.0,
+        "C": 13.67,
+        "D": 53.33
+      }
+    },
+    {
+      "config_id": 436,
+      "subtype": 0,
+      "twe_strategy": "D",
+      "opt_strategy": "A",
+      "alive_baseline": 14.0,
+      "alive_twe": 53.0,
+      "alive_oracle": 58.67,
+      "alive_by_strat": {
+        "A": 58.67,
+        "B": 22.33,
+        "C": 15.67,
+        "D": 53.0
+      }
+    },
+    {
+      "config_id": 438,
+      "subtype": 0,
+      "twe_strategy": "C",
+      "opt_strategy": "C",
+      "alive_baseline": 61.0,
+      "alive_twe": 61.0,
+      "alive_oracle": 61.0,
+      "alive_by_strat": {
+        "A": 61.0,
+        "B": 61.0,
+        "C": 61.0,
+        "D": 61.0
+      }
+    },
+    {
+      "config_id": 439,
+      "subtype": 1,
+      "twe_strategy": "A",
+      "opt_strategy": "A",
+      "alive_baseline": 13.67,
+      "alive_twe": 52.67,
+      "alive_oracle": 52.67,
+      "alive_by_strat": {
+        "A": 52.67,
+        "B": 14.67,
+        "C": 14.0,
+        "D": 31.0
+      }
+    },
+    {
+      "config_id": 441,
+      "subtype": 0,
+      "twe_strategy": "C",
+      "opt_strategy": "D",
+      "alive_baseline": 30.0,
+      "alive_twe": 49.33,
+      "alive_oracle": 61.0,
+      "alive_by_strat": {
+        "A": 61.0,
+        "B": 57.67,
+        "C": 49.33,
+        "D": 61.0
+      }
+    },
+    {
+      "config_id": 442,
+      "subtype": 0,
+      "twe_strategy": "C",
+      "opt_strategy": "B",
+      "alive_baseline": 54.67,
+      "alive_twe": 60.33,
+      "alive_oracle": 61.0,
+      "alive_by_strat": {
+        "A": 61.0,
+        "B": 61.0,
+        "C": 60.33,
+        "D": 61.0
+      }
+    },
+    {
+      "config_id": 445,
+      "subtype": 0,
+      "twe_strategy": "D",
+      "opt_strategy": "A",
+      "alive_baseline": 15.0,
+      "alive_twe": 60.67,
+      "alive_oracle": 61.0,
+      "alive_by_strat": {
+        "A": 61.0,
+        "B": 37.67,
+        "C": 21.33,
+        "D": 60.67
+      }
+    },
+    {
+      "config_id": 448,
+      "subtype": 1,
+      "twe_strategy": "A",
+      "opt_strategy": "A",
+      "alive_baseline": 6.33,
+      "alive_twe": 55.33,
+      "alive_oracle": 55.33,
+      "alive_by_strat": {
+        "A": 55.33,
+        "B": 13.0,
+        "C": 9.0,
+        "D": 22.33
+      }
+    },
+    {
+      "config_id": 452,
+      "subtype": 0,
+      "twe_strategy": "D",
+      "opt_strategy": "A",
+      "alive_baseline": 17.0,
+      "alive_twe": 57.33,
+      "alive_oracle": 59.67,
+      "alive_by_strat": {
+        "A": 59.67,
+        "B": 36.0,
+        "C": 22.0,
+        "D": 57.33
+      }
+    },
+    {
+      "config_id": 453,
+      "subtype": 1,
+      "twe_strategy": "D",
+      "opt_strategy": "A",
+      "alive_baseline": 14.0,
+      "alive_twe": 50.33,
+      "alive_oracle": 60.67,
+      "alive_by_strat": {
+        "A": 60.67,
+        "B": 19.67,
+        "C": 14.33,
+        "D": 50.33
+      }
+    },
+    {
+      "config_id": 456,
+      "subtype": 0,
+      "twe_strategy": "D",
+      "opt_strategy": "A",
+      "alive_baseline": 20.33,
+      "alive_twe": 60.33,
+      "alive_oracle": 61.0,
+      "alive_by_strat": {
+        "A": 61.0,
+        "B": 46.33,
+        "C": 26.0,
+        "D": 60.33
+      }
+    },
+    {
+      "config_id": 459,
+      "subtype": 0,
+      "twe_strategy": "D",
+      "opt_strategy": "D",
+      "alive_baseline": 21.0,
+      "alive_twe": 61.0,
+      "alive_oracle": 61.0,
+      "alive_by_strat": {
+        "A": 61.0,
+        "B": 55.0,
+        "C": 28.33,
+        "D": 61.0
+      }
+    },
+    {
+      "config_id": 463,
+      "subtype": 0,
+      "twe_strategy": "D",
+      "opt_strategy": "A",
+      "alive_baseline": 19.0,
+      "alive_twe": 57.0,
+      "alive_oracle": 59.33,
+      "alive_by_strat": {
+        "A": 59.33,
+        "B": 44.33,
+        "C": 23.33,
+        "D": 57.0
+      }
+    },
+    {
+      "config_id": 464,
+      "subtype": 1,
+      "twe_strategy": "A",
+      "opt_strategy": "A",
+      "alive_baseline": 6.0,
+      "alive_twe": 28.0,
+      "alive_oracle": 28.0,
+      "alive_by_strat": {
+        "A": 28.0,
+        "B": 11.67,
+        "C": 6.33,
+        "D": 15.33
+      }
+    },
+    {
+      "config_id": 465,
+      "subtype": 1,
+      "twe_strategy": "A",
+      "opt_strategy": "A",
+      "alive_baseline": 8.0,
+      "alive_twe": 59.33,
+      "alive_oracle": 59.33,
+      "alive_by_strat": {
+        "A": 59.33,
+        "B": 14.0,
+        "C": 12.0,
+        "D": 30.67
+      }
+    },
+    {
+      "config_id": 468,
+      "subtype": 0,
+      "twe_strategy": "C",
+      "opt_strategy": "A",
+      "alive_baseline": 37.67,
+      "alive_twe": 54.33,
+      "alive_oracle": 61.0,
+      "alive_by_strat": {
+        "A": 61.0,
+        "B": 60.0,
+        "C": 54.33,
+        "D": 60.67
+      }
+    },
+    {
+      "config_id": 471,
+      "subtype": 0,
+      "twe_strategy": "C",
+      "opt_strategy": "A",
+      "alive_baseline": 35.67,
+      "alive_twe": 53.0,
+      "alive_oracle": 61.0,
+      "alive_by_strat": {
+        "A": 61.0,
+        "B": 59.67,
+        "C": 53.0,
+        "D": 60.33
+      }
+    },
+    {
+      "config_id": 472,
+      "subtype": 1,
+      "twe_strategy": "D",
+      "opt_strategy": "A",
+      "alive_baseline": 12.67,
+      "alive_twe": 58.0,
+      "alive_oracle": 61.0,
+      "alive_by_strat": {
+        "A": 61.0,
+        "B": 22.67,
+        "C": 14.0,
+        "D": 58.0
+      }
+    },
+    {
+      "config_id": 475,
+      "subtype": 1,
+      "twe_strategy": "A",
+      "opt_strategy": "A",
+      "alive_baseline": 7.0,
+      "alive_twe": 48.0,
+      "alive_oracle": 48.0,
+      "alive_by_strat": {
+        "A": 48.0,
+        "B": 13.67,
+        "C": 9.33,
+        "D": 18.33
+      }
+    },
+    {
+      "config_id": 477,
+      "subtype": 0,
+      "twe_strategy": "C",
+      "opt_strategy": "D",
+      "alive_baseline": 31.33,
+      "alive_twe": 48.67,
+      "alive_oracle": 61.0,
+      "alive_by_strat": {
+        "A": 61.0,
+        "B": 59.67,
+        "C": 48.67,
+        "D": 61.0
+      }
+    },
+    {
+      "config_id": 478,
+      "subtype": 1,
+      "twe_strategy": "A",
+      "opt_strategy": "A",
+      "alive_baseline": 10.67,
+      "alive_twe": 55.33,
+      "alive_oracle": 55.33,
+      "alive_by_strat": {
+        "A": 55.33,
+        "B": 14.67,
+        "C": 13.0,
+        "D": 25.0
+      }
+    },
+    {
+      "config_id": 481,
+      "subtype": 1,
+      "twe_strategy": "D",
+      "opt_strategy": "A",
+      "alive_baseline": 14.33,
+      "alive_twe": 60.33,
+      "alive_oracle": 61.0,
+      "alive_by_strat": {
+        "A": 61.0,
+        "B": 33.33,
+        "C": 18.33,
+        "D": 60.33
+      }
+    },
+    {
+      "config_id": 482,
+      "subtype": 0,
+      "twe_strategy": "C",
+      "opt_strategy": "D",
+      "alive_baseline": 25.67,
+      "alive_twe": 38.67,
+      "alive_oracle": 61.0,
+      "alive_by_strat": {
+        "A": 61.0,
+        "B": 49.0,
+        "C": 38.67,
+        "D": 61.0
+      }
+    },
+    {
+      "config_id": 483,
+      "subtype": 1,
+      "twe_strategy": "A",
+      "opt_strategy": "A",
+      "alive_baseline": 6.0,
+      "alive_twe": 27.33,
+      "alive_oracle": 27.33,
+      "alive_by_strat": {
+        "A": 27.33,
+        "B": 13.0,
+        "C": 6.33,
+        "D": 14.67
+      }
+    },
+    {
+      "config_id": 486,
+      "subtype": 0,
+      "twe_strategy": "C",
+      "opt_strategy": "A",
+      "alive_baseline": 19.67,
+      "alive_twe": 26.67,
+      "alive_oracle": 59.0,
+      "alive_by_strat": {
+        "A": 59.0,
+        "B": 36.67,
+        "C": 26.67,
+        "D": 53.0
+      }
+    },
+    {
+      "config_id": 488,
+      "subtype": 0,
+      "twe_strategy": "D",
+      "opt_strategy": "A",
+      "alive_baseline": 14.0,
+      "alive_twe": 45.0,
+      "alive_oracle": 51.0,
+      "alive_by_strat": {
+        "A": 51.0,
+        "B": 24.0,
+        "C": 16.33,
+        "D": 45.0
+      }
+    },
+    {
+      "config_id": 490,
+      "subtype": 0,
+      "twe_strategy": "D",
+      "opt_strategy": "A",
+      "alive_baseline": 21.0,
+      "alive_twe": 60.0,
+      "alive_oracle": 60.67,
+      "alive_by_strat": {
+        "A": 60.67,
+        "B": 51.0,
+        "C": 29.33,
+        "D": 60.0
+      }
+    },
+    {
+      "config_id": 492,
+      "subtype": 1,
+      "twe_strategy": "A",
+      "opt_strategy": "A",
+      "alive_baseline": 6.0,
+      "alive_twe": 34.33,
+      "alive_oracle": 34.33,
+      "alive_by_strat": {
+        "A": 34.33,
+        "B": 12.33,
+        "C": 6.67,
+        "D": 16.0
+      }
+    },
+    {
+      "config_id": 493,
+      "subtype": 0,
+      "twe_strategy": "C",
+      "opt_strategy": "D",
+      "alive_baseline": 25.0,
+      "alive_twe": 40.0,
+      "alive_oracle": 61.0,
+      "alive_by_strat": {
+        "A": 61.0,
+        "B": 60.67,
+        "C": 40.0,
+        "D": 61.0
+      }
+    },
+    {
+      "config_id": 495,
+      "subtype": 1,
+      "twe_strategy": "A",
+      "opt_strategy": "A",
+      "alive_baseline": 10.0,
+      "alive_twe": 54.0,
+      "alive_oracle": 54.0,
+      "alive_by_strat": {
+        "A": 54.0,
+        "B": 14.0,
+        "C": 14.0,
+        "D": 23.0
+      }
+    },
+    {
+      "config_id": 496,
+      "subtype": 0,
+      "twe_strategy": "C",
+      "opt_strategy": "A",
+      "alive_baseline": 20.33,
+      "alive_twe": 28.0,
+      "alive_oracle": 61.0,
+      "alive_by_strat": {
+        "A": 61.0,
+        "B": 54.67,
+        "C": 28.0,
+        "D": 60.67
+      }
+    },
+    {
+      "config_id": 497,
+      "subtype": 0,
+      "twe_strategy": "D",
+      "opt_strategy": "D",
+      "alive_baseline": 18.33,
+      "alive_twe": 61.0,
+      "alive_oracle": 61.0,
+      "alive_by_strat": {
+        "A": 61.0,
+        "B": 55.33,
+        "C": 22.0,
+        "D": 61.0
+      }
+    },
+    {
+      "config_id": 498,
+      "subtype": 1,
+      "twe_strategy": "D",
+      "opt_strategy": "A",
+      "alive_baseline": 14.0,
+      "alive_twe": 49.67,
+      "alive_oracle": 56.67,
+      "alive_by_strat": {
+        "A": 56.67,
+        "B": 21.0,
+        "C": 14.33,
+        "D": 49.67
+      }
+    },
+    {
+      "config_id": 499,
+      "subtype": 0,
+      "twe_strategy": "D",
+      "opt_strategy": "D",
+      "alive_baseline": 18.33,
+      "alive_twe": 61.0,
+      "alive_oracle": 61.0,
+      "alive_by_strat": {
+        "A": 61.0,
+        "B": 50.0,
+        "C": 24.67,
+        "D": 61.0
+      }
+    }
+  ]
+}

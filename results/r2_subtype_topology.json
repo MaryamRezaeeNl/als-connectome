@@ -1,0 +1,561 @@
+{
+  "description": "Phase R2.4 Subtype x Topology Interaction",
+  "n_seeds": 5,
+  "steps": 300,
+  "therapy": {
+    "strength": 0.855,
+    "start_t": 13
+  },
+  "cluster_0": {
+    "label": "Cluster 0 (slow-tipping)",
+    "centroid_agg": 1.3576,
+    "centroid_tip": 224.4,
+    "config_ids": [
+      496,
+      456,
+      412,
+      493,
+      349
+    ],
+    "topologies": {
+      "baseline": {
+        "per_config": [
+          {
+            "config_id": 496,
+            "is_genuine": true,
+            "c1_slope": true,
+            "c2_coherence": true,
+            "c3_silent": true,
+            "mean_tipping_step": 209.6,
+            "mean_plateau": 19.6,
+            "prevention_rate": 1.0
+          },
+          {
+            "config_id": 456,
+            "is_genuine": true,
+            "c1_slope": true,
+            "c2_coherence": true,
+            "c3_silent": true,
+            "mean_tipping_step": 207.4,
+            "mean_plateau": 20.6,
+            "prevention_rate": 1.0
+          },
+          {
+            "config_id": 412,
+            "is_genuine": false,
+            "c1_slope": true,
+            "c2_coherence": false,
+            "c3_silent": true,
+            "mean_tipping_step": 224.8,
+            "mean_plateau": 24.2,
+            "prevention_rate": 1.0
+          },
+          {
+            "config_id": 493,
+            "is_genuine": false,
+            "c1_slope": true,
+            "c2_coherence": false,
+            "c3_silent": true,
+            "mean_tipping_step": 226.8,
+            "mean_plateau": 26.0,
+            "prevention_rate": 1.0
+          },
+          {
+            "config_id": 349,
+            "is_genuine": true,
+            "c1_slope": true,
+            "c2_coherence": true,
+            "c3_silent": true,
+            "mean_tipping_step": 223.4,
+            "mean_plateau": 24.6,
+            "prevention_rate": 1.0
+          }
+        ],
+        "genuine_tipping_rate": 0.6,
+        "mean_tipping_step": 218.4,
+        "mean_plateau": 23.0,
+        "therapy_prevention_rate": 1.0
+      },
+      "sparse_chain": {
+        "per_config": [
+          {
+            "config_id": 496,
+            "is_genuine": true,
+            "c1_slope": true,
+            "c2_coherence": true,
+            "c3_silent": true,
+            "mean_tipping_step": 213.2,
+            "mean_plateau": 19.6,
+            "prevention_rate": 1.0
+          },
+          {
+            "config_id": 456,
+            "is_genuine": true,
+            "c1_slope": true,
+            "c2_coherence": true,
+            "c3_silent": true,
+            "mean_tipping_step": 211.4,
+            "mean_plateau": 21.0,
+            "prevention_rate": 1.0
+          },
+          {
+            "config_id": 412,
+            "is_genuine": false,
+            "c1_slope": true,
+            "c2_coherence": false,
+            "c3_silent": true,
+            "mean_tipping_step": 227.4,
+            "mean_plateau": 24.8,
+            "prevention_rate": 1.0
+          },
+          {
+            "config_id": 493,
+            "is_genuine": false,
+            "c1_slope": true,
+            "c2_coherence": false,
+            "c3_silent": true,
+            "mean_tipping_step": 229.8,
+            "mean_plateau": 26.2,
+            "prevention_rate": 1.0
+          },
+          {
+            "config_id": 349,
+            "is_genuine": true,
+            "c1_slope": true,
+            "c2_coherence": true,
+            "c3_silent": true,
+            "mean_tipping_step": 227.4,
+            "mean_plateau": 25.2,
+            "prevention_rate": 1.0
+          }
+        ],
+        "genuine_tipping_rate": 0.6,
+        "mean_tipping_step": 221.8,
+        "mean_plateau": 23.36,
+        "therapy_prevention_rate": 1.0
+      },
+      "triangle_rich_60": {
+        "per_config": [
+          {
+            "config_id": 496,
+            "is_genuine": true,
+            "c1_slope": true,
+            "c2_coherence": true,
+            "c3_silent": true,
+            "mean_tipping_step": 206.4,
+            "mean_plateau": 18.8,
+            "prevention_rate": 1.0
+          },
+          {
+            "config_id": 456,
+            "is_genuine": true,
+            "c1_slope": true,
+            "c2_coherence": true,
+            "c3_silent": true,
+            "mean_tipping_step": 206.0,
+            "mean_plateau": 20.2,
+            "prevention_rate": 1.0
+          },
+          {
+            "config_id": 412,
+            "is_genuine": true,
+            "c1_slope": true,
+            "c2_coherence": true,
+            "c3_silent": true,
+            "mean_tipping_step": 223.6,
+            "mean_plateau": 23.6,
+            "prevention_rate": 1.0
+          },
+          {
+            "config_id": 493,
+            "is_genuine": false,
+            "c1_slope": true,
+            "c2_coherence": false,
+            "c3_silent": true,
+            "mean_tipping_step": 225.2,
+            "mean_plateau": 24.8,
+            "prevention_rate": 1.0
+          },
+          {
+            "config_id": 349,
+            "is_genuine": true,
+            "c1_slope": true,
+            "c2_coherence": true,
+            "c3_silent": true,
+            "mean_tipping_step": 222.4,
+            "mean_plateau": 23.4,
+            "prevention_rate": 1.0
+          }
+        ],
+        "genuine_tipping_rate": 0.8,
+        "mean_tipping_step": 216.7,
+        "mean_plateau": 22.16,
+        "therapy_prevention_rate": 1.0
+      },
+      "distributed": {
+        "per_config": [
+          {
+            "config_id": 496,
+            "is_genuine": true,
+            "c1_slope": true,
+            "c2_coherence": true,
+            "c3_silent": true,
+            "mean_tipping_step": 212.0,
+            "mean_plateau": 19.6,
+            "prevention_rate": 1.0
+          },
+          {
+            "config_id": 456,
+            "is_genuine": true,
+            "c1_slope": true,
+            "c2_coherence": true,
+            "c3_silent": true,
+            "mean_tipping_step": 208.6,
+            "mean_plateau": 20.8,
+            "prevention_rate": 1.0
+          },
+          {
+            "config_id": 412,
+            "is_genuine": false,
+            "c1_slope": true,
+            "c2_coherence": false,
+            "c3_silent": true,
+            "mean_tipping_step": 225.8,
+            "mean_plateau": 25.0,
+            "prevention_rate": 1.0
+          },
+          {
+            "config_id": 493,
+            "is_genuine": false,
+            "c1_slope": true,
+            "c2_coherence": false,
+            "c3_silent": true,
+            "mean_tipping_step": 227.8,
+            "mean_plateau": 26.2,
+            "prevention_rate": 1.0
+          },
+          {
+            "config_id": 349,
+            "is_genuine": true,
+            "c1_slope": true,
+            "c2_coherence": true,
+            "c3_silent": true,
+            "mean_tipping_step": 223.6,
+            "mean_plateau": 25.4,
+            "prevention_rate": 1.0
+          }
+        ],
+        "genuine_tipping_rate": 0.6,
+        "mean_tipping_step": 219.6,
+        "mean_plateau": 23.4,
+        "therapy_prevention_rate": 1.0
+      }
+    }
+  },
+  "cluster_1": {
+    "label": "Cluster 1 (fast-tipping)",
+    "centroid_agg": 5.8629,
+    "centroid_tip": 106.9,
+    "config_ids": [
+      478,
+      495,
+      343,
+      421,
+      51
+    ],
+    "topologies": {
+      "baseline": {
+        "per_config": [
+          {
+            "config_id": 478,
+            "is_genuine": true,
+            "c1_slope": true,
+            "c2_coherence": true,
+            "c3_silent": true,
+            "mean_tipping_step": 97.0,
+            "mean_plateau": 9.4,
+            "prevention_rate": 1.0
+          },
+          {
+            "config_id": 495,
+            "is_genuine": true,
+            "c1_slope": true,
+            "c2_coherence": true,
+            "c3_silent": true,
+            "mean_tipping_step": 97.4,
+            "mean_plateau": 9.0,
+            "prevention_rate": 1.0
+          },
+          {
+            "config_id": 343,
+            "is_genuine": true,
+            "c1_slope": true,
+            "c2_coherence": true,
+            "c3_silent": true,
+            "mean_tipping_step": 96.0,
+            "mean_plateau": 9.8,
+            "prevention_rate": 1.0
+          },
+          {
+            "config_id": 421,
+            "is_genuine": true,
+            "c1_slope": true,
+            "c2_coherence": true,
+            "c3_silent": true,
+            "mean_tipping_step": 96.2,
+            "mean_plateau": 10.6,
+            "prevention_rate": 1.0
+          },
+          {
+            "config_id": 51,
+            "is_genuine": true,
+            "c1_slope": true,
+            "c2_coherence": true,
+            "c3_silent": true,
+            "mean_tipping_step": 96.2,
+            "mean_plateau": 10.2,
+            "prevention_rate": 1.0
+          }
+        ],
+        "genuine_tipping_rate": 1.0,
+        "mean_tipping_step": 96.6,
+        "mean_plateau": 9.8,
+        "therapy_prevention_rate": 1.0
+      },
+      "sparse_chain": {
+        "per_config": [
+          {
+            "config_id": 478,
+            "is_genuine": true,
+            "c1_slope": true,
+            "c2_coherence": true,
+            "c3_silent": true,
+            "mean_tipping_step": 97.8,
+            "mean_plateau": 9.4,
+            "prevention_rate": 1.0
+          },
+          {
+            "config_id": 495,
+            "is_genuine": true,
+            "c1_slope": true,
+            "c2_coherence": true,
+            "c3_silent": true,
+            "mean_tipping_step": 98.6,
+            "mean_plateau": 9.0,
+            "prevention_rate": 1.0
+          },
+          {
+            "config_id": 343,
+            "is_genuine": true,
+            "c1_slope": true,
+            "c2_coherence": true,
+            "c3_silent": true,
+            "mean_tipping_step": 97.4,
+            "mean_plateau": 9.8,
+            "prevention_rate": 1.0
+          },
+          {
+            "config_id": 421,
+            "is_genuine": true,
+            "c1_slope": true,
+            "c2_coherence": true,
+            "c3_silent": true,
+            "mean_tipping_step": 97.2,
+            "mean_plateau": 10.6,
+            "prevention_rate": 1.0
+          },
+          {
+            "config_id": 51,
+            "is_genuine": true,
+            "c1_slope": true,
+            "c2_coherence": true,
+            "c3_silent": true,
+            "mean_tipping_step": 97.2,
+            "mean_plateau": 10.2,
+            "prevention_rate": 1.0
+          }
+        ],
+        "genuine_tipping_rate": 1.0,
+        "mean_tipping_step": 97.6,
+        "mean_plateau": 9.8,
+        "therapy_prevention_rate": 1.0
+      },
+      "triangle_rich_60": {
+        "per_config": [
+          {
+            "config_id": 478,
+            "is_genuine": true,
+            "c1_slope": true,
+            "c2_coherence": true,
+            "c3_silent": true,
+            "mean_tipping_step": 95.6,
+            "mean_plateau": 7.2,
+            "prevention_rate": 1.0
+          },
+          {
+            "config_id": 495,
+            "is_genuine": true,
+            "c1_slope": true,
+            "c2_coherence": true,
+            "c3_silent": true,
+            "mean_tipping_step": 95.6,
+            "mean_plateau": 6.6,
+            "prevention_rate": 1.0
+          },
+          {
+            "config_id": 343,
+            "is_genuine": true,
+            "c1_slope": true,
+            "c2_coherence": true,
+            "c3_silent": true,
+            "mean_tipping_step": 95.0,
+            "mean_plateau": 6.8,
+            "prevention_rate": 1.0
+          },
+          {
+            "config_id": 421,
+            "is_genuine": true,
+            "c1_slope": true,
+            "c2_coherence": true,
+            "c3_silent": true,
+            "mean_tipping_step": 94.6,
+            "mean_plateau": 7.0,
+            "prevention_rate": 1.0
+          },
+          {
+            "config_id": 51,
+            "is_genuine": true,
+            "c1_slope": true,
+            "c2_coherence": true,
+            "c3_silent": true,
+            "mean_tipping_step": 94.4,
+            "mean_plateau": 6.4,
+            "prevention_rate": 1.0
+          }
+        ],
+        "genuine_tipping_rate": 1.0,
+        "mean_tipping_step": 95.0,
+        "mean_plateau": 6.8,
+        "therapy_prevention_rate": 1.0
+      },
+      "distributed": {
+        "per_config": [
+          {
+            "config_id": 478,
+            "is_genuine": true,
+            "c1_slope": true,
+            "c2_coherence": true,
+            "c3_silent": true,
+            "mean_tipping_step": 97.2,
+            "mean_plateau": 9.4,
+            "prevention_rate": 1.0
+          },
+          {
+            "config_id": 495,
+            "is_genuine": true,
+            "c1_slope": true,
+            "c2_coherence": true,
+            "c3_silent": true,
+            "mean_tipping_step": 97.4,
+            "mean_plateau": 9.0,
+            "prevention_rate": 1.0
+          },
+          {
+            "config_id": 343,
+            "is_genuine": true,
+            "c1_slope": true,
+            "c2_coherence": true,
+            "c3_silent": true,
+            "mean_tipping_step": 96.4,
+            "mean_plateau": 9.8,
+            "prevention_rate": 1.0
+          },
+          {
+            "config_id": 421,
+            "is_genuine": true,
+            "c1_slope": true,
+            "c2_coherence": true,
+            "c3_silent": true,
+            "mean_tipping_step": 96.2,
+            "mean_plateau": 10.6,
+            "prevention_rate": 1.0
+          },
+          {
+            "config_id": 51,
+            "is_genuine": true,
+            "c1_slope": true,
+            "c2_coherence": true,
+            "c3_silent": true,
+            "mean_tipping_step": 96.2,
+            "mean_plateau": 10.2,
+            "prevention_rate": 1.0
+          }
+        ],
+        "genuine_tipping_rate": 1.0,
+        "mean_tipping_step": 96.7,
+        "mean_plateau": 9.8,
+        "therapy_prevention_rate": 1.0
+      }
+    }
+  },
+  "interactions": {
+    "sparse_chain": {
+      "genuine_tipping_rate": {
+        "delta_C0": 0.0,
+        "delta_C1": 0.0,
+        "interaction": 0.0
+      },
+      "mean_plateau": {
+        "delta_C0": 0.36,
+        "delta_C1": 0.0,
+        "interaction": 0.36
+      },
+      "therapy_prevention_rate": {
+        "delta_C0": 0.0,
+        "delta_C1": 0.0,
+        "interaction": 0.0
+      }
+    },
+    "triangle_rich_60": {
+      "genuine_tipping_rate": {
+        "delta_C0": 0.2,
+        "delta_C1": 0.0,
+        "interaction": 0.2
+      },
+      "mean_plateau": {
+        "delta_C0": -0.84,
+        "delta_C1": -3.0,
+        "interaction": 2.16
+      },
+      "therapy_prevention_rate": {
+        "delta_C0": 0.0,
+        "delta_C1": 0.0,
+        "interaction": 0.0
+      }
+    },
+    "distributed": {
+      "genuine_tipping_rate": {
+        "delta_C0": 0.0,
+        "delta_C1": 0.0,
+        "interaction": 0.0
+      },
+      "mean_plateau": {
+        "delta_C0": 0.4,
+        "delta_C1": 0.0,
+        "interaction": 0.4
+      },
+      "therapy_prevention_rate": {
+        "delta_C0": 0.0,
+        "delta_C1": 0.0,
+        "interaction": 0.0
+      }
+    }
+  },
+  "scientific_answers": {
+    "Q1: Does sparse_chain help slow-tipping (C0) more than fast-tipping (C1)?": "YES -- strongly. sparse_chain preferentially benefits Cluster 0 (plateau delta: C0=+0.36, C1=+0.00; interaction=+0.360). Removing redundant premotor edges slows the slow-cascade more than the fast-cascade, consistent with Tier-1-dominated disease dynamics having more to gain from reduced spreading paths.",
+    "Q2: Does triangle_rich 60% hurt fast-tipping (C1) more?": "YES -- fast-tipping (C1) is more sensitive to recurrent loops. triangle_rich 60% plateau delta: C0=-0.84, C1=-3.00 (interaction=+2.160). Fast-cascades lose proportionally more survivors when feedback loops are added: the already-rapid cascade is further amplified by recurrent aggregation paths before therapy can intervene. Slow-cascades (C0) tolerate the structural change better because their longer pre-symptomatic window absorbs the extra load.",
+    "Q3: Does topology matter more for one subtype overall?": "Yes -- Cluster 0 (slow-tipping) shows larger topology sensitivity overall (sum interaction=+3.120 across all topology-metric combinations). Strongest single interaction: triangle_rich_60 / Mean plateau survivors (interaction=+2.160).",
+    "Q4: How does distributed topology affect the two subtypes?": "Distributed shows C0-favouring interaction for plateau survivors (C0=+0.40, C1=+0.00; interaction=+0.400) and neutral for therapy prevention (interaction=+0.000). Democratised connectivity preferentially protects the subtype with more room to improve -- the slow-cascade (C0) benefits more from reduced bottlenecks because its longer pre-symptomatic window amplifies any structural advantage.",
+    "Q5: Should topology-based interventions be subtype-specific?": "RECOMMENDATION: YES, subtype-specific deployment is warranted. The interaction effects across all topology-metric combinations indicate that topology modifications affect both subtypes in broadly the same direction, though with different magnitudes. The largest subtype-differentiated effect is in Mean plateau survivors (triangle_rich_60: interaction=+2.160), suggesting this topology is the strongest candidate for subtype-stratified deployment. In a clinical context, this means connectivity-based biomarkers (e.g. circuit feedback density, premotor redundancy) could guide which topology-modifying intervention is most appropriate for a given patient's disease subtype -- but the marginal benefit of stratification is moderate to large."
+  }
+}

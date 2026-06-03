@@ -1,0 +1,728 @@
+{
+  "ranked": [
+    {
+      "id": 17,
+      "name": "DA6",
+      "type": 1,
+      "type_label": "Motor-A (ALS)",
+      "degree": 3,
+      "btwn": 0.03322,
+      "agg_score": 0.6667,
+      "absorb_ratio": 0.2222,
+      "is_hub": false
+    },
+    {
+      "id": 0,
+      "name": "AVAL",
+      "type": 0,
+      "type_label": "Command IN",
+      "degree": 23,
+      "btwn": 0.33043,
+      "agg_score": 0.0,
+      "absorb_ratio": 0.0,
+      "is_hub": true
+    },
+    {
+      "id": 1,
+      "name": "AVAR",
+      "type": 0,
+      "type_label": "Command IN",
+      "degree": 18,
+      "btwn": 0.17646,
+      "agg_score": 0.0,
+      "absorb_ratio": 0.0,
+      "is_hub": true
+    },
+    {
+      "id": 2,
+      "name": "AVBL",
+      "type": 0,
+      "type_label": "Command IN",
+      "degree": 20,
+      "btwn": 0.31691,
+      "agg_score": 0.0,
+      "absorb_ratio": 0.0,
+      "is_hub": true
+    },
+    {
+      "id": 3,
+      "name": "AVBR",
+      "type": 0,
+      "type_label": "Command IN",
+      "degree": 15,
+      "btwn": 0.13888,
+      "agg_score": 0.0,
+      "absorb_ratio": 0.0,
+      "is_hub": true
+    },
+    {
+      "id": 4,
+      "name": "PVCL",
+      "type": 0,
+      "type_label": "Command IN",
+      "degree": 12,
+      "btwn": 0.13881,
+      "agg_score": 0.0,
+      "absorb_ratio": 0.0,
+      "is_hub": true
+    },
+    {
+      "id": 5,
+      "name": "PVCR",
+      "type": 0,
+      "type_label": "Command IN",
+      "degree": 12,
+      "btwn": 0.13881,
+      "agg_score": 0.0,
+      "absorb_ratio": 0.0,
+      "is_hub": true
+    },
+    {
+      "id": 6,
+      "name": "AVDL",
+      "type": 0,
+      "type_label": "Command IN",
+      "degree": 2,
+      "btwn": 0.00045,
+      "agg_score": 0.0,
+      "absorb_ratio": 0.0,
+      "is_hub": false
+    },
+    {
+      "id": 7,
+      "name": "AVDR",
+      "type": 0,
+      "type_label": "Command IN",
+      "degree": 2,
+      "btwn": 0.00045,
+      "agg_score": 0.0,
+      "absorb_ratio": 0.0,
+      "is_hub": false
+    },
+    {
+      "id": 8,
+      "name": "AIBR",
+      "type": 5,
+      "type_label": "Interneuron",
+      "degree": 4,
+      "btwn": 0.03189,
+      "agg_score": 0.0,
+      "absorb_ratio": 0.0,
+      "is_hub": false
+    },
+    {
+      "id": 9,
+      "name": "AIBL",
+      "type": 5,
+      "type_label": "Interneuron",
+      "degree": 4,
+      "btwn": 0.03189,
+      "agg_score": 0.0,
+      "absorb_ratio": 0.0,
+      "is_hub": false
+    },
+    {
+      "id": 10,
+      "name": "RIBL",
+      "type": 5,
+      "type_label": "Interneuron",
+      "degree": 4,
+      "btwn": 0.00036,
+      "agg_score": 0.0,
+      "absorb_ratio": 0.0,
+      "is_hub": false
+    },
+    {
+      "id": 11,
+      "name": "RIBR",
+      "type": 5,
+      "type_label": "Interneuron",
+      "degree": 4,
+      "btwn": 0.00036,
+      "agg_score": 0.0,
+      "absorb_ratio": 0.0,
+      "is_hub": false
+    },
+    {
+      "id": 12,
+      "name": "DA1",
+      "type": 1,
+      "type_label": "Motor-A (ALS)",
+      "degree": 4,
+      "btwn": 0.01267,
+      "agg_score": 0.0,
+      "absorb_ratio": 0.0,
+      "is_hub": false
+    },
+    {
+      "id": 13,
+      "name": "DA2",
+      "type": 1,
+      "type_label": "Motor-A (ALS)",
+      "degree": 5,
+      "btwn": 0.01288,
+      "agg_score": 0.0,
+      "absorb_ratio": 0.0,
+      "is_hub": false
+    },
+    {
+      "id": 14,
+      "name": "DA3",
+      "type": 1,
+      "type_label": "Motor-A (ALS)",
+      "degree": 5,
+      "btwn": 0.01271,
+      "agg_score": 0.0,
+      "absorb_ratio": 0.0,
+      "is_hub": false
+    },
+    {
+      "id": 15,
+      "name": "DA4",
+      "type": 1,
+      "type_label": "Motor-A (ALS)",
+      "degree": 5,
+      "btwn": 0.01288,
+      "agg_score": 0.0,
+      "absorb_ratio": 0.0,
+      "is_hub": false
+    },
+    {
+      "id": 16,
+      "name": "DA5",
+      "type": 1,
+      "type_label": "Motor-A (ALS)",
+      "degree": 4,
+      "btwn": 0.01267,
+      "agg_score": 0.0,
+      "absorb_ratio": 0.0,
+      "is_hub": false
+    },
+    {
+      "id": 18,
+      "name": "DA7",
+      "type": 1,
+      "type_label": "Motor-A (ALS)",
+      "degree": 1,
+      "btwn": 0.0,
+      "agg_score": 0.0,
+      "absorb_ratio": 0.0,
+      "is_hub": false
+    },
+    {
+      "id": 19,
+      "name": "DA8",
+      "type": 1,
+      "type_label": "Motor-A (ALS)",
+      "degree": 1,
+      "btwn": 0.0,
+      "agg_score": 0.0,
+      "absorb_ratio": 0.0,
+      "is_hub": false
+    },
+    {
+      "id": 20,
+      "name": "DA9",
+      "type": 1,
+      "type_label": "Motor-A (ALS)",
+      "degree": 0,
+      "btwn": 0.0,
+      "agg_score": 0.0,
+      "absorb_ratio": 0.0,
+      "is_hub": false
+    },
+    {
+      "id": 21,
+      "name": "DB1",
+      "type": 2,
+      "type_label": "Motor-B",
+      "degree": 4,
+      "btwn": 0.03308,
+      "agg_score": 0.0,
+      "absorb_ratio": 0.0,
+      "is_hub": false
+    },
+    {
+      "id": 22,
+      "name": "DB2",
+      "type": 2,
+      "type_label": "Motor-B",
+      "degree": 5,
+      "btwn": 0.03383,
+      "agg_score": 0.0,
+      "absorb_ratio": 0.0,
+      "is_hub": false
+    },
+    {
+      "id": 23,
+      "name": "DB3",
+      "type": 2,
+      "type_label": "Motor-B",
+      "degree": 5,
+      "btwn": 0.03383,
+      "agg_score": 0.0,
+      "absorb_ratio": 0.0,
+      "is_hub": false
+    },
+    {
+      "id": 24,
+      "name": "DB4",
+      "type": 2,
+      "type_label": "Motor-B",
+      "degree": 5,
+      "btwn": 0.03383,
+      "agg_score": 0.0,
+      "absorb_ratio": 0.0,
+      "is_hub": false
+    },
+    {
+      "id": 25,
+      "name": "DB5",
+      "type": 2,
+      "type_label": "Motor-B",
+      "degree": 4,
+      "btwn": 0.03308,
+      "agg_score": 0.0,
+      "absorb_ratio": 0.0,
+      "is_hub": false
+    },
+    {
+      "id": 26,
+      "name": "DB6",
+      "type": 2,
+      "type_label": "Motor-B",
+      "degree": 2,
+      "btwn": 0.00031,
+      "agg_score": 0.0,
+      "absorb_ratio": 0.0,
+      "is_hub": false
+    },
+    {
+      "id": 27,
+      "name": "DB7",
+      "type": 2,
+      "type_label": "Motor-B",
+      "degree": 2,
+      "btwn": 0.00031,
+      "agg_score": 0.0,
+      "absorb_ratio": 0.0,
+      "is_hub": false
+    },
+    {
+      "id": 28,
+      "name": "DD1",
+      "type": 3,
+      "type_label": "Motor-D",
+      "degree": 4,
+      "btwn": 0.00865,
+      "agg_score": 0.0,
+      "absorb_ratio": 0.0,
+      "is_hub": false
+    },
+    {
+      "id": 29,
+      "name": "DD2",
+      "type": 3,
+      "type_label": "Motor-D",
+      "degree": 5,
+      "btwn": 0.01447,
+      "agg_score": 0.0,
+      "absorb_ratio": 0.0,
+      "is_hub": false
+    },
+    {
+      "id": 30,
+      "name": "DD3",
+      "type": 3,
+      "type_label": "Motor-D",
+      "degree": 5,
+      "btwn": 0.01579,
+      "agg_score": 0.0,
+      "absorb_ratio": 0.0,
+      "is_hub": false
+    },
+    {
+      "id": 31,
+      "name": "DD4",
+      "type": 3,
+      "type_label": "Motor-D",
+      "degree": 5,
+      "btwn": 0.01447,
+      "agg_score": 0.0,
+      "absorb_ratio": 0.0,
+      "is_hub": false
+    },
+    {
+      "id": 32,
+      "name": "DD5",
+      "type": 3,
+      "type_label": "Motor-D",
+      "degree": 4,
+      "btwn": 0.00865,
+      "agg_score": 0.0,
+      "absorb_ratio": 0.0,
+      "is_hub": false
+    },
+    {
+      "id": 33,
+      "name": "DD6",
+      "type": 3,
+      "type_label": "Motor-D",
+      "degree": 1,
+      "btwn": 0.0,
+      "agg_score": 0.0,
+      "absorb_ratio": 0.0,
+      "is_hub": false
+    },
+    {
+      "id": 34,
+      "name": "VD1",
+      "type": 3,
+      "type_label": "Motor-D",
+      "degree": 1,
+      "btwn": 0.0,
+      "agg_score": 0.0,
+      "absorb_ratio": 0.0,
+      "is_hub": false
+    },
+    {
+      "id": 35,
+      "name": "VD2",
+      "type": 3,
+      "type_label": "Motor-D",
+      "degree": 1,
+      "btwn": 0.0,
+      "agg_score": 0.0,
+      "absorb_ratio": 0.0,
+      "is_hub": false
+    },
+    {
+      "id": 36,
+      "name": "VD3",
+      "type": 3,
+      "type_label": "Motor-D",
+      "degree": 1,
+      "btwn": 0.0,
+      "agg_score": 0.0,
+      "absorb_ratio": 0.0,
+      "is_hub": false
+    },
+    {
+      "id": 37,
+      "name": "VD4",
+      "type": 3,
+      "type_label": "Motor-D",
+      "degree": 1,
+      "btwn": 0.0,
+      "agg_score": 0.0,
+      "absorb_ratio": 0.0,
+      "is_hub": false
+    },
+    {
+      "id": 38,
+      "name": "VD5",
+      "type": 3,
+      "type_label": "Motor-D",
+      "degree": 1,
+      "btwn": 0.0,
+      "agg_score": 0.0,
+      "absorb_ratio": 0.0,
+      "is_hub": false
+    },
+    {
+      "id": 39,
+      "name": "VA1",
+      "type": 1,
+      "type_label": "Motor-A (ALS)",
+      "degree": 2,
+      "btwn": 0.00595,
+      "agg_score": 0.0,
+      "absorb_ratio": 0.0,
+      "is_hub": false
+    },
+    {
+      "id": 40,
+      "name": "VA2",
+      "type": 1,
+      "type_label": "Motor-A (ALS)",
+      "degree": 2,
+      "btwn": 0.00522,
+      "agg_score": 0.0,
+      "absorb_ratio": 0.0,
+      "is_hub": false
+    },
+    {
+      "id": 41,
+      "name": "VA3",
+      "type": 1,
+      "type_label": "Motor-A (ALS)",
+      "degree": 2,
+      "btwn": 0.00502,
+      "agg_score": 0.0,
+      "absorb_ratio": 0.0,
+      "is_hub": false
+    },
+    {
+      "id": 42,
+      "name": "VA4",
+      "type": 1,
+      "type_label": "Motor-A (ALS)",
+      "degree": 2,
+      "btwn": 0.00522,
+      "agg_score": 0.0,
+      "absorb_ratio": 0.0,
+      "is_hub": false
+    },
+    {
+      "id": 43,
+      "name": "VA5",
+      "type": 1,
+      "type_label": "Motor-A (ALS)",
+      "degree": 2,
+      "btwn": 0.00595,
+      "agg_score": 0.0,
+      "absorb_ratio": 0.0,
+      "is_hub": false
+    },
+    {
+      "id": 44,
+      "name": "VB1",
+      "type": 2,
+      "type_label": "Motor-B",
+      "degree": 2,
+      "btwn": 0.01298,
+      "agg_score": 0.0,
+      "absorb_ratio": 0.0,
+      "is_hub": false
+    },
+    {
+      "id": 45,
+      "name": "VB2",
+      "type": 2,
+      "type_label": "Motor-B",
+      "degree": 2,
+      "btwn": 0.01223,
+      "agg_score": 0.0,
+      "absorb_ratio": 0.0,
+      "is_hub": false
+    },
+    {
+      "id": 46,
+      "name": "VB3",
+      "type": 2,
+      "type_label": "Motor-B",
+      "degree": 2,
+      "btwn": 0.01194,
+      "agg_score": 0.0,
+      "absorb_ratio": 0.0,
+      "is_hub": false
+    },
+    {
+      "id": 47,
+      "name": "VB4",
+      "type": 2,
+      "type_label": "Motor-B",
+      "degree": 2,
+      "btwn": 0.01223,
+      "agg_score": 0.0,
+      "absorb_ratio": 0.0,
+      "is_hub": false
+    },
+    {
+      "id": 48,
+      "name": "VB5",
+      "type": 2,
+      "type_label": "Motor-B",
+      "degree": 2,
+      "btwn": 0.01298,
+      "agg_score": 0.0,
+      "absorb_ratio": 0.0,
+      "is_hub": false
+    },
+    {
+      "id": 49,
+      "name": "PLML",
+      "type": 4,
+      "type_label": "Sensory",
+      "degree": 2,
+      "btwn": 5e-05,
+      "agg_score": 0.0,
+      "absorb_ratio": 0.0,
+      "is_hub": false
+    },
+    {
+      "id": 50,
+      "name": "PLMR",
+      "type": 4,
+      "type_label": "Sensory",
+      "degree": 2,
+      "btwn": 5e-05,
+      "agg_score": 0.0,
+      "absorb_ratio": 0.0,
+      "is_hub": false
+    },
+    {
+      "id": 51,
+      "name": "ALML",
+      "type": 4,
+      "type_label": "Sensory",
+      "degree": 1,
+      "btwn": 0.0,
+      "agg_score": 0.0,
+      "absorb_ratio": 0.0,
+      "is_hub": false
+    },
+    {
+      "id": 52,
+      "name": "ALMR",
+      "type": 4,
+      "type_label": "Sensory",
+      "degree": 1,
+      "btwn": 0.0,
+      "agg_score": 0.0,
+      "absorb_ratio": 0.0,
+      "is_hub": false
+    },
+    {
+      "id": 53,
+      "name": "AVM",
+      "type": 4,
+      "type_label": "Sensory",
+      "degree": 2,
+      "btwn": 5e-05,
+      "agg_score": 0.0,
+      "absorb_ratio": 0.0,
+      "is_hub": false
+    },
+    {
+      "id": 54,
+      "name": "PVM",
+      "type": 4,
+      "type_label": "Sensory",
+      "degree": 2,
+      "btwn": 5e-05,
+      "agg_score": 0.0,
+      "absorb_ratio": 0.0,
+      "is_hub": false
+    },
+    {
+      "id": 55,
+      "name": "AVJL",
+      "type": 5,
+      "type_label": "Interneuron",
+      "degree": 4,
+      "btwn": 0.03189,
+      "agg_score": 0.0,
+      "absorb_ratio": 0.0,
+      "is_hub": false
+    },
+    {
+      "id": 56,
+      "name": "AVJR",
+      "type": 5,
+      "type_label": "Interneuron",
+      "degree": 4,
+      "btwn": 0.03189,
+      "agg_score": 0.0,
+      "absorb_ratio": 0.0,
+      "is_hub": false
+    },
+    {
+      "id": 57,
+      "name": "DVA",
+      "type": 5,
+      "type_label": "Interneuron",
+      "degree": 6,
+      "btwn": 0.06547,
+      "agg_score": 0.0,
+      "absorb_ratio": 0.0,
+      "is_hub": false
+    },
+    {
+      "id": 58,
+      "name": "PVP",
+      "type": 5,
+      "type_label": "Interneuron",
+      "degree": 2,
+      "btwn": 5e-05,
+      "agg_score": 0.0,
+      "absorb_ratio": 0.0,
+      "is_hub": false
+    },
+    {
+      "id": 59,
+      "name": "LUAL",
+      "type": 5,
+      "type_label": "Interneuron",
+      "degree": 2,
+      "btwn": 0.00045,
+      "agg_score": 0.0,
+      "absorb_ratio": 0.0,
+      "is_hub": false
+    },
+    {
+      "id": 60,
+      "name": "LUAR",
+      "type": 5,
+      "type_label": "Interneuron",
+      "degree": 2,
+      "btwn": 0.00045,
+      "agg_score": 0.0,
+      "absorb_ratio": 0.0,
+      "is_hub": false
+    }
+  ],
+  "baselines": {
+    "als": {
+      "total_dead": 3,
+      "final_alive": 58
+    },
+    "hub": {
+      "total_dead": 40,
+      "final_alive": 21
+    },
+    "random": {
+      "total_dead": 3,
+      "final_alive": 58
+    }
+  },
+  "correlations": {
+    "degree": -0.033,
+    "betweenness": 0.0056,
+    "absorb_ratio": 1.0
+  },
+  "hub_protectors": [],
+  "non_hub_protectors": [
+    {
+      "id": 17,
+      "name": "DA6",
+      "type": 1,
+      "type_label": "Motor-A (ALS)",
+      "degree": 3,
+      "btwn": 0.03322,
+      "agg_score": 0.6667,
+      "absorb_ratio": 0.2222,
+      "is_hub": false
+    }
+  ],
+  "outliers": [
+    {
+      "id": 17,
+      "name": "DA6",
+      "type": 1,
+      "type_label": "Motor-A (ALS)",
+      "degree": 3,
+      "btwn": 0.03322,
+      "agg_score": 0.6667,
+      "absorb_ratio": 0.2222,
+      "is_hub": false
+    }
+  ],
+  "summary": {
+    "top_protector": "DA6",
+    "top_agg_score": 0.6667,
+    "outlier_names": [
+      "DA6"
+    ]
+  }
+}

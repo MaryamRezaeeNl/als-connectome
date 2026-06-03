@@ -1,0 +1,348 @@
+{
+  "description": "Phase 8 two-tier cascade initiation test",
+  "config_id": 334,
+  "setup": {
+    "steps": 500,
+    "n_seeds": 5,
+    "tier2_thr": 5,
+    "tier2_win": 100,
+    "protection": "10x capacity (health loss * 0.1)"
+  },
+  "first_10_deaths": [
+    {
+      "rank": 1,
+      "idx": 40,
+      "name": "DD1",
+      "death_step": 201,
+      "vulnerability": 0.7,
+      "total_degree": 4,
+      "is_bridge": false,
+      "load_contribution": 0.03061224489795918,
+      "secondary_deaths_30": 3
+    },
+    {
+      "rank": 2,
+      "idx": 25,
+      "name": "DA2",
+      "death_step": 206,
+      "vulnerability": 1.0,
+      "total_degree": 6,
+      "is_bridge": false,
+      "load_contribution": 0.043731778425655975,
+      "secondary_deaths_30": 1
+    },
+    {
+      "rank": 3,
+      "idx": 33,
+      "name": "DB1",
+      "death_step": 208,
+      "vulnerability": 0.9,
+      "total_degree": 5,
+      "is_bridge": false,
+      "load_contribution": 0.04081632653061225,
+      "secondary_deaths_30": 0
+    },
+    {
+      "rank": 4,
+      "idx": 41,
+      "name": "DD2",
+      "death_step": 210,
+      "vulnerability": 0.7,
+      "total_degree": 5,
+      "is_bridge": false,
+      "load_contribution": 0.034985422740524776,
+      "secondary_deaths_30": 2
+    },
+    {
+      "rank": 5,
+      "idx": 42,
+      "name": "DD3",
+      "death_step": 215,
+      "vulnerability": 0.7,
+      "total_degree": 5,
+      "is_bridge": false,
+      "load_contribution": 0.034985422740524776,
+      "secondary_deaths_30": 3
+    },
+    {
+      "rank": 6,
+      "idx": 46,
+      "name": "VA1",
+      "death_step": 219,
+      "vulnerability": 0.95,
+      "total_degree": 5,
+      "is_bridge": false,
+      "load_contribution": 0.04081632653061225,
+      "secondary_deaths_30": 2
+    },
+    {
+      "rank": 7,
+      "idx": 47,
+      "name": "VA2",
+      "death_step": 221,
+      "vulnerability": 0.95,
+      "total_degree": 5,
+      "is_bridge": false,
+      "load_contribution": 0.03644314868804664,
+      "secondary_deaths_30": 1
+    },
+    {
+      "rank": 8,
+      "idx": 56,
+      "name": "VD1",
+      "death_step": 225,
+      "vulnerability": 0.65,
+      "total_degree": 4,
+      "is_bridge": false,
+      "load_contribution": 0.03061224489795918,
+      "secondary_deaths_30": 1
+    },
+    {
+      "rank": 9,
+      "idx": 57,
+      "name": "VD2",
+      "death_step": 225,
+      "vulnerability": 0.65,
+      "total_degree": 5,
+      "is_bridge": false,
+      "load_contribution": 0.034985422740524776,
+      "secondary_deaths_30": 3
+    },
+    {
+      "rank": 10,
+      "idx": 43,
+      "name": "DD4",
+      "death_step": 228,
+      "vulnerability": 0.7,
+      "total_degree": 4,
+      "is_bridge": true,
+      "load_contribution": 0.027696793002915453,
+      "secondary_deaths_30": 1
+    }
+  ],
+  "protection_groups": {
+    "A": [
+      "DD1"
+    ],
+    "B": [
+      "DD1",
+      "DA2",
+      "DB1"
+    ],
+    "C": [
+      "DD1",
+      "DA2",
+      "DB1",
+      "DD2",
+      "DD3"
+    ],
+    "D": [
+      "DA6",
+      "AVDL"
+    ],
+    "E": [
+      "DA1",
+      "DA2",
+      "DA3"
+    ],
+    "F": [
+      "AVAL",
+      "AVAR",
+      "AVBL"
+    ]
+  },
+  "scenarios": [
+    {
+      "genuine_rate": 1.0,
+      "c1_rate": 1.0,
+      "c2_rate": 1.0,
+      "c3_rate": 1.0,
+      "tipping_step": 248.0,
+      "peak_decline": 9.0,
+      "coherence_r": 0.6864800023960578,
+      "plateau": 11.0,
+      "total_deaths": 50.0,
+      "first_death": 202.0,
+      "tier2_activation": 220.0,
+      "load_cascade_size": 32.0,
+      "label": "baseline",
+      "protected_idx": [],
+      "protected_names": []
+    },
+    {
+      "genuine_rate": 0.0,
+      "c1_rate": 0.0,
+      "c2_rate": 0.4,
+      "c3_rate": 1.0,
+      "tipping_step": 487.0,
+      "peak_decline": 3.0,
+      "coherence_r": 0.012652507217352255,
+      "plateau": 53.0,
+      "total_deaths": 8.0,
+      "first_death": 385.0,
+      "tier2_activation": 485.0,
+      "load_cascade_size": 55.0,
+      "label": "full_therapy",
+      "protected_idx": [],
+      "protected_names": []
+    },
+    {
+      "genuine_rate": 1.0,
+      "c1_rate": 1.0,
+      "c2_rate": 1.0,
+      "c3_rate": 1.0,
+      "tipping_step": 248.0,
+      "peak_decline": 9.0,
+      "coherence_r": 0.6926389751312436,
+      "plateau": 12.0,
+      "total_deaths": 49.0,
+      "first_death": 203.0,
+      "tier2_activation": 220.0,
+      "load_cascade_size": 31.0,
+      "label": "protect_A",
+      "protected_idx": [
+        40
+      ],
+      "protected_names": [
+        "DD1"
+      ]
+    },
+    {
+      "genuine_rate": 1.0,
+      "c1_rate": 1.0,
+      "c2_rate": 1.0,
+      "c3_rate": 1.0,
+      "tipping_step": 248.0,
+      "peak_decline": 9.0,
+      "coherence_r": 0.6823358880909548,
+      "plateau": 14.0,
+      "total_deaths": 47.0,
+      "first_death": 203.0,
+      "tier2_activation": 220.0,
+      "load_cascade_size": 29.0,
+      "label": "protect_B",
+      "protected_idx": [
+        40,
+        25,
+        33
+      ],
+      "protected_names": [
+        "DD1",
+        "DA2",
+        "DB1"
+      ]
+    },
+    {
+      "genuine_rate": 1.0,
+      "c1_rate": 1.0,
+      "c2_rate": 1.0,
+      "c3_rate": 1.0,
+      "tipping_step": 248.0,
+      "peak_decline": 9.0,
+      "coherence_r": 0.6915572308623915,
+      "plateau": 16.0,
+      "total_deaths": 45.0,
+      "first_death": 209.0,
+      "tier2_activation": 226.0,
+      "load_cascade_size": 28.0,
+      "label": "protect_C",
+      "protected_idx": [
+        40,
+        25,
+        33,
+        41,
+        42
+      ],
+      "protected_names": [
+        "DD1",
+        "DA2",
+        "DB1",
+        "DD2",
+        "DD3"
+      ]
+    },
+    {
+      "genuine_rate": 1.0,
+      "c1_rate": 1.0,
+      "c2_rate": 1.0,
+      "c3_rate": 1.0,
+      "tipping_step": 248.0,
+      "peak_decline": 8.0,
+      "coherence_r": 0.6903833485254974,
+      "plateau": 13.0,
+      "total_deaths": 48.0,
+      "first_death": 202.0,
+      "tier2_activation": 220.0,
+      "load_cascade_size": 31.0,
+      "label": "protect_D_DA6AVDL",
+      "protected_idx": [
+        29,
+        12
+      ],
+      "protected_names": [
+        "DA6",
+        "AVDL"
+      ]
+    },
+    {
+      "genuine_rate": 1.0,
+      "c1_rate": 1.0,
+      "c2_rate": 1.0,
+      "c3_rate": 1.0,
+      "tipping_step": 248.0,
+      "peak_decline": 8.0,
+      "coherence_r": 0.6741732374320164,
+      "plateau": 14.0,
+      "total_deaths": 47.0,
+      "first_death": 202.0,
+      "tier2_activation": 221.0,
+      "load_cascade_size": 29.0,
+      "label": "protect_E_vuln",
+      "protected_idx": [
+        24,
+        25,
+        26
+      ],
+      "protected_names": [
+        "DA1",
+        "DA2",
+        "DA3"
+      ]
+    },
+    {
+      "genuine_rate": 1.0,
+      "c1_rate": 1.0,
+      "c2_rate": 1.0,
+      "c3_rate": 1.0,
+      "tipping_step": 239.0,
+      "peak_decline": 9.0,
+      "coherence_r": 0.7241319789181733,
+      "plateau": 14.0,
+      "total_deaths": 47.0,
+      "first_death": 202.0,
+      "tier2_activation": 220.0,
+      "load_cascade_size": 31.0,
+      "label": "protect_F_degree",
+      "protected_idx": [
+        10,
+        11,
+        6
+      ],
+      "protected_names": [
+        "AVAL",
+        "AVAR",
+        "AVBL"
+      ]
+    }
+  ],
+  "random_stats": {
+    "n": 50,
+    "plateau_mean": 12.6,
+    "plateau_std": 0.5291502622129182,
+    "tier2_mean": 220.96,
+    "tier2_std": 1.4277254638059798,
+    "genuine_mean": 1.0,
+    "genuine_std": 0.0
+  },
+  "runtime_s": 20.4
+}

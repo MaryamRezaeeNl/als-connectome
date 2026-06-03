@@ -1,0 +1,174 @@
+{
+  "params": {
+    "absorbers": [
+      6,
+      59,
+      60,
+      17
+    ],
+    "absorber_names": [
+      "AVDL",
+      "LUAL",
+      "LUAR",
+      "DA6"
+    ],
+    "pulse_fraction": 0.1,
+    "absorber_boost": 1.2,
+    "random_seeds": 20
+  },
+  "results": {
+    "als": {
+      "base": {
+        "final_alive": 58,
+        "total_dead": 3,
+        "depth": 0,
+        "survival_rate": 0.9508
+      },
+      "topo": {
+        "final_alive": 1,
+        "total_dead": 60,
+        "depth": 11,
+        "survival_rate": 0.0164,
+        "energy_before": 1264.3607,
+        "energy_after": 250.1135
+      },
+      "pulse": {
+        "final_alive": 58,
+        "total_dead": 3,
+        "depth": 0,
+        "survival_rate": 0.9508,
+        "absorbers_overloaded": 0
+      },
+      "combined": {
+        "final_alive": 1,
+        "total_dead": 60,
+        "depth": 9,
+        "survival_rate": 0.0164,
+        "energy_before": 1264.3607,
+        "energy_after": 250.1135
+      }
+    },
+    "hub": {
+      "base": {
+        "final_alive": 21,
+        "total_dead": 40,
+        "depth": 6,
+        "survival_rate": 0.3443
+      },
+      "topo": {
+        "final_alive": 7,
+        "total_dead": 54,
+        "depth": 6,
+        "survival_rate": 0.1148,
+        "energy_before": 1264.3607,
+        "energy_after": 250.1135
+      },
+      "pulse": {
+        "final_alive": 1,
+        "total_dead": 60,
+        "depth": 6,
+        "survival_rate": 0.0164,
+        "absorbers_overloaded": 4
+      },
+      "combined": {
+        "final_alive": 7,
+        "total_dead": 54,
+        "depth": 6,
+        "survival_rate": 0.1148,
+        "energy_before": 1264.3607,
+        "energy_after": 250.1135
+      }
+    },
+    "random": {
+      "base": {
+        "final_alive": 49.25,
+        "total_dead": 11.75,
+        "depth": 1.3,
+        "survival_rate": 0.8074
+      },
+      "topo": {
+        "final_alive": 29.05,
+        "total_dead": 31.95,
+        "depth": 4.35,
+        "survival_rate": 0.4762
+      },
+      "pulse": {
+        "final_alive": 52.15,
+        "total_dead": 8.85,
+        "depth": 0.75,
+        "survival_rate": 0.8549
+      },
+      "combined": {
+        "final_alive": 30.2,
+        "total_dead": 30.8,
+        "depth": 3.8,
+        "survival_rate": 0.4951
+      }
+    }
+  },
+  "gains": {
+    "als": {
+      "topo": -57,
+      "pulse": 0,
+      "combined": -57
+    },
+    "hub": {
+      "topo": -14,
+      "pulse": -20,
+      "combined": -14
+    },
+    "random": {
+      "topo": -20.2,
+      "pulse": 2.9,
+      "combined": -19.05
+    }
+  },
+  "pf_sweep": [
+    {
+      "pf": 0.05,
+      "final_alive": 58,
+      "gain": 0
+    },
+    {
+      "pf": 0.1,
+      "final_alive": 58,
+      "gain": 0
+    },
+    {
+      "pf": 0.2,
+      "final_alive": 58,
+      "gain": 0
+    },
+    {
+      "pf": 0.3,
+      "final_alive": 1,
+      "gain": -57
+    }
+  ],
+  "boost_sweep": [
+    {
+      "boost": 1.0,
+      "final_alive": 58,
+      "gain": 0
+    },
+    {
+      "boost": 1.2,
+      "final_alive": 58,
+      "gain": 0
+    },
+    {
+      "boost": 1.5,
+      "final_alive": 58,
+      "gain": 0
+    },
+    {
+      "boost": 2.0,
+      "final_alive": 58,
+      "gain": 0
+    }
+  ],
+  "summary": {
+    "best_pf": 0.05,
+    "best_boost": 1.0
+  }
+}

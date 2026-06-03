@@ -1,0 +1,22 @@
+{
+  "description": "Phase R2.5 Minimal Biomarker Panel",
+  "panel": [
+    "aggregationAmplification"
+  ],
+  "loo_accuracy": 1.0,
+  "selection_order": [
+    {
+      "rank": 1,
+      "feature": "aggregationAmplification",
+      "loo_accuracy": 1.0,
+      "stability": "stable",
+      "confidence": "medium"
+    }
+  ],
+  "stability_summary": {
+    "aggregationAmplification": "stable"
+  },
+  "clinical_summary": {
+    "aggregationAmplification": "medium"
+  }
+}
