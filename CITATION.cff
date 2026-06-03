@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+authors:
+  - family-names: Rezaee
+    given-names: Maryam
+title: "ALS Connectome Degeneration Project"
+version: v1.0.0
+date-released: 2026-06-03
+url: "https://github.com/MaryamRezaeeNl/als-connectome"
+doi: 10.5281/zenodo.20528826
+abstract: "Computational study of ALS-like cascade dynamics
+  on the C. elegans motor connectome (61 neurons, 127 synapses).
+  Multi-phase simulation framework covering criticality emergence,
+  therapeutic windows, disease subtypes, and pre-symptomatic
+  early-warning signals."
+keywords:
+  - neurodegeneration
+  - connectome
+  - ALS
+  - computational neuroscience
+  - tipping points
+  - C. elegans
+license: CC-BY-4.0
