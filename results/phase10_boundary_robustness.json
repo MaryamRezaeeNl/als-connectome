@@ -1,0 +1,908 @@
+{
+  "description": "Phase 10 therapeutic boundary robustness",
+  "setup": {
+    "n_configs": 20,
+    "steps": 500,
+    "n_seeds": 3,
+    "strengths": [
+      0.1,
+      0.2,
+      0.3,
+      0.4,
+      0.5,
+      0.6,
+      0.7,
+      0.8,
+      0.9
+    ],
+    "start_ts": [
+      0,
+      25,
+      50,
+      75,
+      100,
+      125,
+      150,
+      175,
+      200
+    ]
+  },
+  "config_results": [
+    {
+      "config_id": 334,
+      "baseline_tip": 251.0,
+      "baseline_genuine": 1.0,
+      "boundary": {
+        "slope": 350.0,
+        "intercept": -187.49999999999986,
+        "r2": 0.9800000000000003,
+        "n_points": 4,
+        "boundary_pts": [
+          [
+            0.6,
+            25.0
+          ],
+          [
+            0.7,
+            50.0
+          ],
+          [
+            0.8,
+            100.0
+          ],
+          [
+            0.9,
+            125.0
+          ]
+        ],
+        "min_strength_prev": 0.6,
+        "max_start_t_any": 125.0
+      },
+      "outcome_flat": "pDDDD**PPppDDD**PPpIDDDD**PpppDDDDDPIpppDDD**IIIIppDD*IIpIIIIDDIIIIpIIIIIIIIIIIpI"
+    },
+    {
+      "config_id": 235,
+      "baseline_tip": 325.0,
+      "baseline_genuine": 1.0,
+      "boundary": {
+        "slope": 83.33333333333327,
+        "intercept": 144.4444444444444,
+        "r2": 0.3000000000000002,
+        "n_points": 9,
+        "boundary_pts": [
+          [
+            0.1,
+            75.0
+          ],
+          [
+            0.2,
+            200.0
+          ],
+          [
+            0.3,
+            200.0
+          ],
+          [
+            0.4,
+            200.0
+          ],
+          [
+            0.5,
+            200.0
+          ],
+          [
+            0.6,
+            200.0
+          ],
+          [
+            0.7,
+            200.0
+          ],
+          [
+            0.8,
+            200.0
+          ],
+          [
+            0.9,
+            200.0
+          ]
+        ],
+        "min_strength_prev": 0.1,
+        "max_start_t_any": 200.0
+      },
+      "outcome_flat": "**PPPPPPP**PPPPPPP***P*PPPP***PPPPPPp***PPPPPp***PPPPPI***PPP*PI****PPPPI*****PPP"
+    },
+    {
+      "config_id": 382,
+      "baseline_tip": 199.0,
+      "baseline_genuine": 1.0,
+      "boundary": {
+        "slope": 124.99999999999997,
+        "intercept": -58.33333333333336,
+        "r2": 0.7500000000000003,
+        "n_points": 3,
+        "boundary_pts": [
+          [
+            0.7,
+            25.0
+          ],
+          [
+            0.8,
+            50.0
+          ],
+          [
+            0.9,
+            50.0
+          ]
+        ],
+        "min_strength_prev": 0.7,
+        "max_start_t_any": 50.0
+      },
+      "outcome_flat": "ppDDDD*PPIpDDDD*PPIppDDDD*PIIppDDDDDIIIpppDDDIIIIIppppIIIIIIIIIIIIIIIIIIIIIIIIIII"
+    },
+    {
+      "config_id": 391,
+      "baseline_tip": 238.0,
+      "baseline_genuine": 1.0,
+      "boundary": {
+        "slope": 192.8571428571429,
+        "intercept": -37.85714285714293,
+        "r2": 0.9055900621118012,
+        "n_points": 6,
+        "boundary_pts": [
+          [
+            0.4,
+            25.0
+          ],
+          [
+            0.5,
+            75.0
+          ],
+          [
+            0.6,
+            75.0
+          ],
+          [
+            0.7,
+            100.0
+          ],
+          [
+            0.8,
+            125.0
+          ],
+          [
+            0.9,
+            125.0
+          ]
+        ],
+        "min_strength_prev": 0.4,
+        "max_start_t_any": 125.0
+      },
+      "outcome_flat": "DppD*PPPPIDp***PPPIDID***PPIIDp**PPPDIIDIp**PIIIIIII**IDIIIIIIpIIDIIIIIIIIpIIIIII"
+    },
+    {
+      "config_id": 21,
+      "baseline_tip": 241.0,
+      "baseline_genuine": 1.0,
+      "boundary": {
+        "slope": 207.14285714285722,
+        "intercept": -38.80952380952392,
+        "r2": 0.9361781076066791,
+        "n_points": 6,
+        "boundary_pts": [
+          [
+            0.4,
+            50.0
+          ],
+          [
+            0.5,
+            50.0
+          ],
+          [
+            0.6,
+            100.0
+          ],
+          [
+            0.7,
+            100.0
+          ],
+          [
+            0.8,
+            125.0
+          ],
+          [
+            0.9,
+            150.0
+          ]
+        ],
+        "min_strength_prev": 0.4,
+        "max_start_t_any": 150.0
+      },
+      "outcome_flat": "pDD**PPPPpDD***PPPpDD*****PIpDDD***PIppDD***PIIpppDD**IIpppppD*IIIIIppppIIIIIIIII"
+    },
+    {
+      "config_id": 37,
+      "baseline_tip": 226.0,
+      "baseline_genuine": 1.0,
+      "boundary": {
+        "slope": 250.0000000000002,
+        "intercept": -125.00000000000006,
+        "r2": 0.5555555555555556,
+        "n_points": 4,
+        "boundary_pts": [
+          [
+            0.6,
+            0.0
+          ],
+          [
+            0.7,
+            75.0
+          ],
+          [
+            0.8,
+            100.0
+          ],
+          [
+            0.9,
+            75.0
+          ]
+        ],
+        "min_strength_prev": 0.6,
+        "max_start_t_any": 100.0
+      },
+      "outcome_flat": "ppDDD**PPppDDDD*PPIpDppD*PPIppIpp**PIppppIp*DIIIIppIDIIIIIIIIpIIIIIIIIIIIIIIIIIII"
+    },
+    {
+      "config_id": 118,
+      "baseline_tip": 209.0,
+      "baseline_genuine": 1.0,
+      "boundary": {
+        "slope": 249.99999999999955,
+        "intercept": -174.99999999999952,
+        "r2": 1.0,
+        "n_points": 2,
+        "boundary_pts": [
+          [
+            0.8,
+            25.0
+          ],
+          [
+            0.9,
+            50.0
+          ]
+        ],
+        "min_strength_prev": 0.8,
+        "max_start_t_any": 50.0
+      },
+      "outcome_flat": "pDDDDDDPPppDDDDD*PppDDDDDD*pppDDDDDDpIpDDDDDDppIIppDppIIpIIIpppIIIIIIIIIIIIIIIIII"
+    },
+    {
+      "config_id": 178,
+      "baseline_tip": 203.0,
+      "baseline_genuine": 1.0,
+      "boundary": {
+        "slope": 500.00000000000006,
+        "intercept": -358.33333333333354,
+        "r2": 0.9230769230769227,
+        "n_points": 3,
+        "boundary_pts": [
+          [
+            0.7,
+            0.0
+          ],
+          [
+            0.8,
+            25.0
+          ],
+          [
+            0.9,
+            100.0
+          ]
+        ],
+        "min_strength_prev": 0.7,
+        "max_start_t_any": 100.0
+      },
+      "outcome_flat": "ppDDDD**PppDDDDD*PpppDDDDDPIpppDDDDDIIpppDpD*IIIpppppIIIIIIIIIIIIIIIIIIIIIIIIIIII"
+    },
+    {
+      "config_id": 188,
+      "baseline_tip": 239.0,
+      "baseline_genuine": 1.0,
+      "boundary": {
+        "slope": 250.0000000000001,
+        "intercept": -100.00000000000014,
+        "r2": 1.0,
+        "n_points": 6,
+        "boundary_pts": [
+          [
+            0.4,
+            0.0
+          ],
+          [
+            0.5,
+            25.0
+          ],
+          [
+            0.6,
+            50.0
+          ],
+          [
+            0.7,
+            75.0
+          ],
+          [
+            0.8,
+            100.0
+          ],
+          [
+            0.9,
+            125.0
+          ]
+        ],
+        "min_strength_prev": 0.4,
+        "max_start_t_any": 125.0
+      },
+      "outcome_flat": "pDD***PPPppDD***PPppDDD***PIppDDD*PPIpppDDD**IpppppDD*IpppIIppDIIIIpIIIIIIIIIIIII"
+    },
+    {
+      "config_id": 224,
+      "baseline_tip": 265.0,
+      "baseline_genuine": 1.0,
+      "boundary": {
+        "slope": 221.80451127819546,
+        "intercept": -37.969924812030015,
+        "r2": 0.9460096023190501,
+        "n_points": 8,
+        "boundary_pts": [
+          [
+            0.1,
+            0.0
+          ],
+          [
+            0.3,
+            0.0
+          ],
+          [
+            0.4,
+            50.0
+          ],
+          [
+            0.5,
+            75.0
+          ],
+          [
+            0.6,
+            100.0
+          ],
+          [
+            0.7,
+            125.0
+          ],
+          [
+            0.8,
+            150.0
+          ],
+          [
+            0.9,
+            150.0
+          ]
+        ],
+        "min_strength_prev": 0.1,
+        "max_start_t_any": 150.0
+      },
+      "outcome_flat": "*p***PPPPppD*****PppD***P**IppD*****IppDD***PIpppDD***IIpIppD**IIIIppppIIIIIIIIII"
+    },
+    {
+      "config_id": 241,
+      "baseline_tip": 231.0,
+      "baseline_genuine": 0.6666666666666666,
+      "boundary": {
+        "slope": -1.0442278129205021e-13,
+        "intercept": 199.99999999999991,
+        "r2": NaN,
+        "n_points": 9,
+        "boundary_pts": [
+          [
+            0.1,
+            200.0
+          ],
+          [
+            0.2,
+            200.0
+          ],
+          [
+            0.3,
+            200.0
+          ],
+          [
+            0.4,
+            200.0
+          ],
+          [
+            0.5,
+            200.0
+          ],
+          [
+            0.6,
+            200.0
+          ],
+          [
+            0.7,
+            200.0
+          ],
+          [
+            0.8,
+            200.0
+          ],
+          [
+            0.9,
+            200.0
+          ]
+        ],
+        "min_strength_prev": 0.1,
+        "max_start_t_any": 200.0
+      },
+      "outcome_flat": "******PPP******PPP******PPP******PPP*******P*********P***************************"
+    },
+    {
+      "config_id": 263,
+      "baseline_tip": 234.0,
+      "baseline_genuine": 1.0,
+      "boundary": {
+        "slope": 174.99999999999997,
+        "intercept": -87.4999999999999,
+        "r2": 0.890909090909091,
+        "n_points": 4,
+        "boundary_pts": [
+          [
+            0.6,
+            25.0
+          ],
+          [
+            0.7,
+            25.0
+          ],
+          [
+            0.8,
+            50.0
+          ],
+          [
+            0.9,
+            75.0
+          ]
+        ],
+        "min_strength_prev": 0.6,
+        "max_start_t_any": 75.0
+      },
+      "outcome_flat": "IpDDD**PPIpDDD***PpppDDDD*PIpppDDDDPIpppppDDDIIpIIpppDIIIIIIpIpIIIIIIIIIIIIIIIIII"
+    },
+    {
+      "config_id": 312,
+      "baseline_tip": 265.0,
+      "baseline_genuine": 1.0,
+      "boundary": {
+        "slope": 178.57142857142856,
+        "intercept": -21.428571428571377,
+        "r2": 0.909090909090909,
+        "n_points": 7,
+        "boundary_pts": [
+          [
+            0.3,
+            50.0
+          ],
+          [
+            0.4,
+            50.0
+          ],
+          [
+            0.5,
+            50.0
+          ],
+          [
+            0.6,
+            75.0
+          ],
+          [
+            0.7,
+            100.0
+          ],
+          [
+            0.8,
+            125.0
+          ],
+          [
+            0.9,
+            150.0
+          ]
+        ],
+        "min_strength_prev": 0.3,
+        "max_start_t_any": 150.0
+      },
+      "outcome_flat": "Dp*****PPIpDD**PPPpp****P*PpIpDD***PIIIpDD**PIpDpDDD**IIIppDDD*IIIpIIpppIIIIIIppD"
+    },
+    {
+      "config_id": 329,
+      "baseline_tip": 294.0,
+      "baseline_genuine": 1.0,
+      "boundary": {
+        "slope": -1.0442278129205021e-13,
+        "intercept": 199.99999999999991,
+        "r2": NaN,
+        "n_points": 9,
+        "boundary_pts": [
+          [
+            0.1,
+            200.0
+          ],
+          [
+            0.2,
+            200.0
+          ],
+          [
+            0.3,
+            200.0
+          ],
+          [
+            0.4,
+            200.0
+          ],
+          [
+            0.5,
+            200.0
+          ],
+          [
+            0.6,
+            200.0
+          ],
+          [
+            0.7,
+            200.0
+          ],
+          [
+            0.8,
+            200.0
+          ],
+          [
+            0.9,
+            200.0
+          ]
+        ],
+        "min_strength_prev": 0.1,
+        "max_start_t_any": 200.0
+      },
+      "outcome_flat": "***PPPPPP***PPPPPP****PPPPP****PPPPP******PPP*****P*PP******PP********PP*********"
+    },
+    {
+      "config_id": 424,
+      "baseline_tip": 215.0,
+      "baseline_genuine": 1.0,
+      "boundary": {
+        "slope": 324.99999999999983,
+        "intercept": -174.99999999999974,
+        "r2": 0.9657142857142861,
+        "n_points": 4,
+        "boundary_pts": [
+          [
+            0.6,
+            25.0
+          ],
+          [
+            0.7,
+            50.0
+          ],
+          [
+            0.8,
+            75.0
+          ],
+          [
+            0.9,
+            125.0
+          ]
+        ],
+        "min_strength_prev": 0.6,
+        "max_start_t_any": 125.0
+      },
+      "outcome_flat": "pDDDD**PPIDDDD**PPIpDDDD*PPIpDDDDD*PIIpDDDDDPIIIppDDD*IIIIIppppIIIIIIIIIIIIIIIIII"
+    },
+    {
+      "config_id": 493,
+      "baseline_tip": 244.0,
+      "baseline_genuine": 1.0,
+      "boundary": {
+        "slope": 299.9999999999999,
+        "intercept": -114.99999999999984,
+        "r2": 0.972972972972973,
+        "n_points": 5,
+        "boundary_pts": [
+          [
+            0.5,
+            25.0
+          ],
+          [
+            0.6,
+            75.0
+          ],
+          [
+            0.7,
+            100.0
+          ],
+          [
+            0.8,
+            125.0
+          ],
+          [
+            0.9,
+            150.0
+          ]
+        ],
+        "min_strength_prev": 0.5,
+        "max_start_t_any": 150.0
+      },
+      "outcome_flat": "IpDD*P*PPIpDD***PPIpDDD****IppDD***PIIppDD***IIIppDD**IIIIIppp*IIIIIpppIIIIIIIIII"
+    },
+    {
+      "config_id": 496,
+      "baseline_tip": 231.0,
+      "baseline_genuine": 1.0,
+      "boundary": {
+        "slope": 59.42622950819671,
+        "intercept": -2.663934426229501,
+        "r2": 0.3628127696289907,
+        "n_points": 7,
+        "boundary_pts": [
+          [
+            0.2,
+            25.0
+          ],
+          [
+            0.4,
+            25.0
+          ],
+          [
+            0.5,
+            25.0
+          ],
+          [
+            0.6,
+            0.0
+          ],
+          [
+            0.7,
+            25.0
+          ],
+          [
+            0.8,
+            50.0
+          ],
+          [
+            0.9,
+            75.0
+          ]
+        ],
+        "min_strength_prev": 0.2,
+        "max_start_t_any": 75.0
+      },
+      "outcome_flat": "I*D***PPPI*D**DPP*IppDDDDP*IIpDDDDD*IIpppDDDDIIIppppDDppppIIIppIIpIIpIIIIIIIIIIII"
+    },
+    {
+      "config_id": 497,
+      "baseline_tip": 224.0,
+      "baseline_genuine": 1.0,
+      "boundary": {
+        "slope": 499.9999999999999,
+        "intercept": -341.6666666666667,
+        "r2": 0.9230769230769231,
+        "n_points": 3,
+        "boundary_pts": [
+          [
+            0.7,
+            0.0
+          ],
+          [
+            0.8,
+            75.0
+          ],
+          [
+            0.9,
+            100.0
+          ]
+        ],
+        "min_strength_prev": 0.7,
+        "max_start_t_any": 100.0
+      },
+      "outcome_flat": "IpDDDD*PPIpDDDDD**pppDDDD**IpppDDD**IpppDDDD*IIpIIppDDIIIIIIIppIIIIIIIIIIIIIIIIII"
+    },
+    {
+      "config_id": 83,
+      "baseline_tip": 280.0,
+      "baseline_genuine": 1.0,
+      "boundary": {
+        "slope": 314.28571428571445,
+        "intercept": -95.95238095238118,
+        "r2": 0.8297142857142855,
+        "n_points": 6,
+        "boundary_pts": [
+          [
+            0.4,
+            50.0
+          ],
+          [
+            0.5,
+            50.0
+          ],
+          [
+            0.6,
+            50.0
+          ],
+          [
+            0.7,
+            150.0
+          ],
+          [
+            0.8,
+            175.0
+          ],
+          [
+            0.9,
+            175.0
+          ]
+        ],
+        "min_strength_prev": 0.4,
+        "max_start_t_any": 175.0
+      },
+      "outcome_flat": "pID**PPPPpID***PPPpIp***PPPppIDDDPP*IIIppD*P*IppIIpD*PIIIIII***IIIIppp**IIIIpIIII"
+    },
+    {
+      "config_id": 87,
+      "baseline_tip": 249.0,
+      "baseline_genuine": 0.6666666666666666,
+      "boundary": {
+        "slope": -1.0442278129205021e-13,
+        "intercept": 199.99999999999991,
+        "r2": NaN,
+        "n_points": 9,
+        "boundary_pts": [
+          [
+            0.1,
+            200.0
+          ],
+          [
+            0.2,
+            200.0
+          ],
+          [
+            0.3,
+            200.0
+          ],
+          [
+            0.4,
+            200.0
+          ],
+          [
+            0.5,
+            200.0
+          ],
+          [
+            0.6,
+            200.0
+          ],
+          [
+            0.7,
+            200.0
+          ],
+          [
+            0.8,
+            200.0
+          ],
+          [
+            0.9,
+            200.0
+          ]
+        ],
+        "min_strength_prev": 0.1,
+        "max_start_t_any": 200.0
+      },
+      "outcome_flat": "********P********P*************************P*************************************"
+    }
+  ],
+  "aggregate": {
+    "n_with_boundary": 17,
+    "slope_mean": 251.907130410404,
+    "slope_std": 119.6910308120676,
+    "slope_min": 59.42622950819671,
+    "slope_max": 500.00000000000006,
+    "intercept_mean": -106.68060983380984,
+    "intercept_std": 117.04694097949788,
+    "r2_mean": 0.8323942051633805,
+    "r2_frac_gt090": 0.6470588235294118,
+    "slopes": [
+      350.0,
+      83.33333333333327,
+      124.99999999999997,
+      192.8571428571429,
+      207.14285714285722,
+      250.0000000000002,
+      249.99999999999955,
+      500.00000000000006,
+      250.0000000000001,
+      221.80451127819546,
+      174.99999999999997,
+      178.57142857142856,
+      324.99999999999983,
+      299.9999999999999,
+      59.42622950819671,
+      499.9999999999999,
+      314.28571428571445
+    ],
+    "intercepts": [
+      -187.49999999999986,
+      144.4444444444444,
+      -58.33333333333336,
+      -37.85714285714293,
+      -38.80952380952392,
+      -125.00000000000006,
+      -174.99999999999952,
+      -358.33333333333354,
+      -100.00000000000014,
+      -37.969924812030015,
+      -87.4999999999999,
+      -21.428571428571377,
+      -174.99999999999974,
+      -114.99999999999984,
+      -2.663934426229501,
+      -341.6666666666667,
+      -95.95238095238118
+    ],
+    "r2s": [
+      0.9800000000000003,
+      0.3000000000000002,
+      0.7500000000000003,
+      0.9055900621118012,
+      0.9361781076066791,
+      0.5555555555555556,
+      1.0,
+      0.9230769230769227,
+      1.0,
+      0.9460096023190501,
+      0.890909090909091,
+      0.909090909090909,
+      0.9657142857142861,
+      0.972972972972973,
+      0.3628127696289907,
+      0.9230769230769231,
+      0.8297142857142855
+    ]
+  },
+  "correlations": {
+    "aggregationAmplification": {
+      "r_slope": 0.6449935251550283,
+      "r_intercept": -0.8107012193200934
+    },
+    "mitochondrialFragility": {
+      "r_slope": -0.4717817727263736,
+      "r_intercept": 0.4513952179827785
+    },
+    "atpCollapseThreshold": {
+      "r_slope": 0.07802346754857,
+      "r_intercept": -0.18178073639467424
+    },
+    "glutamateSensitivity": {
+      "r_slope": 0.12312507246058689,
+      "r_intercept": 0.035252594799630325
+    },
+    "calciumStressGain": {
+      "r_slope": -0.49728726719919325,
+      "r_intercept": 0.5025974206708897
+    },
+    "oxidativeFeedback": {
+      "r_slope": 0.09124911679603433,
+      "r_intercept": -0.1334327556193719
+    },
+    "recoveryIrreversibility": {
+      "r_slope": -0.32053025649700667,
+      "r_intercept": 0.25742123317728205
+    }
+  },
+  "verdict": "Two distinct boundary classes exist",
+  "runtime_s": 387.1
+}

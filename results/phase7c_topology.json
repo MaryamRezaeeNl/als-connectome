@@ -1,0 +1,837 @@
+{
+  "experiment": {
+    "n_configs": 10,
+    "n_seeds": 3,
+    "n_topo": 10,
+    "steps_base": 500,
+    "steps_therapy": 300,
+    "criterion": {
+      "slope_thr": 4,
+      "coh_thr": 0.3,
+      "silent_min": 50,
+      "tipping_thr": 55
+    },
+    "best_therapy": {
+      "type": "agg_sup",
+      "strength": 0.855,
+      "start_t": 13
+    }
+  },
+  "topology_metrics": {
+    "celegans": {
+      "n_edges": 127.0,
+      "degree_variance": 6.727,
+      "avg_clustering": 0.1169,
+      "avg_shortest_path": 3.1443,
+      "modularity": 0.5069,
+      "n_bridges": 4.0
+    },
+    "er": {
+      "n_edges": 127.0,
+      "degree_variance": 3.6288,
+      "avg_clustering": 0.0299,
+      "avg_shortest_path": 2.9673,
+      "modularity": 0.4223,
+      "n_bridges": 3.1
+    },
+    "ba": {
+      "n_edges": 127.0,
+      "degree_variance": 11.0222,
+      "avg_clustering": 0.0752,
+      "avg_shortest_path": 2.7144,
+      "modularity": 0.3984,
+      "n_bridges": 0.1
+    },
+    "ws": {
+      "n_edges": 127.0,
+      "degree_variance": 1.1142,
+      "avg_clustering": 0.0951,
+      "avg_shortest_path": 3.1905,
+      "modularity": 0.5173,
+      "n_bridges": 0.0
+    },
+    "shuffled": {
+      "n_edges": 127.0,
+      "degree_variance": 6.727,
+      "avg_clustering": 0.0507,
+      "avg_shortest_path": 2.9296,
+      "modularity": 0.4245,
+      "n_bridges": 2.2
+    }
+  },
+  "baseline_results": {
+    "celegans": {
+      "topo_name": "celegans",
+      "n_instances": 1,
+      "genuine_tipping_rate": 1.0,
+      "genuine_rate_std": 0.0,
+      "mean_tipping_step": 219.9,
+      "mean_spatial_coh": 0.582,
+      "mean_plateau": 11.3,
+      "per_instance": [
+        {
+          "topo_idx": 0,
+          "genuine_rate": 1.0,
+          "prevented_rate": null,
+          "mean_tip": 219.9,
+          "mean_coh_r": 0.582,
+          "mean_plateau": 11.3
+        }
+      ]
+    },
+    "er": {
+      "topo_name": "er",
+      "n_instances": 10,
+      "genuine_tipping_rate": 0.48,
+      "genuine_rate_std": 0.371,
+      "mean_tipping_step": 214.0,
+      "mean_spatial_coh": 0.295,
+      "mean_plateau": 3.8,
+      "per_instance": [
+        {
+          "topo_idx": 0,
+          "genuine_rate": 0.0,
+          "prevented_rate": null,
+          "mean_tip": 214.3,
+          "mean_coh_r": 0.096,
+          "mean_plateau": 5.1
+        },
+        {
+          "topo_idx": 1,
+          "genuine_rate": 0.8,
+          "prevented_rate": null,
+          "mean_tip": 215.9,
+          "mean_coh_r": 0.407,
+          "mean_plateau": 4.4
+        },
+        {
+          "topo_idx": 2,
+          "genuine_rate": 0.6,
+          "prevented_rate": null,
+          "mean_tip": 211.8,
+          "mean_coh_r": 0.279,
+          "mean_plateau": 3.4
+        },
+        {
+          "topo_idx": 3,
+          "genuine_rate": 0.0,
+          "prevented_rate": null,
+          "mean_tip": 212.8,
+          "mean_coh_r": 0.171,
+          "mean_plateau": 3.1
+        },
+        {
+          "topo_idx": 4,
+          "genuine_rate": 0.8,
+          "prevented_rate": null,
+          "mean_tip": 210.0,
+          "mean_coh_r": 0.346,
+          "mean_plateau": 3.9
+        },
+        {
+          "topo_idx": 5,
+          "genuine_rate": 0.8,
+          "prevented_rate": null,
+          "mean_tip": 214.8,
+          "mean_coh_r": 0.451,
+          "mean_plateau": 4.0
+        },
+        {
+          "topo_idx": 6,
+          "genuine_rate": 0.0,
+          "prevented_rate": null,
+          "mean_tip": 211.4,
+          "mean_coh_r": 0.161,
+          "mean_plateau": 2.5
+        },
+        {
+          "topo_idx": 7,
+          "genuine_rate": 0.2,
+          "prevented_rate": null,
+          "mean_tip": 218.6,
+          "mean_coh_r": 0.212,
+          "mean_plateau": 2.6
+        },
+        {
+          "topo_idx": 8,
+          "genuine_rate": 0.6,
+          "prevented_rate": null,
+          "mean_tip": 214.8,
+          "mean_coh_r": 0.271,
+          "mean_plateau": 3.2
+        },
+        {
+          "topo_idx": 9,
+          "genuine_rate": 1.0,
+          "prevented_rate": null,
+          "mean_tip": 215.9,
+          "mean_coh_r": 0.562,
+          "mean_plateau": 5.9
+        }
+      ]
+    },
+    "ba": {
+      "topo_name": "ba",
+      "n_instances": 10,
+      "genuine_tipping_rate": 0.0,
+      "genuine_rate_std": 0.0,
+      "mean_tipping_step": 209.1,
+      "mean_spatial_coh": -0.104,
+      "mean_plateau": 2.5,
+      "per_instance": [
+        {
+          "topo_idx": 0,
+          "genuine_rate": 0.0,
+          "prevented_rate": null,
+          "mean_tip": 203.8,
+          "mean_coh_r": -0.28,
+          "mean_plateau": 2.3
+        },
+        {
+          "topo_idx": 1,
+          "genuine_rate": 0.0,
+          "prevented_rate": null,
+          "mean_tip": 211.6,
+          "mean_coh_r": -0.019,
+          "mean_plateau": 3.5
+        },
+        {
+          "topo_idx": 2,
+          "genuine_rate": 0.0,
+          "prevented_rate": null,
+          "mean_tip": 209.7,
+          "mean_coh_r": -0.168,
+          "mean_plateau": 2.9
+        },
+        {
+          "topo_idx": 3,
+          "genuine_rate": 0.0,
+          "prevented_rate": null,
+          "mean_tip": 209.9,
+          "mean_coh_r": -0.022,
+          "mean_plateau": 3.0
+        },
+        {
+          "topo_idx": 4,
+          "genuine_rate": 0.0,
+          "prevented_rate": null,
+          "mean_tip": 205.8,
+          "mean_coh_r": -0.077,
+          "mean_plateau": 2.2
+        },
+        {
+          "topo_idx": 5,
+          "genuine_rate": 0.0,
+          "prevented_rate": null,
+          "mean_tip": 207.4,
+          "mean_coh_r": -0.022,
+          "mean_plateau": 2.4
+        },
+        {
+          "topo_idx": 6,
+          "genuine_rate": 0.0,
+          "prevented_rate": null,
+          "mean_tip": 208.7,
+          "mean_coh_r": -0.115,
+          "mean_plateau": 2.0
+        },
+        {
+          "topo_idx": 7,
+          "genuine_rate": 0.0,
+          "prevented_rate": null,
+          "mean_tip": 209.8,
+          "mean_coh_r": -0.071,
+          "mean_plateau": 1.7
+        },
+        {
+          "topo_idx": 8,
+          "genuine_rate": 0.0,
+          "prevented_rate": null,
+          "mean_tip": 209.2,
+          "mean_coh_r": -0.226,
+          "mean_plateau": 1.7
+        },
+        {
+          "topo_idx": 9,
+          "genuine_rate": 0.0,
+          "prevented_rate": null,
+          "mean_tip": 215.4,
+          "mean_coh_r": -0.044,
+          "mean_plateau": 3.2
+        }
+      ]
+    },
+    "ws": {
+      "topo_name": "ws",
+      "n_instances": 10,
+      "genuine_tipping_rate": 0.78,
+      "genuine_rate_std": 0.125,
+      "mean_tipping_step": 223.7,
+      "mean_spatial_coh": 0.423,
+      "mean_plateau": 4.3,
+      "per_instance": [
+        {
+          "topo_idx": 0,
+          "genuine_rate": 0.5,
+          "prevented_rate": null,
+          "mean_tip": 225.6,
+          "mean_coh_r": 0.283,
+          "mean_plateau": 4.2
+        },
+        {
+          "topo_idx": 1,
+          "genuine_rate": 0.6,
+          "prevented_rate": null,
+          "mean_tip": 223.4,
+          "mean_coh_r": 0.334,
+          "mean_plateau": 4.6
+        },
+        {
+          "topo_idx": 2,
+          "genuine_rate": 0.9,
+          "prevented_rate": null,
+          "mean_tip": 221.9,
+          "mean_coh_r": 0.485,
+          "mean_plateau": 3.6
+        },
+        {
+          "topo_idx": 3,
+          "genuine_rate": 0.8,
+          "prevented_rate": null,
+          "mean_tip": 225.9,
+          "mean_coh_r": 0.437,
+          "mean_plateau": 3.0
+        },
+        {
+          "topo_idx": 4,
+          "genuine_rate": 0.8,
+          "prevented_rate": null,
+          "mean_tip": 230.9,
+          "mean_coh_r": 0.487,
+          "mean_plateau": 3.6
+        },
+        {
+          "topo_idx": 5,
+          "genuine_rate": 0.9,
+          "prevented_rate": null,
+          "mean_tip": 220.8,
+          "mean_coh_r": 0.522,
+          "mean_plateau": 2.0
+        },
+        {
+          "topo_idx": 6,
+          "genuine_rate": 0.8,
+          "prevented_rate": null,
+          "mean_tip": 219.4,
+          "mean_coh_r": 0.365,
+          "mean_plateau": 5.9
+        },
+        {
+          "topo_idx": 7,
+          "genuine_rate": 0.8,
+          "prevented_rate": null,
+          "mean_tip": 224.1,
+          "mean_coh_r": 0.438,
+          "mean_plateau": 3.1
+        },
+        {
+          "topo_idx": 8,
+          "genuine_rate": 0.9,
+          "prevented_rate": null,
+          "mean_tip": 224.8,
+          "mean_coh_r": 0.484,
+          "mean_plateau": 6.5
+        },
+        {
+          "topo_idx": 9,
+          "genuine_rate": 0.8,
+          "prevented_rate": null,
+          "mean_tip": 220.0,
+          "mean_coh_r": 0.398,
+          "mean_plateau": 6.9
+        }
+      ]
+    },
+    "shuffled": {
+      "topo_name": "shuffled",
+      "n_instances": 10,
+      "genuine_tipping_rate": 0.73,
+      "genuine_rate_std": 0.119,
+      "mean_tipping_step": 213.8,
+      "mean_spatial_coh": 0.378,
+      "mean_plateau": 11.9,
+      "per_instance": [
+        {
+          "topo_idx": 0,
+          "genuine_rate": 0.8,
+          "prevented_rate": null,
+          "mean_tip": 212.4,
+          "mean_coh_r": 0.432,
+          "mean_plateau": 12.1
+        },
+        {
+          "topo_idx": 1,
+          "genuine_rate": 0.9,
+          "prevented_rate": null,
+          "mean_tip": 210.6,
+          "mean_coh_r": 0.405,
+          "mean_plateau": 11.6
+        },
+        {
+          "topo_idx": 2,
+          "genuine_rate": 0.7,
+          "prevented_rate": null,
+          "mean_tip": 215.0,
+          "mean_coh_r": 0.356,
+          "mean_plateau": 11.5
+        },
+        {
+          "topo_idx": 3,
+          "genuine_rate": 0.7,
+          "prevented_rate": null,
+          "mean_tip": 217.0,
+          "mean_coh_r": 0.394,
+          "mean_plateau": 12.1
+        },
+        {
+          "topo_idx": 4,
+          "genuine_rate": 0.9,
+          "prevented_rate": null,
+          "mean_tip": 217.0,
+          "mean_coh_r": 0.424,
+          "mean_plateau": 12.3
+        },
+        {
+          "topo_idx": 5,
+          "genuine_rate": 0.8,
+          "prevented_rate": null,
+          "mean_tip": 216.6,
+          "mean_coh_r": 0.4,
+          "mean_plateau": 12.3
+        },
+        {
+          "topo_idx": 6,
+          "genuine_rate": 0.6,
+          "prevented_rate": null,
+          "mean_tip": 211.2,
+          "mean_coh_r": 0.307,
+          "mean_plateau": 11.3
+        },
+        {
+          "topo_idx": 7,
+          "genuine_rate": 0.5,
+          "prevented_rate": null,
+          "mean_tip": 213.1,
+          "mean_coh_r": 0.329,
+          "mean_plateau": 12.3
+        },
+        {
+          "topo_idx": 8,
+          "genuine_rate": 0.7,
+          "prevented_rate": null,
+          "mean_tip": 211.5,
+          "mean_coh_r": 0.348,
+          "mean_plateau": 11.9
+        },
+        {
+          "topo_idx": 9,
+          "genuine_rate": 0.7,
+          "prevented_rate": null,
+          "mean_tip": 214.0,
+          "mean_coh_r": 0.386,
+          "mean_plateau": 11.2
+        }
+      ]
+    }
+  },
+  "therapy_results": {
+    "celegans": {
+      "topo_name": "celegans",
+      "n_instances": 1,
+      "genuine_tipping_rate": 0.0,
+      "genuine_rate_std": 0.0,
+      "mean_tipping_step": 300.0,
+      "mean_spatial_coh": 0.0,
+      "mean_plateau": 60.7,
+      "per_instance": [
+        {
+          "topo_idx": 0,
+          "genuine_rate": 0.0,
+          "prevented_rate": 1.0,
+          "mean_tip": 300.0,
+          "mean_coh_r": 0.0,
+          "mean_plateau": 60.7
+        }
+      ],
+      "therapy_prevention_rate": 1.0
+    },
+    "er": {
+      "topo_name": "er",
+      "n_instances": 10,
+      "genuine_tipping_rate": 0.0,
+      "genuine_rate_std": 0.0,
+      "mean_tipping_step": 300.0,
+      "mean_spatial_coh": 0.0,
+      "mean_plateau": 60.9,
+      "per_instance": [
+        {
+          "topo_idx": 0,
+          "genuine_rate": 0.0,
+          "prevented_rate": 1.0,
+          "mean_tip": 300.0,
+          "mean_coh_r": 0.0,
+          "mean_plateau": 60.9
+        },
+        {
+          "topo_idx": 1,
+          "genuine_rate": 0.0,
+          "prevented_rate": 1.0,
+          "mean_tip": 300.0,
+          "mean_coh_r": 0.0,
+          "mean_plateau": 60.8
+        },
+        {
+          "topo_idx": 2,
+          "genuine_rate": 0.0,
+          "prevented_rate": 1.0,
+          "mean_tip": 300.0,
+          "mean_coh_r": 0.0,
+          "mean_plateau": 60.7
+        },
+        {
+          "topo_idx": 3,
+          "genuine_rate": 0.0,
+          "prevented_rate": 1.0,
+          "mean_tip": 300.0,
+          "mean_coh_r": 0.0,
+          "mean_plateau": 60.9
+        },
+        {
+          "topo_idx": 4,
+          "genuine_rate": 0.0,
+          "prevented_rate": 1.0,
+          "mean_tip": 300.0,
+          "mean_coh_r": 0.0,
+          "mean_plateau": 60.7
+        },
+        {
+          "topo_idx": 5,
+          "genuine_rate": 0.0,
+          "prevented_rate": 1.0,
+          "mean_tip": 300.0,
+          "mean_coh_r": 0.0,
+          "mean_plateau": 61.0
+        },
+        {
+          "topo_idx": 6,
+          "genuine_rate": 0.0,
+          "prevented_rate": 1.0,
+          "mean_tip": 300.0,
+          "mean_coh_r": 0.0,
+          "mean_plateau": 61.0
+        },
+        {
+          "topo_idx": 7,
+          "genuine_rate": 0.0,
+          "prevented_rate": 1.0,
+          "mean_tip": 300.0,
+          "mean_coh_r": 0.0,
+          "mean_plateau": 60.8
+        },
+        {
+          "topo_idx": 8,
+          "genuine_rate": 0.0,
+          "prevented_rate": 1.0,
+          "mean_tip": 300.0,
+          "mean_coh_r": 0.0,
+          "mean_plateau": 61.0
+        },
+        {
+          "topo_idx": 9,
+          "genuine_rate": 0.0,
+          "prevented_rate": 1.0,
+          "mean_tip": 300.0,
+          "mean_coh_r": 0.0,
+          "mean_plateau": 61.0
+        }
+      ],
+      "therapy_prevention_rate": 1.0
+    },
+    "ba": {
+      "topo_name": "ba",
+      "n_instances": 10,
+      "genuine_tipping_rate": 0.0,
+      "genuine_rate_std": 0.0,
+      "mean_tipping_step": 300.0,
+      "mean_spatial_coh": 0.0,
+      "mean_plateau": 60.8,
+      "per_instance": [
+        {
+          "topo_idx": 0,
+          "genuine_rate": 0.0,
+          "prevented_rate": 1.0,
+          "mean_tip": 300.0,
+          "mean_coh_r": 0.0,
+          "mean_plateau": 60.5
+        },
+        {
+          "topo_idx": 1,
+          "genuine_rate": 0.0,
+          "prevented_rate": 1.0,
+          "mean_tip": 300.0,
+          "mean_coh_r": 0.0,
+          "mean_plateau": 60.8
+        },
+        {
+          "topo_idx": 2,
+          "genuine_rate": 0.0,
+          "prevented_rate": 1.0,
+          "mean_tip": 300.0,
+          "mean_coh_r": 0.0,
+          "mean_plateau": 60.9
+        },
+        {
+          "topo_idx": 3,
+          "genuine_rate": 0.0,
+          "prevented_rate": 1.0,
+          "mean_tip": 300.0,
+          "mean_coh_r": 0.0,
+          "mean_plateau": 60.8
+        },
+        {
+          "topo_idx": 4,
+          "genuine_rate": 0.0,
+          "prevented_rate": 1.0,
+          "mean_tip": 300.0,
+          "mean_coh_r": 0.0,
+          "mean_plateau": 60.8
+        },
+        {
+          "topo_idx": 5,
+          "genuine_rate": 0.0,
+          "prevented_rate": 1.0,
+          "mean_tip": 300.0,
+          "mean_coh_r": 0.0,
+          "mean_plateau": 60.3
+        },
+        {
+          "topo_idx": 6,
+          "genuine_rate": 0.0,
+          "prevented_rate": 1.0,
+          "mean_tip": 300.0,
+          "mean_coh_r": 0.0,
+          "mean_plateau": 60.9
+        },
+        {
+          "topo_idx": 7,
+          "genuine_rate": 0.0,
+          "prevented_rate": 1.0,
+          "mean_tip": 300.0,
+          "mean_coh_r": 0.0,
+          "mean_plateau": 60.8
+        },
+        {
+          "topo_idx": 8,
+          "genuine_rate": 0.0,
+          "prevented_rate": 1.0,
+          "mean_tip": 300.0,
+          "mean_coh_r": 0.0,
+          "mean_plateau": 60.9
+        },
+        {
+          "topo_idx": 9,
+          "genuine_rate": 0.0,
+          "prevented_rate": 1.0,
+          "mean_tip": 300.0,
+          "mean_coh_r": 0.0,
+          "mean_plateau": 60.9
+        }
+      ],
+      "therapy_prevention_rate": 1.0
+    },
+    "ws": {
+      "topo_name": "ws",
+      "n_instances": 10,
+      "genuine_tipping_rate": 0.0,
+      "genuine_rate_std": 0.0,
+      "mean_tipping_step": 300.0,
+      "mean_spatial_coh": 0.0,
+      "mean_plateau": 61.0,
+      "per_instance": [
+        {
+          "topo_idx": 0,
+          "genuine_rate": 0.0,
+          "prevented_rate": 1.0,
+          "mean_tip": 300.0,
+          "mean_coh_r": 0.0,
+          "mean_plateau": 61.0
+        },
+        {
+          "topo_idx": 1,
+          "genuine_rate": 0.0,
+          "prevented_rate": 1.0,
+          "mean_tip": 300.0,
+          "mean_coh_r": 0.0,
+          "mean_plateau": 61.0
+        },
+        {
+          "topo_idx": 2,
+          "genuine_rate": 0.0,
+          "prevented_rate": 1.0,
+          "mean_tip": 300.0,
+          "mean_coh_r": 0.0,
+          "mean_plateau": 61.0
+        },
+        {
+          "topo_idx": 3,
+          "genuine_rate": 0.0,
+          "prevented_rate": 1.0,
+          "mean_tip": 300.0,
+          "mean_coh_r": 0.0,
+          "mean_plateau": 60.9
+        },
+        {
+          "topo_idx": 4,
+          "genuine_rate": 0.0,
+          "prevented_rate": 1.0,
+          "mean_tip": 300.0,
+          "mean_coh_r": 0.0,
+          "mean_plateau": 61.0
+        },
+        {
+          "topo_idx": 5,
+          "genuine_rate": 0.0,
+          "prevented_rate": 1.0,
+          "mean_tip": 300.0,
+          "mean_coh_r": 0.0,
+          "mean_plateau": 61.0
+        },
+        {
+          "topo_idx": 6,
+          "genuine_rate": 0.0,
+          "prevented_rate": 1.0,
+          "mean_tip": 300.0,
+          "mean_coh_r": 0.0,
+          "mean_plateau": 60.9
+        },
+        {
+          "topo_idx": 7,
+          "genuine_rate": 0.0,
+          "prevented_rate": 1.0,
+          "mean_tip": 300.0,
+          "mean_coh_r": 0.0,
+          "mean_plateau": 61.0
+        },
+        {
+          "topo_idx": 8,
+          "genuine_rate": 0.0,
+          "prevented_rate": 1.0,
+          "mean_tip": 300.0,
+          "mean_coh_r": 0.0,
+          "mean_plateau": 61.0
+        },
+        {
+          "topo_idx": 9,
+          "genuine_rate": 0.0,
+          "prevented_rate": 1.0,
+          "mean_tip": 300.0,
+          "mean_coh_r": 0.0,
+          "mean_plateau": 60.9
+        }
+      ],
+      "therapy_prevention_rate": 1.0
+    },
+    "shuffled": {
+      "topo_name": "shuffled",
+      "n_instances": 10,
+      "genuine_tipping_rate": 0.0,
+      "genuine_rate_std": 0.0,
+      "mean_tipping_step": 300.0,
+      "mean_spatial_coh": 0.0,
+      "mean_plateau": 60.8,
+      "per_instance": [
+        {
+          "topo_idx": 0,
+          "genuine_rate": 0.0,
+          "prevented_rate": 1.0,
+          "mean_tip": 300.0,
+          "mean_coh_r": 0.0,
+          "mean_plateau": 60.8
+        },
+        {
+          "topo_idx": 1,
+          "genuine_rate": 0.0,
+          "prevented_rate": 1.0,
+          "mean_tip": 300.0,
+          "mean_coh_r": 0.0,
+          "mean_plateau": 60.6
+        },
+        {
+          "topo_idx": 2,
+          "genuine_rate": 0.0,
+          "prevented_rate": 1.0,
+          "mean_tip": 300.0,
+          "mean_coh_r": 0.0,
+          "mean_plateau": 60.6
+        },
+        {
+          "topo_idx": 3,
+          "genuine_rate": 0.0,
+          "prevented_rate": 1.0,
+          "mean_tip": 300.0,
+          "mean_coh_r": 0.0,
+          "mean_plateau": 60.9
+        },
+        {
+          "topo_idx": 4,
+          "genuine_rate": 0.0,
+          "prevented_rate": 1.0,
+          "mean_tip": 300.0,
+          "mean_coh_r": 0.0,
+          "mean_plateau": 60.8
+        },
+        {
+          "topo_idx": 5,
+          "genuine_rate": 0.0,
+          "prevented_rate": 1.0,
+          "mean_tip": 300.0,
+          "mean_coh_r": 0.0,
+          "mean_plateau": 60.7
+        },
+        {
+          "topo_idx": 6,
+          "genuine_rate": 0.0,
+          "prevented_rate": 1.0,
+          "mean_tip": 300.0,
+          "mean_coh_r": 0.0,
+          "mean_plateau": 60.9
+        },
+        {
+          "topo_idx": 7,
+          "genuine_rate": 0.0,
+          "prevented_rate": 1.0,
+          "mean_tip": 300.0,
+          "mean_coh_r": 0.0,
+          "mean_plateau": 60.9
+        },
+        {
+          "topo_idx": 8,
+          "genuine_rate": 0.0,
+          "prevented_rate": 1.0,
+          "mean_tip": 300.0,
+          "mean_coh_r": 0.0,
+          "mean_plateau": 60.8
+        },
+        {
+          "topo_idx": 9,
+          "genuine_rate": 0.0,
+          "prevented_rate": 1.0,
+          "mean_tip": 300.0,
+          "mean_coh_r": 0.0,
+          "mean_plateau": 60.7
+        }
+      ],
+      "therapy_prevention_rate": 1.0
+    }
+  }
+}

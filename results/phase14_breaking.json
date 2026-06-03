@@ -1,0 +1,298 @@
+{
+  "description": "Phase 14 breaking threshold probe",
+  "n_configs": 5,
+  "config_ids": [
+    334,
+    391,
+    382,
+    235,
+    497
+  ],
+  "n_seeds": 10,
+  "steps": 300,
+  "baseline": {
+    "tip_mean": 226.0,
+    "coh_r_mean": 0.36597443267799806,
+    "genuine_rate": 0.6,
+    "per_config": [
+      {
+        "config_id": 334,
+        "tip_med": 222.5,
+        "coh_r_med": 0.22849184090542207,
+        "genuine": false
+      },
+      {
+        "config_id": 391,
+        "tip_med": 219.0,
+        "coh_r_med": 0.32478720671714056,
+        "genuine": true
+      },
+      {
+        "config_id": 382,
+        "tip_med": 193.5,
+        "coh_r_med": 0.609618996301753,
+        "genuine": true
+      },
+      {
+        "config_id": 235,
+        "tip_med": 291.5,
+        "coh_r_med": 0.08477307116151273,
+        "genuine": false
+      },
+      {
+        "config_id": 497,
+        "tip_med": 203.5,
+        "coh_r_med": 0.5822010483041621,
+        "genuine": true
+      }
+    ]
+  },
+  "breaking_thresholds": {
+    "genuine_rate": 0.5,
+    "coherence_r": 0.3,
+    "subtype_rank_r": 0.5
+  },
+  "perturbations": {
+    "edge_dropout": {
+      "levels": [
+        0.3,
+        0.5,
+        0.7
+      ],
+      "results": [
+        {
+          "level": 0.3,
+          "tip_mean": 240.2,
+          "coh_r_mean": 0.15190364137424786,
+          "genuine_rate": 0.4,
+          "subtype_spearman_r": 1.0,
+          "per_config": [
+            {
+              "config_id": 334,
+              "tip_med": 238.0,
+              "coh_r_med": -0.2028512761222525,
+              "genuine": false,
+              "mean_component_size": 57.4
+            },
+            {
+              "config_id": 391,
+              "tip_med": 234.0,
+              "coh_r_med": 0.2940850147054406,
+              "genuine": false,
+              "mean_component_size": 57.4
+            },
+            {
+              "config_id": 382,
+              "tip_med": 210.0,
+              "coh_r_med": 0.42695193416540184,
+              "genuine": true,
+              "mean_component_size": 57.4
+            },
+            {
+              "config_id": 235,
+              "tip_med": 300.0,
+              "coh_r_med": -0.09204829801648948,
+              "genuine": false,
+              "mean_component_size": 57.4
+            },
+            {
+              "config_id": 497,
+              "tip_med": 219.0,
+              "coh_r_med": 0.33338083213913894,
+              "genuine": true,
+              "mean_component_size": 57.4
+            }
+          ],
+          "mean_component_size": 57.4
+        },
+        {
+          "level": 0.5,
+          "tip_mean": 252.5,
+          "coh_r_mean": 0.15443167534707958,
+          "genuine_rate": 0.4,
+          "subtype_spearman_r": 1.0,
+          "per_config": [
+            {
+              "config_id": 334,
+              "tip_med": 254.5,
+              "coh_r_med": -0.13031568538966637,
+              "genuine": false,
+              "mean_component_size": 48.7
+            },
+            {
+              "config_id": 391,
+              "tip_med": 248.0,
+              "coh_r_med": 0.25890668288403146,
+              "genuine": false,
+              "mean_component_size": 48.7
+            },
+            {
+              "config_id": 382,
+              "tip_med": 221.5,
+              "coh_r_med": 0.3367431545973603,
+              "genuine": true,
+              "mean_component_size": 48.7
+            },
+            {
+              "config_id": 235,
+              "tip_med": 300.0,
+              "coh_r_med": 0.0,
+              "genuine": false,
+              "mean_component_size": 48.7
+            },
+            {
+              "config_id": 497,
+              "tip_med": 238.5,
+              "coh_r_med": 0.3068242246436725,
+              "genuine": true,
+              "mean_component_size": 48.7
+            }
+          ],
+          "mean_component_size": 48.7
+        },
+        {
+          "level": 0.7,
+          "tip_mean": 281.8,
+          "coh_r_mean": 0.17576465794585258,
+          "genuine_rate": 0.0,
+          "subtype_spearman_r": 0.9,
+          "per_config": [
+            {
+              "config_id": 334,
+              "tip_med": 280.0,
+              "coh_r_med": 0.05564917857426999,
+              "genuine": false,
+              "mean_component_size": 20.2
+            },
+            {
+              "config_id": 391,
+              "tip_med": 294.5,
+              "coh_r_med": 0.42784319894265244,
+              "genuine": false,
+              "mean_component_size": 20.2
+            },
+            {
+              "config_id": 382,
+              "tip_med": 258.0,
+              "coh_r_med": 0.28922745237552716,
+              "genuine": false,
+              "mean_component_size": 20.2
+            },
+            {
+              "config_id": 235,
+              "tip_med": 300.0,
+              "coh_r_med": 0.0,
+              "genuine": false,
+              "mean_component_size": 20.2
+            },
+            {
+              "config_id": 497,
+              "tip_med": 276.5,
+              "coh_r_med": 0.10610345983681332,
+              "genuine": false,
+              "mean_component_size": 20.2
+            }
+          ],
+          "mean_component_size": 20.2
+        }
+      ],
+      "breaking_points": {
+        "genuine_rate_below_0.5": 0.3,
+        "coherence_r_below_0.3": 0.3,
+        "subtype_rank_r_below_0.5": "not_reached"
+      }
+    },
+    "vuln_noise": {
+      "levels": [
+        0.5,
+        1.0
+      ],
+      "results": [
+        {
+          "level": 0.5,
+          "tip_mean": 213.1,
+          "coh_r_mean": 0.1793830288942277,
+          "genuine_rate": 0.2,
+          "subtype_spearman_r": 1.0,
+          "per_config": [
+            {
+              "config_id": 334,
+              "tip_med": 219.5,
+              "coh_r_med": 0.18206514284808145,
+              "genuine": false
+            },
+            {
+              "config_id": 391,
+              "tip_med": 208.5,
+              "coh_r_med": 0.06180238276922538,
+              "genuine": false
+            },
+            {
+              "config_id": 382,
+              "tip_med": 175.0,
+              "coh_r_med": 0.30812449901033423,
+              "genuine": true
+            },
+            {
+              "config_id": 235,
+              "tip_med": 284.5,
+              "coh_r_med": 0.08458256688263863,
+              "genuine": false
+            },
+            {
+              "config_id": 497,
+              "tip_med": 178.0,
+              "coh_r_med": 0.26034055296085873,
+              "genuine": false
+            }
+          ]
+        },
+        {
+          "level": 1.0,
+          "tip_mean": 206.3,
+          "coh_r_mean": 0.1473419582469509,
+          "genuine_rate": 0.0,
+          "subtype_spearman_r": 1.0,
+          "per_config": [
+            {
+              "config_id": 334,
+              "tip_med": 215.5,
+              "coh_r_med": 0.2432355305969596,
+              "genuine": false
+            },
+            {
+              "config_id": 391,
+              "tip_med": 206.0,
+              "coh_r_med": -0.04840819902959041,
+              "genuine": false
+            },
+            {
+              "config_id": 382,
+              "tip_med": 165.5,
+              "coh_r_med": 0.2858598636584131,
+              "genuine": false
+            },
+            {
+              "config_id": 235,
+              "tip_med": 276.0,
+              "coh_r_med": 0.028708834806163777,
+              "genuine": false
+            },
+            {
+              "config_id": 497,
+              "tip_med": 168.5,
+              "coh_r_med": 0.22731376120280838,
+              "genuine": false
+            }
+          ]
+        }
+      ],
+      "breaking_points": {
+        "genuine_rate_below_0.5": 0.5,
+        "coherence_r_below_0.3": 0.5,
+        "subtype_rank_r_below_0.5": "not_reached"
+      }
+    }
+  },
+  "runtime_s": 19.2
+}

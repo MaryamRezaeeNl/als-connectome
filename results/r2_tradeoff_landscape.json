@@ -1,0 +1,346 @@
+{
+  "description": "2D landscape: x=global_efficiency, y=plateau_survivors, color=collapse_velocity",
+  "axes": {
+    "x": "global_efficiency  (1/n(n-1) * sum 1/d_ij, directed)",
+    "y": "plateau_survivors  (alive at step 300)",
+    "color": "collapse_velocity  (peak 10-step death rate)"
+  },
+  "points": [
+    {
+      "topology": "sparse_chain",
+      "strength": 0,
+      "x_global_efficiency": 0.111,
+      "y_plateau_survivors": 27.84,
+      "color_collapse_vel": 8.72,
+      "genuine_tipping_rate": 0.4
+    },
+    {
+      "topology": "sparse_chain",
+      "strength": 10,
+      "x_global_efficiency": 0.1108,
+      "y_plateau_survivors": 27.84,
+      "color_collapse_vel": 8.68,
+      "genuine_tipping_rate": 0.4
+    },
+    {
+      "topology": "sparse_chain",
+      "strength": 20,
+      "x_global_efficiency": 0.1106,
+      "y_plateau_survivors": 27.84,
+      "color_collapse_vel": 8.68,
+      "genuine_tipping_rate": 0.4
+    },
+    {
+      "topology": "sparse_chain",
+      "strength": 40,
+      "x_global_efficiency": 0.1102,
+      "y_plateau_survivors": 27.96,
+      "color_collapse_vel": 8.68,
+      "genuine_tipping_rate": 0.4
+    },
+    {
+      "topology": "sparse_chain",
+      "strength": 60,
+      "x_global_efficiency": 0.1095,
+      "y_plateau_survivors": 28.16,
+      "color_collapse_vel": 8.88,
+      "genuine_tipping_rate": 0.2
+    },
+    {
+      "topology": "sparse_chain",
+      "strength": 80,
+      "x_global_efficiency": 0.109,
+      "y_plateau_survivors": 28.28,
+      "color_collapse_vel": 8.92,
+      "genuine_tipping_rate": 0.2
+    },
+    {
+      "topology": "sparse_chain",
+      "strength": 100,
+      "x_global_efficiency": 0.1079,
+      "y_plateau_survivors": 28.56,
+      "color_collapse_vel": 9.24,
+      "genuine_tipping_rate": 0.6
+    },
+    {
+      "topology": "triangle_rich",
+      "strength": 0,
+      "x_global_efficiency": 0.111,
+      "y_plateau_survivors": 27.84,
+      "color_collapse_vel": 8.72,
+      "genuine_tipping_rate": 0.4
+    },
+    {
+      "topology": "triangle_rich",
+      "strength": 10,
+      "x_global_efficiency": 0.1192,
+      "y_plateau_survivors": 27.72,
+      "color_collapse_vel": 8.64,
+      "genuine_tipping_rate": 0.4
+    },
+    {
+      "topology": "triangle_rich",
+      "strength": 20,
+      "x_global_efficiency": 0.1262,
+      "y_plateau_survivors": 27.6,
+      "color_collapse_vel": 8.76,
+      "genuine_tipping_rate": 0.4
+    },
+    {
+      "topology": "triangle_rich",
+      "strength": 40,
+      "x_global_efficiency": 0.1376,
+      "y_plateau_survivors": 27.44,
+      "color_collapse_vel": 9.04,
+      "genuine_tipping_rate": 0.4
+    },
+    {
+      "topology": "triangle_rich",
+      "strength": 60,
+      "x_global_efficiency": 0.1432,
+      "y_plateau_survivors": 27.16,
+      "color_collapse_vel": 9.04,
+      "genuine_tipping_rate": 0.4
+    },
+    {
+      "topology": "triangle_rich",
+      "strength": 80,
+      "x_global_efficiency": 0.1538,
+      "y_plateau_survivors": 26.88,
+      "color_collapse_vel": 9.24,
+      "genuine_tipping_rate": 0.6
+    },
+    {
+      "topology": "triangle_rich",
+      "strength": 100,
+      "x_global_efficiency": 0.1677,
+      "y_plateau_survivors": 26.64,
+      "color_collapse_vel": 9.28,
+      "genuine_tipping_rate": 0.6
+    },
+    {
+      "topology": "modular",
+      "strength": 0,
+      "x_global_efficiency": 0.111,
+      "y_plateau_survivors": 27.84,
+      "color_collapse_vel": 8.72,
+      "genuine_tipping_rate": 0.4
+    },
+    {
+      "topology": "modular",
+      "strength": 10,
+      "x_global_efficiency": 0.111,
+      "y_plateau_survivors": 27.56,
+      "color_collapse_vel": 8.76,
+      "genuine_tipping_rate": 0.4
+    },
+    {
+      "topology": "modular",
+      "strength": 20,
+      "x_global_efficiency": 0.111,
+      "y_plateau_survivors": 27.08,
+      "color_collapse_vel": 9.08,
+      "genuine_tipping_rate": 0.4
+    },
+    {
+      "topology": "modular",
+      "strength": 40,
+      "x_global_efficiency": 0.111,
+      "y_plateau_survivors": 26.64,
+      "color_collapse_vel": 9.64,
+      "genuine_tipping_rate": 0.2
+    },
+    {
+      "topology": "modular",
+      "strength": 60,
+      "x_global_efficiency": 0.111,
+      "y_plateau_survivors": 26.08,
+      "color_collapse_vel": 9.8,
+      "genuine_tipping_rate": 0.2
+    },
+    {
+      "topology": "modular",
+      "strength": 80,
+      "x_global_efficiency": 0.111,
+      "y_plateau_survivors": 25.52,
+      "color_collapse_vel": 9.88,
+      "genuine_tipping_rate": 0.2
+    },
+    {
+      "topology": "modular",
+      "strength": 100,
+      "x_global_efficiency": 0.111,
+      "y_plateau_survivors": 25.0,
+      "color_collapse_vel": 10.2,
+      "genuine_tipping_rate": 0.2
+    },
+    {
+      "topology": "rich_club",
+      "strength": 0,
+      "x_global_efficiency": 0.111,
+      "y_plateau_survivors": 27.84,
+      "color_collapse_vel": 8.72,
+      "genuine_tipping_rate": 0.4
+    },
+    {
+      "topology": "rich_club",
+      "strength": 10,
+      "x_global_efficiency": 0.111,
+      "y_plateau_survivors": 27.68,
+      "color_collapse_vel": 8.76,
+      "genuine_tipping_rate": 0.4
+    },
+    {
+      "topology": "rich_club",
+      "strength": 20,
+      "x_global_efficiency": 0.111,
+      "y_plateau_survivors": 27.44,
+      "color_collapse_vel": 8.8,
+      "genuine_tipping_rate": 0.4
+    },
+    {
+      "topology": "rich_club",
+      "strength": 40,
+      "x_global_efficiency": 0.111,
+      "y_plateau_survivors": 27.04,
+      "color_collapse_vel": 8.72,
+      "genuine_tipping_rate": 0.4
+    },
+    {
+      "topology": "rich_club",
+      "strength": 60,
+      "x_global_efficiency": 0.111,
+      "y_plateau_survivors": 26.88,
+      "color_collapse_vel": 8.8,
+      "genuine_tipping_rate": 0.6
+    },
+    {
+      "topology": "rich_club",
+      "strength": 80,
+      "x_global_efficiency": 0.111,
+      "y_plateau_survivors": 26.76,
+      "color_collapse_vel": 9.08,
+      "genuine_tipping_rate": 0.4
+    },
+    {
+      "topology": "rich_club",
+      "strength": 100,
+      "x_global_efficiency": 0.111,
+      "y_plateau_survivors": 26.64,
+      "color_collapse_vel": 9.0,
+      "genuine_tipping_rate": 0.4
+    },
+    {
+      "topology": "distributed",
+      "strength": 0,
+      "x_global_efficiency": 0.111,
+      "y_plateau_survivors": 27.84,
+      "color_collapse_vel": 8.72,
+      "genuine_tipping_rate": 0.4
+    },
+    {
+      "topology": "distributed",
+      "strength": 10,
+      "x_global_efficiency": 0.111,
+      "y_plateau_survivors": 27.84,
+      "color_collapse_vel": 8.72,
+      "genuine_tipping_rate": 0.4
+    },
+    {
+      "topology": "distributed",
+      "strength": 20,
+      "x_global_efficiency": 0.1123,
+      "y_plateau_survivors": 27.92,
+      "color_collapse_vel": 8.6,
+      "genuine_tipping_rate": 0.4
+    },
+    {
+      "topology": "distributed",
+      "strength": 40,
+      "x_global_efficiency": 0.1126,
+      "y_plateau_survivors": 27.96,
+      "color_collapse_vel": 8.56,
+      "genuine_tipping_rate": 0.2
+    },
+    {
+      "topology": "distributed",
+      "strength": 60,
+      "x_global_efficiency": 0.1128,
+      "y_plateau_survivors": 28.16,
+      "color_collapse_vel": 8.48,
+      "genuine_tipping_rate": 0.4
+    },
+    {
+      "topology": "distributed",
+      "strength": 80,
+      "x_global_efficiency": 0.1131,
+      "y_plateau_survivors": 28.32,
+      "color_collapse_vel": 8.28,
+      "genuine_tipping_rate": 0.2
+    },
+    {
+      "topology": "distributed",
+      "strength": 100,
+      "x_global_efficiency": 0.1131,
+      "y_plateau_survivors": 28.36,
+      "color_collapse_vel": 8.28,
+      "genuine_tipping_rate": 0.2
+    },
+    {
+      "topology": "bypass_loops",
+      "strength": 0,
+      "x_global_efficiency": 0.111,
+      "y_plateau_survivors": 27.84,
+      "color_collapse_vel": 8.72,
+      "genuine_tipping_rate": 0.4
+    },
+    {
+      "topology": "bypass_loops",
+      "strength": 10,
+      "x_global_efficiency": 0.111,
+      "y_plateau_survivors": 27.84,
+      "color_collapse_vel": 8.72,
+      "genuine_tipping_rate": 0.4
+    },
+    {
+      "topology": "bypass_loops",
+      "strength": 20,
+      "x_global_efficiency": 0.111,
+      "y_plateau_survivors": 27.84,
+      "color_collapse_vel": 8.72,
+      "genuine_tipping_rate": 0.4
+    },
+    {
+      "topology": "bypass_loops",
+      "strength": 40,
+      "x_global_efficiency": 0.1124,
+      "y_plateau_survivors": 27.48,
+      "color_collapse_vel": 9.04,
+      "genuine_tipping_rate": 0.4
+    },
+    {
+      "topology": "bypass_loops",
+      "strength": 60,
+      "x_global_efficiency": 0.1124,
+      "y_plateau_survivors": 27.48,
+      "color_collapse_vel": 9.04,
+      "genuine_tipping_rate": 0.4
+    },
+    {
+      "topology": "bypass_loops",
+      "strength": 80,
+      "x_global_efficiency": 0.1136,
+      "y_plateau_survivors": 27.48,
+      "color_collapse_vel": 8.96,
+      "genuine_tipping_rate": 0.4
+    },
+    {
+      "topology": "bypass_loops",
+      "strength": 100,
+      "x_global_efficiency": 0.1141,
+      "y_plateau_survivors": 27.4,
+      "color_collapse_vel": 8.88,
+      "genuine_tipping_rate": 0.4
+    }
+  ]
+}

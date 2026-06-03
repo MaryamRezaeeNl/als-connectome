@@ -1,0 +1,1185 @@
+{
+  "description": "Phase R2.1 Motif Resilience Study",
+  "n_topologies": 9,
+  "n_configs": 5,
+  "n_seeds": 10,
+  "steps": 500,
+  "therapy": {
+    "strength": 0.855,
+    "start_t": 13
+  },
+  "res_scores": [
+    {
+      "motif_name": "sparse_chain",
+      "RES": 0.8153,
+      "td_ratio": 1.02,
+      "tw_ratio": 1.016,
+      "pl_ratio": 1.005,
+      "cv_term": 0.019
+    },
+    {
+      "motif_name": "distributed",
+      "RES": 0.803,
+      "td_ratio": 1.006,
+      "tw_ratio": 1.0,
+      "pl_ratio": 1.0,
+      "cv_term": 0.006
+    },
+    {
+      "motif_name": "baseline",
+      "RES": 0.8,
+      "td_ratio": 1.0,
+      "tw_ratio": 1.0,
+      "pl_ratio": 1.0,
+      "cv_term": 0.0
+    },
+    {
+      "motif_name": "anti_hub",
+      "RES": 0.7996,
+      "td_ratio": 1.002,
+      "tw_ratio": 0.995,
+      "pl_ratio": 1.0,
+      "cv_term": 0.002
+    },
+    {
+      "motif_name": "modular",
+      "RES": 0.7986,
+      "td_ratio": 0.966,
+      "tw_ratio": 1.074,
+      "pl_ratio": 0.969,
+      "cv_term": -0.036
+    },
+    {
+      "motif_name": "bypass_loops",
+      "RES": 0.7962,
+      "td_ratio": 0.991,
+      "tw_ratio": 1.004,
+      "pl_ratio": 0.997,
+      "cv_term": -0.009
+    },
+    {
+      "motif_name": "hierarchical",
+      "RES": 0.7905,
+      "td_ratio": 0.984,
+      "tw_ratio": 0.996,
+      "pl_ratio": 1.0,
+      "cv_term": -0.017
+    },
+    {
+      "motif_name": "rich_club",
+      "RES": 0.7873,
+      "td_ratio": 0.97,
+      "tw_ratio": 1.014,
+      "pl_ratio": 0.992,
+      "cv_term": -0.031
+    },
+    {
+      "motif_name": "triangle_rich",
+      "RES": 0.7382,
+      "td_ratio": 0.985,
+      "tw_ratio": 1.016,
+      "pl_ratio": 0.704,
+      "cv_term": -0.015
+    }
+  ],
+  "topologies": [
+    {
+      "motif_name": "baseline",
+      "biological_note": "C. elegans original motor connectome (127 directed synapses, White et al. 1986 / Cook et al. 2019)",
+      "graph_metrics": {
+        "n_edges": 127,
+        "clustering_coeff": 0.2024,
+        "avg_path_length": 2.876,
+        "modularity": 0.0834,
+        "n_bridges": 4,
+        "degree_variance": 6.73
+      },
+      "config_results": [
+        {
+          "config_id": 334,
+          "criterion": {
+            "is_genuine": true,
+            "c1_slope": true,
+            "c2_coherence": true,
+            "c3_silent": true,
+            "tip_median": 222.5,
+            "silent_median": 200.5,
+            "peak_median": 9.0,
+            "coh_r_median": 0.69
+          },
+          "mean_tipping_step": 221.4,
+          "mean_coherence_r": 0.702,
+          "mean_tier2_step": 215.6,
+          "mean_plateau": 11.7,
+          "therapy_prevention_rate": 1.0,
+          "mean_therapy_delay": 262.8,
+          "mean_therapy_plateau": 52.3
+        },
+        {
+          "config_id": 235,
+          "criterion": {
+            "is_genuine": true,
+            "c1_slope": true,
+            "c2_coherence": true,
+            "c3_silent": true,
+            "tip_median": 291.5,
+            "silent_median": 254.0,
+            "peak_median": 7.5,
+            "coh_r_median": 0.481
+          },
+          "mean_tipping_step": 290.0,
+          "mean_coherence_r": 0.473,
+          "mean_tier2_step": 284.9,
+          "mean_plateau": 15.0,
+          "therapy_prevention_rate": 1.0,
+          "mean_therapy_delay": 198.1,
+          "mean_therapy_plateau": 55.2
+        },
+        {
+          "config_id": 382,
+          "criterion": {
+            "is_genuine": true,
+            "c1_slope": true,
+            "c2_coherence": true,
+            "c3_silent": true,
+            "tip_median": 193.5,
+            "silent_median": 171.5,
+            "peak_median": 11.5,
+            "coh_r_median": 0.515
+          },
+          "mean_tipping_step": 192.0,
+          "mean_coherence_r": 0.509,
+          "mean_tier2_step": 188.6,
+          "mean_plateau": 10.9,
+          "therapy_prevention_rate": 1.0,
+          "mean_therapy_delay": 178.4,
+          "mean_therapy_plateau": 33.0
+        },
+        {
+          "config_id": 391,
+          "criterion": {
+            "is_genuine": true,
+            "c1_slope": true,
+            "c2_coherence": true,
+            "c3_silent": true,
+            "tip_median": 219.0,
+            "silent_median": 186.0,
+            "peak_median": 9.0,
+            "coh_r_median": 0.511
+          },
+          "mean_tipping_step": 216.8,
+          "mean_coherence_r": 0.517,
+          "mean_tier2_step": 210.5,
+          "mean_plateau": 12.1,
+          "therapy_prevention_rate": 1.0,
+          "mean_therapy_delay": 170.5,
+          "mean_therapy_plateau": 43.1
+        },
+        {
+          "config_id": 21,
+          "criterion": {
+            "is_genuine": true,
+            "c1_slope": true,
+            "c2_coherence": true,
+            "c3_silent": true,
+            "tip_median": 230.0,
+            "silent_median": 197.5,
+            "peak_median": 9.5,
+            "coh_r_median": 0.488
+          },
+          "mean_tipping_step": 231.9,
+          "mean_coherence_r": 0.501,
+          "mean_tier2_step": 226.5,
+          "mean_plateau": 12.0,
+          "therapy_prevention_rate": 1.0,
+          "mean_therapy_delay": 209.4,
+          "mean_therapy_plateau": 47.4
+        }
+      ],
+      "genuine_tipping_rate": 1.0,
+      "mean_tipping_step": 230.4,
+      "mean_coherence_r": 0.54,
+      "tier2_activation_step": 225.2,
+      "plateau_survivors": 12.34,
+      "therapy_prevention_rate": 1.0,
+      "mean_therapy_delay": 203.8,
+      "runtime_s": 10.8
+    },
+    {
+      "motif_name": "triangle_rich",
+      "biological_note": "10 motor->premotor feedback edges added (DA1->RIML, DB1->RIBL, etc.), creating CPG-like recurrent triangles. Models biological central pattern generator feedback found in vertebrate spinal cord.",
+      "graph_metrics": {
+        "n_edges": 137,
+        "clustering_coeff": 0.1874,
+        "avg_path_length": 3.767,
+        "modularity": 0.0431,
+        "n_bridges": 4,
+        "degree_variance": 6.74
+      },
+      "config_results": [
+        {
+          "config_id": 334,
+          "criterion": {
+            "is_genuine": true,
+            "c1_slope": true,
+            "c2_coherence": true,
+            "c3_silent": true,
+            "tip_median": 218.0,
+            "silent_median": 199.5,
+            "peak_median": 9.0,
+            "coh_r_median": 0.688
+          },
+          "mean_tipping_step": 217.9,
+          "mean_coherence_r": 0.693,
+          "mean_tier2_step": 213.1,
+          "mean_plateau": 6.4,
+          "therapy_prevention_rate": 1.0,
+          "mean_therapy_delay": 266.0,
+          "mean_therapy_plateau": 52.3
+        },
+        {
+          "config_id": 235,
+          "criterion": {
+            "is_genuine": true,
+            "c1_slope": true,
+            "c2_coherence": true,
+            "c3_silent": true,
+            "tip_median": 288.0,
+            "silent_median": 253.5,
+            "peak_median": 8.0,
+            "coh_r_median": 0.492
+          },
+          "mean_tipping_step": 287.6,
+          "mean_coherence_r": 0.479,
+          "mean_tier2_step": 282.2,
+          "mean_plateau": 12.9,
+          "therapy_prevention_rate": 1.0,
+          "mean_therapy_delay": 200.5,
+          "mean_therapy_plateau": 55.2
+        },
+        {
+          "config_id": 382,
+          "criterion": {
+            "is_genuine": true,
+            "c1_slope": true,
+            "c2_coherence": true,
+            "c3_silent": true,
+            "tip_median": 188.5,
+            "silent_median": 167.5,
+            "peak_median": 13.0,
+            "coh_r_median": 0.532
+          },
+          "mean_tipping_step": 187.3,
+          "mean_coherence_r": 0.533,
+          "mean_tier2_step": 184.0,
+          "mean_plateau": 6.8,
+          "therapy_prevention_rate": 1.0,
+          "mean_therapy_delay": 182.8,
+          "mean_therapy_plateau": 32.5
+        },
+        {
+          "config_id": 391,
+          "criterion": {
+            "is_genuine": true,
+            "c1_slope": true,
+            "c2_coherence": true,
+            "c3_silent": true,
+            "tip_median": 215.5,
+            "silent_median": 184.0,
+            "peak_median": 9.0,
+            "coh_r_median": 0.553
+          },
+          "mean_tipping_step": 215.0,
+          "mean_coherence_r": 0.542,
+          "mean_tier2_step": 208.9,
+          "mean_plateau": 8.9,
+          "therapy_prevention_rate": 1.0,
+          "mean_therapy_delay": 172.2,
+          "mean_therapy_plateau": 43.1
+        },
+        {
+          "config_id": 21,
+          "criterion": {
+            "is_genuine": true,
+            "c1_slope": true,
+            "c2_coherence": true,
+            "c3_silent": true,
+            "tip_median": 225.5,
+            "silent_median": 195.0,
+            "peak_median": 9.5,
+            "coh_r_median": 0.521
+          },
+          "mean_tipping_step": 227.2,
+          "mean_coherence_r": 0.522,
+          "mean_tier2_step": 221.9,
+          "mean_plateau": 8.3,
+          "therapy_prevention_rate": 1.0,
+          "mean_therapy_delay": 213.8,
+          "mean_therapy_plateau": 47.2
+        }
+      ],
+      "genuine_tipping_rate": 1.0,
+      "mean_tipping_step": 227.0,
+      "mean_coherence_r": 0.554,
+      "tier2_activation_step": 222.0,
+      "plateau_survivors": 8.66,
+      "therapy_prevention_rate": 1.0,
+      "mean_therapy_delay": 207.1,
+      "runtime_s": 8.8
+    },
+    {
+      "motif_name": "bypass_loops",
+      "biological_note": "3 cross-hemisphere backup edges for highest-weight bottleneck projections (PVCR->AVBL, AVAR->DA1, AVBR->DB1). Models bilateral redundancy that C. elegans uses for robust locomotion.",
+      "graph_metrics": {
+        "n_edges": 130,
+        "clustering_coeff": 0.2092,
+        "avg_path_length": 2.839,
+        "modularity": 0.0809,
+        "n_bridges": 4,
+        "degree_variance": 7.6
+      },
+      "config_results": [
+        {
+          "config_id": 334,
+          "criterion": {
+            "is_genuine": true,
+            "c1_slope": true,
+            "c2_coherence": true,
+            "c3_silent": true,
+            "tip_median": 220.0,
+            "silent_median": 199.5,
+            "peak_median": 8.0,
+            "coh_r_median": 0.683
+          },
+          "mean_tipping_step": 219.5,
+          "mean_coherence_r": 0.695,
+          "mean_tier2_step": 213.5,
+          "mean_plateau": 11.7,
+          "therapy_prevention_rate": 1.0,
+          "mean_therapy_delay": 264.2,
+          "mean_therapy_plateau": 52.2
+        },
+        {
+          "config_id": 235,
+          "criterion": {
+            "is_genuine": true,
+            "c1_slope": true,
+            "c2_coherence": true,
+            "c3_silent": true,
+            "tip_median": 281.0,
+            "silent_median": 248.5,
+            "peak_median": 7.0,
+            "coh_r_median": 0.504
+          },
+          "mean_tipping_step": 286.6,
+          "mean_coherence_r": 0.483,
+          "mean_tier2_step": 280.5,
+          "mean_plateau": 14.8,
+          "therapy_prevention_rate": 1.0,
+          "mean_therapy_delay": 201.6,
+          "mean_therapy_plateau": 55.0
+        },
+        {
+          "config_id": 382,
+          "criterion": {
+            "is_genuine": true,
+            "c1_slope": true,
+            "c2_coherence": true,
+            "c3_silent": true,
+            "tip_median": 192.0,
+            "silent_median": 163.5,
+            "peak_median": 12.5,
+            "coh_r_median": 0.512
+          },
+          "mean_tipping_step": 190.7,
+          "mean_coherence_r": 0.508,
+          "mean_tier2_step": 184.2,
+          "mean_plateau": 10.9,
+          "therapy_prevention_rate": 1.0,
+          "mean_therapy_delay": 175.5,
+          "mean_therapy_plateau": 32.7
+        },
+        {
+          "config_id": 391,
+          "criterion": {
+            "is_genuine": true,
+            "c1_slope": true,
+            "c2_coherence": true,
+            "c3_silent": true,
+            "tip_median": 215.0,
+            "silent_median": 177.5,
+            "peak_median": 8.5,
+            "coh_r_median": 0.495
+          },
+          "mean_tipping_step": 215.0,
+          "mean_coherence_r": 0.507,
+          "mean_tier2_step": 209.3,
+          "mean_plateau": 12.1,
+          "therapy_prevention_rate": 1.0,
+          "mean_therapy_delay": 172.6,
+          "mean_therapy_plateau": 43.1
+        },
+        {
+          "config_id": 21,
+          "criterion": {
+            "is_genuine": true,
+            "c1_slope": true,
+            "c2_coherence": true,
+            "c3_silent": true,
+            "tip_median": 227.5,
+            "silent_median": 189.0,
+            "peak_median": 9.5,
+            "coh_r_median": 0.49
+          },
+          "mean_tipping_step": 230.1,
+          "mean_coherence_r": 0.495,
+          "mean_tier2_step": 224.1,
+          "mean_plateau": 12.0,
+          "therapy_prevention_rate": 1.0,
+          "mean_therapy_delay": 209.3,
+          "mean_therapy_plateau": 47.1
+        }
+      ],
+      "genuine_tipping_rate": 1.0,
+      "mean_tipping_step": 228.4,
+      "mean_coherence_r": 0.538,
+      "tier2_activation_step": 222.3,
+      "plateau_survivors": 12.3,
+      "therapy_prevention_rate": 1.0,
+      "mean_therapy_delay": 204.6,
+      "runtime_s": 8.8
+    },
+    {
+      "motif_name": "modular",
+      "biological_note": "Intra-community weights x1.5, inter-community x0.7 (3 communities: sensory, interneuron, motor). Strengthens local circuits while reducing cross-layer prion-like spreading pathways.",
+      "graph_metrics": {
+        "n_edges": 127,
+        "clustering_coeff": 0.2024,
+        "avg_path_length": 2.876,
+        "modularity": 0.2008,
+        "n_bridges": 4,
+        "degree_variance": 6.73
+      },
+      "config_results": [
+        {
+          "config_id": 334,
+          "criterion": {
+            "is_genuine": true,
+            "c1_slope": true,
+            "c2_coherence": true,
+            "c3_silent": true,
+            "tip_median": 206.5,
+            "silent_median": 179.5,
+            "peak_median": 9.5,
+            "coh_r_median": 0.597
+          },
+          "mean_tipping_step": 208.4,
+          "mean_coherence_r": 0.599,
+          "mean_tier2_step": 200.5,
+          "mean_plateau": 11.6,
+          "therapy_prevention_rate": 1.0,
+          "mean_therapy_delay": 268.6,
+          "mean_therapy_plateau": 51.6
+        },
+        {
+          "config_id": 235,
+          "criterion": {
+            "is_genuine": false,
+            "c1_slope": true,
+            "c2_coherence": false,
+            "c3_silent": true,
+            "tip_median": 280.0,
+            "silent_median": 254.0,
+            "peak_median": 8.0,
+            "coh_r_median": 0.27
+          },
+          "mean_tipping_step": 283.4,
+          "mean_coherence_r": 0.304,
+          "mean_tier2_step": 276.3,
+          "mean_plateau": 13.7,
+          "therapy_prevention_rate": 1.0,
+          "mean_therapy_delay": 205.7,
+          "mean_therapy_plateau": 55.8
+        },
+        {
+          "config_id": 382,
+          "criterion": {
+            "is_genuine": true,
+            "c1_slope": true,
+            "c2_coherence": true,
+            "c3_silent": true,
+            "tip_median": 185.5,
+            "silent_median": 168.0,
+            "peak_median": 14.0,
+            "coh_r_median": 0.453
+          },
+          "mean_tipping_step": 182.1,
+          "mean_coherence_r": 0.437,
+          "mean_tier2_step": 179.8,
+          "mean_plateau": 10.9,
+          "therapy_prevention_rate": 1.0,
+          "mean_therapy_delay": 194.5,
+          "mean_therapy_plateau": 32.1
+        },
+        {
+          "config_id": 391,
+          "criterion": {
+            "is_genuine": true,
+            "c1_slope": true,
+            "c2_coherence": true,
+            "c3_silent": true,
+            "tip_median": 217.5,
+            "silent_median": 198.0,
+            "peak_median": 9.0,
+            "coh_r_median": 0.414
+          },
+          "mean_tipping_step": 215.4,
+          "mean_coherence_r": 0.413,
+          "mean_tier2_step": 211.2,
+          "mean_plateau": 11.7,
+          "therapy_prevention_rate": 1.0,
+          "mean_therapy_delay": 196.9,
+          "mean_therapy_plateau": 45.4
+        },
+        {
+          "config_id": 21,
+          "criterion": {
+            "is_genuine": true,
+            "c1_slope": true,
+            "c2_coherence": true,
+            "c3_silent": true,
+            "tip_median": 223.5,
+            "silent_median": 204.0,
+            "peak_median": 11.0,
+            "coh_r_median": 0.418
+          },
+          "mean_tipping_step": 223.1,
+          "mean_coherence_r": 0.407,
+          "mean_tier2_step": 220.1,
+          "mean_plateau": 11.9,
+          "therapy_prevention_rate": 1.0,
+          "mean_therapy_delay": 228.9,
+          "mean_therapy_plateau": 48.6
+        }
+      ],
+      "genuine_tipping_rate": 0.8,
+      "mean_tipping_step": 222.5,
+      "mean_coherence_r": 0.432,
+      "tier2_activation_step": 217.6,
+      "plateau_survivors": 11.96,
+      "therapy_prevention_rate": 1.0,
+      "mean_therapy_delay": 218.9,
+      "runtime_s": 9.1
+    },
+    {
+      "motif_name": "anti_hub",
+      "biological_note": "3 distal hub edges (AVAL->DA9, AVAR->DA8, AVAL->VA5) redistributed to underused interneurons (AIBL, AIBR). Reduces super-spreader influence of the two main backward command neurons.",
+      "graph_metrics": {
+        "n_edges": 127,
+        "clustering_coeff": 0.1776,
+        "avg_path_length": 2.942,
+        "modularity": 0.0834,
+        "n_bridges": 4,
+        "degree_variance": 5.61
+      },
+      "config_results": [
+        {
+          "config_id": 334,
+          "criterion": {
+            "is_genuine": true,
+            "c1_slope": true,
+            "c2_coherence": true,
+            "c3_silent": true,
+            "tip_median": 222.5,
+            "silent_median": 200.5,
+            "peak_median": 8.0,
+            "coh_r_median": 0.679
+          },
+          "mean_tipping_step": 221.4,
+          "mean_coherence_r": 0.694,
+          "mean_tier2_step": 215.7,
+          "mean_plateau": 11.7,
+          "therapy_prevention_rate": 1.0,
+          "mean_therapy_delay": 262.7,
+          "mean_therapy_plateau": 52.3
+        },
+        {
+          "config_id": 235,
+          "criterion": {
+            "is_genuine": true,
+            "c1_slope": true,
+            "c2_coherence": true,
+            "c3_silent": true,
+            "tip_median": 292.0,
+            "silent_median": 254.0,
+            "peak_median": 7.5,
+            "coh_r_median": 0.472
+          },
+          "mean_tipping_step": 291.4,
+          "mean_coherence_r": 0.46,
+          "mean_tier2_step": 284.9,
+          "mean_plateau": 15.0,
+          "therapy_prevention_rate": 1.0,
+          "mean_therapy_delay": 196.6,
+          "mean_therapy_plateau": 55.2
+        },
+        {
+          "config_id": 382,
+          "criterion": {
+            "is_genuine": true,
+            "c1_slope": true,
+            "c2_coherence": true,
+            "c3_silent": true,
+            "tip_median": 193.5,
+            "silent_median": 171.5,
+            "peak_median": 12.0,
+            "coh_r_median": 0.5
+          },
+          "mean_tipping_step": 192.2,
+          "mean_coherence_r": 0.494,
+          "mean_tier2_step": 189.2,
+          "mean_plateau": 10.9,
+          "therapy_prevention_rate": 1.0,
+          "mean_therapy_delay": 177.8,
+          "mean_therapy_plateau": 33.2
+        },
+        {
+          "config_id": 391,
+          "criterion": {
+            "is_genuine": true,
+            "c1_slope": true,
+            "c2_coherence": true,
+            "c3_silent": true,
+            "tip_median": 219.0,
+            "silent_median": 186.0,
+            "peak_median": 8.5,
+            "coh_r_median": 0.506
+          },
+          "mean_tipping_step": 217.2,
+          "mean_coherence_r": 0.513,
+          "mean_tier2_step": 210.5,
+          "mean_plateau": 12.1,
+          "therapy_prevention_rate": 1.0,
+          "mean_therapy_delay": 169.7,
+          "mean_therapy_plateau": 43.1
+        },
+        {
+          "config_id": 21,
+          "criterion": {
+            "is_genuine": true,
+            "c1_slope": true,
+            "c2_coherence": true,
+            "c3_silent": true,
+            "tip_median": 230.5,
+            "silent_median": 197.5,
+            "peak_median": 9.5,
+            "coh_r_median": 0.469
+          },
+          "mean_tipping_step": 232.1,
+          "mean_coherence_r": 0.473,
+          "mean_tier2_step": 226.9,
+          "mean_plateau": 12.0,
+          "therapy_prevention_rate": 1.0,
+          "mean_therapy_delay": 207.2,
+          "mean_therapy_plateau": 47.5
+        }
+      ],
+      "genuine_tipping_rate": 1.0,
+      "mean_tipping_step": 230.9,
+      "mean_coherence_r": 0.527,
+      "tier2_activation_step": 225.4,
+      "plateau_survivors": 12.34,
+      "therapy_prevention_rate": 1.0,
+      "mean_therapy_delay": 202.8,
+      "runtime_s": 9.1
+    },
+    {
+      "motif_name": "rich_club",
+      "biological_note": "Edges between top-20%-degree nodes scaled x1.5. Strengthens backbone connectivity between hubs. Models ALS-resistant highly-connected circuits proposed in scale-free network resilience studies.",
+      "graph_metrics": {
+        "n_edges": 127,
+        "clustering_coeff": 0.2024,
+        "avg_path_length": 2.876,
+        "modularity": 0.0938,
+        "n_bridges": 4,
+        "degree_variance": 6.73
+      },
+      "config_results": [
+        {
+          "config_id": 334,
+          "criterion": {
+            "is_genuine": true,
+            "c1_slope": true,
+            "c2_coherence": true,
+            "c3_silent": true,
+            "tip_median": 215.5,
+            "silent_median": 196.5,
+            "peak_median": 10.0,
+            "coh_r_median": 0.635
+          },
+          "mean_tipping_step": 215.6,
+          "mean_coherence_r": 0.647,
+          "mean_tier2_step": 210.2,
+          "mean_plateau": 11.7,
+          "therapy_prevention_rate": 1.0,
+          "mean_therapy_delay": 266.1,
+          "mean_therapy_plateau": 52.0
+        },
+        {
+          "config_id": 235,
+          "criterion": {
+            "is_genuine": true,
+            "c1_slope": true,
+            "c2_coherence": true,
+            "c3_silent": true,
+            "tip_median": 281.5,
+            "silent_median": 240.5,
+            "peak_median": 8.0,
+            "coh_r_median": 0.425
+          },
+          "mean_tipping_step": 282.4,
+          "mean_coherence_r": 0.418,
+          "mean_tier2_step": 276.7,
+          "mean_plateau": 14.5,
+          "therapy_prevention_rate": 1.0,
+          "mean_therapy_delay": 205.8,
+          "mean_therapy_plateau": 54.8
+        },
+        {
+          "config_id": 382,
+          "criterion": {
+            "is_genuine": true,
+            "c1_slope": true,
+            "c2_coherence": true,
+            "c3_silent": true,
+            "tip_median": 187.5,
+            "silent_median": 163.0,
+            "peak_median": 14.5,
+            "coh_r_median": 0.482
+          },
+          "mean_tipping_step": 184.7,
+          "mean_coherence_r": 0.472,
+          "mean_tier2_step": 179.9,
+          "mean_plateau": 10.9,
+          "therapy_prevention_rate": 1.0,
+          "mean_therapy_delay": 177.4,
+          "mean_therapy_plateau": 32.5
+        },
+        {
+          "config_id": 391,
+          "criterion": {
+            "is_genuine": true,
+            "c1_slope": true,
+            "c2_coherence": true,
+            "c3_silent": true,
+            "tip_median": 208.0,
+            "silent_median": 175.5,
+            "peak_median": 9.0,
+            "coh_r_median": 0.448
+          },
+          "mean_tipping_step": 211.2,
+          "mean_coherence_r": 0.46,
+          "mean_tier2_step": 204.6,
+          "mean_plateau": 12.1,
+          "therapy_prevention_rate": 1.0,
+          "mean_therapy_delay": 170.0,
+          "mean_therapy_plateau": 42.5
+        },
+        {
+          "config_id": 21,
+          "criterion": {
+            "is_genuine": true,
+            "c1_slope": true,
+            "c2_coherence": true,
+            "c3_silent": true,
+            "tip_median": 223.0,
+            "silent_median": 186.0,
+            "peak_median": 9.0,
+            "coh_r_median": 0.449
+          },
+          "mean_tipping_step": 223.1,
+          "mean_coherence_r": 0.457,
+          "mean_tier2_step": 218.1,
+          "mean_plateau": 12.0,
+          "therapy_prevention_rate": 1.0,
+          "mean_therapy_delay": 214.0,
+          "mean_therapy_plateau": 47.2
+        }
+      ],
+      "genuine_tipping_rate": 1.0,
+      "mean_tipping_step": 223.4,
+      "mean_coherence_r": 0.491,
+      "tier2_activation_step": 217.9,
+      "plateau_survivors": 12.24,
+      "therapy_prevention_rate": 1.0,
+      "mean_therapy_delay": 206.7,
+      "runtime_s": 8.8
+    },
+    {
+      "motif_name": "distributed",
+      "biological_note": "5 hub->distal edges replaced by equivalent connections from underutilized interneurons (AVDL, AVDR, PVCL, AVEL, AVER). Democratises input to distal motor neurons, reducing cascade bottlenecks.",
+      "graph_metrics": {
+        "n_edges": 127,
+        "clustering_coeff": 0.1786,
+        "avg_path_length": 2.96,
+        "modularity": 0.0913,
+        "n_bridges": 4,
+        "degree_variance": 5.68
+      },
+      "config_results": [
+        {
+          "config_id": 334,
+          "criterion": {
+            "is_genuine": true,
+            "c1_slope": true,
+            "c2_coherence": true,
+            "c3_silent": true,
+            "tip_median": 223.0,
+            "silent_median": 200.5,
+            "peak_median": 8.5,
+            "coh_r_median": 0.671
+          },
+          "mean_tipping_step": 222.1,
+          "mean_coherence_r": 0.688,
+          "mean_tier2_step": 216.7,
+          "mean_plateau": 11.7,
+          "therapy_prevention_rate": 1.0,
+          "mean_therapy_delay": 264.0,
+          "mean_therapy_plateau": 52.7
+        },
+        {
+          "config_id": 235,
+          "criterion": {
+            "is_genuine": true,
+            "c1_slope": true,
+            "c2_coherence": true,
+            "c3_silent": true,
+            "tip_median": 294.5,
+            "silent_median": 255.0,
+            "peak_median": 7.0,
+            "coh_r_median": 0.426
+          },
+          "mean_tipping_step": 291.9,
+          "mean_coherence_r": 0.44,
+          "mean_tier2_step": 287.7,
+          "mean_plateau": 15.0,
+          "therapy_prevention_rate": 1.0,
+          "mean_therapy_delay": 196.2,
+          "mean_therapy_plateau": 55.5
+        },
+        {
+          "config_id": 382,
+          "criterion": {
+            "is_genuine": true,
+            "c1_slope": true,
+            "c2_coherence": true,
+            "c3_silent": true,
+            "tip_median": 194.5,
+            "silent_median": 171.5,
+            "peak_median": 11.0,
+            "coh_r_median": 0.498
+          },
+          "mean_tipping_step": 192.8,
+          "mean_coherence_r": 0.487,
+          "mean_tier2_step": 189.2,
+          "mean_plateau": 10.9,
+          "therapy_prevention_rate": 1.0,
+          "mean_therapy_delay": 180.9,
+          "mean_therapy_plateau": 33.9
+        },
+        {
+          "config_id": 391,
+          "criterion": {
+            "is_genuine": true,
+            "c1_slope": true,
+            "c2_coherence": true,
+            "c3_silent": true,
+            "tip_median": 220.0,
+            "silent_median": 186.0,
+            "peak_median": 8.0,
+            "coh_r_median": 0.478
+          },
+          "mean_tipping_step": 218.4,
+          "mean_coherence_r": 0.488,
+          "mean_tier2_step": 211.2,
+          "mean_plateau": 12.1,
+          "therapy_prevention_rate": 1.0,
+          "mean_therapy_delay": 169.2,
+          "mean_therapy_plateau": 43.9
+        },
+        {
+          "config_id": 21,
+          "criterion": {
+            "is_genuine": true,
+            "c1_slope": true,
+            "c2_coherence": true,
+            "c3_silent": true,
+            "tip_median": 230.5,
+            "silent_median": 197.5,
+            "peak_median": 9.0,
+            "coh_r_median": 0.456
+          },
+          "mean_tipping_step": 233.4,
+          "mean_coherence_r": 0.468,
+          "mean_tier2_step": 226.5,
+          "mean_plateau": 12.0,
+          "therapy_prevention_rate": 1.0,
+          "mean_therapy_delay": 209.2,
+          "mean_therapy_plateau": 48.0
+        }
+      ],
+      "genuine_tipping_rate": 1.0,
+      "mean_tipping_step": 231.7,
+      "mean_coherence_r": 0.514,
+      "tier2_activation_step": 226.3,
+      "plateau_survivors": 12.34,
+      "therapy_prevention_rate": 1.0,
+      "mean_therapy_delay": 203.9,
+      "runtime_s": 8.7
+    },
+    {
+      "motif_name": "hierarchical",
+      "biological_note": "10 sensory->motor skip-level edges added (PLML->DA1, ALML->DB1, AVM->VA1, etc.). Creates explicit hierarchical shortcuts bypassing interneuron layer, mimicking fast reflex arcs in vertebrate spinal circuits.",
+      "graph_metrics": {
+        "n_edges": 137,
+        "clustering_coeff": 0.1774,
+        "avg_path_length": 2.842,
+        "modularity": 0.0828,
+        "n_bridges": 4,
+        "degree_variance": 6.81
+      },
+      "config_results": [
+        {
+          "config_id": 334,
+          "criterion": {
+            "is_genuine": true,
+            "c1_slope": true,
+            "c2_coherence": true,
+            "c3_silent": true,
+            "tip_median": 219.5,
+            "silent_median": 199.0,
+            "peak_median": 8.5,
+            "coh_r_median": 0.691
+          },
+          "mean_tipping_step": 219.0,
+          "mean_coherence_r": 0.703,
+          "mean_tier2_step": 212.6,
+          "mean_plateau": 11.7,
+          "therapy_prevention_rate": 1.0,
+          "mean_therapy_delay": 261.2,
+          "mean_therapy_plateau": 52.1
+        },
+        {
+          "config_id": 235,
+          "criterion": {
+            "is_genuine": true,
+            "c1_slope": true,
+            "c2_coherence": true,
+            "c3_silent": true,
+            "tip_median": 285.5,
+            "silent_median": 249.0,
+            "peak_median": 7.0,
+            "coh_r_median": 0.478
+          },
+          "mean_tipping_step": 285.4,
+          "mean_coherence_r": 0.478,
+          "mean_tier2_step": 281.5,
+          "mean_plateau": 15.0,
+          "therapy_prevention_rate": 1.0,
+          "mean_therapy_delay": 202.3,
+          "mean_therapy_plateau": 55.0
+        },
+        {
+          "config_id": 382,
+          "criterion": {
+            "is_genuine": true,
+            "c1_slope": true,
+            "c2_coherence": true,
+            "c3_silent": true,
+            "tip_median": 190.5,
+            "silent_median": 167.0,
+            "peak_median": 11.0,
+            "coh_r_median": 0.518
+          },
+          "mean_tipping_step": 188.9,
+          "mean_coherence_r": 0.511,
+          "mean_tier2_step": 184.4,
+          "mean_plateau": 10.9,
+          "therapy_prevention_rate": 1.0,
+          "mean_therapy_delay": 176.7,
+          "mean_therapy_plateau": 32.2
+        },
+        {
+          "config_id": 391,
+          "criterion": {
+            "is_genuine": true,
+            "c1_slope": true,
+            "c2_coherence": true,
+            "c3_silent": true,
+            "tip_median": 210.0,
+            "silent_median": 177.0,
+            "peak_median": 8.5,
+            "coh_r_median": 0.512
+          },
+          "mean_tipping_step": 211.9,
+          "mean_coherence_r": 0.519,
+          "mean_tier2_step": 207.5,
+          "mean_plateau": 12.1,
+          "therapy_prevention_rate": 1.0,
+          "mean_therapy_delay": 168.8,
+          "mean_therapy_plateau": 41.9
+        },
+        {
+          "config_id": 21,
+          "criterion": {
+            "is_genuine": true,
+            "c1_slope": true,
+            "c2_coherence": true,
+            "c3_silent": true,
+            "tip_median": 227.5,
+            "silent_median": 189.0,
+            "peak_median": 9.0,
+            "coh_r_median": 0.491
+          },
+          "mean_tipping_step": 228.0,
+          "mean_coherence_r": 0.502,
+          "mean_tier2_step": 220.5,
+          "mean_plateau": 12.0,
+          "therapy_prevention_rate": 1.0,
+          "mean_therapy_delay": 206.0,
+          "mean_therapy_plateau": 46.8
+        }
+      ],
+      "genuine_tipping_rate": 1.0,
+      "mean_tipping_step": 226.6,
+      "mean_coherence_r": 0.543,
+      "tier2_activation_step": 221.3,
+      "plateau_survivors": 12.34,
+      "therapy_prevention_rate": 1.0,
+      "mean_therapy_delay": 203.0,
+      "runtime_s": 8.6
+    },
+    {
+      "motif_name": "sparse_chain",
+      "biological_note": "12 redundant premotor->motor edges removed. Preserves only core chains and primary command->motor paths. Negative control: maximally fragile topology with minimal redundancy.",
+      "graph_metrics": {
+        "n_edges": 115,
+        "clustering_coeff": 0.1842,
+        "avg_path_length": 2.934,
+        "modularity": 0.1079,
+        "n_bridges": 8,
+        "degree_variance": 7.06
+      },
+      "config_results": [
+        {
+          "config_id": 334,
+          "criterion": {
+            "is_genuine": true,
+            "c1_slope": true,
+            "c2_coherence": true,
+            "c3_silent": true,
+            "tip_median": 224.5,
+            "silent_median": 201.0,
+            "peak_median": 9.5,
+            "coh_r_median": 0.693
+          },
+          "mean_tipping_step": 224.0,
+          "mean_coherence_r": 0.706,
+          "mean_tier2_step": 219.5,
+          "mean_plateau": 11.8,
+          "therapy_prevention_rate": 1.0,
+          "mean_therapy_delay": 262.3,
+          "mean_therapy_plateau": 52.5
+        },
+        {
+          "config_id": 235,
+          "criterion": {
+            "is_genuine": true,
+            "c1_slope": true,
+            "c2_coherence": true,
+            "c3_silent": true,
+            "tip_median": 295.0,
+            "silent_median": 258.0,
+            "peak_median": 7.0,
+            "coh_r_median": 0.419
+          },
+          "mean_tipping_step": 296.8,
+          "mean_coherence_r": 0.46,
+          "mean_tier2_step": 291.6,
+          "mean_plateau": 15.2,
+          "therapy_prevention_rate": 1.0,
+          "mean_therapy_delay": 193.3,
+          "mean_therapy_plateau": 55.6
+        },
+        {
+          "config_id": 382,
+          "criterion": {
+            "is_genuine": true,
+            "c1_slope": true,
+            "c2_coherence": true,
+            "c3_silent": true,
+            "tip_median": 196.5,
+            "silent_median": 175.0,
+            "peak_median": 12.5,
+            "coh_r_median": 0.519
+          },
+          "mean_tipping_step": 194.9,
+          "mean_coherence_r": 0.512,
+          "mean_tier2_step": 192.7,
+          "mean_plateau": 10.9,
+          "therapy_prevention_rate": 1.0,
+          "mean_therapy_delay": 185.3,
+          "mean_therapy_plateau": 33.6
+        },
+        {
+          "config_id": 391,
+          "criterion": {
+            "is_genuine": true,
+            "c1_slope": true,
+            "c2_coherence": true,
+            "c3_silent": true,
+            "tip_median": 222.5,
+            "silent_median": 189.5,
+            "peak_median": 9.0,
+            "coh_r_median": 0.507
+          },
+          "mean_tipping_step": 221.8,
+          "mean_coherence_r": 0.532,
+          "mean_tier2_step": 217.4,
+          "mean_plateau": 12.1,
+          "therapy_prevention_rate": 1.0,
+          "mean_therapy_delay": 181.9,
+          "mean_therapy_plateau": 44.2
+        },
+        {
+          "config_id": 21,
+          "criterion": {
+            "is_genuine": true,
+            "c1_slope": true,
+            "c2_coherence": true,
+            "c3_silent": true,
+            "tip_median": 236.0,
+            "silent_median": 201.0,
+            "peak_median": 10.5,
+            "coh_r_median": 0.501
+          },
+          "mean_tipping_step": 236.9,
+          "mean_coherence_r": 0.509,
+          "mean_tier2_step": 232.1,
+          "mean_plateau": 12.0,
+          "therapy_prevention_rate": 1.0,
+          "mean_therapy_delay": 212.2,
+          "mean_therapy_plateau": 48.9
+        }
+      ],
+      "genuine_tipping_rate": 1.0,
+      "mean_tipping_step": 234.9,
+      "mean_coherence_r": 0.544,
+      "tier2_activation_step": 230.7,
+      "plateau_survivors": 12.4,
+      "therapy_prevention_rate": 1.0,
+      "mean_therapy_delay": 207.0,
+      "runtime_s": 10.3
+    }
+  ]
+}

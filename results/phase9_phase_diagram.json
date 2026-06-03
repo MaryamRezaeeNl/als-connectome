@@ -1,0 +1,1051 @@
+{
+  "description": "Phase 9 aggregation suppression phase diagram",
+  "config_id": 334,
+  "setup": {
+    "strengths": [
+      0.1,
+      0.2,
+      0.3,
+      0.4,
+      0.5,
+      0.6,
+      0.7,
+      0.8,
+      0.9
+    ],
+    "start_ts": [
+      0,
+      25,
+      50,
+      75,
+      100,
+      125,
+      150,
+      175,
+      200,
+      225,
+      250
+    ],
+    "n_seeds": 5,
+    "steps": 500
+  },
+  "baseline": {
+    "genuine_rate": 1.0,
+    "tipping_step": 248.0,
+    "plateau": 11.0,
+    "tier2_activated": true,
+    "mixed": false
+  },
+  "grid": [
+    {
+      "start_t": 0,
+      "strength": 0.1,
+      "outcome": "partial",
+      "genuine_rate": 1.0,
+      "tipping_step": 262.0,
+      "plateau": 12.0,
+      "tier2_activated": true,
+      "mixed": false
+    },
+    {
+      "start_t": 0,
+      "strength": 0.2,
+      "outcome": "partial",
+      "genuine_rate": 1.0,
+      "tipping_step": 265.0,
+      "plateau": 14.0,
+      "tier2_activated": true,
+      "mixed": false
+    },
+    {
+      "start_t": 0,
+      "strength": 0.3,
+      "outcome": "delay",
+      "genuine_rate": 1.0,
+      "tipping_step": 282.0,
+      "plateau": 15.0,
+      "tier2_activated": true,
+      "mixed": false
+    },
+    {
+      "start_t": 0,
+      "strength": 0.4,
+      "outcome": "delay",
+      "genuine_rate": 1.0,
+      "tipping_step": 309.0,
+      "plateau": 16.0,
+      "tier2_activated": true,
+      "mixed": false
+    },
+    {
+      "start_t": 0,
+      "strength": 0.5,
+      "outcome": "delay",
+      "genuine_rate": 1.0,
+      "tipping_step": 368.0,
+      "plateau": 20.0,
+      "tier2_activated": true,
+      "mixed": false
+    },
+    {
+      "start_t": 0,
+      "strength": 0.6,
+      "outcome": "mixed",
+      "genuine_rate": 0.6,
+      "tipping_step": 376.0,
+      "plateau": 25.0,
+      "tier2_activated": true,
+      "mixed": true
+    },
+    {
+      "start_t": 0,
+      "strength": 0.7,
+      "outcome": "mixed",
+      "genuine_rate": 0.4,
+      "tipping_step": 449.0,
+      "plateau": 33.0,
+      "tier2_activated": true,
+      "mixed": true
+    },
+    {
+      "start_t": 0,
+      "strength": 0.8,
+      "outcome": "prevention",
+      "genuine_rate": 0.0,
+      "tipping_step": 462.0,
+      "plateau": 48.0,
+      "tier2_activated": false,
+      "mixed": false
+    },
+    {
+      "start_t": 0,
+      "strength": 0.9,
+      "outcome": "prevention",
+      "genuine_rate": 0.0,
+      "tipping_step": 452.0,
+      "plateau": 58.0,
+      "tier2_activated": false,
+      "mixed": false
+    },
+    {
+      "start_t": 25,
+      "strength": 0.1,
+      "outcome": "partial",
+      "genuine_rate": 1.0,
+      "tipping_step": 260.0,
+      "plateau": 12.0,
+      "tier2_activated": true,
+      "mixed": false
+    },
+    {
+      "start_t": 25,
+      "strength": 0.2,
+      "outcome": "partial",
+      "genuine_rate": 1.0,
+      "tipping_step": 259.0,
+      "plateau": 13.0,
+      "tier2_activated": true,
+      "mixed": false
+    },
+    {
+      "start_t": 25,
+      "strength": 0.3,
+      "outcome": "delay",
+      "genuine_rate": 1.0,
+      "tipping_step": 290.0,
+      "plateau": 15.0,
+      "tier2_activated": true,
+      "mixed": false
+    },
+    {
+      "start_t": 25,
+      "strength": 0.4,
+      "outcome": "delay",
+      "genuine_rate": 1.0,
+      "tipping_step": 300.0,
+      "plateau": 16.0,
+      "tier2_activated": true,
+      "mixed": false
+    },
+    {
+      "start_t": 25,
+      "strength": 0.5,
+      "outcome": "delay",
+      "genuine_rate": 1.0,
+      "tipping_step": 322.0,
+      "plateau": 19.0,
+      "tier2_activated": true,
+      "mixed": false
+    },
+    {
+      "start_t": 25,
+      "strength": 0.6,
+      "outcome": "mixed",
+      "genuine_rate": 0.6,
+      "tipping_step": 356.0,
+      "plateau": 24.0,
+      "tier2_activated": true,
+      "mixed": true
+    },
+    {
+      "start_t": 25,
+      "strength": 0.7,
+      "outcome": "mixed",
+      "genuine_rate": 0.6,
+      "tipping_step": 452.0,
+      "plateau": 29.0,
+      "tier2_activated": true,
+      "mixed": true
+    },
+    {
+      "start_t": 25,
+      "strength": 0.8,
+      "outcome": "prevention",
+      "genuine_rate": 0.0,
+      "tipping_step": 432.0,
+      "plateau": 41.0,
+      "tier2_activated": false,
+      "mixed": false
+    },
+    {
+      "start_t": 25,
+      "strength": 0.9,
+      "outcome": "prevention",
+      "genuine_rate": 0.0,
+      "tipping_step": 461.0,
+      "plateau": 55.0,
+      "tier2_activated": false,
+      "mixed": false
+    },
+    {
+      "start_t": 50,
+      "strength": 0.1,
+      "outcome": "ineffective",
+      "genuine_rate": 1.0,
+      "tipping_step": 258.0,
+      "plateau": 12.0,
+      "tier2_activated": true,
+      "mixed": false
+    },
+    {
+      "start_t": 50,
+      "strength": 0.2,
+      "outcome": "ineffective",
+      "genuine_rate": 1.0,
+      "tipping_step": 249.0,
+      "plateau": 13.0,
+      "tier2_activated": true,
+      "mixed": false
+    },
+    {
+      "start_t": 50,
+      "strength": 0.3,
+      "outcome": "partial",
+      "genuine_rate": 1.0,
+      "tipping_step": 269.0,
+      "plateau": 15.0,
+      "tier2_activated": true,
+      "mixed": false
+    },
+    {
+      "start_t": 50,
+      "strength": 0.4,
+      "outcome": "delay",
+      "genuine_rate": 1.0,
+      "tipping_step": 298.0,
+      "plateau": 16.0,
+      "tier2_activated": true,
+      "mixed": false
+    },
+    {
+      "start_t": 50,
+      "strength": 0.5,
+      "outcome": "delay",
+      "genuine_rate": 1.0,
+      "tipping_step": 310.0,
+      "plateau": 18.0,
+      "tier2_activated": true,
+      "mixed": false
+    },
+    {
+      "start_t": 50,
+      "strength": 0.6,
+      "outcome": "delay",
+      "genuine_rate": 1.0,
+      "tipping_step": 326.0,
+      "plateau": 20.0,
+      "tier2_activated": true,
+      "mixed": false
+    },
+    {
+      "start_t": 50,
+      "strength": 0.7,
+      "outcome": "mixed",
+      "genuine_rate": 0.6,
+      "tipping_step": 359.0,
+      "plateau": 25.0,
+      "tier2_activated": true,
+      "mixed": true
+    },
+    {
+      "start_t": 50,
+      "strength": 0.8,
+      "outcome": "mixed",
+      "genuine_rate": 0.2,
+      "tipping_step": 406.0,
+      "plateau": 35.0,
+      "tier2_activated": true,
+      "mixed": true
+    },
+    {
+      "start_t": 50,
+      "strength": 0.9,
+      "outcome": "prevention",
+      "genuine_rate": 0.0,
+      "tipping_step": 452.0,
+      "plateau": 44.0,
+      "tier2_activated": false,
+      "mixed": false
+    },
+    {
+      "start_t": 75,
+      "strength": 0.1,
+      "outcome": "ineffective",
+      "genuine_rate": 1.0,
+      "tipping_step": 249.0,
+      "plateau": 12.0,
+      "tier2_activated": true,
+      "mixed": false
+    },
+    {
+      "start_t": 75,
+      "strength": 0.2,
+      "outcome": "ineffective",
+      "genuine_rate": 1.0,
+      "tipping_step": 253.0,
+      "plateau": 12.0,
+      "tier2_activated": true,
+      "mixed": false
+    },
+    {
+      "start_t": 75,
+      "strength": 0.3,
+      "outcome": "partial",
+      "genuine_rate": 1.0,
+      "tipping_step": 269.0,
+      "plateau": 15.0,
+      "tier2_activated": true,
+      "mixed": false
+    },
+    {
+      "start_t": 75,
+      "strength": 0.4,
+      "outcome": "delay",
+      "genuine_rate": 1.0,
+      "tipping_step": 286.0,
+      "plateau": 16.0,
+      "tier2_activated": true,
+      "mixed": false
+    },
+    {
+      "start_t": 75,
+      "strength": 0.5,
+      "outcome": "delay",
+      "genuine_rate": 1.0,
+      "tipping_step": 308.0,
+      "plateau": 18.0,
+      "tier2_activated": true,
+      "mixed": false
+    },
+    {
+      "start_t": 75,
+      "strength": 0.6,
+      "outcome": "delay",
+      "genuine_rate": 1.0,
+      "tipping_step": 291.0,
+      "plateau": 19.0,
+      "tier2_activated": true,
+      "mixed": false
+    },
+    {
+      "start_t": 75,
+      "strength": 0.7,
+      "outcome": "delay",
+      "genuine_rate": 1.0,
+      "tipping_step": 310.0,
+      "plateau": 22.0,
+      "tier2_activated": true,
+      "mixed": false
+    },
+    {
+      "start_t": 75,
+      "strength": 0.8,
+      "outcome": "mixed",
+      "genuine_rate": 0.6,
+      "tipping_step": 356.0,
+      "plateau": 27.0,
+      "tier2_activated": true,
+      "mixed": true
+    },
+    {
+      "start_t": 75,
+      "strength": 0.9,
+      "outcome": "prevention",
+      "genuine_rate": 0.0,
+      "tipping_step": 388.0,
+      "plateau": 36.0,
+      "tier2_activated": false,
+      "mixed": false
+    },
+    {
+      "start_t": 100,
+      "strength": 0.1,
+      "outcome": "ineffective",
+      "genuine_rate": 1.0,
+      "tipping_step": 247.0,
+      "plateau": 12.0,
+      "tier2_activated": true,
+      "mixed": false
+    },
+    {
+      "start_t": 100,
+      "strength": 0.2,
+      "outcome": "ineffective",
+      "genuine_rate": 1.0,
+      "tipping_step": 249.0,
+      "plateau": 12.0,
+      "tier2_activated": true,
+      "mixed": false
+    },
+    {
+      "start_t": 100,
+      "strength": 0.3,
+      "outcome": "partial",
+      "genuine_rate": 1.0,
+      "tipping_step": 264.0,
+      "plateau": 15.0,
+      "tier2_activated": true,
+      "mixed": false
+    },
+    {
+      "start_t": 100,
+      "strength": 0.4,
+      "outcome": "partial",
+      "genuine_rate": 1.0,
+      "tipping_step": 276.0,
+      "plateau": 15.0,
+      "tier2_activated": true,
+      "mixed": false
+    },
+    {
+      "start_t": 100,
+      "strength": 0.5,
+      "outcome": "delay",
+      "genuine_rate": 1.0,
+      "tipping_step": 281.0,
+      "plateau": 16.0,
+      "tier2_activated": true,
+      "mixed": false
+    },
+    {
+      "start_t": 100,
+      "strength": 0.6,
+      "outcome": "delay",
+      "genuine_rate": 1.0,
+      "tipping_step": 305.0,
+      "plateau": 19.0,
+      "tier2_activated": true,
+      "mixed": false
+    },
+    {
+      "start_t": 100,
+      "strength": 0.7,
+      "outcome": "delay",
+      "genuine_rate": 1.0,
+      "tipping_step": 300.0,
+      "plateau": 20.0,
+      "tier2_activated": true,
+      "mixed": false
+    },
+    {
+      "start_t": 100,
+      "strength": 0.8,
+      "outcome": "mixed",
+      "genuine_rate": 0.8,
+      "tipping_step": 298.0,
+      "plateau": 23.0,
+      "tier2_activated": true,
+      "mixed": true
+    },
+    {
+      "start_t": 100,
+      "strength": 0.9,
+      "outcome": "mixed",
+      "genuine_rate": 0.6,
+      "tipping_step": 336.0,
+      "plateau": 27.0,
+      "tier2_activated": true,
+      "mixed": true
+    },
+    {
+      "start_t": 125,
+      "strength": 0.1,
+      "outcome": "ineffective",
+      "genuine_rate": 1.0,
+      "tipping_step": 245.0,
+      "plateau": 12.0,
+      "tier2_activated": true,
+      "mixed": false
+    },
+    {
+      "start_t": 125,
+      "strength": 0.2,
+      "outcome": "ineffective",
+      "genuine_rate": 1.0,
+      "tipping_step": 246.0,
+      "plateau": 12.0,
+      "tier2_activated": true,
+      "mixed": false
+    },
+    {
+      "start_t": 125,
+      "strength": 0.3,
+      "outcome": "ineffective",
+      "genuine_rate": 1.0,
+      "tipping_step": 243.0,
+      "plateau": 14.0,
+      "tier2_activated": true,
+      "mixed": false
+    },
+    {
+      "start_t": 125,
+      "strength": 0.4,
+      "outcome": "ineffective",
+      "genuine_rate": 1.0,
+      "tipping_step": 250.0,
+      "plateau": 15.0,
+      "tier2_activated": true,
+      "mixed": false
+    },
+    {
+      "start_t": 125,
+      "strength": 0.5,
+      "outcome": "partial",
+      "genuine_rate": 1.0,
+      "tipping_step": 270.0,
+      "plateau": 16.0,
+      "tier2_activated": true,
+      "mixed": false
+    },
+    {
+      "start_t": 125,
+      "strength": 0.6,
+      "outcome": "partial",
+      "genuine_rate": 1.0,
+      "tipping_step": 261.0,
+      "plateau": 18.0,
+      "tier2_activated": true,
+      "mixed": false
+    },
+    {
+      "start_t": 125,
+      "strength": 0.7,
+      "outcome": "delay",
+      "genuine_rate": 1.0,
+      "tipping_step": 284.0,
+      "plateau": 19.0,
+      "tier2_activated": true,
+      "mixed": false
+    },
+    {
+      "start_t": 125,
+      "strength": 0.8,
+      "outcome": "delay",
+      "genuine_rate": 1.0,
+      "tipping_step": 279.0,
+      "plateau": 21.0,
+      "tier2_activated": true,
+      "mixed": false
+    },
+    {
+      "start_t": 125,
+      "strength": 0.9,
+      "outcome": "mixed",
+      "genuine_rate": 0.8,
+      "tipping_step": 301.0,
+      "plateau": 23.0,
+      "tier2_activated": true,
+      "mixed": true
+    },
+    {
+      "start_t": 150,
+      "strength": 0.1,
+      "outcome": "ineffective",
+      "genuine_rate": 1.0,
+      "tipping_step": 242.0,
+      "plateau": 12.0,
+      "tier2_activated": true,
+      "mixed": false
+    },
+    {
+      "start_t": 150,
+      "strength": 0.2,
+      "outcome": "ineffective",
+      "genuine_rate": 1.0,
+      "tipping_step": 247.0,
+      "plateau": 12.0,
+      "tier2_activated": true,
+      "mixed": false
+    },
+    {
+      "start_t": 150,
+      "strength": 0.3,
+      "outcome": "ineffective",
+      "genuine_rate": 1.0,
+      "tipping_step": 245.0,
+      "plateau": 13.0,
+      "tier2_activated": true,
+      "mixed": false
+    },
+    {
+      "start_t": 150,
+      "strength": 0.4,
+      "outcome": "ineffective",
+      "genuine_rate": 1.0,
+      "tipping_step": 241.0,
+      "plateau": 15.0,
+      "tier2_activated": true,
+      "mixed": false
+    },
+    {
+      "start_t": 150,
+      "strength": 0.5,
+      "outcome": "ineffective",
+      "genuine_rate": 1.0,
+      "tipping_step": 244.0,
+      "plateau": 15.0,
+      "tier2_activated": true,
+      "mixed": false
+    },
+    {
+      "start_t": 150,
+      "strength": 0.6,
+      "outcome": "ineffective",
+      "genuine_rate": 1.0,
+      "tipping_step": 250.0,
+      "plateau": 16.0,
+      "tier2_activated": true,
+      "mixed": false
+    },
+    {
+      "start_t": 150,
+      "strength": 0.7,
+      "outcome": "ineffective",
+      "genuine_rate": 1.0,
+      "tipping_step": 256.0,
+      "plateau": 18.0,
+      "tier2_activated": true,
+      "mixed": false
+    },
+    {
+      "start_t": 150,
+      "strength": 0.8,
+      "outcome": "delay",
+      "genuine_rate": 1.0,
+      "tipping_step": 285.0,
+      "plateau": 19.0,
+      "tier2_activated": true,
+      "mixed": false
+    },
+    {
+      "start_t": 150,
+      "strength": 0.9,
+      "outcome": "mixed",
+      "genuine_rate": 0.8,
+      "tipping_step": 265.0,
+      "plateau": 20.0,
+      "tier2_activated": true,
+      "mixed": true
+    },
+    {
+      "start_t": 175,
+      "strength": 0.1,
+      "outcome": "ineffective",
+      "genuine_rate": 1.0,
+      "tipping_step": 241.0,
+      "plateau": 12.0,
+      "tier2_activated": true,
+      "mixed": false
+    },
+    {
+      "start_t": 175,
+      "strength": 0.2,
+      "outcome": "ineffective",
+      "genuine_rate": 1.0,
+      "tipping_step": 244.0,
+      "plateau": 12.0,
+      "tier2_activated": true,
+      "mixed": false
+    },
+    {
+      "start_t": 175,
+      "strength": 0.3,
+      "outcome": "ineffective",
+      "genuine_rate": 1.0,
+      "tipping_step": 246.0,
+      "plateau": 12.0,
+      "tier2_activated": true,
+      "mixed": false
+    },
+    {
+      "start_t": 175,
+      "strength": 0.4,
+      "outcome": "ineffective",
+      "genuine_rate": 1.0,
+      "tipping_step": 248.0,
+      "plateau": 14.0,
+      "tier2_activated": true,
+      "mixed": false
+    },
+    {
+      "start_t": 175,
+      "strength": 0.5,
+      "outcome": "ineffective",
+      "genuine_rate": 1.0,
+      "tipping_step": 239.0,
+      "plateau": 15.0,
+      "tier2_activated": true,
+      "mixed": false
+    },
+    {
+      "start_t": 175,
+      "strength": 0.6,
+      "outcome": "ineffective",
+      "genuine_rate": 1.0,
+      "tipping_step": 236.0,
+      "plateau": 15.0,
+      "tier2_activated": true,
+      "mixed": false
+    },
+    {
+      "start_t": 175,
+      "strength": 0.7,
+      "outcome": "ineffective",
+      "genuine_rate": 1.0,
+      "tipping_step": 237.0,
+      "plateau": 16.0,
+      "tier2_activated": true,
+      "mixed": false
+    },
+    {
+      "start_t": 175,
+      "strength": 0.8,
+      "outcome": "ineffective",
+      "genuine_rate": 1.0,
+      "tipping_step": 245.0,
+      "plateau": 18.0,
+      "tier2_activated": true,
+      "mixed": false
+    },
+    {
+      "start_t": 175,
+      "strength": 0.9,
+      "outcome": "ineffective",
+      "genuine_rate": 1.0,
+      "tipping_step": 245.0,
+      "plateau": 18.0,
+      "tier2_activated": true,
+      "mixed": false
+    },
+    {
+      "start_t": 200,
+      "strength": 0.1,
+      "outcome": "ineffective",
+      "genuine_rate": 1.0,
+      "tipping_step": 239.0,
+      "plateau": 12.0,
+      "tier2_activated": true,
+      "mixed": false
+    },
+    {
+      "start_t": 200,
+      "strength": 0.2,
+      "outcome": "ineffective",
+      "genuine_rate": 1.0,
+      "tipping_step": 240.0,
+      "plateau": 12.0,
+      "tier2_activated": true,
+      "mixed": false
+    },
+    {
+      "start_t": 200,
+      "strength": 0.3,
+      "outcome": "ineffective",
+      "genuine_rate": 1.0,
+      "tipping_step": 241.0,
+      "plateau": 12.0,
+      "tier2_activated": true,
+      "mixed": false
+    },
+    {
+      "start_t": 200,
+      "strength": 0.4,
+      "outcome": "ineffective",
+      "genuine_rate": 1.0,
+      "tipping_step": 242.0,
+      "plateau": 13.0,
+      "tier2_activated": true,
+      "mixed": false
+    },
+    {
+      "start_t": 200,
+      "strength": 0.5,
+      "outcome": "ineffective",
+      "genuine_rate": 1.0,
+      "tipping_step": 245.0,
+      "plateau": 15.0,
+      "tier2_activated": true,
+      "mixed": false
+    },
+    {
+      "start_t": 200,
+      "strength": 0.6,
+      "outcome": "ineffective",
+      "genuine_rate": 1.0,
+      "tipping_step": 235.0,
+      "plateau": 15.0,
+      "tier2_activated": true,
+      "mixed": false
+    },
+    {
+      "start_t": 200,
+      "strength": 0.7,
+      "outcome": "ineffective",
+      "genuine_rate": 1.0,
+      "tipping_step": 236.0,
+      "plateau": 15.0,
+      "tier2_activated": true,
+      "mixed": false
+    },
+    {
+      "start_t": 200,
+      "strength": 0.8,
+      "outcome": "ineffective",
+      "genuine_rate": 1.0,
+      "tipping_step": 236.0,
+      "plateau": 16.0,
+      "tier2_activated": true,
+      "mixed": false
+    },
+    {
+      "start_t": 200,
+      "strength": 0.9,
+      "outcome": "ineffective",
+      "genuine_rate": 1.0,
+      "tipping_step": 231.0,
+      "plateau": 18.0,
+      "tier2_activated": true,
+      "mixed": false
+    },
+    {
+      "start_t": 225,
+      "strength": 0.1,
+      "outcome": "ineffective",
+      "genuine_rate": 1.0,
+      "tipping_step": 248.0,
+      "plateau": 12.0,
+      "tier2_activated": true,
+      "mixed": false
+    },
+    {
+      "start_t": 225,
+      "strength": 0.2,
+      "outcome": "ineffective",
+      "genuine_rate": 1.0,
+      "tipping_step": 248.0,
+      "plateau": 12.0,
+      "tier2_activated": true,
+      "mixed": false
+    },
+    {
+      "start_t": 225,
+      "strength": 0.3,
+      "outcome": "ineffective",
+      "genuine_rate": 1.0,
+      "tipping_step": 239.0,
+      "plateau": 12.0,
+      "tier2_activated": true,
+      "mixed": false
+    },
+    {
+      "start_t": 225,
+      "strength": 0.4,
+      "outcome": "ineffective",
+      "genuine_rate": 1.0,
+      "tipping_step": 239.0,
+      "plateau": 12.0,
+      "tier2_activated": true,
+      "mixed": false
+    },
+    {
+      "start_t": 225,
+      "strength": 0.5,
+      "outcome": "ineffective",
+      "genuine_rate": 1.0,
+      "tipping_step": 239.0,
+      "plateau": 13.0,
+      "tier2_activated": true,
+      "mixed": false
+    },
+    {
+      "start_t": 225,
+      "strength": 0.6,
+      "outcome": "ineffective",
+      "genuine_rate": 1.0,
+      "tipping_step": 249.0,
+      "plateau": 15.0,
+      "tier2_activated": true,
+      "mixed": false
+    },
+    {
+      "start_t": 225,
+      "strength": 0.7,
+      "outcome": "ineffective",
+      "genuine_rate": 1.0,
+      "tipping_step": 240.0,
+      "plateau": 15.0,
+      "tier2_activated": true,
+      "mixed": false
+    },
+    {
+      "start_t": 225,
+      "strength": 0.8,
+      "outcome": "ineffective",
+      "genuine_rate": 1.0,
+      "tipping_step": 240.0,
+      "plateau": 15.0,
+      "tier2_activated": true,
+      "mixed": false
+    },
+    {
+      "start_t": 225,
+      "strength": 0.9,
+      "outcome": "ineffective",
+      "genuine_rate": 1.0,
+      "tipping_step": 240.0,
+      "plateau": 16.0,
+      "tier2_activated": true,
+      "mixed": false
+    },
+    {
+      "start_t": 250,
+      "strength": 0.1,
+      "outcome": "ineffective",
+      "genuine_rate": 1.0,
+      "tipping_step": 248.0,
+      "plateau": 11.0,
+      "tier2_activated": true,
+      "mixed": false
+    },
+    {
+      "start_t": 250,
+      "strength": 0.2,
+      "outcome": "ineffective",
+      "genuine_rate": 1.0,
+      "tipping_step": 248.0,
+      "plateau": 12.0,
+      "tier2_activated": true,
+      "mixed": false
+    },
+    {
+      "start_t": 250,
+      "strength": 0.3,
+      "outcome": "ineffective",
+      "genuine_rate": 1.0,
+      "tipping_step": 248.0,
+      "plateau": 12.0,
+      "tier2_activated": true,
+      "mixed": false
+    },
+    {
+      "start_t": 250,
+      "strength": 0.4,
+      "outcome": "ineffective",
+      "genuine_rate": 1.0,
+      "tipping_step": 248.0,
+      "plateau": 12.0,
+      "tier2_activated": true,
+      "mixed": false
+    },
+    {
+      "start_t": 250,
+      "strength": 0.5,
+      "outcome": "ineffective",
+      "genuine_rate": 1.0,
+      "tipping_step": 248.0,
+      "plateau": 12.0,
+      "tier2_activated": true,
+      "mixed": false
+    },
+    {
+      "start_t": 250,
+      "strength": 0.6,
+      "outcome": "ineffective",
+      "genuine_rate": 1.0,
+      "tipping_step": 248.0,
+      "plateau": 13.0,
+      "tier2_activated": true,
+      "mixed": false
+    },
+    {
+      "start_t": 250,
+      "strength": 0.7,
+      "outcome": "ineffective",
+      "genuine_rate": 1.0,
+      "tipping_step": 248.0,
+      "plateau": 15.0,
+      "tier2_activated": true,
+      "mixed": false
+    },
+    {
+      "start_t": 250,
+      "strength": 0.8,
+      "outcome": "ineffective",
+      "genuine_rate": 1.0,
+      "tipping_step": 248.0,
+      "plateau": 15.0,
+      "tier2_activated": true,
+      "mixed": false
+    },
+    {
+      "start_t": 250,
+      "strength": 0.9,
+      "outcome": "ineffective",
+      "genuine_rate": 1.0,
+      "tipping_step": 248.0,
+      "plateau": 15.0,
+      "tier2_activated": true,
+      "mixed": false
+    }
+  ],
+  "boundary": {
+    "0.6": 25,
+    "0.7": 50,
+    "0.8": 100,
+    "0.9": 150
+  },
+  "boundary_fit": {
+    "slope": 424.99999999999994,
+    "intercept": -237.49999999999986,
+    "r2": 0.9796610169491533,
+    "equation": "max_start_t = 425 * strength + -237"
+  },
+  "thresholds": {
+    "min_strength_t0": 0.8,
+    "min_strength_t50": 0.9,
+    "min_strength_t100": null,
+    "latest_t_s30": null,
+    "latest_t_s50": null
+  },
+  "runtime_s": 39.1
+}

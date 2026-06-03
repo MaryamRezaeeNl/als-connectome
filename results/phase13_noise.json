@@ -1,0 +1,870 @@
+{
+  "description": "Phase 13 biological noise robustness",
+  "n_configs": 10,
+  "config_ids": [
+    334,
+    391,
+    382,
+    235,
+    497,
+    496,
+    493,
+    424,
+    329,
+    312
+  ],
+  "n_seeds": 20,
+  "steps": 500,
+  "baseline": {
+    "tip_mean": 228.9,
+    "coh_r_mean": 0.5625198267719523,
+    "genuine_rate": 1.0,
+    "per_config": [
+      {
+        "config_id": 334,
+        "tip_med": 220.0,
+        "coh_r_med": 0.6847961158102339,
+        "genuine": true
+      },
+      {
+        "config_id": 391,
+        "tip_med": 221.5,
+        "coh_r_med": 0.5110482969890431,
+        "genuine": true
+      },
+      {
+        "config_id": 382,
+        "tip_med": 190.5,
+        "coh_r_med": 0.4889915388253897,
+        "genuine": true
+      },
+      {
+        "config_id": 235,
+        "tip_med": 291.5,
+        "coh_r_med": 0.4945320876191792,
+        "genuine": true
+      },
+      {
+        "config_id": 497,
+        "tip_med": 205.0,
+        "coh_r_med": 0.4784957718550933,
+        "genuine": true
+      },
+      {
+        "config_id": 496,
+        "tip_med": 214.5,
+        "coh_r_med": 0.46327089774730823,
+        "genuine": true
+      },
+      {
+        "config_id": 493,
+        "tip_med": 226.0,
+        "coh_r_med": 0.7164293866824101,
+        "genuine": true
+      },
+      {
+        "config_id": 424,
+        "tip_med": 211.5,
+        "coh_r_med": 0.6756303259131657,
+        "genuine": true
+      },
+      {
+        "config_id": 329,
+        "tip_med": 259.5,
+        "coh_r_med": 0.4800046911078709,
+        "genuine": true
+      },
+      {
+        "config_id": 312,
+        "tip_med": 249.0,
+        "coh_r_med": 0.6319991551698285,
+        "genuine": true
+      }
+    ]
+  },
+  "perturbations": {
+    "weight_noise": {
+      "levels": [
+        0.05,
+        0.1,
+        0.2
+      ],
+      "results": [
+        {
+          "level": 0.05,
+          "tip_mean": 229.0,
+          "coh_r_mean": 0.5634624963983668,
+          "genuine_mean": 1.0,
+          "rel_change_tip": 0.0004368719965049992,
+          "rel_change_coh": 0.0016757980457755301,
+          "rel_change_gen": 0.0,
+          "verdict_tip": "robust",
+          "verdict_coh": "robust",
+          "verdict_gen": "robust",
+          "per_config": [
+            {
+              "config_id": 334,
+              "tip_med": 221.5,
+              "coh_r_med": 0.6864458281307302,
+              "genuine": true
+            },
+            {
+              "config_id": 391,
+              "tip_med": 221.0,
+              "coh_r_med": 0.5129385509297023,
+              "genuine": true
+            },
+            {
+              "config_id": 382,
+              "tip_med": 189.0,
+              "coh_r_med": 0.49132691412358276,
+              "genuine": true
+            },
+            {
+              "config_id": 235,
+              "tip_med": 291.5,
+              "coh_r_med": 0.49648689316472316,
+              "genuine": true
+            },
+            {
+              "config_id": 497,
+              "tip_med": 206.0,
+              "coh_r_med": 0.4719174290443726,
+              "genuine": true
+            },
+            {
+              "config_id": 496,
+              "tip_med": 215.5,
+              "coh_r_med": 0.46417337709331435,
+              "genuine": true
+            },
+            {
+              "config_id": 493,
+              "tip_med": 226.0,
+              "coh_r_med": 0.714649899941616,
+              "genuine": true
+            },
+            {
+              "config_id": 424,
+              "tip_med": 211.5,
+              "coh_r_med": 0.6735197954809199,
+              "genuine": true
+            },
+            {
+              "config_id": 329,
+              "tip_med": 259.0,
+              "coh_r_med": 0.48553209805615577,
+              "genuine": true
+            },
+            {
+              "config_id": 312,
+              "tip_med": 249.0,
+              "coh_r_med": 0.6376341780185504,
+              "genuine": true
+            }
+          ]
+        },
+        {
+          "level": 0.1,
+          "tip_mean": 228.65,
+          "coh_r_mean": 0.5616931410141254,
+          "genuine_mean": 1.0,
+          "rel_change_tip": 0.00109217999126256,
+          "rel_change_coh": 0.0014696117691903206,
+          "rel_change_gen": 0.0,
+          "verdict_tip": "robust",
+          "verdict_coh": "robust",
+          "verdict_gen": "robust",
+          "per_config": [
+            {
+              "config_id": 334,
+              "tip_med": 219.0,
+              "coh_r_med": 0.6850337070338279,
+              "genuine": true
+            },
+            {
+              "config_id": 391,
+              "tip_med": 219.5,
+              "coh_r_med": 0.5094519640711834,
+              "genuine": true
+            },
+            {
+              "config_id": 382,
+              "tip_med": 190.5,
+              "coh_r_med": 0.49602910680491064,
+              "genuine": true
+            },
+            {
+              "config_id": 235,
+              "tip_med": 291.0,
+              "coh_r_med": 0.4797173480171472,
+              "genuine": true
+            },
+            {
+              "config_id": 497,
+              "tip_med": 205.0,
+              "coh_r_med": 0.47177585309692505,
+              "genuine": true
+            },
+            {
+              "config_id": 496,
+              "tip_med": 216.0,
+              "coh_r_med": 0.4733706962414128,
+              "genuine": true
+            },
+            {
+              "config_id": 493,
+              "tip_med": 226.5,
+              "coh_r_med": 0.7172804193662838,
+              "genuine": true
+            },
+            {
+              "config_id": 424,
+              "tip_med": 213.0,
+              "coh_r_med": 0.6683407160800106,
+              "genuine": true
+            },
+            {
+              "config_id": 329,
+              "tip_med": 258.5,
+              "coh_r_med": 0.4813351452268825,
+              "genuine": true
+            },
+            {
+              "config_id": 312,
+              "tip_med": 247.5,
+              "coh_r_med": 0.6345964542026692,
+              "genuine": true
+            }
+          ]
+        },
+        {
+          "level": 0.2,
+          "tip_mean": 228.5,
+          "coh_r_mean": 0.557114468621215,
+          "genuine_mean": 1.0,
+          "rel_change_tip": 0.0017474879860201208,
+          "rel_change_coh": 0.009609186900586592,
+          "rel_change_gen": 0.0,
+          "verdict_tip": "robust",
+          "verdict_coh": "robust",
+          "verdict_gen": "robust",
+          "per_config": [
+            {
+              "config_id": 334,
+              "tip_med": 220.5,
+              "coh_r_med": 0.6866829683710236,
+              "genuine": true
+            },
+            {
+              "config_id": 391,
+              "tip_med": 219.5,
+              "coh_r_med": 0.5089855062549389,
+              "genuine": true
+            },
+            {
+              "config_id": 382,
+              "tip_med": 188.5,
+              "coh_r_med": 0.48461525314404663,
+              "genuine": true
+            },
+            {
+              "config_id": 235,
+              "tip_med": 292.0,
+              "coh_r_med": 0.4844898113442755,
+              "genuine": true
+            },
+            {
+              "config_id": 497,
+              "tip_med": 203.5,
+              "coh_r_med": 0.46634022009763215,
+              "genuine": true
+            },
+            {
+              "config_id": 496,
+              "tip_med": 215.0,
+              "coh_r_med": 0.46100615216550844,
+              "genuine": true
+            },
+            {
+              "config_id": 493,
+              "tip_med": 226.5,
+              "coh_r_med": 0.6944791921107216,
+              "genuine": true
+            },
+            {
+              "config_id": 424,
+              "tip_med": 211.5,
+              "coh_r_med": 0.6670502194645791,
+              "genuine": true
+            },
+            {
+              "config_id": 329,
+              "tip_med": 260.0,
+              "coh_r_med": 0.4701960327614269,
+              "genuine": true
+            },
+            {
+              "config_id": 312,
+              "tip_med": 248.0,
+              "coh_r_med": 0.6472993304979975,
+              "genuine": true
+            }
+          ]
+        }
+      ],
+      "verdict": "robust"
+    },
+    "vuln_noise": {
+      "levels": [
+        0.05,
+        0.1,
+        0.2
+      ],
+      "results": [
+        {
+          "level": 0.05,
+          "tip_mean": 228.9,
+          "coh_r_mean": 0.557041603217572,
+          "genuine_mean": 1.0,
+          "rel_change_tip": 0.0,
+          "rel_change_coh": 0.009738720830192562,
+          "rel_change_gen": 0.0,
+          "verdict_tip": "robust",
+          "verdict_coh": "robust",
+          "verdict_gen": "robust",
+          "per_config": [
+            {
+              "config_id": 334,
+              "tip_med": 220.0,
+              "coh_r_med": 0.6865191168103209,
+              "genuine": true
+            },
+            {
+              "config_id": 391,
+              "tip_med": 221.0,
+              "coh_r_med": 0.5091528374438786,
+              "genuine": true
+            },
+            {
+              "config_id": 382,
+              "tip_med": 189.0,
+              "coh_r_med": 0.4697092582036806,
+              "genuine": true
+            },
+            {
+              "config_id": 235,
+              "tip_med": 293.5,
+              "coh_r_med": 0.49571641096142716,
+              "genuine": true
+            },
+            {
+              "config_id": 497,
+              "tip_med": 205.0,
+              "coh_r_med": 0.4878636391398878,
+              "genuine": true
+            },
+            {
+              "config_id": 496,
+              "tip_med": 215.0,
+              "coh_r_med": 0.4584094280809299,
+              "genuine": true
+            },
+            {
+              "config_id": 493,
+              "tip_med": 226.0,
+              "coh_r_med": 0.7055140511542446,
+              "genuine": true
+            },
+            {
+              "config_id": 424,
+              "tip_med": 211.0,
+              "coh_r_med": 0.6595491647476373,
+              "genuine": true
+            },
+            {
+              "config_id": 329,
+              "tip_med": 259.0,
+              "coh_r_med": 0.47498933669811283,
+              "genuine": true
+            },
+            {
+              "config_id": 312,
+              "tip_med": 249.5,
+              "coh_r_med": 0.6229927889356011,
+              "genuine": true
+            }
+          ]
+        },
+        {
+          "level": 0.1,
+          "tip_mean": 228.1,
+          "coh_r_mean": 0.5462350612439166,
+          "genuine_mean": 1.0,
+          "rel_change_tip": 0.0034949759720402417,
+          "rel_change_coh": 0.028949673865695778,
+          "rel_change_gen": 0.0,
+          "verdict_tip": "robust",
+          "verdict_coh": "robust",
+          "verdict_gen": "robust",
+          "per_config": [
+            {
+              "config_id": 334,
+              "tip_med": 220.0,
+              "coh_r_med": 0.6886490274978161,
+              "genuine": true
+            },
+            {
+              "config_id": 391,
+              "tip_med": 221.5,
+              "coh_r_med": 0.5106578266314155,
+              "genuine": true
+            },
+            {
+              "config_id": 382,
+              "tip_med": 188.5,
+              "coh_r_med": 0.4808525669530337,
+              "genuine": true
+            },
+            {
+              "config_id": 235,
+              "tip_med": 292.5,
+              "coh_r_med": 0.41947983988840754,
+              "genuine": true
+            },
+            {
+              "config_id": 497,
+              "tip_med": 201.0,
+              "coh_r_med": 0.4678064207960954,
+              "genuine": true
+            },
+            {
+              "config_id": 496,
+              "tip_med": 211.5,
+              "coh_r_med": 0.4651329321350359,
+              "genuine": true
+            },
+            {
+              "config_id": 493,
+              "tip_med": 226.0,
+              "coh_r_med": 0.6867366177830212,
+              "genuine": true
+            },
+            {
+              "config_id": 424,
+              "tip_med": 212.0,
+              "coh_r_med": 0.655006343527297,
+              "genuine": true
+            },
+            {
+              "config_id": 329,
+              "tip_med": 260.5,
+              "coh_r_med": 0.4525553359985425,
+              "genuine": true
+            },
+            {
+              "config_id": 312,
+              "tip_med": 247.5,
+              "coh_r_med": 0.6354737012285009,
+              "genuine": true
+            }
+          ]
+        },
+        {
+          "level": 0.2,
+          "tip_mean": 227.55,
+          "coh_r_mean": 0.5425836600098389,
+          "genuine_mean": 1.0,
+          "rel_change_tip": 0.005897771952817799,
+          "rel_change_coh": 0.03544082503992451,
+          "rel_change_gen": 0.0,
+          "verdict_tip": "robust",
+          "verdict_coh": "robust",
+          "verdict_gen": "robust",
+          "per_config": [
+            {
+              "config_id": 334,
+              "tip_med": 219.5,
+              "coh_r_med": 0.6684846080252569,
+              "genuine": true
+            },
+            {
+              "config_id": 391,
+              "tip_med": 221.5,
+              "coh_r_med": 0.5096328411905164,
+              "genuine": true
+            },
+            {
+              "config_id": 382,
+              "tip_med": 185.0,
+              "coh_r_med": 0.49318876438737236,
+              "genuine": true
+            },
+            {
+              "config_id": 235,
+              "tip_med": 293.5,
+              "coh_r_med": 0.43378311833859995,
+              "genuine": true
+            },
+            {
+              "config_id": 497,
+              "tip_med": 199.0,
+              "coh_r_med": 0.5037140895168916,
+              "genuine": true
+            },
+            {
+              "config_id": 496,
+              "tip_med": 211.5,
+              "coh_r_med": 0.46261035249147575,
+              "genuine": true
+            },
+            {
+              "config_id": 493,
+              "tip_med": 227.0,
+              "coh_r_med": 0.6806256940948435,
+              "genuine": true
+            },
+            {
+              "config_id": 424,
+              "tip_med": 211.5,
+              "coh_r_med": 0.6402786096690412,
+              "genuine": true
+            },
+            {
+              "config_id": 329,
+              "tip_med": 260.0,
+              "coh_r_med": 0.46102545816856155,
+              "genuine": true
+            },
+            {
+              "config_id": 312,
+              "tip_med": 247.0,
+              "coh_r_med": 0.572493064215829,
+              "genuine": true
+            }
+          ]
+        }
+      ],
+      "verdict": "robust"
+    },
+    "edge_dropout": {
+      "levels": [
+        0.02,
+        0.05,
+        0.1
+      ],
+      "results": [
+        {
+          "level": 0.02,
+          "tip_mean": 229.4,
+          "coh_r_mean": 0.5542255747251507,
+          "genuine_mean": 1.0,
+          "rel_change_tip": 0.00218435998252512,
+          "rel_change_coh": 0.014744817252751159,
+          "rel_change_gen": 0.0,
+          "verdict_tip": "robust",
+          "verdict_coh": "robust",
+          "verdict_gen": "robust",
+          "per_config": [
+            {
+              "config_id": 334,
+              "tip_med": 221.0,
+              "coh_r_med": 0.6823197361386385,
+              "genuine": true
+            },
+            {
+              "config_id": 391,
+              "tip_med": 222.0,
+              "coh_r_med": 0.4924002428073434,
+              "genuine": true
+            },
+            {
+              "config_id": 382,
+              "tip_med": 190.5,
+              "coh_r_med": 0.48249153382099275,
+              "genuine": true
+            },
+            {
+              "config_id": 235,
+              "tip_med": 293.0,
+              "coh_r_med": 0.47905593651209555,
+              "genuine": true
+            },
+            {
+              "config_id": 497,
+              "tip_med": 205.5,
+              "coh_r_med": 0.462071697992486,
+              "genuine": true
+            },
+            {
+              "config_id": 496,
+              "tip_med": 214.5,
+              "coh_r_med": 0.45661355071346565,
+              "genuine": true
+            },
+            {
+              "config_id": 493,
+              "tip_med": 227.0,
+              "coh_r_med": 0.7116097518009749,
+              "genuine": true
+            },
+            {
+              "config_id": 424,
+              "tip_med": 212.0,
+              "coh_r_med": 0.6677818316998714,
+              "genuine": true
+            },
+            {
+              "config_id": 329,
+              "tip_med": 259.5,
+              "coh_r_med": 0.4769462898495692,
+              "genuine": true
+            },
+            {
+              "config_id": 312,
+              "tip_med": 249.0,
+              "coh_r_med": 0.6309651759160697,
+              "genuine": true
+            }
+          ]
+        },
+        {
+          "level": 0.05,
+          "tip_mean": 230.4,
+          "coh_r_mean": 0.5514404475389998,
+          "genuine_mean": 1.0,
+          "rel_change_tip": 0.00655307994757536,
+          "rel_change_coh": 0.019695979955999254,
+          "rel_change_gen": 0.0,
+          "verdict_tip": "robust",
+          "verdict_coh": "robust",
+          "verdict_gen": "robust",
+          "per_config": [
+            {
+              "config_id": 334,
+              "tip_med": 221.5,
+              "coh_r_med": 0.687010030193162,
+              "genuine": true
+            },
+            {
+              "config_id": 391,
+              "tip_med": 221.5,
+              "coh_r_med": 0.5261865252017287,
+              "genuine": true
+            },
+            {
+              "config_id": 382,
+              "tip_med": 191.5,
+              "coh_r_med": 0.47999152757664754,
+              "genuine": true
+            },
+            {
+              "config_id": 235,
+              "tip_med": 295.0,
+              "coh_r_med": 0.4619112621490591,
+              "genuine": true
+            },
+            {
+              "config_id": 497,
+              "tip_med": 206.0,
+              "coh_r_med": 0.46138080154551,
+              "genuine": true
+            },
+            {
+              "config_id": 496,
+              "tip_med": 215.5,
+              "coh_r_med": 0.4552196434416523,
+              "genuine": true
+            },
+            {
+              "config_id": 493,
+              "tip_med": 228.5,
+              "coh_r_med": 0.7083600786685067,
+              "genuine": true
+            },
+            {
+              "config_id": 424,
+              "tip_med": 214.0,
+              "coh_r_med": 0.658733208066226,
+              "genuine": true
+            },
+            {
+              "config_id": 329,
+              "tip_med": 261.0,
+              "coh_r_med": 0.4701011665311273,
+              "genuine": true
+            },
+            {
+              "config_id": 312,
+              "tip_med": 249.5,
+              "coh_r_med": 0.6055102320163785,
+              "genuine": true
+            }
+          ]
+        },
+        {
+          "level": 0.1,
+          "tip_mean": 233.35,
+          "coh_r_mean": 0.55056662481992,
+          "genuine_mean": 1.0,
+          "rel_change_tip": 0.01944080384447352,
+          "rel_change_coh": 0.021249387813806222,
+          "rel_change_gen": 0.0,
+          "verdict_tip": "robust",
+          "verdict_coh": "robust",
+          "verdict_gen": "robust",
+          "per_config": [
+            {
+              "config_id": 334,
+              "tip_med": 225.0,
+              "coh_r_med": 0.6962968266282638,
+              "genuine": true
+            },
+            {
+              "config_id": 391,
+              "tip_med": 224.0,
+              "coh_r_med": 0.5121779238202053,
+              "genuine": true
+            },
+            {
+              "config_id": 382,
+              "tip_med": 194.5,
+              "coh_r_med": 0.47864674092430376,
+              "genuine": true
+            },
+            {
+              "config_id": 235,
+              "tip_med": 294.5,
+              "coh_r_med": 0.4497280774607124,
+              "genuine": true
+            },
+            {
+              "config_id": 497,
+              "tip_med": 210.0,
+              "coh_r_med": 0.45804917883404805,
+              "genuine": true
+            },
+            {
+              "config_id": 496,
+              "tip_med": 218.5,
+              "coh_r_med": 0.433779533351646,
+              "genuine": true
+            },
+            {
+              "config_id": 493,
+              "tip_med": 232.5,
+              "coh_r_med": 0.7163121954146215,
+              "genuine": true
+            },
+            {
+              "config_id": 424,
+              "tip_med": 218.0,
+              "coh_r_med": 0.673598797565899,
+              "genuine": true
+            },
+            {
+              "config_id": 329,
+              "tip_med": 264.5,
+              "coh_r_med": 0.4800947255843823,
+              "genuine": true
+            },
+            {
+              "config_id": 312,
+              "tip_med": 252.0,
+              "coh_r_med": 0.6069822486151188,
+              "genuine": true
+            }
+          ]
+        }
+      ],
+      "verdict": "robust"
+    },
+    "hetero_amp": {
+      "levels": [
+        0.2
+      ],
+      "results": [
+        {
+          "level": 0.2,
+          "tip_mean": 226.85,
+          "coh_r_mean": 0.5570455964987234,
+          "genuine_mean": 1.0,
+          "rel_change_tip": 0.008955875928353042,
+          "rel_change_coh": 0.00973162191392088,
+          "rel_change_gen": 0.0,
+          "verdict_tip": "robust",
+          "verdict_coh": "robust",
+          "verdict_gen": "robust",
+          "per_config": [
+            {
+              "config_id": 334,
+              "tip_med": 219.5,
+              "coh_r_med": 0.6692078901183198,
+              "genuine": true
+            },
+            {
+              "config_id": 391,
+              "tip_med": 218.0,
+              "coh_r_med": 0.5218823258083809,
+              "genuine": true
+            },
+            {
+              "config_id": 382,
+              "tip_med": 188.5,
+              "coh_r_med": 0.49991625259266076,
+              "genuine": true
+            },
+            {
+              "config_id": 235,
+              "tip_med": 289.0,
+              "coh_r_med": 0.4560973475655411,
+              "genuine": true
+            },
+            {
+              "config_id": 497,
+              "tip_med": 202.0,
+              "coh_r_med": 0.4941334550829746,
+              "genuine": true
+            },
+            {
+              "config_id": 496,
+              "tip_med": 210.0,
+              "coh_r_med": 0.4649322962846527,
+              "genuine": true
+            },
+            {
+              "config_id": 493,
+              "tip_med": 225.0,
+              "coh_r_med": 0.6891844768409151,
+              "genuine": true
+            },
+            {
+              "config_id": 424,
+              "tip_med": 210.5,
+              "coh_r_med": 0.664178608322556,
+              "genuine": true
+            },
+            {
+              "config_id": 329,
+              "tip_med": 260.0,
+              "coh_r_med": 0.4871635660182055,
+              "genuine": true
+            },
+            {
+              "config_id": 312,
+              "tip_med": 246.0,
+              "coh_r_med": 0.6237597463530279,
+              "genuine": true
+            }
+          ],
+          "subtype_spearman_r": 0.9757575757575757,
+          "tip_cv_baseline": 0.12323662671550271,
+          "tip_cv_perturbed": 0.12548684620524628,
+          "subtypes_separate": true
+        }
+      ],
+      "verdict": "robust"
+    }
+  },
+  "runtime_s": 200.6
+}

@@ -1,0 +1,2636 @@
+{
+  "description": "Phase R2.3 Topology-Dependent Therapeutic Boundary",
+  "grid_axes": {
+    "strengths": [
+      0.1,
+      0.2,
+      0.3,
+      0.4,
+      0.5,
+      0.6,
+      0.7,
+      0.8,
+      0.9
+    ],
+    "start_ts": [
+      0,
+      25,
+      50,
+      75,
+      100,
+      125,
+      150,
+      175,
+      200
+    ]
+  },
+  "n_configs": 5,
+  "n_seeds": 5,
+  "steps": 300,
+  "prev_threshold": 0.5,
+  "reference_boundary": {
+    "slope": 252.0,
+    "intercept": -107.0
+  },
+  "scientific_answers": {
+    "Q1: Does sparse_chain have a wider therapeutic window?": "NO. sparse_chain S=100% does NOT widen the therapeutic window vs baseline. Window area: 17 vs 17 (delta=+0). Max preventable start_t at str=0.80: 75 vs 75. Although sparse topology delays tipping, therapy must still be started by approximately the same step to prevent degeneration.",
+    "Q2: Does triangle_rich S=60% outperform S=100%?": "YES. triangle_rich S=60% (safe zone) outperforms S=100% in therapeutic window. Area: 16 vs 15; max start_t at str=0.80: 75 vs 75. This confirms the R2.2 finding: the safe operating zone (<=60% feedback loops) preserves therapeutic access, while exceeding it (100%) narrows the window.",
+    "Q3: What is the boundary equation for each topology?": "Fitted boundary: max_start_t = slope * strength + intercept\n\nReference (Phase 9/10 aggregate, top-20 configs): max_start_t = 252*str - 107\n  baseline: max_start_t = 175*str + (-62)  R2=0.942  At str=0.80: pred=78 vs ref=95\n  sparse_chain_100: max_start_t = 175*str + (-62)  R2=0.942  At str=0.80: pred=78 vs ref=95\n  triangle_rich_60: max_start_t = 225*str + (-102)  R2=0.920  At str=0.80: pred=78 vs ref=95\n  triangle_rich_100: max_start_t = 175*str + (-72)  R2=0.817  At str=0.80: pred=68 vs ref=95",
+    "Q4: Can topology choice substitute for earlier therapy?": "NO. All topologies show similar max_start_t at strength=0.80, suggesting that topology does not substitute for earlier therapy. Connectivity structure alters cascade dynamics but does not meaningfully expand the therapeutic window.",
+    "Q5: What is the clinical implication of topology-dependent windows?": "Clinical implication: Connectivity architecture directly influences therapeutic opportunity. The widest window was found in Baseline C. elegans (127 edges) (area=17 preventive grid cells) vs the narrowest in Triangle rich S=100% (137 edges, +10 feedback loops) (area=15). This suggests that therapeutic strategies targeting synaptic pruning or circuit simplification (analogous to sparse_chain modification) may extend the pre-symptomatic window during which drug intervention remains effective. Conversely, pro-connectivity interventions that increase recurrent loops (triangle_rich S=100%) may inadvertently narrow the window, accelerating the onset of therapy-resistant Tier-2 cascade. The R2.2 safe operating zone (<=60% feedback strength) appears to offer the best balance: enhanced communication efficiency without sacrificing therapeutic accessibility. In an ALS drug discovery context, this suggests that connectivity biomarkers measuring circuit redundancy and feedback loop density could predict therapeutic window width independently of disease severity \u2014 a testable hypothesis for patient stratification."
+  },
+  "topologies": [
+    {
+      "name": "baseline",
+      "label": "Baseline C. elegans (127 edges)",
+      "n_edges": 127,
+      "boundary": {
+        "slope": 175.0,
+        "intercept": -62.5,
+        "r2": 0.942,
+        "points": [
+          [
+            0.5,
+            25
+          ],
+          [
+            0.6,
+            50
+          ],
+          [
+            0.7,
+            50
+          ],
+          [
+            0.8,
+            75
+          ],
+          [
+            0.9,
+            100
+          ]
+        ]
+      },
+      "window_area": 17,
+      "max_start_t_at_80": 75,
+      "min_strength_at_t0": 0.5,
+      "genuine_tipping_rate": 0.4,
+      "mean_baseline_tip": 228.8,
+      "phase7b": [
+        {
+          "config_id": 334,
+          "is_genuine": false,
+          "tip_median": 222.0,
+          "sil_median": 202.0,
+          "peak_median": 9.0,
+          "coh_median": -0.041
+        },
+        {
+          "config_id": 235,
+          "is_genuine": false,
+          "tip_median": 279.0,
+          "sil_median": 254.0,
+          "peak_median": 4.0,
+          "coh_median": 0.039
+        },
+        {
+          "config_id": 382,
+          "is_genuine": true,
+          "tip_median": 193.0,
+          "sil_median": 172.0,
+          "peak_median": 11.0,
+          "coh_median": 0.613
+        },
+        {
+          "config_id": 391,
+          "is_genuine": false,
+          "tip_median": 215.0,
+          "sil_median": 184.0,
+          "peak_median": 9.0,
+          "coh_median": 0.195
+        },
+        {
+          "config_id": 21,
+          "is_genuine": true,
+          "tip_median": 231.0,
+          "sil_median": 193.0,
+          "peak_median": 10.0,
+          "coh_median": 0.309
+        }
+      ],
+      "grid": {
+        "strength_0p1_start_0": {
+          "prevention_rate": 0.08,
+          "mean_tipping_step": 239.4,
+          "mean_plateau": 30.4,
+          "mean_delay": 10.6,
+          "outcome": "partial"
+        },
+        "strength_0p1_start_25": {
+          "prevention_rate": 0.08,
+          "mean_tipping_step": 237.9,
+          "mean_plateau": 30.3,
+          "mean_delay": 9.1,
+          "outcome": "ineffective"
+        },
+        "strength_0p1_start_50": {
+          "prevention_rate": 0.08,
+          "mean_tipping_step": 236.2,
+          "mean_plateau": 30.0,
+          "mean_delay": 7.4,
+          "outcome": "ineffective"
+        },
+        "strength_0p1_start_75": {
+          "prevention_rate": 0.08,
+          "mean_tipping_step": 234.5,
+          "mean_plateau": 29.4,
+          "mean_delay": 5.7,
+          "outcome": "ineffective"
+        },
+        "strength_0p1_start_100": {
+          "prevention_rate": 0.08,
+          "mean_tipping_step": 233.0,
+          "mean_plateau": 29.0,
+          "mean_delay": 4.2,
+          "outcome": "ineffective"
+        },
+        "strength_0p1_start_125": {
+          "prevention_rate": 0.08,
+          "mean_tipping_step": 231.4,
+          "mean_plateau": 28.6,
+          "mean_delay": 2.6,
+          "outcome": "ineffective"
+        },
+        "strength_0p1_start_150": {
+          "prevention_rate": 0.08,
+          "mean_tipping_step": 230.4,
+          "mean_plateau": 28.2,
+          "mean_delay": 1.6,
+          "outcome": "ineffective"
+        },
+        "strength_0p1_start_175": {
+          "prevention_rate": 0.08,
+          "mean_tipping_step": 229.7,
+          "mean_plateau": 28.1,
+          "mean_delay": 0.9,
+          "outcome": "ineffective"
+        },
+        "strength_0p1_start_200": {
+          "prevention_rate": 0.08,
+          "mean_tipping_step": 229.2,
+          "mean_plateau": 28.0,
+          "mean_delay": 0.4,
+          "outcome": "ineffective"
+        },
+        "strength_0p2_start_0": {
+          "prevention_rate": 0.2,
+          "mean_tipping_step": 251.0,
+          "mean_plateau": 35.1,
+          "mean_delay": 22.2,
+          "outcome": "partial"
+        },
+        "strength_0p2_start_25": {
+          "prevention_rate": 0.16,
+          "mean_tipping_step": 248.0,
+          "mean_plateau": 34.3,
+          "mean_delay": 19.2,
+          "outcome": "partial"
+        },
+        "strength_0p2_start_50": {
+          "prevention_rate": 0.16,
+          "mean_tipping_step": 244.4,
+          "mean_plateau": 33.0,
+          "mean_delay": 15.6,
+          "outcome": "partial"
+        },
+        "strength_0p2_start_75": {
+          "prevention_rate": 0.12,
+          "mean_tipping_step": 240.8,
+          "mean_plateau": 32.2,
+          "mean_delay": 12.0,
+          "outcome": "partial"
+        },
+        "strength_0p2_start_100": {
+          "prevention_rate": 0.08,
+          "mean_tipping_step": 237.4,
+          "mean_plateau": 31.0,
+          "mean_delay": 8.6,
+          "outcome": "ineffective"
+        },
+        "strength_0p2_start_125": {
+          "prevention_rate": 0.08,
+          "mean_tipping_step": 234.5,
+          "mean_plateau": 30.0,
+          "mean_delay": 5.7,
+          "outcome": "ineffective"
+        },
+        "strength_0p2_start_150": {
+          "prevention_rate": 0.08,
+          "mean_tipping_step": 232.0,
+          "mean_plateau": 29.4,
+          "mean_delay": 3.2,
+          "outcome": "ineffective"
+        },
+        "strength_0p2_start_175": {
+          "prevention_rate": 0.08,
+          "mean_tipping_step": 230.4,
+          "mean_plateau": 28.7,
+          "mean_delay": 1.6,
+          "outcome": "ineffective"
+        },
+        "strength_0p2_start_200": {
+          "prevention_rate": 0.08,
+          "mean_tipping_step": 229.4,
+          "mean_plateau": 28.2,
+          "mean_delay": 0.6,
+          "outcome": "ineffective"
+        },
+        "strength_0p3_start_0": {
+          "prevention_rate": 0.2,
+          "mean_tipping_step": 263.6,
+          "mean_plateau": 41.0,
+          "mean_delay": 34.8,
+          "outcome": "partial"
+        },
+        "strength_0p3_start_25": {
+          "prevention_rate": 0.2,
+          "mean_tipping_step": 258.8,
+          "mean_plateau": 39.4,
+          "mean_delay": 30.0,
+          "outcome": "partial"
+        },
+        "strength_0p3_start_50": {
+          "prevention_rate": 0.2,
+          "mean_tipping_step": 253.0,
+          "mean_plateau": 37.6,
+          "mean_delay": 24.2,
+          "outcome": "partial"
+        },
+        "strength_0p3_start_75": {
+          "prevention_rate": 0.2,
+          "mean_tipping_step": 247.2,
+          "mean_plateau": 35.4,
+          "mean_delay": 18.4,
+          "outcome": "partial"
+        },
+        "strength_0p3_start_100": {
+          "prevention_rate": 0.16,
+          "mean_tipping_step": 242.0,
+          "mean_plateau": 33.3,
+          "mean_delay": 13.2,
+          "outcome": "partial"
+        },
+        "strength_0p3_start_125": {
+          "prevention_rate": 0.08,
+          "mean_tipping_step": 237.4,
+          "mean_plateau": 32.0,
+          "mean_delay": 8.6,
+          "outcome": "ineffective"
+        },
+        "strength_0p3_start_150": {
+          "prevention_rate": 0.08,
+          "mean_tipping_step": 233.7,
+          "mean_plateau": 30.4,
+          "mean_delay": 4.9,
+          "outcome": "ineffective"
+        },
+        "strength_0p3_start_175": {
+          "prevention_rate": 0.08,
+          "mean_tipping_step": 231.2,
+          "mean_plateau": 29.4,
+          "mean_delay": 2.4,
+          "outcome": "ineffective"
+        },
+        "strength_0p3_start_200": {
+          "prevention_rate": 0.08,
+          "mean_tipping_step": 229.7,
+          "mean_plateau": 28.6,
+          "mean_delay": 0.9,
+          "outcome": "ineffective"
+        },
+        "strength_0p4_start_0": {
+          "prevention_rate": 0.32,
+          "mean_tipping_step": 278.0,
+          "mean_plateau": 46.8,
+          "mean_delay": 49.2,
+          "outcome": "delay"
+        },
+        "strength_0p4_start_25": {
+          "prevention_rate": 0.24,
+          "mean_tipping_step": 271.3,
+          "mean_plateau": 44.9,
+          "mean_delay": 42.5,
+          "outcome": "delay"
+        },
+        "strength_0p4_start_50": {
+          "prevention_rate": 0.2,
+          "mean_tipping_step": 262.8,
+          "mean_plateau": 42.2,
+          "mean_delay": 34.0,
+          "outcome": "partial"
+        },
+        "strength_0p4_start_75": {
+          "prevention_rate": 0.2,
+          "mean_tipping_step": 254.4,
+          "mean_plateau": 39.2,
+          "mean_delay": 25.6,
+          "outcome": "partial"
+        },
+        "strength_0p4_start_100": {
+          "prevention_rate": 0.2,
+          "mean_tipping_step": 246.8,
+          "mean_plateau": 36.4,
+          "mean_delay": 18.0,
+          "outcome": "partial"
+        },
+        "strength_0p4_start_125": {
+          "prevention_rate": 0.16,
+          "mean_tipping_step": 240.4,
+          "mean_plateau": 33.6,
+          "mean_delay": 11.6,
+          "outcome": "partial"
+        },
+        "strength_0p4_start_150": {
+          "prevention_rate": 0.08,
+          "mean_tipping_step": 235.4,
+          "mean_plateau": 31.9,
+          "mean_delay": 6.6,
+          "outcome": "ineffective"
+        },
+        "strength_0p4_start_175": {
+          "prevention_rate": 0.08,
+          "mean_tipping_step": 232.0,
+          "mean_plateau": 30.0,
+          "mean_delay": 3.2,
+          "outcome": "ineffective"
+        },
+        "strength_0p4_start_200": {
+          "prevention_rate": 0.08,
+          "mean_tipping_step": 230.0,
+          "mean_plateau": 29.1,
+          "mean_delay": 1.2,
+          "outcome": "ineffective"
+        },
+        "strength_0p5_start_0": {
+          "prevention_rate": 0.6,
+          "mean_tipping_step": 288.1,
+          "mean_plateau": 52.4,
+          "mean_delay": 59.3,
+          "outcome": "prevention"
+        },
+        "strength_0p5_start_25": {
+          "prevention_rate": 0.52,
+          "mean_tipping_step": 282.7,
+          "mean_plateau": 49.8,
+          "mean_delay": 53.9,
+          "outcome": "prevention"
+        },
+        "strength_0p5_start_50": {
+          "prevention_rate": 0.24,
+          "mean_tipping_step": 273.8,
+          "mean_plateau": 46.3,
+          "mean_delay": 45.0,
+          "outcome": "delay"
+        },
+        "strength_0p5_start_75": {
+          "prevention_rate": 0.2,
+          "mean_tipping_step": 262.3,
+          "mean_plateau": 43.2,
+          "mean_delay": 33.5,
+          "outcome": "partial"
+        },
+        "strength_0p5_start_100": {
+          "prevention_rate": 0.2,
+          "mean_tipping_step": 252.1,
+          "mean_plateau": 39.3,
+          "mean_delay": 23.3,
+          "outcome": "partial"
+        },
+        "strength_0p5_start_125": {
+          "prevention_rate": 0.2,
+          "mean_tipping_step": 243.6,
+          "mean_plateau": 35.7,
+          "mean_delay": 14.8,
+          "outcome": "partial"
+        },
+        "strength_0p5_start_150": {
+          "prevention_rate": 0.16,
+          "mean_tipping_step": 237.2,
+          "mean_plateau": 33.1,
+          "mean_delay": 8.4,
+          "outcome": "ineffective"
+        },
+        "strength_0p5_start_175": {
+          "prevention_rate": 0.08,
+          "mean_tipping_step": 232.9,
+          "mean_plateau": 30.9,
+          "mean_delay": 4.1,
+          "outcome": "ineffective"
+        },
+        "strength_0p5_start_200": {
+          "prevention_rate": 0.08,
+          "mean_tipping_step": 230.4,
+          "mean_plateau": 29.4,
+          "mean_delay": 1.6,
+          "outcome": "ineffective"
+        },
+        "strength_0p6_start_0": {
+          "prevention_rate": 0.84,
+          "mean_tipping_step": 297.0,
+          "mean_plateau": 57.5,
+          "mean_delay": 68.2,
+          "outcome": "prevention"
+        },
+        "strength_0p6_start_25": {
+          "prevention_rate": 0.64,
+          "mean_tipping_step": 290.9,
+          "mean_plateau": 55.0,
+          "mean_delay": 62.1,
+          "outcome": "prevention"
+        },
+        "strength_0p6_start_50": {
+          "prevention_rate": 0.52,
+          "mean_tipping_step": 282.4,
+          "mean_plateau": 50.5,
+          "mean_delay": 53.6,
+          "outcome": "prevention"
+        },
+        "strength_0p6_start_75": {
+          "prevention_rate": 0.24,
+          "mean_tipping_step": 271.1,
+          "mean_plateau": 46.5,
+          "mean_delay": 42.3,
+          "outcome": "delay"
+        },
+        "strength_0p6_start_100": {
+          "prevention_rate": 0.2,
+          "mean_tipping_step": 257.7,
+          "mean_plateau": 42.5,
+          "mean_delay": 28.9,
+          "outcome": "partial"
+        },
+        "strength_0p6_start_125": {
+          "prevention_rate": 0.2,
+          "mean_tipping_step": 247.2,
+          "mean_plateau": 38.2,
+          "mean_delay": 18.4,
+          "outcome": "partial"
+        },
+        "strength_0p6_start_150": {
+          "prevention_rate": 0.2,
+          "mean_tipping_step": 238.9,
+          "mean_plateau": 34.5,
+          "mean_delay": 10.1,
+          "outcome": "partial"
+        },
+        "strength_0p6_start_175": {
+          "prevention_rate": 0.08,
+          "mean_tipping_step": 233.8,
+          "mean_plateau": 31.7,
+          "mean_delay": 5.0,
+          "outcome": "ineffective"
+        },
+        "strength_0p6_start_200": {
+          "prevention_rate": 0.08,
+          "mean_tipping_step": 230.8,
+          "mean_plateau": 29.8,
+          "mean_delay": 2.0,
+          "outcome": "ineffective"
+        },
+        "strength_0p7_start_0": {
+          "prevention_rate": 0.92,
+          "mean_tipping_step": 299.6,
+          "mean_plateau": 59.2,
+          "mean_delay": 70.8,
+          "outcome": "prevention"
+        },
+        "strength_0p7_start_25": {
+          "prevention_rate": 0.84,
+          "mean_tipping_step": 297.4,
+          "mean_plateau": 58.0,
+          "mean_delay": 68.6,
+          "outcome": "prevention"
+        },
+        "strength_0p7_start_50": {
+          "prevention_rate": 0.6,
+          "mean_tipping_step": 289.2,
+          "mean_plateau": 55.1,
+          "mean_delay": 60.4,
+          "outcome": "prevention"
+        },
+        "strength_0p7_start_75": {
+          "prevention_rate": 0.48,
+          "mean_tipping_step": 278.6,
+          "mean_plateau": 49.8,
+          "mean_delay": 49.8,
+          "outcome": "delay"
+        },
+        "strength_0p7_start_100": {
+          "prevention_rate": 0.24,
+          "mean_tipping_step": 264.3,
+          "mean_plateau": 45.5,
+          "mean_delay": 35.5,
+          "outcome": "partial"
+        },
+        "strength_0p7_start_125": {
+          "prevention_rate": 0.2,
+          "mean_tipping_step": 250.7,
+          "mean_plateau": 40.7,
+          "mean_delay": 21.9,
+          "outcome": "partial"
+        },
+        "strength_0p7_start_150": {
+          "prevention_rate": 0.2,
+          "mean_tipping_step": 240.6,
+          "mean_plateau": 35.9,
+          "mean_delay": 11.8,
+          "outcome": "partial"
+        },
+        "strength_0p7_start_175": {
+          "prevention_rate": 0.12,
+          "mean_tipping_step": 234.7,
+          "mean_plateau": 32.6,
+          "mean_delay": 5.9,
+          "outcome": "ineffective"
+        },
+        "strength_0p7_start_200": {
+          "prevention_rate": 0.08,
+          "mean_tipping_step": 231.0,
+          "mean_plateau": 30.2,
+          "mean_delay": 2.2,
+          "outcome": "ineffective"
+        },
+        "strength_0p8_start_0": {
+          "prevention_rate": 1.0,
+          "mean_tipping_step": 300.0,
+          "mean_plateau": 60.5,
+          "mean_delay": 71.2,
+          "outcome": "prevention"
+        },
+        "strength_0p8_start_25": {
+          "prevention_rate": 0.96,
+          "mean_tipping_step": 299.6,
+          "mean_plateau": 59.4,
+          "mean_delay": 70.8,
+          "outcome": "prevention"
+        },
+        "strength_0p8_start_50": {
+          "prevention_rate": 0.76,
+          "mean_tipping_step": 295.8,
+          "mean_plateau": 57.8,
+          "mean_delay": 67.0,
+          "outcome": "prevention"
+        },
+        "strength_0p8_start_75": {
+          "prevention_rate": 0.6,
+          "mean_tipping_step": 284.1,
+          "mean_plateau": 53.9,
+          "mean_delay": 55.3,
+          "outcome": "prevention"
+        },
+        "strength_0p8_start_100": {
+          "prevention_rate": 0.36,
+          "mean_tipping_step": 271.0,
+          "mean_plateau": 48.1,
+          "mean_delay": 42.2,
+          "outcome": "delay"
+        },
+        "strength_0p8_start_125": {
+          "prevention_rate": 0.2,
+          "mean_tipping_step": 254.3,
+          "mean_plateau": 42.9,
+          "mean_delay": 25.5,
+          "outcome": "partial"
+        },
+        "strength_0p8_start_150": {
+          "prevention_rate": 0.2,
+          "mean_tipping_step": 242.6,
+          "mean_plateau": 37.8,
+          "mean_delay": 13.8,
+          "outcome": "partial"
+        },
+        "strength_0p8_start_175": {
+          "prevention_rate": 0.2,
+          "mean_tipping_step": 235.4,
+          "mean_plateau": 33.5,
+          "mean_delay": 6.6,
+          "outcome": "ineffective"
+        },
+        "strength_0p8_start_200": {
+          "prevention_rate": 0.08,
+          "mean_tipping_step": 231.3,
+          "mean_plateau": 30.9,
+          "mean_delay": 2.5,
+          "outcome": "ineffective"
+        },
+        "strength_0p9_start_0": {
+          "prevention_rate": 1.0,
+          "mean_tipping_step": 300.0,
+          "mean_plateau": 60.9,
+          "mean_delay": 71.2,
+          "outcome": "prevention"
+        },
+        "strength_0p9_start_25": {
+          "prevention_rate": 1.0,
+          "mean_tipping_step": 300.0,
+          "mean_plateau": 60.5,
+          "mean_delay": 71.2,
+          "outcome": "prevention"
+        },
+        "strength_0p9_start_50": {
+          "prevention_rate": 0.92,
+          "mean_tipping_step": 298.9,
+          "mean_plateau": 59.0,
+          "mean_delay": 70.1,
+          "outcome": "prevention"
+        },
+        "strength_0p9_start_75": {
+          "prevention_rate": 0.68,
+          "mean_tipping_step": 290.2,
+          "mean_plateau": 56.3,
+          "mean_delay": 61.4,
+          "outcome": "prevention"
+        },
+        "strength_0p9_start_100": {
+          "prevention_rate": 0.52,
+          "mean_tipping_step": 276.0,
+          "mean_plateau": 50.3,
+          "mean_delay": 47.2,
+          "outcome": "prevention"
+        },
+        "strength_0p9_start_125": {
+          "prevention_rate": 0.24,
+          "mean_tipping_step": 259.2,
+          "mean_plateau": 45.3,
+          "mean_delay": 30.4,
+          "outcome": "partial"
+        },
+        "strength_0p9_start_150": {
+          "prevention_rate": 0.2,
+          "mean_tipping_step": 244.6,
+          "mean_plateau": 39.3,
+          "mean_delay": 15.8,
+          "outcome": "partial"
+        },
+        "strength_0p9_start_175": {
+          "prevention_rate": 0.2,
+          "mean_tipping_step": 236.0,
+          "mean_plateau": 34.6,
+          "mean_delay": 7.2,
+          "outcome": "ineffective"
+        },
+        "strength_0p9_start_200": {
+          "prevention_rate": 0.08,
+          "mean_tipping_step": 231.7,
+          "mean_plateau": 31.3,
+          "mean_delay": 2.9,
+          "outcome": "ineffective"
+        }
+      }
+    },
+    {
+      "name": "sparse_chain_100",
+      "label": "Sparse chain S=100% (115 edges, -12 premotor edges)",
+      "n_edges": 115,
+      "boundary": {
+        "slope": 175.0,
+        "intercept": -62.5,
+        "r2": 0.942,
+        "points": [
+          [
+            0.5,
+            25
+          ],
+          [
+            0.6,
+            50
+          ],
+          [
+            0.7,
+            50
+          ],
+          [
+            0.8,
+            75
+          ],
+          [
+            0.9,
+            100
+          ]
+        ]
+      },
+      "window_area": 17,
+      "max_start_t_at_80": 75,
+      "min_strength_at_t0": 0.5,
+      "genuine_tipping_rate": 0.6,
+      "mean_baseline_tip": 233.2,
+      "phase7b": [
+        {
+          "config_id": 334,
+          "is_genuine": false,
+          "tip_median": 225.0,
+          "sil_median": 203.0,
+          "peak_median": 9.0,
+          "coh_median": -0.065
+        },
+        {
+          "config_id": 235,
+          "is_genuine": false,
+          "tip_median": 290.0,
+          "sil_median": 260.0,
+          "peak_median": 3.0,
+          "coh_median": 0.118
+        },
+        {
+          "config_id": 382,
+          "is_genuine": true,
+          "tip_median": 196.0,
+          "sil_median": 176.0,
+          "peak_median": 12.0,
+          "coh_median": 0.618
+        },
+        {
+          "config_id": 391,
+          "is_genuine": true,
+          "tip_median": 222.0,
+          "sil_median": 187.0,
+          "peak_median": 9.0,
+          "coh_median": 0.32
+        },
+        {
+          "config_id": 21,
+          "is_genuine": true,
+          "tip_median": 238.0,
+          "sil_median": 201.0,
+          "peak_median": 12.0,
+          "coh_median": 0.349
+        }
+      ],
+      "grid": {
+        "strength_0p1_start_0": {
+          "prevention_rate": 0.12,
+          "mean_tipping_step": 244.0,
+          "mean_plateau": 31.3,
+          "mean_delay": 10.8,
+          "outcome": "partial"
+        },
+        "strength_0p1_start_25": {
+          "prevention_rate": 0.12,
+          "mean_tipping_step": 242.7,
+          "mean_plateau": 31.0,
+          "mean_delay": 9.5,
+          "outcome": "ineffective"
+        },
+        "strength_0p1_start_50": {
+          "prevention_rate": 0.08,
+          "mean_tipping_step": 240.8,
+          "mean_plateau": 30.7,
+          "mean_delay": 7.6,
+          "outcome": "ineffective"
+        },
+        "strength_0p1_start_75": {
+          "prevention_rate": 0.08,
+          "mean_tipping_step": 239.1,
+          "mean_plateau": 30.2,
+          "mean_delay": 5.9,
+          "outcome": "ineffective"
+        },
+        "strength_0p1_start_100": {
+          "prevention_rate": 0.08,
+          "mean_tipping_step": 237.6,
+          "mean_plateau": 29.8,
+          "mean_delay": 4.4,
+          "outcome": "ineffective"
+        },
+        "strength_0p1_start_125": {
+          "prevention_rate": 0.08,
+          "mean_tipping_step": 236.1,
+          "mean_plateau": 29.3,
+          "mean_delay": 2.9,
+          "outcome": "ineffective"
+        },
+        "strength_0p1_start_150": {
+          "prevention_rate": 0.08,
+          "mean_tipping_step": 235.0,
+          "mean_plateau": 28.9,
+          "mean_delay": 1.8,
+          "outcome": "ineffective"
+        },
+        "strength_0p1_start_175": {
+          "prevention_rate": 0.08,
+          "mean_tipping_step": 234.0,
+          "mean_plateau": 28.8,
+          "mean_delay": 0.8,
+          "outcome": "ineffective"
+        },
+        "strength_0p1_start_200": {
+          "prevention_rate": 0.08,
+          "mean_tipping_step": 233.5,
+          "mean_plateau": 28.7,
+          "mean_delay": 0.3,
+          "outcome": "ineffective"
+        },
+        "strength_0p2_start_0": {
+          "prevention_rate": 0.2,
+          "mean_tipping_step": 254.8,
+          "mean_plateau": 36.4,
+          "mean_delay": 21.6,
+          "outcome": "partial"
+        },
+        "strength_0p2_start_25": {
+          "prevention_rate": 0.2,
+          "mean_tipping_step": 252.2,
+          "mean_plateau": 35.4,
+          "mean_delay": 19.0,
+          "outcome": "partial"
+        },
+        "strength_0p2_start_50": {
+          "prevention_rate": 0.2,
+          "mean_tipping_step": 248.8,
+          "mean_plateau": 34.1,
+          "mean_delay": 15.6,
+          "outcome": "partial"
+        },
+        "strength_0p2_start_75": {
+          "prevention_rate": 0.2,
+          "mean_tipping_step": 245.6,
+          "mean_plateau": 33.1,
+          "mean_delay": 12.4,
+          "outcome": "partial"
+        },
+        "strength_0p2_start_100": {
+          "prevention_rate": 0.12,
+          "mean_tipping_step": 242.1,
+          "mean_plateau": 31.8,
+          "mean_delay": 8.9,
+          "outcome": "ineffective"
+        },
+        "strength_0p2_start_125": {
+          "prevention_rate": 0.08,
+          "mean_tipping_step": 239.1,
+          "mean_plateau": 30.8,
+          "mean_delay": 5.9,
+          "outcome": "ineffective"
+        },
+        "strength_0p2_start_150": {
+          "prevention_rate": 0.08,
+          "mean_tipping_step": 236.8,
+          "mean_plateau": 30.2,
+          "mean_delay": 3.6,
+          "outcome": "ineffective"
+        },
+        "strength_0p2_start_175": {
+          "prevention_rate": 0.08,
+          "mean_tipping_step": 235.0,
+          "mean_plateau": 29.4,
+          "mean_delay": 1.8,
+          "outcome": "ineffective"
+        },
+        "strength_0p2_start_200": {
+          "prevention_rate": 0.08,
+          "mean_tipping_step": 234.0,
+          "mean_plateau": 28.8,
+          "mean_delay": 0.8,
+          "outcome": "ineffective"
+        },
+        "strength_0p3_start_0": {
+          "prevention_rate": 0.2,
+          "mean_tipping_step": 267.0,
+          "mean_plateau": 42.2,
+          "mean_delay": 33.8,
+          "outcome": "partial"
+        },
+        "strength_0p3_start_25": {
+          "prevention_rate": 0.2,
+          "mean_tipping_step": 262.6,
+          "mean_plateau": 40.8,
+          "mean_delay": 29.4,
+          "outcome": "partial"
+        },
+        "strength_0p3_start_50": {
+          "prevention_rate": 0.2,
+          "mean_tipping_step": 257.1,
+          "mean_plateau": 38.9,
+          "mean_delay": 23.9,
+          "outcome": "partial"
+        },
+        "strength_0p3_start_75": {
+          "prevention_rate": 0.2,
+          "mean_tipping_step": 251.5,
+          "mean_plateau": 36.6,
+          "mean_delay": 18.3,
+          "outcome": "partial"
+        },
+        "strength_0p3_start_100": {
+          "prevention_rate": 0.2,
+          "mean_tipping_step": 246.5,
+          "mean_plateau": 34.5,
+          "mean_delay": 13.3,
+          "outcome": "partial"
+        },
+        "strength_0p3_start_125": {
+          "prevention_rate": 0.2,
+          "mean_tipping_step": 242.3,
+          "mean_plateau": 32.8,
+          "mean_delay": 9.1,
+          "outcome": "ineffective"
+        },
+        "strength_0p3_start_150": {
+          "prevention_rate": 0.12,
+          "mean_tipping_step": 238.6,
+          "mean_plateau": 31.2,
+          "mean_delay": 5.4,
+          "outcome": "ineffective"
+        },
+        "strength_0p3_start_175": {
+          "prevention_rate": 0.08,
+          "mean_tipping_step": 235.9,
+          "mean_plateau": 30.3,
+          "mean_delay": 2.7,
+          "outcome": "ineffective"
+        },
+        "strength_0p3_start_200": {
+          "prevention_rate": 0.08,
+          "mean_tipping_step": 234.3,
+          "mean_plateau": 29.3,
+          "mean_delay": 1.1,
+          "outcome": "ineffective"
+        },
+        "strength_0p4_start_0": {
+          "prevention_rate": 0.36,
+          "mean_tipping_step": 281.4,
+          "mean_plateau": 47.9,
+          "mean_delay": 48.2,
+          "outcome": "delay"
+        },
+        "strength_0p4_start_25": {
+          "prevention_rate": 0.28,
+          "mean_tipping_step": 275.0,
+          "mean_plateau": 45.9,
+          "mean_delay": 41.8,
+          "outcome": "delay"
+        },
+        "strength_0p4_start_50": {
+          "prevention_rate": 0.24,
+          "mean_tipping_step": 267.0,
+          "mean_plateau": 43.3,
+          "mean_delay": 33.8,
+          "outcome": "partial"
+        },
+        "strength_0p4_start_75": {
+          "prevention_rate": 0.2,
+          "mean_tipping_step": 258.8,
+          "mean_plateau": 40.4,
+          "mean_delay": 25.6,
+          "outcome": "partial"
+        },
+        "strength_0p4_start_100": {
+          "prevention_rate": 0.2,
+          "mean_tipping_step": 251.3,
+          "mean_plateau": 37.4,
+          "mean_delay": 18.1,
+          "outcome": "partial"
+        },
+        "strength_0p4_start_125": {
+          "prevention_rate": 0.2,
+          "mean_tipping_step": 245.1,
+          "mean_plateau": 34.9,
+          "mean_delay": 11.9,
+          "outcome": "partial"
+        },
+        "strength_0p4_start_150": {
+          "prevention_rate": 0.2,
+          "mean_tipping_step": 240.4,
+          "mean_plateau": 32.7,
+          "mean_delay": 7.2,
+          "outcome": "ineffective"
+        },
+        "strength_0p4_start_175": {
+          "prevention_rate": 0.08,
+          "mean_tipping_step": 236.8,
+          "mean_plateau": 30.8,
+          "mean_delay": 3.6,
+          "outcome": "ineffective"
+        },
+        "strength_0p4_start_200": {
+          "prevention_rate": 0.08,
+          "mean_tipping_step": 234.6,
+          "mean_plateau": 29.8,
+          "mean_delay": 1.4,
+          "outcome": "ineffective"
+        },
+        "strength_0p5_start_0": {
+          "prevention_rate": 0.6,
+          "mean_tipping_step": 292.0,
+          "mean_plateau": 53.7,
+          "mean_delay": 58.8,
+          "outcome": "prevention"
+        },
+        "strength_0p5_start_25": {
+          "prevention_rate": 0.52,
+          "mean_tipping_step": 286.0,
+          "mean_plateau": 50.9,
+          "mean_delay": 52.8,
+          "outcome": "prevention"
+        },
+        "strength_0p5_start_50": {
+          "prevention_rate": 0.32,
+          "mean_tipping_step": 277.2,
+          "mean_plateau": 47.5,
+          "mean_delay": 44.0,
+          "outcome": "delay"
+        },
+        "strength_0p5_start_75": {
+          "prevention_rate": 0.28,
+          "mean_tipping_step": 267.0,
+          "mean_plateau": 44.1,
+          "mean_delay": 33.8,
+          "outcome": "partial"
+        },
+        "strength_0p5_start_100": {
+          "prevention_rate": 0.2,
+          "mean_tipping_step": 257.1,
+          "mean_plateau": 40.6,
+          "mean_delay": 23.9,
+          "outcome": "partial"
+        },
+        "strength_0p5_start_125": {
+          "prevention_rate": 0.2,
+          "mean_tipping_step": 248.1,
+          "mean_plateau": 37.2,
+          "mean_delay": 14.9,
+          "outcome": "partial"
+        },
+        "strength_0p5_start_150": {
+          "prevention_rate": 0.2,
+          "mean_tipping_step": 241.9,
+          "mean_plateau": 34.2,
+          "mean_delay": 8.7,
+          "outcome": "ineffective"
+        },
+        "strength_0p5_start_175": {
+          "prevention_rate": 0.2,
+          "mean_tipping_step": 237.8,
+          "mean_plateau": 31.8,
+          "mean_delay": 4.6,
+          "outcome": "ineffective"
+        },
+        "strength_0p5_start_200": {
+          "prevention_rate": 0.08,
+          "mean_tipping_step": 234.9,
+          "mean_plateau": 30.2,
+          "mean_delay": 1.7,
+          "outcome": "ineffective"
+        },
+        "strength_0p6_start_0": {
+          "prevention_rate": 0.92,
+          "mean_tipping_step": 297.8,
+          "mean_plateau": 58.3,
+          "mean_delay": 64.6,
+          "outcome": "prevention"
+        },
+        "strength_0p6_start_25": {
+          "prevention_rate": 0.72,
+          "mean_tipping_step": 294.9,
+          "mean_plateau": 56.2,
+          "mean_delay": 61.7,
+          "outcome": "prevention"
+        },
+        "strength_0p6_start_50": {
+          "prevention_rate": 0.52,
+          "mean_tipping_step": 286.2,
+          "mean_plateau": 51.8,
+          "mean_delay": 53.0,
+          "outcome": "prevention"
+        },
+        "strength_0p6_start_75": {
+          "prevention_rate": 0.32,
+          "mean_tipping_step": 275.2,
+          "mean_plateau": 47.6,
+          "mean_delay": 42.0,
+          "outcome": "delay"
+        },
+        "strength_0p6_start_100": {
+          "prevention_rate": 0.28,
+          "mean_tipping_step": 263.0,
+          "mean_plateau": 43.6,
+          "mean_delay": 29.8,
+          "outcome": "partial"
+        },
+        "strength_0p6_start_125": {
+          "prevention_rate": 0.2,
+          "mean_tipping_step": 252.0,
+          "mean_plateau": 39.7,
+          "mean_delay": 18.8,
+          "outcome": "partial"
+        },
+        "strength_0p6_start_150": {
+          "prevention_rate": 0.2,
+          "mean_tipping_step": 243.5,
+          "mean_plateau": 35.6,
+          "mean_delay": 10.3,
+          "outcome": "partial"
+        },
+        "strength_0p6_start_175": {
+          "prevention_rate": 0.2,
+          "mean_tipping_step": 238.4,
+          "mean_plateau": 32.7,
+          "mean_delay": 5.2,
+          "outcome": "ineffective"
+        },
+        "strength_0p6_start_200": {
+          "prevention_rate": 0.08,
+          "mean_tipping_step": 235.2,
+          "mean_plateau": 30.6,
+          "mean_delay": 2.0,
+          "outcome": "ineffective"
+        },
+        "strength_0p7_start_0": {
+          "prevention_rate": 0.92,
+          "mean_tipping_step": 299.7,
+          "mean_plateau": 59.6,
+          "mean_delay": 66.5,
+          "outcome": "prevention"
+        },
+        "strength_0p7_start_25": {
+          "prevention_rate": 0.92,
+          "mean_tipping_step": 298.2,
+          "mean_plateau": 58.6,
+          "mean_delay": 65.0,
+          "outcome": "prevention"
+        },
+        "strength_0p7_start_50": {
+          "prevention_rate": 0.64,
+          "mean_tipping_step": 293.8,
+          "mean_plateau": 55.8,
+          "mean_delay": 60.6,
+          "outcome": "prevention"
+        },
+        "strength_0p7_start_75": {
+          "prevention_rate": 0.48,
+          "mean_tipping_step": 282.5,
+          "mean_plateau": 51.0,
+          "mean_delay": 49.3,
+          "outcome": "delay"
+        },
+        "strength_0p7_start_100": {
+          "prevention_rate": 0.32,
+          "mean_tipping_step": 268.9,
+          "mean_plateau": 46.7,
+          "mean_delay": 35.7,
+          "outcome": "partial"
+        },
+        "strength_0p7_start_125": {
+          "prevention_rate": 0.2,
+          "mean_tipping_step": 256.2,
+          "mean_plateau": 42.0,
+          "mean_delay": 23.0,
+          "outcome": "partial"
+        },
+        "strength_0p7_start_150": {
+          "prevention_rate": 0.2,
+          "mean_tipping_step": 245.4,
+          "mean_plateau": 37.2,
+          "mean_delay": 12.2,
+          "outcome": "partial"
+        },
+        "strength_0p7_start_175": {
+          "prevention_rate": 0.2,
+          "mean_tipping_step": 239.2,
+          "mean_plateau": 33.8,
+          "mean_delay": 6.0,
+          "outcome": "ineffective"
+        },
+        "strength_0p7_start_200": {
+          "prevention_rate": 0.12,
+          "mean_tipping_step": 235.7,
+          "mean_plateau": 31.1,
+          "mean_delay": 2.5,
+          "outcome": "ineffective"
+        },
+        "strength_0p8_start_0": {
+          "prevention_rate": 1.0,
+          "mean_tipping_step": 300.0,
+          "mean_plateau": 60.6,
+          "mean_delay": 66.8,
+          "outcome": "prevention"
+        },
+        "strength_0p8_start_25": {
+          "prevention_rate": 0.96,
+          "mean_tipping_step": 299.8,
+          "mean_plateau": 59.9,
+          "mean_delay": 66.6,
+          "outcome": "prevention"
+        },
+        "strength_0p8_start_50": {
+          "prevention_rate": 0.92,
+          "mean_tipping_step": 298.0,
+          "mean_plateau": 58.4,
+          "mean_delay": 64.8,
+          "outcome": "prevention"
+        },
+        "strength_0p8_start_75": {
+          "prevention_rate": 0.6,
+          "mean_tipping_step": 288.9,
+          "mean_plateau": 54.8,
+          "mean_delay": 55.7,
+          "outcome": "prevention"
+        },
+        "strength_0p8_start_100": {
+          "prevention_rate": 0.4,
+          "mean_tipping_step": 274.8,
+          "mean_plateau": 49.2,
+          "mean_delay": 41.6,
+          "outcome": "delay"
+        },
+        "strength_0p8_start_125": {
+          "prevention_rate": 0.28,
+          "mean_tipping_step": 260.1,
+          "mean_plateau": 44.0,
+          "mean_delay": 26.9,
+          "outcome": "partial"
+        },
+        "strength_0p8_start_150": {
+          "prevention_rate": 0.2,
+          "mean_tipping_step": 247.9,
+          "mean_plateau": 39.2,
+          "mean_delay": 14.7,
+          "outcome": "partial"
+        },
+        "strength_0p8_start_175": {
+          "prevention_rate": 0.2,
+          "mean_tipping_step": 240.0,
+          "mean_plateau": 34.8,
+          "mean_delay": 6.8,
+          "outcome": "ineffective"
+        },
+        "strength_0p8_start_200": {
+          "prevention_rate": 0.2,
+          "mean_tipping_step": 236.0,
+          "mean_plateau": 31.7,
+          "mean_delay": 2.8,
+          "outcome": "ineffective"
+        },
+        "strength_0p9_start_0": {
+          "prevention_rate": 1.0,
+          "mean_tipping_step": 300.0,
+          "mean_plateau": 60.9,
+          "mean_delay": 66.8,
+          "outcome": "prevention"
+        },
+        "strength_0p9_start_25": {
+          "prevention_rate": 1.0,
+          "mean_tipping_step": 300.0,
+          "mean_plateau": 60.6,
+          "mean_delay": 66.8,
+          "outcome": "prevention"
+        },
+        "strength_0p9_start_50": {
+          "prevention_rate": 0.96,
+          "mean_tipping_step": 299.3,
+          "mean_plateau": 59.7,
+          "mean_delay": 66.1,
+          "outcome": "prevention"
+        },
+        "strength_0p9_start_75": {
+          "prevention_rate": 0.68,
+          "mean_tipping_step": 294.9,
+          "mean_plateau": 57.0,
+          "mean_delay": 61.7,
+          "outcome": "prevention"
+        },
+        "strength_0p9_start_100": {
+          "prevention_rate": 0.52,
+          "mean_tipping_step": 280.6,
+          "mean_plateau": 51.4,
+          "mean_delay": 47.4,
+          "outcome": "prevention"
+        },
+        "strength_0p9_start_125": {
+          "prevention_rate": 0.28,
+          "mean_tipping_step": 264.4,
+          "mean_plateau": 46.4,
+          "mean_delay": 31.2,
+          "outcome": "partial"
+        },
+        "strength_0p9_start_150": {
+          "prevention_rate": 0.2,
+          "mean_tipping_step": 250.4,
+          "mean_plateau": 40.6,
+          "mean_delay": 17.2,
+          "outcome": "partial"
+        },
+        "strength_0p9_start_175": {
+          "prevention_rate": 0.2,
+          "mean_tipping_step": 240.6,
+          "mean_plateau": 35.7,
+          "mean_delay": 7.4,
+          "outcome": "ineffective"
+        },
+        "strength_0p9_start_200": {
+          "prevention_rate": 0.2,
+          "mean_tipping_step": 236.1,
+          "mean_plateau": 32.2,
+          "mean_delay": 2.9,
+          "outcome": "ineffective"
+        }
+      }
+    },
+    {
+      "name": "triangle_rich_60",
+      "label": "Triangle rich S=60% (133 edges, +6 feedback loops)",
+      "n_edges": 133,
+      "boundary": {
+        "slope": 225.0,
+        "intercept": -102.5,
+        "r2": 0.92,
+        "points": [
+          [
+            0.5,
+            0
+          ],
+          [
+            0.6,
+            50
+          ],
+          [
+            0.7,
+            50
+          ],
+          [
+            0.8,
+            75
+          ],
+          [
+            0.9,
+            100
+          ]
+        ]
+      },
+      "window_area": 16,
+      "max_start_t_at_80": 75,
+      "min_strength_at_t0": 0.5,
+      "genuine_tipping_rate": 0.4,
+      "mean_baseline_tip": 226.8,
+      "phase7b": [
+        {
+          "config_id": 334,
+          "is_genuine": false,
+          "tip_median": 219.0,
+          "sil_median": 200.0,
+          "peak_median": 9.0,
+          "coh_median": 0.251
+        },
+        {
+          "config_id": 235,
+          "is_genuine": false,
+          "tip_median": 278.0,
+          "sil_median": 254.0,
+          "peak_median": 4.0,
+          "coh_median": 0.063
+        },
+        {
+          "config_id": 382,
+          "is_genuine": true,
+          "tip_median": 190.0,
+          "sil_median": 170.0,
+          "peak_median": 14.0,
+          "coh_median": 0.591
+        },
+        {
+          "config_id": 391,
+          "is_genuine": false,
+          "tip_median": 213.0,
+          "sil_median": 183.0,
+          "peak_median": 8.0,
+          "coh_median": 0.195
+        },
+        {
+          "config_id": 21,
+          "is_genuine": true,
+          "tip_median": 228.0,
+          "sil_median": 190.0,
+          "peak_median": 10.0,
+          "coh_median": 0.37
+        }
+      ],
+      "grid": {
+        "strength_0p1_start_0": {
+          "prevention_rate": 0.08,
+          "mean_tipping_step": 237.6,
+          "mean_plateau": 29.8,
+          "mean_delay": 10.8,
+          "outcome": "partial"
+        },
+        "strength_0p1_start_25": {
+          "prevention_rate": 0.08,
+          "mean_tipping_step": 236.0,
+          "mean_plateau": 29.7,
+          "mean_delay": 9.2,
+          "outcome": "ineffective"
+        },
+        "strength_0p1_start_50": {
+          "prevention_rate": 0.08,
+          "mean_tipping_step": 234.2,
+          "mean_plateau": 29.2,
+          "mean_delay": 7.5,
+          "outcome": "ineffective"
+        },
+        "strength_0p1_start_75": {
+          "prevention_rate": 0.08,
+          "mean_tipping_step": 232.6,
+          "mean_plateau": 28.9,
+          "mean_delay": 5.8,
+          "outcome": "ineffective"
+        },
+        "strength_0p1_start_100": {
+          "prevention_rate": 0.08,
+          "mean_tipping_step": 230.9,
+          "mean_plateau": 28.5,
+          "mean_delay": 4.1,
+          "outcome": "ineffective"
+        },
+        "strength_0p1_start_125": {
+          "prevention_rate": 0.08,
+          "mean_tipping_step": 229.4,
+          "mean_plateau": 28.1,
+          "mean_delay": 2.6,
+          "outcome": "ineffective"
+        },
+        "strength_0p1_start_150": {
+          "prevention_rate": 0.08,
+          "mean_tipping_step": 228.4,
+          "mean_plateau": 27.9,
+          "mean_delay": 1.6,
+          "outcome": "ineffective"
+        },
+        "strength_0p1_start_175": {
+          "prevention_rate": 0.04,
+          "mean_tipping_step": 227.6,
+          "mean_plateau": 27.4,
+          "mean_delay": 0.8,
+          "outcome": "ineffective"
+        },
+        "strength_0p1_start_200": {
+          "prevention_rate": 0.0,
+          "mean_tipping_step": 227.0,
+          "mean_plateau": 27.3,
+          "mean_delay": 0.3,
+          "outcome": "ineffective"
+        },
+        "strength_0p2_start_0": {
+          "prevention_rate": 0.2,
+          "mean_tipping_step": 249.5,
+          "mean_plateau": 34.4,
+          "mean_delay": 22.7,
+          "outcome": "partial"
+        },
+        "strength_0p2_start_25": {
+          "prevention_rate": 0.16,
+          "mean_tipping_step": 246.5,
+          "mean_plateau": 33.2,
+          "mean_delay": 19.7,
+          "outcome": "partial"
+        },
+        "strength_0p2_start_50": {
+          "prevention_rate": 0.12,
+          "mean_tipping_step": 242.6,
+          "mean_plateau": 32.2,
+          "mean_delay": 15.9,
+          "outcome": "partial"
+        },
+        "strength_0p2_start_75": {
+          "prevention_rate": 0.08,
+          "mean_tipping_step": 238.7,
+          "mean_plateau": 31.2,
+          "mean_delay": 12.0,
+          "outcome": "partial"
+        },
+        "strength_0p2_start_100": {
+          "prevention_rate": 0.08,
+          "mean_tipping_step": 235.2,
+          "mean_plateau": 30.4,
+          "mean_delay": 8.5,
+          "outcome": "ineffective"
+        },
+        "strength_0p2_start_125": {
+          "prevention_rate": 0.08,
+          "mean_tipping_step": 232.2,
+          "mean_plateau": 29.4,
+          "mean_delay": 5.4,
+          "outcome": "ineffective"
+        },
+        "strength_0p2_start_150": {
+          "prevention_rate": 0.08,
+          "mean_tipping_step": 230.0,
+          "mean_plateau": 28.8,
+          "mean_delay": 3.2,
+          "outcome": "ineffective"
+        },
+        "strength_0p2_start_175": {
+          "prevention_rate": 0.08,
+          "mean_tipping_step": 228.4,
+          "mean_plateau": 28.0,
+          "mean_delay": 1.6,
+          "outcome": "ineffective"
+        },
+        "strength_0p2_start_200": {
+          "prevention_rate": 0.08,
+          "mean_tipping_step": 227.4,
+          "mean_plateau": 27.7,
+          "mean_delay": 0.7,
+          "outcome": "ineffective"
+        },
+        "strength_0p3_start_0": {
+          "prevention_rate": 0.2,
+          "mean_tipping_step": 262.4,
+          "mean_plateau": 40.0,
+          "mean_delay": 35.6,
+          "outcome": "partial"
+        },
+        "strength_0p3_start_25": {
+          "prevention_rate": 0.2,
+          "mean_tipping_step": 257.5,
+          "mean_plateau": 38.8,
+          "mean_delay": 30.7,
+          "outcome": "partial"
+        },
+        "strength_0p3_start_50": {
+          "prevention_rate": 0.2,
+          "mean_tipping_step": 251.3,
+          "mean_plateau": 36.3,
+          "mean_delay": 24.5,
+          "outcome": "partial"
+        },
+        "strength_0p3_start_75": {
+          "prevention_rate": 0.2,
+          "mean_tipping_step": 245.5,
+          "mean_plateau": 34.4,
+          "mean_delay": 18.7,
+          "outcome": "partial"
+        },
+        "strength_0p3_start_100": {
+          "prevention_rate": 0.16,
+          "mean_tipping_step": 240.2,
+          "mean_plateau": 32.6,
+          "mean_delay": 13.5,
+          "outcome": "partial"
+        },
+        "strength_0p3_start_125": {
+          "prevention_rate": 0.08,
+          "mean_tipping_step": 235.2,
+          "mean_plateau": 31.1,
+          "mean_delay": 8.5,
+          "outcome": "ineffective"
+        },
+        "strength_0p3_start_150": {
+          "prevention_rate": 0.08,
+          "mean_tipping_step": 231.5,
+          "mean_plateau": 29.7,
+          "mean_delay": 4.8,
+          "outcome": "ineffective"
+        },
+        "strength_0p3_start_175": {
+          "prevention_rate": 0.08,
+          "mean_tipping_step": 229.1,
+          "mean_plateau": 28.8,
+          "mean_delay": 2.4,
+          "outcome": "ineffective"
+        },
+        "strength_0p3_start_200": {
+          "prevention_rate": 0.08,
+          "mean_tipping_step": 227.7,
+          "mean_plateau": 28.0,
+          "mean_delay": 0.9,
+          "outcome": "ineffective"
+        },
+        "strength_0p4_start_0": {
+          "prevention_rate": 0.28,
+          "mean_tipping_step": 277.0,
+          "mean_plateau": 46.4,
+          "mean_delay": 50.3,
+          "outcome": "delay"
+        },
+        "strength_0p4_start_25": {
+          "prevention_rate": 0.2,
+          "mean_tipping_step": 270.1,
+          "mean_plateau": 44.3,
+          "mean_delay": 43.4,
+          "outcome": "delay"
+        },
+        "strength_0p4_start_50": {
+          "prevention_rate": 0.2,
+          "mean_tipping_step": 261.2,
+          "mean_plateau": 41.5,
+          "mean_delay": 34.5,
+          "outcome": "partial"
+        },
+        "strength_0p4_start_75": {
+          "prevention_rate": 0.2,
+          "mean_tipping_step": 252.7,
+          "mean_plateau": 38.4,
+          "mean_delay": 25.9,
+          "outcome": "partial"
+        },
+        "strength_0p4_start_100": {
+          "prevention_rate": 0.2,
+          "mean_tipping_step": 244.9,
+          "mean_plateau": 35.4,
+          "mean_delay": 18.2,
+          "outcome": "partial"
+        },
+        "strength_0p4_start_125": {
+          "prevention_rate": 0.16,
+          "mean_tipping_step": 238.4,
+          "mean_plateau": 33.1,
+          "mean_delay": 11.6,
+          "outcome": "partial"
+        },
+        "strength_0p4_start_150": {
+          "prevention_rate": 0.08,
+          "mean_tipping_step": 233.2,
+          "mean_plateau": 31.0,
+          "mean_delay": 6.4,
+          "outcome": "ineffective"
+        },
+        "strength_0p4_start_175": {
+          "prevention_rate": 0.08,
+          "mean_tipping_step": 229.9,
+          "mean_plateau": 29.4,
+          "mean_delay": 3.1,
+          "outcome": "ineffective"
+        },
+        "strength_0p4_start_200": {
+          "prevention_rate": 0.08,
+          "mean_tipping_step": 228.1,
+          "mean_plateau": 28.5,
+          "mean_delay": 1.3,
+          "outcome": "ineffective"
+        },
+        "strength_0p5_start_0": {
+          "prevention_rate": 0.6,
+          "mean_tipping_step": 287.6,
+          "mean_plateau": 52.1,
+          "mean_delay": 60.9,
+          "outcome": "prevention"
+        },
+        "strength_0p5_start_25": {
+          "prevention_rate": 0.48,
+          "mean_tipping_step": 282.0,
+          "mean_plateau": 49.4,
+          "mean_delay": 55.2,
+          "outcome": "delay"
+        },
+        "strength_0p5_start_50": {
+          "prevention_rate": 0.24,
+          "mean_tipping_step": 272.6,
+          "mean_plateau": 46.0,
+          "mean_delay": 45.8,
+          "outcome": "delay"
+        },
+        "strength_0p5_start_75": {
+          "prevention_rate": 0.2,
+          "mean_tipping_step": 261.2,
+          "mean_plateau": 42.6,
+          "mean_delay": 34.4,
+          "outcome": "partial"
+        },
+        "strength_0p5_start_100": {
+          "prevention_rate": 0.2,
+          "mean_tipping_step": 250.4,
+          "mean_plateau": 38.6,
+          "mean_delay": 23.7,
+          "outcome": "partial"
+        },
+        "strength_0p5_start_125": {
+          "prevention_rate": 0.2,
+          "mean_tipping_step": 241.4,
+          "mean_plateau": 34.8,
+          "mean_delay": 14.6,
+          "outcome": "partial"
+        },
+        "strength_0p5_start_150": {
+          "prevention_rate": 0.12,
+          "mean_tipping_step": 235.1,
+          "mean_plateau": 32.2,
+          "mean_delay": 8.3,
+          "outcome": "ineffective"
+        },
+        "strength_0p5_start_175": {
+          "prevention_rate": 0.08,
+          "mean_tipping_step": 230.7,
+          "mean_plateau": 30.2,
+          "mean_delay": 4.0,
+          "outcome": "ineffective"
+        },
+        "strength_0p5_start_200": {
+          "prevention_rate": 0.08,
+          "mean_tipping_step": 228.3,
+          "mean_plateau": 28.9,
+          "mean_delay": 1.6,
+          "outcome": "ineffective"
+        },
+        "strength_0p6_start_0": {
+          "prevention_rate": 0.84,
+          "mean_tipping_step": 296.9,
+          "mean_plateau": 57.4,
+          "mean_delay": 70.2,
+          "outcome": "prevention"
+        },
+        "strength_0p6_start_25": {
+          "prevention_rate": 0.6,
+          "mean_tipping_step": 290.7,
+          "mean_plateau": 54.9,
+          "mean_delay": 63.9,
+          "outcome": "prevention"
+        },
+        "strength_0p6_start_50": {
+          "prevention_rate": 0.52,
+          "mean_tipping_step": 282.0,
+          "mean_plateau": 50.2,
+          "mean_delay": 55.3,
+          "outcome": "prevention"
+        },
+        "strength_0p6_start_75": {
+          "prevention_rate": 0.24,
+          "mean_tipping_step": 269.8,
+          "mean_plateau": 46.0,
+          "mean_delay": 43.0,
+          "outcome": "delay"
+        },
+        "strength_0p6_start_100": {
+          "prevention_rate": 0.2,
+          "mean_tipping_step": 256.6,
+          "mean_plateau": 41.9,
+          "mean_delay": 29.9,
+          "outcome": "partial"
+        },
+        "strength_0p6_start_125": {
+          "prevention_rate": 0.2,
+          "mean_tipping_step": 244.6,
+          "mean_plateau": 37.4,
+          "mean_delay": 17.9,
+          "outcome": "partial"
+        },
+        "strength_0p6_start_150": {
+          "prevention_rate": 0.2,
+          "mean_tipping_step": 236.8,
+          "mean_plateau": 33.7,
+          "mean_delay": 10.1,
+          "outcome": "partial"
+        },
+        "strength_0p6_start_175": {
+          "prevention_rate": 0.08,
+          "mean_tipping_step": 231.6,
+          "mean_plateau": 31.0,
+          "mean_delay": 4.8,
+          "outcome": "ineffective"
+        },
+        "strength_0p6_start_200": {
+          "prevention_rate": 0.08,
+          "mean_tipping_step": 228.7,
+          "mean_plateau": 29.2,
+          "mean_delay": 1.9,
+          "outcome": "ineffective"
+        },
+        "strength_0p7_start_0": {
+          "prevention_rate": 0.92,
+          "mean_tipping_step": 299.5,
+          "mean_plateau": 59.2,
+          "mean_delay": 72.7,
+          "outcome": "prevention"
+        },
+        "strength_0p7_start_25": {
+          "prevention_rate": 0.84,
+          "mean_tipping_step": 297.4,
+          "mean_plateau": 58.0,
+          "mean_delay": 70.6,
+          "outcome": "prevention"
+        },
+        "strength_0p7_start_50": {
+          "prevention_rate": 0.6,
+          "mean_tipping_step": 288.8,
+          "mean_plateau": 55.0,
+          "mean_delay": 62.1,
+          "outcome": "prevention"
+        },
+        "strength_0p7_start_75": {
+          "prevention_rate": 0.44,
+          "mean_tipping_step": 278.0,
+          "mean_plateau": 49.4,
+          "mean_delay": 51.2,
+          "outcome": "delay"
+        },
+        "strength_0p7_start_100": {
+          "prevention_rate": 0.24,
+          "mean_tipping_step": 263.2,
+          "mean_plateau": 45.2,
+          "mean_delay": 36.4,
+          "outcome": "partial"
+        },
+        "strength_0p7_start_125": {
+          "prevention_rate": 0.2,
+          "mean_tipping_step": 248.7,
+          "mean_plateau": 40.3,
+          "mean_delay": 22.0,
+          "outcome": "partial"
+        },
+        "strength_0p7_start_150": {
+          "prevention_rate": 0.2,
+          "mean_tipping_step": 238.3,
+          "mean_plateau": 35.2,
+          "mean_delay": 11.6,
+          "outcome": "partial"
+        },
+        "strength_0p7_start_175": {
+          "prevention_rate": 0.12,
+          "mean_tipping_step": 232.3,
+          "mean_plateau": 31.7,
+          "mean_delay": 5.6,
+          "outcome": "ineffective"
+        },
+        "strength_0p7_start_200": {
+          "prevention_rate": 0.08,
+          "mean_tipping_step": 229.0,
+          "mean_plateau": 29.5,
+          "mean_delay": 2.2,
+          "outcome": "ineffective"
+        },
+        "strength_0p8_start_0": {
+          "prevention_rate": 1.0,
+          "mean_tipping_step": 300.0,
+          "mean_plateau": 60.5,
+          "mean_delay": 73.2,
+          "outcome": "prevention"
+        },
+        "strength_0p8_start_25": {
+          "prevention_rate": 0.96,
+          "mean_tipping_step": 299.6,
+          "mean_plateau": 59.4,
+          "mean_delay": 72.8,
+          "outcome": "prevention"
+        },
+        "strength_0p8_start_50": {
+          "prevention_rate": 0.72,
+          "mean_tipping_step": 295.6,
+          "mean_plateau": 57.6,
+          "mean_delay": 68.9,
+          "outcome": "prevention"
+        },
+        "strength_0p8_start_75": {
+          "prevention_rate": 0.6,
+          "mean_tipping_step": 283.8,
+          "mean_plateau": 53.8,
+          "mean_delay": 57.0,
+          "outcome": "prevention"
+        },
+        "strength_0p8_start_100": {
+          "prevention_rate": 0.32,
+          "mean_tipping_step": 270.2,
+          "mean_plateau": 47.8,
+          "mean_delay": 43.4,
+          "outcome": "delay"
+        },
+        "strength_0p8_start_125": {
+          "prevention_rate": 0.2,
+          "mean_tipping_step": 252.8,
+          "mean_plateau": 42.2,
+          "mean_delay": 26.1,
+          "outcome": "partial"
+        },
+        "strength_0p8_start_150": {
+          "prevention_rate": 0.2,
+          "mean_tipping_step": 240.2,
+          "mean_plateau": 36.8,
+          "mean_delay": 13.5,
+          "outcome": "partial"
+        },
+        "strength_0p8_start_175": {
+          "prevention_rate": 0.16,
+          "mean_tipping_step": 233.1,
+          "mean_plateau": 32.6,
+          "mean_delay": 6.4,
+          "outcome": "ineffective"
+        },
+        "strength_0p8_start_200": {
+          "prevention_rate": 0.08,
+          "mean_tipping_step": 229.2,
+          "mean_plateau": 30.0,
+          "mean_delay": 2.5,
+          "outcome": "ineffective"
+        },
+        "strength_0p9_start_0": {
+          "prevention_rate": 1.0,
+          "mean_tipping_step": 300.0,
+          "mean_plateau": 60.9,
+          "mean_delay": 73.2,
+          "outcome": "prevention"
+        },
+        "strength_0p9_start_25": {
+          "prevention_rate": 1.0,
+          "mean_tipping_step": 300.0,
+          "mean_plateau": 60.5,
+          "mean_delay": 73.2,
+          "outcome": "prevention"
+        },
+        "strength_0p9_start_50": {
+          "prevention_rate": 0.92,
+          "mean_tipping_step": 298.8,
+          "mean_plateau": 59.0,
+          "mean_delay": 72.1,
+          "outcome": "prevention"
+        },
+        "strength_0p9_start_75": {
+          "prevention_rate": 0.68,
+          "mean_tipping_step": 290.0,
+          "mean_plateau": 56.3,
+          "mean_delay": 63.2,
+          "outcome": "prevention"
+        },
+        "strength_0p9_start_100": {
+          "prevention_rate": 0.52,
+          "mean_tipping_step": 275.3,
+          "mean_plateau": 50.0,
+          "mean_delay": 48.5,
+          "outcome": "prevention"
+        },
+        "strength_0p9_start_125": {
+          "prevention_rate": 0.24,
+          "mean_tipping_step": 257.5,
+          "mean_plateau": 45.0,
+          "mean_delay": 30.8,
+          "outcome": "partial"
+        },
+        "strength_0p9_start_150": {
+          "prevention_rate": 0.2,
+          "mean_tipping_step": 242.4,
+          "mean_plateau": 38.8,
+          "mean_delay": 15.6,
+          "outcome": "partial"
+        },
+        "strength_0p9_start_175": {
+          "prevention_rate": 0.2,
+          "mean_tipping_step": 233.8,
+          "mean_plateau": 33.7,
+          "mean_delay": 7.0,
+          "outcome": "ineffective"
+        },
+        "strength_0p9_start_200": {
+          "prevention_rate": 0.08,
+          "mean_tipping_step": 229.5,
+          "mean_plateau": 30.4,
+          "mean_delay": 2.7,
+          "outcome": "ineffective"
+        }
+      }
+    },
+    {
+      "name": "triangle_rich_100",
+      "label": "Triangle rich S=100% (137 edges, +10 feedback loops)",
+      "n_edges": 137,
+      "boundary": {
+        "slope": 175.0,
+        "intercept": -72.5,
+        "r2": 0.817,
+        "points": [
+          [
+            0.5,
+            0
+          ],
+          [
+            0.6,
+            50
+          ],
+          [
+            0.7,
+            50
+          ],
+          [
+            0.8,
+            75
+          ],
+          [
+            0.9,
+            75
+          ]
+        ]
+      },
+      "window_area": 15,
+      "max_start_t_at_80": 75,
+      "min_strength_at_t0": 0.5,
+      "genuine_tipping_rate": 0.6,
+      "mean_baseline_tip": 225.6,
+      "phase7b": [
+        {
+          "config_id": 334,
+          "is_genuine": true,
+          "tip_median": 216.0,
+          "sil_median": 200.0,
+          "peak_median": 9.0,
+          "coh_median": 0.437
+        },
+        {
+          "config_id": 235,
+          "is_genuine": false,
+          "tip_median": 277.0,
+          "sil_median": 254.0,
+          "peak_median": 4.0,
+          "coh_median": 0.042
+        },
+        {
+          "config_id": 382,
+          "is_genuine": true,
+          "tip_median": 187.0,
+          "sil_median": 168.0,
+          "peak_median": 13.0,
+          "coh_median": 0.564
+        },
+        {
+          "config_id": 391,
+          "is_genuine": false,
+          "tip_median": 213.0,
+          "sil_median": 182.0,
+          "peak_median": 9.0,
+          "coh_median": 0.174
+        },
+        {
+          "config_id": 21,
+          "is_genuine": true,
+          "tip_median": 228.0,
+          "sil_median": 188.0,
+          "peak_median": 11.0,
+          "coh_median": 0.384
+        }
+      ],
+      "grid": {
+        "strength_0p1_start_0": {
+          "prevention_rate": 0.08,
+          "mean_tipping_step": 236.6,
+          "mean_plateau": 29.5,
+          "mean_delay": 11.0,
+          "outcome": "partial"
+        },
+        "strength_0p1_start_25": {
+          "prevention_rate": 0.08,
+          "mean_tipping_step": 235.1,
+          "mean_plateau": 29.4,
+          "mean_delay": 9.4,
+          "outcome": "ineffective"
+        },
+        "strength_0p1_start_50": {
+          "prevention_rate": 0.08,
+          "mean_tipping_step": 233.2,
+          "mean_plateau": 28.9,
+          "mean_delay": 7.6,
+          "outcome": "ineffective"
+        },
+        "strength_0p1_start_75": {
+          "prevention_rate": 0.08,
+          "mean_tipping_step": 231.7,
+          "mean_plateau": 28.5,
+          "mean_delay": 6.0,
+          "outcome": "ineffective"
+        },
+        "strength_0p1_start_100": {
+          "prevention_rate": 0.08,
+          "mean_tipping_step": 229.9,
+          "mean_plateau": 28.1,
+          "mean_delay": 4.3,
+          "outcome": "ineffective"
+        },
+        "strength_0p1_start_125": {
+          "prevention_rate": 0.08,
+          "mean_tipping_step": 228.5,
+          "mean_plateau": 27.7,
+          "mean_delay": 2.8,
+          "outcome": "ineffective"
+        },
+        "strength_0p1_start_150": {
+          "prevention_rate": 0.08,
+          "mean_tipping_step": 227.4,
+          "mean_plateau": 27.3,
+          "mean_delay": 1.7,
+          "outcome": "ineffective"
+        },
+        "strength_0p1_start_175": {
+          "prevention_rate": 0.04,
+          "mean_tipping_step": 226.4,
+          "mean_plateau": 26.9,
+          "mean_delay": 0.8,
+          "outcome": "ineffective"
+        },
+        "strength_0p1_start_200": {
+          "prevention_rate": 0.0,
+          "mean_tipping_step": 226.1,
+          "mean_plateau": 26.8,
+          "mean_delay": 0.4,
+          "outcome": "ineffective"
+        },
+        "strength_0p2_start_0": {
+          "prevention_rate": 0.2,
+          "mean_tipping_step": 248.6,
+          "mean_plateau": 33.8,
+          "mean_delay": 23.0,
+          "outcome": "partial"
+        },
+        "strength_0p2_start_25": {
+          "prevention_rate": 0.16,
+          "mean_tipping_step": 245.6,
+          "mean_plateau": 32.8,
+          "mean_delay": 20.0,
+          "outcome": "partial"
+        },
+        "strength_0p2_start_50": {
+          "prevention_rate": 0.12,
+          "mean_tipping_step": 241.8,
+          "mean_plateau": 31.9,
+          "mean_delay": 16.2,
+          "outcome": "partial"
+        },
+        "strength_0p2_start_75": {
+          "prevention_rate": 0.08,
+          "mean_tipping_step": 237.8,
+          "mean_plateau": 30.9,
+          "mean_delay": 12.2,
+          "outcome": "partial"
+        },
+        "strength_0p2_start_100": {
+          "prevention_rate": 0.08,
+          "mean_tipping_step": 234.2,
+          "mean_plateau": 30.0,
+          "mean_delay": 8.6,
+          "outcome": "ineffective"
+        },
+        "strength_0p2_start_125": {
+          "prevention_rate": 0.08,
+          "mean_tipping_step": 231.2,
+          "mean_plateau": 29.1,
+          "mean_delay": 5.6,
+          "outcome": "ineffective"
+        },
+        "strength_0p2_start_150": {
+          "prevention_rate": 0.08,
+          "mean_tipping_step": 228.9,
+          "mean_plateau": 28.5,
+          "mean_delay": 3.2,
+          "outcome": "ineffective"
+        },
+        "strength_0p2_start_175": {
+          "prevention_rate": 0.08,
+          "mean_tipping_step": 227.3,
+          "mean_plateau": 27.7,
+          "mean_delay": 1.6,
+          "outcome": "ineffective"
+        },
+        "strength_0p2_start_200": {
+          "prevention_rate": 0.08,
+          "mean_tipping_step": 226.4,
+          "mean_plateau": 27.2,
+          "mean_delay": 0.8,
+          "outcome": "ineffective"
+        },
+        "strength_0p3_start_0": {
+          "prevention_rate": 0.2,
+          "mean_tipping_step": 261.7,
+          "mean_plateau": 39.8,
+          "mean_delay": 36.0,
+          "outcome": "partial"
+        },
+        "strength_0p3_start_25": {
+          "prevention_rate": 0.2,
+          "mean_tipping_step": 256.8,
+          "mean_plateau": 38.4,
+          "mean_delay": 31.2,
+          "outcome": "partial"
+        },
+        "strength_0p3_start_50": {
+          "prevention_rate": 0.2,
+          "mean_tipping_step": 250.5,
+          "mean_plateau": 36.0,
+          "mean_delay": 24.8,
+          "outcome": "partial"
+        },
+        "strength_0p3_start_75": {
+          "prevention_rate": 0.2,
+          "mean_tipping_step": 244.6,
+          "mean_plateau": 34.0,
+          "mean_delay": 18.9,
+          "outcome": "partial"
+        },
+        "strength_0p3_start_100": {
+          "prevention_rate": 0.12,
+          "mean_tipping_step": 239.2,
+          "mean_plateau": 32.2,
+          "mean_delay": 13.5,
+          "outcome": "partial"
+        },
+        "strength_0p3_start_125": {
+          "prevention_rate": 0.08,
+          "mean_tipping_step": 234.1,
+          "mean_plateau": 30.8,
+          "mean_delay": 8.4,
+          "outcome": "ineffective"
+        },
+        "strength_0p3_start_150": {
+          "prevention_rate": 0.08,
+          "mean_tipping_step": 230.4,
+          "mean_plateau": 29.4,
+          "mean_delay": 4.7,
+          "outcome": "ineffective"
+        },
+        "strength_0p3_start_175": {
+          "prevention_rate": 0.08,
+          "mean_tipping_step": 228.2,
+          "mean_plateau": 28.6,
+          "mean_delay": 2.5,
+          "outcome": "ineffective"
+        },
+        "strength_0p3_start_200": {
+          "prevention_rate": 0.08,
+          "mean_tipping_step": 226.6,
+          "mean_plateau": 27.6,
+          "mean_delay": 1.0,
+          "outcome": "ineffective"
+        },
+        "strength_0p4_start_0": {
+          "prevention_rate": 0.28,
+          "mean_tipping_step": 276.3,
+          "mean_plateau": 46.3,
+          "mean_delay": 50.7,
+          "outcome": "delay"
+        },
+        "strength_0p4_start_25": {
+          "prevention_rate": 0.2,
+          "mean_tipping_step": 269.4,
+          "mean_plateau": 44.1,
+          "mean_delay": 43.7,
+          "outcome": "delay"
+        },
+        "strength_0p4_start_50": {
+          "prevention_rate": 0.2,
+          "mean_tipping_step": 260.5,
+          "mean_plateau": 41.2,
+          "mean_delay": 34.8,
+          "outcome": "partial"
+        },
+        "strength_0p4_start_75": {
+          "prevention_rate": 0.2,
+          "mean_tipping_step": 251.8,
+          "mean_plateau": 38.1,
+          "mean_delay": 26.2,
+          "outcome": "partial"
+        },
+        "strength_0p4_start_100": {
+          "prevention_rate": 0.2,
+          "mean_tipping_step": 243.8,
+          "mean_plateau": 35.1,
+          "mean_delay": 18.2,
+          "outcome": "partial"
+        },
+        "strength_0p4_start_125": {
+          "prevention_rate": 0.16,
+          "mean_tipping_step": 237.4,
+          "mean_plateau": 32.4,
+          "mean_delay": 11.8,
+          "outcome": "partial"
+        },
+        "strength_0p4_start_150": {
+          "prevention_rate": 0.08,
+          "mean_tipping_step": 232.0,
+          "mean_plateau": 30.7,
+          "mean_delay": 6.4,
+          "outcome": "ineffective"
+        },
+        "strength_0p4_start_175": {
+          "prevention_rate": 0.08,
+          "mean_tipping_step": 228.9,
+          "mean_plateau": 29.0,
+          "mean_delay": 3.3,
+          "outcome": "ineffective"
+        },
+        "strength_0p4_start_200": {
+          "prevention_rate": 0.08,
+          "mean_tipping_step": 227.0,
+          "mean_plateau": 28.1,
+          "mean_delay": 1.3,
+          "outcome": "ineffective"
+        },
+        "strength_0p5_start_0": {
+          "prevention_rate": 0.6,
+          "mean_tipping_step": 287.4,
+          "mean_plateau": 51.8,
+          "mean_delay": 61.8,
+          "outcome": "prevention"
+        },
+        "strength_0p5_start_25": {
+          "prevention_rate": 0.48,
+          "mean_tipping_step": 281.6,
+          "mean_plateau": 49.2,
+          "mean_delay": 56.0,
+          "outcome": "delay"
+        },
+        "strength_0p5_start_50": {
+          "prevention_rate": 0.24,
+          "mean_tipping_step": 272.1,
+          "mean_plateau": 45.9,
+          "mean_delay": 46.4,
+          "outcome": "delay"
+        },
+        "strength_0p5_start_75": {
+          "prevention_rate": 0.2,
+          "mean_tipping_step": 260.4,
+          "mean_plateau": 42.1,
+          "mean_delay": 34.8,
+          "outcome": "partial"
+        },
+        "strength_0p5_start_100": {
+          "prevention_rate": 0.2,
+          "mean_tipping_step": 249.5,
+          "mean_plateau": 38.2,
+          "mean_delay": 23.8,
+          "outcome": "partial"
+        },
+        "strength_0p5_start_125": {
+          "prevention_rate": 0.2,
+          "mean_tipping_step": 240.4,
+          "mean_plateau": 34.6,
+          "mean_delay": 14.8,
+          "outcome": "partial"
+        },
+        "strength_0p5_start_150": {
+          "prevention_rate": 0.08,
+          "mean_tipping_step": 233.8,
+          "mean_plateau": 31.7,
+          "mean_delay": 8.2,
+          "outcome": "ineffective"
+        },
+        "strength_0p5_start_175": {
+          "prevention_rate": 0.08,
+          "mean_tipping_step": 229.7,
+          "mean_plateau": 29.8,
+          "mean_delay": 4.0,
+          "outcome": "ineffective"
+        },
+        "strength_0p5_start_200": {
+          "prevention_rate": 0.08,
+          "mean_tipping_step": 227.3,
+          "mean_plateau": 28.4,
+          "mean_delay": 1.6,
+          "outcome": "ineffective"
+        },
+        "strength_0p6_start_0": {
+          "prevention_rate": 0.8,
+          "mean_tipping_step": 296.8,
+          "mean_plateau": 57.2,
+          "mean_delay": 71.2,
+          "outcome": "prevention"
+        },
+        "strength_0p6_start_25": {
+          "prevention_rate": 0.6,
+          "mean_tipping_step": 290.4,
+          "mean_plateau": 54.7,
+          "mean_delay": 64.8,
+          "outcome": "prevention"
+        },
+        "strength_0p6_start_50": {
+          "prevention_rate": 0.52,
+          "mean_tipping_step": 281.8,
+          "mean_plateau": 50.1,
+          "mean_delay": 56.1,
+          "outcome": "prevention"
+        },
+        "strength_0p6_start_75": {
+          "prevention_rate": 0.24,
+          "mean_tipping_step": 269.3,
+          "mean_plateau": 45.9,
+          "mean_delay": 43.7,
+          "outcome": "delay"
+        },
+        "strength_0p6_start_100": {
+          "prevention_rate": 0.2,
+          "mean_tipping_step": 255.6,
+          "mean_plateau": 41.6,
+          "mean_delay": 30.0,
+          "outcome": "partial"
+        },
+        "strength_0p6_start_125": {
+          "prevention_rate": 0.2,
+          "mean_tipping_step": 243.7,
+          "mean_plateau": 36.9,
+          "mean_delay": 18.1,
+          "outcome": "partial"
+        },
+        "strength_0p6_start_150": {
+          "prevention_rate": 0.2,
+          "mean_tipping_step": 235.7,
+          "mean_plateau": 33.3,
+          "mean_delay": 10.0,
+          "outcome": "partial"
+        },
+        "strength_0p6_start_175": {
+          "prevention_rate": 0.08,
+          "mean_tipping_step": 230.5,
+          "mean_plateau": 30.6,
+          "mean_delay": 4.9,
+          "outcome": "ineffective"
+        },
+        "strength_0p6_start_200": {
+          "prevention_rate": 0.08,
+          "mean_tipping_step": 227.6,
+          "mean_plateau": 28.9,
+          "mean_delay": 2.0,
+          "outcome": "ineffective"
+        },
+        "strength_0p7_start_0": {
+          "prevention_rate": 0.92,
+          "mean_tipping_step": 299.5,
+          "mean_plateau": 59.2,
+          "mean_delay": 73.8,
+          "outcome": "prevention"
+        },
+        "strength_0p7_start_25": {
+          "prevention_rate": 0.84,
+          "mean_tipping_step": 297.4,
+          "mean_plateau": 57.9,
+          "mean_delay": 71.7,
+          "outcome": "prevention"
+        },
+        "strength_0p7_start_50": {
+          "prevention_rate": 0.6,
+          "mean_tipping_step": 288.8,
+          "mean_plateau": 55.0,
+          "mean_delay": 63.2,
+          "outcome": "prevention"
+        },
+        "strength_0p7_start_75": {
+          "prevention_rate": 0.44,
+          "mean_tipping_step": 277.7,
+          "mean_plateau": 49.4,
+          "mean_delay": 52.0,
+          "outcome": "delay"
+        },
+        "strength_0p7_start_100": {
+          "prevention_rate": 0.24,
+          "mean_tipping_step": 262.6,
+          "mean_plateau": 45.0,
+          "mean_delay": 37.0,
+          "outcome": "partial"
+        },
+        "strength_0p7_start_125": {
+          "prevention_rate": 0.2,
+          "mean_tipping_step": 247.6,
+          "mean_plateau": 39.9,
+          "mean_delay": 22.0,
+          "outcome": "partial"
+        },
+        "strength_0p7_start_150": {
+          "prevention_rate": 0.2,
+          "mean_tipping_step": 237.2,
+          "mean_plateau": 35.0,
+          "mean_delay": 11.6,
+          "outcome": "partial"
+        },
+        "strength_0p7_start_175": {
+          "prevention_rate": 0.08,
+          "mean_tipping_step": 231.3,
+          "mean_plateau": 31.3,
+          "mean_delay": 5.7,
+          "outcome": "ineffective"
+        },
+        "strength_0p7_start_200": {
+          "prevention_rate": 0.08,
+          "mean_tipping_step": 227.9,
+          "mean_plateau": 29.3,
+          "mean_delay": 2.3,
+          "outcome": "ineffective"
+        },
+        "strength_0p8_start_0": {
+          "prevention_rate": 1.0,
+          "mean_tipping_step": 300.0,
+          "mean_plateau": 60.5,
+          "mean_delay": 74.4,
+          "outcome": "prevention"
+        },
+        "strength_0p8_start_25": {
+          "prevention_rate": 0.96,
+          "mean_tipping_step": 299.6,
+          "mean_plateau": 59.4,
+          "mean_delay": 74.0,
+          "outcome": "prevention"
+        },
+        "strength_0p8_start_50": {
+          "prevention_rate": 0.72,
+          "mean_tipping_step": 295.6,
+          "mean_plateau": 57.6,
+          "mean_delay": 69.9,
+          "outcome": "prevention"
+        },
+        "strength_0p8_start_75": {
+          "prevention_rate": 0.6,
+          "mean_tipping_step": 283.7,
+          "mean_plateau": 53.5,
+          "mean_delay": 58.0,
+          "outcome": "prevention"
+        },
+        "strength_0p8_start_100": {
+          "prevention_rate": 0.32,
+          "mean_tipping_step": 269.6,
+          "mean_plateau": 47.7,
+          "mean_delay": 44.0,
+          "outcome": "delay"
+        },
+        "strength_0p8_start_125": {
+          "prevention_rate": 0.2,
+          "mean_tipping_step": 251.9,
+          "mean_plateau": 41.9,
+          "mean_delay": 26.2,
+          "outcome": "partial"
+        },
+        "strength_0p8_start_150": {
+          "prevention_rate": 0.2,
+          "mean_tipping_step": 239.0,
+          "mean_plateau": 36.4,
+          "mean_delay": 13.4,
+          "outcome": "partial"
+        },
+        "strength_0p8_start_175": {
+          "prevention_rate": 0.16,
+          "mean_tipping_step": 232.2,
+          "mean_plateau": 32.3,
+          "mean_delay": 6.6,
+          "outcome": "ineffective"
+        },
+        "strength_0p8_start_200": {
+          "prevention_rate": 0.08,
+          "mean_tipping_step": 228.2,
+          "mean_plateau": 29.7,
+          "mean_delay": 2.6,
+          "outcome": "ineffective"
+        },
+        "strength_0p9_start_0": {
+          "prevention_rate": 1.0,
+          "mean_tipping_step": 300.0,
+          "mean_plateau": 60.9,
+          "mean_delay": 74.4,
+          "outcome": "prevention"
+        },
+        "strength_0p9_start_25": {
+          "prevention_rate": 1.0,
+          "mean_tipping_step": 300.0,
+          "mean_plateau": 60.5,
+          "mean_delay": 74.4,
+          "outcome": "prevention"
+        },
+        "strength_0p9_start_50": {
+          "prevention_rate": 0.92,
+          "mean_tipping_step": 298.8,
+          "mean_plateau": 59.0,
+          "mean_delay": 73.2,
+          "outcome": "prevention"
+        },
+        "strength_0p9_start_75": {
+          "prevention_rate": 0.68,
+          "mean_tipping_step": 289.9,
+          "mean_plateau": 56.3,
+          "mean_delay": 64.3,
+          "outcome": "prevention"
+        },
+        "strength_0p9_start_100": {
+          "prevention_rate": 0.48,
+          "mean_tipping_step": 274.9,
+          "mean_plateau": 49.8,
+          "mean_delay": 49.2,
+          "outcome": "delay"
+        },
+        "strength_0p9_start_125": {
+          "prevention_rate": 0.24,
+          "mean_tipping_step": 256.5,
+          "mean_plateau": 44.6,
+          "mean_delay": 30.9,
+          "outcome": "partial"
+        },
+        "strength_0p9_start_150": {
+          "prevention_rate": 0.2,
+          "mean_tipping_step": 241.0,
+          "mean_plateau": 38.3,
+          "mean_delay": 15.3,
+          "outcome": "partial"
+        },
+        "strength_0p9_start_175": {
+          "prevention_rate": 0.2,
+          "mean_tipping_step": 232.6,
+          "mean_plateau": 33.4,
+          "mean_delay": 7.0,
+          "outcome": "ineffective"
+        },
+        "strength_0p9_start_200": {
+          "prevention_rate": 0.08,
+          "mean_tipping_step": 228.6,
+          "mean_plateau": 30.2,
+          "mean_delay": 2.9,
+          "outcome": "ineffective"
+        }
+      }
+    }
+  ]
+}

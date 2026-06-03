@@ -1,0 +1,61 @@
+{
+  "description": "Phase R2.8 Decision Quality Metrics",
+  "uncertainty_decomposition": {
+    "total_mse": 2836.9,
+    "total_rmse": 53.26,
+    "noise_var": 34.87,
+    "subtype_amb_var": 1020.69,
+    "param_var": 2669.8,
+    "noise_pct": 0.9,
+    "subtype_amb_pct": 27.4,
+    "param_var_pct": 71.7,
+    "n_misclassified": 32,
+    "n_total": 247
+  },
+  "calibration_curve": [
+    {
+      "conf_lo": 0.5,
+      "conf_hi": 0.6,
+      "n": 35,
+      "mean_conf": 0.559,
+      "accuracy": 0.657,
+      "calibrated": true
+    },
+    {
+      "conf_lo": 0.6,
+      "conf_hi": 0.7,
+      "n": 44,
+      "mean_conf": 0.662,
+      "accuracy": 0.75,
+      "calibrated": true
+    },
+    {
+      "conf_lo": 0.7,
+      "conf_hi": 0.8,
+      "n": 78,
+      "mean_conf": 0.758,
+      "accuracy": 0.949,
+      "calibrated": true
+    },
+    {
+      "conf_lo": 0.8,
+      "conf_hi": 0.9,
+      "n": 24,
+      "mean_conf": 0.831,
+      "accuracy": 1.0,
+      "calibrated": true
+    },
+    {
+      "conf_lo": 0.9,
+      "conf_hi": 1.0,
+      "n": 59,
+      "mean_conf": 0.975,
+      "accuracy": 1.0,
+      "calibrated": true
+    }
+  ],
+  "triage_accuracy": 0.4413,
+  "survival_gain_twe": 30.31,
+  "decision_regret": 4.62,
+  "dominant_uncertainty": "parameter variance"
+}
