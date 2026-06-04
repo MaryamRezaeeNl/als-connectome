@@ -1,0 +1,709 @@
+{
+  "phase": "Phase 15 -- Decoupled Aggregation Mechanism",
+  "params": {
+    "isr_values": [
+      0.05,
+      0.5,
+      2.0,
+      5.0,
+      10.0
+    ],
+    "tsse_values": [
+      0.05,
+      0.5,
+      2.0,
+      5.0,
+      10.0
+    ],
+    "n_seeds_baseline": 20,
+    "n_seeds_ablation": 10,
+    "steps": 500,
+    "base_cascade_params": {
+      "aggregationAmplification": 1.0,
+      "mitochondrialFragility": 1.0,
+      "atpCollapseThreshold": 0.3,
+      "glutamateSensitivity": 0.01,
+      "calciumStressGain": 0.5,
+      "oxidativeFeedback": 0.02,
+      "recoveryIrreversibility": 0.8
+    },
+    "criterion": {
+      "c1_slope_thr": 4,
+      "c2_coherence_thr": 0.3,
+      "c3_silent_min": 50
+    }
+  },
+  "summary": {
+    "n_grid_cells": 25,
+    "total_runs": 1000,
+    "mean_genuine_rate": 0.838,
+    "dominant_mechanism_counts": {
+      "both": 5,
+      "spread": 4,
+      "seeding": 10,
+      "neither": 6
+    },
+    "r_log_isr_vs_genuine": 0.586,
+    "r_log_tsse_vs_genuine": 0.463,
+    "more_predictive": "ISR",
+    "diagonal_cells": [
+      {
+        "isr": 0.05,
+        "tsse": 0.05,
+        "genuine_rate": 0.0,
+        "dominant": "both"
+      },
+      {
+        "isr": 0.5,
+        "tsse": 0.5,
+        "genuine_rate": 0.4,
+        "dominant": "both"
+      },
+      {
+        "isr": 2.0,
+        "tsse": 2.0,
+        "genuine_rate": 1.0,
+        "dominant": "seeding"
+      },
+      {
+        "isr": 5.0,
+        "tsse": 5.0,
+        "genuine_rate": 1.0,
+        "dominant": "neither"
+      },
+      {
+        "isr": 10.0,
+        "tsse": 10.0,
+        "genuine_rate": 1.0,
+        "dominant": "neither"
+      }
+    ]
+  },
+  "grid_results": [
+    {
+      "isr": 0.05,
+      "tsse": 0.05,
+      "baseline": {
+        "genuine_rate": 0.0,
+        "mean_coh_r": 0.019,
+        "mean_plateau": 59.1,
+        "mean_first_death": 442.1
+      },
+      "isr_disabled": {
+        "genuine_rate": 0.0,
+        "mean_coh_r": 0.0,
+        "mean_plateau": 60.2,
+        "mean_first_death": 460.5
+      },
+      "tsse_disabled": {
+        "genuine_rate": 0.0,
+        "mean_coh_r": 0.059,
+        "mean_plateau": 59.2,
+        "mean_first_death": 462.3
+      },
+      "dominant_mechanism": "both",
+      "isr_load_bearing": true,
+      "tsse_load_bearing": true
+    },
+    {
+      "isr": 0.05,
+      "tsse": 0.5,
+      "baseline": {
+        "genuine_rate": 0.0,
+        "mean_coh_r": -0.071,
+        "mean_plateau": 50.0,
+        "mean_first_death": 392.6
+      },
+      "isr_disabled": {
+        "genuine_rate": 0.0,
+        "mean_coh_r": 0.093,
+        "mean_plateau": 55.4,
+        "mean_first_death": 398.5
+      },
+      "tsse_disabled": {
+        "genuine_rate": 0.0,
+        "mean_coh_r": 0.059,
+        "mean_plateau": 59.2,
+        "mean_first_death": 462.3
+      },
+      "dominant_mechanism": "both",
+      "isr_load_bearing": true,
+      "tsse_load_bearing": true
+    },
+    {
+      "isr": 0.05,
+      "tsse": 2.0,
+      "baseline": {
+        "genuine_rate": 0.5,
+        "mean_coh_r": 0.298,
+        "mean_plateau": 16.6,
+        "mean_first_death": 241.7
+      },
+      "isr_disabled": {
+        "genuine_rate": 0.2,
+        "mean_coh_r": 0.249,
+        "mean_plateau": 16.5,
+        "mean_first_death": 249.7
+      },
+      "tsse_disabled": {
+        "genuine_rate": 0.0,
+        "mean_coh_r": 0.059,
+        "mean_plateau": 59.2,
+        "mean_first_death": 462.3
+      },
+      "dominant_mechanism": "both",
+      "isr_load_bearing": true,
+      "tsse_load_bearing": true
+    },
+    {
+      "isr": 0.05,
+      "tsse": 5.0,
+      "baseline": {
+        "genuine_rate": 1.0,
+        "mean_coh_r": 0.388,
+        "mean_plateau": 13.8,
+        "mean_first_death": 147.9
+      },
+      "isr_disabled": {
+        "genuine_rate": 0.9,
+        "mean_coh_r": 0.362,
+        "mean_plateau": 14.0,
+        "mean_first_death": 151.8
+      },
+      "tsse_disabled": {
+        "genuine_rate": 0.0,
+        "mean_coh_r": 0.059,
+        "mean_plateau": 59.2,
+        "mean_first_death": 462.3
+      },
+      "dominant_mechanism": "spread",
+      "isr_load_bearing": false,
+      "tsse_load_bearing": true
+    },
+    {
+      "isr": 0.05,
+      "tsse": 10.0,
+      "baseline": {
+        "genuine_rate": 1.0,
+        "mean_coh_r": 0.461,
+        "mean_plateau": 13.8,
+        "mean_first_death": 105.0
+      },
+      "isr_disabled": {
+        "genuine_rate": 1.0,
+        "mean_coh_r": 0.462,
+        "mean_plateau": 14.0,
+        "mean_first_death": 106.4
+      },
+      "tsse_disabled": {
+        "genuine_rate": 0.0,
+        "mean_coh_r": 0.059,
+        "mean_plateau": 59.2,
+        "mean_first_death": 462.3
+      },
+      "dominant_mechanism": "spread",
+      "isr_load_bearing": false,
+      "tsse_load_bearing": true
+    },
+    {
+      "isr": 0.5,
+      "tsse": 0.05,
+      "baseline": {
+        "genuine_rate": 0.05,
+        "mean_coh_r": 0.201,
+        "mean_plateau": 43.6,
+        "mean_first_death": 352.1
+      },
+      "isr_disabled": {
+        "genuine_rate": 0.0,
+        "mean_coh_r": 0.0,
+        "mean_plateau": 60.2,
+        "mean_first_death": 460.5
+      },
+      "tsse_disabled": {
+        "genuine_rate": 0.1,
+        "mean_coh_r": 0.293,
+        "mean_plateau": 44.9,
+        "mean_first_death": 364.0
+      },
+      "dominant_mechanism": "seeding",
+      "isr_load_bearing": true,
+      "tsse_load_bearing": false
+    },
+    {
+      "isr": 0.5,
+      "tsse": 0.5,
+      "baseline": {
+        "genuine_rate": 0.4,
+        "mean_coh_r": 0.254,
+        "mean_plateau": 27.8,
+        "mean_first_death": 321.4
+      },
+      "isr_disabled": {
+        "genuine_rate": 0.0,
+        "mean_coh_r": 0.093,
+        "mean_plateau": 55.4,
+        "mean_first_death": 398.5
+      },
+      "tsse_disabled": {
+        "genuine_rate": 0.1,
+        "mean_coh_r": 0.293,
+        "mean_plateau": 44.9,
+        "mean_first_death": 364.0
+      },
+      "dominant_mechanism": "both",
+      "isr_load_bearing": true,
+      "tsse_load_bearing": true
+    },
+    {
+      "isr": 0.5,
+      "tsse": 2.0,
+      "baseline": {
+        "genuine_rate": 1.0,
+        "mean_coh_r": 0.424,
+        "mean_plateau": 13.9,
+        "mean_first_death": 218.3
+      },
+      "isr_disabled": {
+        "genuine_rate": 0.2,
+        "mean_coh_r": 0.249,
+        "mean_plateau": 16.5,
+        "mean_first_death": 249.7
+      },
+      "tsse_disabled": {
+        "genuine_rate": 0.1,
+        "mean_coh_r": 0.293,
+        "mean_plateau": 44.9,
+        "mean_first_death": 364.0
+      },
+      "dominant_mechanism": "both",
+      "isr_load_bearing": true,
+      "tsse_load_bearing": true
+    },
+    {
+      "isr": 0.5,
+      "tsse": 5.0,
+      "baseline": {
+        "genuine_rate": 1.0,
+        "mean_coh_r": 0.442,
+        "mean_plateau": 13.3,
+        "mean_first_death": 139.7
+      },
+      "isr_disabled": {
+        "genuine_rate": 0.9,
+        "mean_coh_r": 0.362,
+        "mean_plateau": 14.0,
+        "mean_first_death": 151.8
+      },
+      "tsse_disabled": {
+        "genuine_rate": 0.1,
+        "mean_coh_r": 0.293,
+        "mean_plateau": 44.9,
+        "mean_first_death": 364.0
+      },
+      "dominant_mechanism": "spread",
+      "isr_load_bearing": false,
+      "tsse_load_bearing": true
+    },
+    {
+      "isr": 0.5,
+      "tsse": 10.0,
+      "baseline": {
+        "genuine_rate": 1.0,
+        "mean_coh_r": 0.438,
+        "mean_plateau": 13.3,
+        "mean_first_death": 101.7
+      },
+      "isr_disabled": {
+        "genuine_rate": 1.0,
+        "mean_coh_r": 0.462,
+        "mean_plateau": 14.0,
+        "mean_first_death": 106.4
+      },
+      "tsse_disabled": {
+        "genuine_rate": 0.1,
+        "mean_coh_r": 0.293,
+        "mean_plateau": 44.9,
+        "mean_first_death": 364.0
+      },
+      "dominant_mechanism": "spread",
+      "isr_load_bearing": false,
+      "tsse_load_bearing": true
+    },
+    {
+      "isr": 2.0,
+      "tsse": 0.05,
+      "baseline": {
+        "genuine_rate": 1.0,
+        "mean_coh_r": 0.878,
+        "mean_plateau": 17.4,
+        "mean_first_death": 229.8
+      },
+      "isr_disabled": {
+        "genuine_rate": 0.0,
+        "mean_coh_r": 0.0,
+        "mean_plateau": 60.2,
+        "mean_first_death": 460.5
+      },
+      "tsse_disabled": {
+        "genuine_rate": 1.0,
+        "mean_coh_r": 0.852,
+        "mean_plateau": 17.5,
+        "mean_first_death": 230.5
+      },
+      "dominant_mechanism": "seeding",
+      "isr_load_bearing": true,
+      "tsse_load_bearing": false
+    },
+    {
+      "isr": 2.0,
+      "tsse": 0.5,
+      "baseline": {
+        "genuine_rate": 1.0,
+        "mean_coh_r": 0.866,
+        "mean_plateau": 12.3,
+        "mean_first_death": 218.8
+      },
+      "isr_disabled": {
+        "genuine_rate": 0.0,
+        "mean_coh_r": 0.093,
+        "mean_plateau": 55.4,
+        "mean_first_death": 398.5
+      },
+      "tsse_disabled": {
+        "genuine_rate": 1.0,
+        "mean_coh_r": 0.852,
+        "mean_plateau": 17.5,
+        "mean_first_death": 230.5
+      },
+      "dominant_mechanism": "seeding",
+      "isr_load_bearing": true,
+      "tsse_load_bearing": false
+    },
+    {
+      "isr": 2.0,
+      "tsse": 2.0,
+      "baseline": {
+        "genuine_rate": 1.0,
+        "mean_coh_r": 0.668,
+        "mean_plateau": 9.8,
+        "mean_first_death": 169.7
+      },
+      "isr_disabled": {
+        "genuine_rate": 0.2,
+        "mean_coh_r": 0.249,
+        "mean_plateau": 16.5,
+        "mean_first_death": 249.7
+      },
+      "tsse_disabled": {
+        "genuine_rate": 1.0,
+        "mean_coh_r": 0.852,
+        "mean_plateau": 17.5,
+        "mean_first_death": 230.5
+      },
+      "dominant_mechanism": "seeding",
+      "isr_load_bearing": true,
+      "tsse_load_bearing": false
+    },
+    {
+      "isr": 2.0,
+      "tsse": 5.0,
+      "baseline": {
+        "genuine_rate": 1.0,
+        "mean_coh_r": 0.519,
+        "mean_plateau": 9.8,
+        "mean_first_death": 119.8
+      },
+      "isr_disabled": {
+        "genuine_rate": 0.9,
+        "mean_coh_r": 0.362,
+        "mean_plateau": 14.0,
+        "mean_first_death": 151.8
+      },
+      "tsse_disabled": {
+        "genuine_rate": 1.0,
+        "mean_coh_r": 0.852,
+        "mean_plateau": 17.5,
+        "mean_first_death": 230.5
+      },
+      "dominant_mechanism": "neither",
+      "isr_load_bearing": false,
+      "tsse_load_bearing": false
+    },
+    {
+      "isr": 2.0,
+      "tsse": 10.0,
+      "baseline": {
+        "genuine_rate": 1.0,
+        "mean_coh_r": 0.455,
+        "mean_plateau": 9.8,
+        "mean_first_death": 93.0
+      },
+      "isr_disabled": {
+        "genuine_rate": 1.0,
+        "mean_coh_r": 0.462,
+        "mean_plateau": 14.0,
+        "mean_first_death": 106.4
+      },
+      "tsse_disabled": {
+        "genuine_rate": 1.0,
+        "mean_coh_r": 0.852,
+        "mean_plateau": 17.5,
+        "mean_first_death": 230.5
+      },
+      "dominant_mechanism": "neither",
+      "isr_load_bearing": false,
+      "tsse_load_bearing": false
+    },
+    {
+      "isr": 5.0,
+      "tsse": 0.05,
+      "baseline": {
+        "genuine_rate": 1.0,
+        "mean_coh_r": 0.939,
+        "mean_plateau": 7.0,
+        "mean_first_death": 159.2
+      },
+      "isr_disabled": {
+        "genuine_rate": 0.0,
+        "mean_coh_r": 0.0,
+        "mean_plateau": 60.2,
+        "mean_first_death": 460.5
+      },
+      "tsse_disabled": {
+        "genuine_rate": 1.0,
+        "mean_coh_r": 0.942,
+        "mean_plateau": 7.2,
+        "mean_first_death": 158.0
+      },
+      "dominant_mechanism": "seeding",
+      "isr_load_bearing": true,
+      "tsse_load_bearing": false
+    },
+    {
+      "isr": 5.0,
+      "tsse": 0.5,
+      "baseline": {
+        "genuine_rate": 1.0,
+        "mean_coh_r": 0.92,
+        "mean_plateau": 5.8,
+        "mean_first_death": 153.8
+      },
+      "isr_disabled": {
+        "genuine_rate": 0.0,
+        "mean_coh_r": 0.093,
+        "mean_plateau": 55.4,
+        "mean_first_death": 398.5
+      },
+      "tsse_disabled": {
+        "genuine_rate": 1.0,
+        "mean_coh_r": 0.942,
+        "mean_plateau": 7.2,
+        "mean_first_death": 158.0
+      },
+      "dominant_mechanism": "seeding",
+      "isr_load_bearing": true,
+      "tsse_load_bearing": false
+    },
+    {
+      "isr": 5.0,
+      "tsse": 2.0,
+      "baseline": {
+        "genuine_rate": 1.0,
+        "mean_coh_r": 0.776,
+        "mean_plateau": 5.5,
+        "mean_first_death": 129.1
+      },
+      "isr_disabled": {
+        "genuine_rate": 0.2,
+        "mean_coh_r": 0.249,
+        "mean_plateau": 16.5,
+        "mean_first_death": 249.7
+      },
+      "tsse_disabled": {
+        "genuine_rate": 1.0,
+        "mean_coh_r": 0.942,
+        "mean_plateau": 7.2,
+        "mean_first_death": 158.0
+      },
+      "dominant_mechanism": "seeding",
+      "isr_load_bearing": true,
+      "tsse_load_bearing": false
+    },
+    {
+      "isr": 5.0,
+      "tsse": 5.0,
+      "baseline": {
+        "genuine_rate": 1.0,
+        "mean_coh_r": 0.63,
+        "mean_plateau": 5.5,
+        "mean_first_death": 99.6
+      },
+      "isr_disabled": {
+        "genuine_rate": 0.9,
+        "mean_coh_r": 0.362,
+        "mean_plateau": 14.0,
+        "mean_first_death": 151.8
+      },
+      "tsse_disabled": {
+        "genuine_rate": 1.0,
+        "mean_coh_r": 0.942,
+        "mean_plateau": 7.2,
+        "mean_first_death": 158.0
+      },
+      "dominant_mechanism": "neither",
+      "isr_load_bearing": false,
+      "tsse_load_bearing": false
+    },
+    {
+      "isr": 5.0,
+      "tsse": 10.0,
+      "baseline": {
+        "genuine_rate": 1.0,
+        "mean_coh_r": 0.56,
+        "mean_plateau": 5.5,
+        "mean_first_death": 82.6
+      },
+      "isr_disabled": {
+        "genuine_rate": 1.0,
+        "mean_coh_r": 0.462,
+        "mean_plateau": 14.0,
+        "mean_first_death": 106.4
+      },
+      "tsse_disabled": {
+        "genuine_rate": 1.0,
+        "mean_coh_r": 0.942,
+        "mean_plateau": 7.2,
+        "mean_first_death": 158.0
+      },
+      "dominant_mechanism": "neither",
+      "isr_load_bearing": false,
+      "tsse_load_bearing": false
+    },
+    {
+      "isr": 10.0,
+      "tsse": 0.05,
+      "baseline": {
+        "genuine_rate": 1.0,
+        "mean_coh_r": 0.914,
+        "mean_plateau": 3.5,
+        "mean_first_death": 117.0
+      },
+      "isr_disabled": {
+        "genuine_rate": 0.0,
+        "mean_coh_r": 0.0,
+        "mean_plateau": 60.2,
+        "mean_first_death": 460.5
+      },
+      "tsse_disabled": {
+        "genuine_rate": 1.0,
+        "mean_coh_r": 0.924,
+        "mean_plateau": 4.1,
+        "mean_first_death": 116.3
+      },
+      "dominant_mechanism": "seeding",
+      "isr_load_bearing": true,
+      "tsse_load_bearing": false
+    },
+    {
+      "isr": 10.0,
+      "tsse": 0.5,
+      "baseline": {
+        "genuine_rate": 1.0,
+        "mean_coh_r": 0.884,
+        "mean_plateau": 3.5,
+        "mean_first_death": 114.0
+      },
+      "isr_disabled": {
+        "genuine_rate": 0.0,
+        "mean_coh_r": 0.093,
+        "mean_plateau": 55.4,
+        "mean_first_death": 398.5
+      },
+      "tsse_disabled": {
+        "genuine_rate": 1.0,
+        "mean_coh_r": 0.924,
+        "mean_plateau": 4.1,
+        "mean_first_death": 116.3
+      },
+      "dominant_mechanism": "seeding",
+      "isr_load_bearing": true,
+      "tsse_load_bearing": false
+    },
+    {
+      "isr": 10.0,
+      "tsse": 2.0,
+      "baseline": {
+        "genuine_rate": 1.0,
+        "mean_coh_r": 0.78,
+        "mean_plateau": 3.5,
+        "mean_first_death": 101.7
+      },
+      "isr_disabled": {
+        "genuine_rate": 0.2,
+        "mean_coh_r": 0.249,
+        "mean_plateau": 16.5,
+        "mean_first_death": 249.7
+      },
+      "tsse_disabled": {
+        "genuine_rate": 1.0,
+        "mean_coh_r": 0.924,
+        "mean_plateau": 4.1,
+        "mean_first_death": 116.3
+      },
+      "dominant_mechanism": "seeding",
+      "isr_load_bearing": true,
+      "tsse_load_bearing": false
+    },
+    {
+      "isr": 10.0,
+      "tsse": 5.0,
+      "baseline": {
+        "genuine_rate": 1.0,
+        "mean_coh_r": 0.674,
+        "mean_plateau": 3.5,
+        "mean_first_death": 85.2
+      },
+      "isr_disabled": {
+        "genuine_rate": 0.9,
+        "mean_coh_r": 0.362,
+        "mean_plateau": 14.0,
+        "mean_first_death": 151.8
+      },
+      "tsse_disabled": {
+        "genuine_rate": 1.0,
+        "mean_coh_r": 0.924,
+        "mean_plateau": 4.1,
+        "mean_first_death": 116.3
+      },
+      "dominant_mechanism": "neither",
+      "isr_load_bearing": false,
+      "tsse_load_bearing": false
+    },
+    {
+      "isr": 10.0,
+      "tsse": 10.0,
+      "baseline": {
+        "genuine_rate": 1.0,
+        "mean_coh_r": 0.613,
+        "mean_plateau": 3.5,
+        "mean_first_death": 74.2
+      },
+      "isr_disabled": {
+        "genuine_rate": 1.0,
+        "mean_coh_r": 0.462,
+        "mean_plateau": 14.0,
+        "mean_first_death": 106.4
+      },
+      "tsse_disabled": {
+        "genuine_rate": 1.0,
+        "mean_coh_r": 0.924,
+        "mean_plateau": 4.1,
+        "mean_first_death": 116.3
+      },
+      "dominant_mechanism": "neither",
+      "isr_load_bearing": false,
+      "tsse_load_bearing": false
+    }
+  ]
+}
