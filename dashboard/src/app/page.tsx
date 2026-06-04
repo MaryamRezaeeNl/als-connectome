@@ -30,6 +30,12 @@ const R2Subtype  = dynamic(() => import("@/components/phases/Round2SubtypeTopolo
 const R2Biomark  = dynamic(() => import("@/components/phases/Round2Biomarkers"),       { ssr: false });
 const R2Window   = dynamic(() => import("@/components/phases/Round2WindowPrediction"), { ssr: false });
 const R2TWE      = dynamic(() => import("@/components/phases/Round2TWE"),              { ssr: false });
+const R3Decoupled  = dynamic(() => import("@/components/phases/Round3Decoupled"),      { ssr: false });
+const R3Downstream = dynamic(() => import("@/components/phases/Round3Downstream"),     { ssr: false });
+const R3MitoThresh = dynamic(() => import("@/components/phases/Round3MitoThreshold"),  { ssr: false });
+const R3MitoValid  = dynamic(() => import("@/components/phases/Round3MitoValidation"), { ssr: false });
+const R3Topology   = dynamic(() => import("@/components/phases/Round3Topology"),       { ssr: false });
+const R3Seed       = dynamic(() => import("@/components/phases/Round3SeedLocation"),   { ssr: false });
 
 // ── Tab registry ─────────────────────────────────────────────────────────────
 const TABS = [
@@ -66,6 +72,13 @@ const TABS = [
   { id: "r2biomarker",  label: "R2.5: Early-Warning",                  icon: "🔬", short: "R2.5 EW"     },
   { id: "r2window",     label: "R2.7: Window Prediction",             icon: "⏱️", short: "R2.7 W.Pred"  },
   { id: "r2twe",        label: "R2.8: Therapeutic Window Estimator",  icon: "🤖", short: "R2.8 TWE"     },
+  // Round 3
+  { id: "r3decoupled",  label: "R3.1: Decoupled Aggregation",         icon: "🔬", short: "R3.1 Decoupled" },
+  { id: "r3downstream", label: "R3.2: Downstream Causal Power",        icon: "⚗️", short: "R3.2 Downstream"},
+  { id: "r3mitothresh", label: "R3.3: Mito Threshold",                 icon: "🔋", short: "R3.3 Mito Thr." },
+  { id: "r3mitovalid",  label: "R3.4: Mito Validation",                icon: "✅", short: "R3.4 Mito Val." },
+  { id: "r3topology",   label: "R3.5: Topological Necessity",          icon: "🕸️", short: "R3.5 Topology"  },
+  { id: "r3seed",       label: "R3.6: Seed Location",                  icon: "🌱", short: "R3.6 Seed Loc." },
 ] as const;
 
 type TabId = typeof TABS[number]["id"];
@@ -78,6 +91,7 @@ const NAV_SECTIONS: { label: string | null; ids: TabId[] }[] = [
   { label: "── Early Phases ──", ids: ["phase1a", "phase1b", "phase1c", "phase2", "phase3", "phase4"] },
   { label: "── Core Findings ──", ids: ["phase5", "phase6", "phase7", "phase8", "phase9", "phase10", "phase12", "phase13"] },
   { label: "── Round 2 ──", ids: ["r2motif", "r2efficiency", "r2therapy", "r2subtype", "r2biomarker", "r2window", "r2twe"] },
+  { label: "── Round 3 ──", ids: ["r3decoupled", "r3downstream", "r3mitothresh", "r3mitovalid", "r3topology", "r3seed"] },
 ];
 
 const TAB_MAP = Object.fromEntries(TABS.map(t => [t.id, t])) as Record<TabId, typeof TABS[number]>;
@@ -90,6 +104,39 @@ const FINDINGS = [
   { n: "4", title: "Sharp linear therapy boundary",  desc: "max_start_t = 425 × strength − 237 (R²=0.98, config #334). Mean: 252 × strength − 107 across 17 configs.",                                                              color: "#a8ff78" },
   { n: "5", title: "Two disease subtypes",           desc: "Slow-tipping (aggAmp ~1.4, step 224) vs fast-tipping (aggAmp ~5.9, step 107). Qualitatively different therapy windows.",                                                  color: "#ff9944" },
   { n: "6", title: "Subtype rank invariant",         desc: "Relative ordering of degeneration aggressiveness never breaks under extreme perturbation (70% dropout, σ=1.0 noise).",                                                     color: "#ff4444" },
+];
+
+const R3_FINDINGS = [
+  {
+    n: "R3.1", title: "Decoupled Aggregation",
+    desc: "aggAmp dominance is genuine, not a coupling artifact. ISR and TSSE are independently load-bearing (r=0.586 vs 0.463). Medium context (ISR=TSSE=2) → 100% genuine tipping.",
+    color: "#00e5ff",
+  },
+  {
+    n: "R3.2", title: "Downstream Causal Power",
+    desc: "Mitochondria becomes load-bearing only at extreme fragility (mitFrag≥4, low-aggregation context). Glutamate, Ca²⁺, and irreversibility remain negligible across all regimes.",
+    color: "#f97316",
+  },
+  {
+    n: "R3.3", title: "Mitochondrial Threshold",
+    desc: "Near-takeover onset at mitFrag=4.0 in low-aggregation context only. High aggregation contexts saturate the mito→ATP pathway, making mitFrag irrelevant as an independent driver.",
+    color: "#ffd700",
+  },
+  {
+    n: "R3.4", title: "Threshold Validation",
+    desc: "R3.3 mitFrag=0.3 takeover confirmed artifact (1/3 criteria at n=15 seeds). With n=50: 0/3 criteria at mitFrag=0.3. Clean near-takeover boundary at mitFrag=4.0 (tight bootstrap CIs).",
+    color: "#a8ff78",
+  },
+  {
+    n: "R3.5", title: "Topological Necessity",
+    desc: "TSSE is topology-sensitive; ISR is topology-invariant. ISR-dominant: ALL 5 topologies tip (100%). TSSE-dominant: only C. elegans tips. BA hub structure destroys coherence (r=0.073).",
+    color: "#a855f7",
+  },
+  {
+    n: "R3.6", title: "Seed Location Sensitivity",
+    desc: "Seed location affects WHEN (88-step range: 77→165), not WHETHER tipping occurs (genuine=1.000 for 59/61 neurons). AVAL ranks 9th fastest — network hubs outpace vulnerability alone.",
+    color: "#4ade80",
+  },
 ];
 
 const R2_FINDINGS = [
@@ -212,6 +259,28 @@ function OverviewPanel() {
         </div>
       </div>
 
+      {/* Round 3 findings */}
+      <div>
+        <h3 className="text-sm font-bold text-gray-400 uppercase tracking-widest mb-2">Round 3 — Decoupled Aggregation &amp; Mechanism Dissection</h3>
+        <p className="text-xs text-gray-500 mb-3">
+          Round 3 decouples aggregation into ISR + TSSE, validates downstream causal roles, maps the
+          mitochondrial takeover threshold, and tests topology and seed-location sensitivity under the
+          v2.0 model.
+        </p>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
+          {R3_FINDINGS.map(f => (
+            <div key={f.n} className="bg-gray-900 border border-gray-700 rounded-xl p-4 flex gap-3">
+              <span className="w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold flex-shrink-0 mt-0.5"
+                style={{ background: f.color, color: "#000" }}>{f.n}</span>
+              <div>
+                <div className="text-sm font-semibold text-gray-200 mb-1">{f.title}</div>
+                <div className="text-xs text-gray-400">{f.desc}</div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
       {/* Cascade diagram */}
       <div className="bg-gray-900 border border-gray-700 rounded-xl p-5">
         <h3 className="text-sm font-bold text-gray-400 uppercase tracking-widest mb-3">Excitotoxic Feedback Cascade</h3>
@@ -250,7 +319,7 @@ export default function Dashboard() {
             <span className="text-lg">🧬</span>
             <div>
               <h1 className="text-sm font-bold text-white leading-tight">ALS Connectome Dashboard</h1>
-              <p className="text-xs text-gray-500">C. elegans · 61 neurons · 127 synapses · Phase 0 → Phase 14 + Round 2</p>
+              <p className="text-xs text-gray-500">C. elegans · 61 neurons · 127 synapses · Phase 0 → Phase 14 + Round 2 + Round 3</p>
             </div>
           </div>
           <span className="hidden sm:inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-gray-800 border border-gray-700 text-xs text-gray-400">
@@ -333,6 +402,12 @@ export default function Dashboard() {
           {activeTab === "r2biomarker"  && <R2Biomark />}
           {activeTab === "r2window"     && <R2Window />}
           {activeTab === "r2twe"        && <R2TWE />}
+          {activeTab === "r3decoupled"  && <R3Decoupled />}
+          {activeTab === "r3downstream" && <R3Downstream />}
+          {activeTab === "r3mitothresh" && <R3MitoThresh />}
+          {activeTab === "r3mitovalid"  && <R3MitoValid />}
+          {activeTab === "r3topology"   && <R3Topology />}
+          {activeTab === "r3seed"       && <R3Seed />}
         </main>
       </div>
 
