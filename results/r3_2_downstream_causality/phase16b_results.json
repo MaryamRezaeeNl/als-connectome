@@ -1,0 +1,747 @@
+{
+  "phase": "R3.3 -- Mitochondrial Takeover Threshold",
+  "params": {
+    "mitfrag_values": [
+      0.3,
+      0.5,
+      1.0,
+      1.5,
+      2.0,
+      3.0,
+      4.0,
+      5.0,
+      6.0,
+      8.0
+    ],
+    "aggregation_contexts": {
+      "low": {
+        "intracellularSeedingRate": 0.5,
+        "transSynapticSpreadEfficiency": 0.5
+      },
+      "medium": {
+        "intracellularSeedingRate": 2.0,
+        "transSynapticSpreadEfficiency": 2.0
+      },
+      "high": {
+        "intracellularSeedingRate": 5.0,
+        "transSynapticSpreadEfficiency": 5.0
+      }
+    },
+    "n_seeds": 15,
+    "steps": 500,
+    "mito_disable_val": 0.001,
+    "effect_thresholds": {
+      "large": "abs(shift)>50 OR abs(gain)>10 OR rate_drop>0.30",
+      "medium": "abs(shift)>20 OR abs(gain)>5  OR rate_drop>0.10"
+    }
+  },
+  "summary": {
+    "n_grid_cells": 30,
+    "total_runs": 900,
+    "takeover_thresholds": {
+      "low": 0.3,
+      "medium": null,
+      "high": null
+    },
+    "is_threshold_aggregation_dependent": false,
+    "threshold_fit": null,
+    "mito_dominated_fraction_by_context": {
+      "low": 1.0,
+      "medium": 0.0,
+      "high": 0.0
+    },
+    "mean_mito_dominated_fraction": 0.333
+  },
+  "grid_results": [
+    {
+      "context": "low",
+      "isr": 0.5,
+      "tsse": 0.5,
+      "mitFrag": 0.3,
+      "baseline": {
+        "genuine_rate": 0.533,
+        "mean_first_death": 319.8,
+        "mean_plateau": 29.0,
+        "mean_coh_r": 0.238
+      },
+      "ablation": {
+        "genuine_rate": 0.2,
+        "mean_first_death": 330.0,
+        "mean_plateau": 30.2,
+        "mean_coh_r": 0.174
+      },
+      "first_death_shift": 10.2,
+      "plateau_gain": 1.2,
+      "genuine_rate_drop": 0.333,
+      "effect_size": "large",
+      "cell_state": "mitochondrial_takeover"
+    },
+    {
+      "context": "low",
+      "isr": 0.5,
+      "tsse": 0.5,
+      "mitFrag": 0.5,
+      "baseline": {
+        "genuine_rate": 0.2,
+        "mean_first_death": 317.9,
+        "mean_plateau": 27.3,
+        "mean_coh_r": 0.196
+      },
+      "ablation": {
+        "genuine_rate": 0.067,
+        "mean_first_death": 337.9,
+        "mean_plateau": 29.5,
+        "mean_coh_r": 0.118
+      },
+      "first_death_shift": 20.0,
+      "plateau_gain": 2.2,
+      "genuine_rate_drop": 0.133,
+      "effect_size": "medium",
+      "cell_state": "transitional"
+    },
+    {
+      "context": "low",
+      "isr": 0.5,
+      "tsse": 0.5,
+      "mitFrag": 1.0,
+      "baseline": {
+        "genuine_rate": 0.533,
+        "mean_first_death": 327.5,
+        "mean_plateau": 27.1,
+        "mean_coh_r": 0.269
+      },
+      "ablation": {
+        "genuine_rate": 0.333,
+        "mean_first_death": 329.2,
+        "mean_plateau": 29.8,
+        "mean_coh_r": 0.197
+      },
+      "first_death_shift": 1.7,
+      "plateau_gain": 2.7,
+      "genuine_rate_drop": 0.2,
+      "effect_size": "medium",
+      "cell_state": "transitional"
+    },
+    {
+      "context": "low",
+      "isr": 0.5,
+      "tsse": 0.5,
+      "mitFrag": 1.5,
+      "baseline": {
+        "genuine_rate": 0.2,
+        "mean_first_death": 307.6,
+        "mean_plateau": 26.6,
+        "mean_coh_r": 0.255
+      },
+      "ablation": {
+        "genuine_rate": 0.267,
+        "mean_first_death": 321.5,
+        "mean_plateau": 28.9,
+        "mean_coh_r": 0.158
+      },
+      "first_death_shift": 13.9,
+      "plateau_gain": 2.3,
+      "genuine_rate_drop": -0.067,
+      "effect_size": "small",
+      "cell_state": "seeding_dominant"
+    },
+    {
+      "context": "low",
+      "isr": 0.5,
+      "tsse": 0.5,
+      "mitFrag": 2.0,
+      "baseline": {
+        "genuine_rate": 0.467,
+        "mean_first_death": 301.2,
+        "mean_plateau": 25.4,
+        "mean_coh_r": 0.286
+      },
+      "ablation": {
+        "genuine_rate": 0.4,
+        "mean_first_death": 328.4,
+        "mean_plateau": 28.1,
+        "mean_coh_r": 0.253
+      },
+      "first_death_shift": 27.2,
+      "plateau_gain": 2.7,
+      "genuine_rate_drop": 0.067,
+      "effect_size": "medium",
+      "cell_state": "transitional"
+    },
+    {
+      "context": "low",
+      "isr": 0.5,
+      "tsse": 0.5,
+      "mitFrag": 3.0,
+      "baseline": {
+        "genuine_rate": 0.2,
+        "mean_first_death": 288.1,
+        "mean_plateau": 24.5,
+        "mean_coh_r": 0.219
+      },
+      "ablation": {
+        "genuine_rate": 0.267,
+        "mean_first_death": 330.2,
+        "mean_plateau": 28.8,
+        "mean_coh_r": 0.18
+      },
+      "first_death_shift": 42.1,
+      "plateau_gain": 4.3,
+      "genuine_rate_drop": -0.067,
+      "effect_size": "medium",
+      "cell_state": "transitional"
+    },
+    {
+      "context": "low",
+      "isr": 0.5,
+      "tsse": 0.5,
+      "mitFrag": 4.0,
+      "baseline": {
+        "genuine_rate": 0.533,
+        "mean_first_death": 268.2,
+        "mean_plateau": 21.0,
+        "mean_coh_r": 0.286
+      },
+      "ablation": {
+        "genuine_rate": 0.067,
+        "mean_first_death": 333.1,
+        "mean_plateau": 29.1,
+        "mean_coh_r": 0.113
+      },
+      "first_death_shift": 64.9,
+      "plateau_gain": 8.1,
+      "genuine_rate_drop": 0.466,
+      "effect_size": "large",
+      "cell_state": "mitochondrial_takeover"
+    },
+    {
+      "context": "low",
+      "isr": 0.5,
+      "tsse": 0.5,
+      "mitFrag": 5.0,
+      "baseline": {
+        "genuine_rate": 0.467,
+        "mean_first_death": 260.6,
+        "mean_plateau": 18.8,
+        "mean_coh_r": 0.32
+      },
+      "ablation": {
+        "genuine_rate": 0.333,
+        "mean_first_death": 328.5,
+        "mean_plateau": 29.6,
+        "mean_coh_r": 0.198
+      },
+      "first_death_shift": 67.9,
+      "plateau_gain": 10.8,
+      "genuine_rate_drop": 0.134,
+      "effect_size": "large",
+      "cell_state": "mitochondrial_takeover"
+    },
+    {
+      "context": "low",
+      "isr": 0.5,
+      "tsse": 0.5,
+      "mitFrag": 6.0,
+      "baseline": {
+        "genuine_rate": 0.4,
+        "mean_first_death": 232.6,
+        "mean_plateau": 19.6,
+        "mean_coh_r": 0.239
+      },
+      "ablation": {
+        "genuine_rate": 0.2,
+        "mean_first_death": 325.3,
+        "mean_plateau": 29.5,
+        "mean_coh_r": 0.159
+      },
+      "first_death_shift": 92.7,
+      "plateau_gain": 9.9,
+      "genuine_rate_drop": 0.2,
+      "effect_size": "large",
+      "cell_state": "mitochondrial_takeover"
+    },
+    {
+      "context": "low",
+      "isr": 0.5,
+      "tsse": 0.5,
+      "mitFrag": 8.0,
+      "baseline": {
+        "genuine_rate": 0.133,
+        "mean_first_death": 209.0,
+        "mean_plateau": 17.2,
+        "mean_coh_r": 0.228
+      },
+      "ablation": {
+        "genuine_rate": 0.133,
+        "mean_first_death": 330.6,
+        "mean_plateau": 27.9,
+        "mean_coh_r": 0.188
+      },
+      "first_death_shift": 121.6,
+      "plateau_gain": 10.7,
+      "genuine_rate_drop": 0.0,
+      "effect_size": "large",
+      "cell_state": "mitochondrial_takeover"
+    },
+    {
+      "context": "medium",
+      "isr": 2.0,
+      "tsse": 2.0,
+      "mitFrag": 0.3,
+      "baseline": {
+        "genuine_rate": 1.0,
+        "mean_first_death": 169.3,
+        "mean_plateau": 9.8,
+        "mean_coh_r": 0.685
+      },
+      "ablation": {
+        "genuine_rate": 1.0,
+        "mean_first_death": 169.1,
+        "mean_plateau": 9.0,
+        "mean_coh_r": 0.671
+      },
+      "first_death_shift": -0.2,
+      "plateau_gain": -0.8,
+      "genuine_rate_drop": 0.0,
+      "effect_size": "small",
+      "cell_state": "seeding_dominant"
+    },
+    {
+      "context": "medium",
+      "isr": 2.0,
+      "tsse": 2.0,
+      "mitFrag": 0.5,
+      "baseline": {
+        "genuine_rate": 1.0,
+        "mean_first_death": 168.5,
+        "mean_plateau": 9.1,
+        "mean_coh_r": 0.671
+      },
+      "ablation": {
+        "genuine_rate": 1.0,
+        "mean_first_death": 169.9,
+        "mean_plateau": 9.7,
+        "mean_coh_r": 0.695
+      },
+      "first_death_shift": 1.4,
+      "plateau_gain": 0.6,
+      "genuine_rate_drop": 0.0,
+      "effect_size": "small",
+      "cell_state": "seeding_dominant"
+    },
+    {
+      "context": "medium",
+      "isr": 2.0,
+      "tsse": 2.0,
+      "mitFrag": 1.0,
+      "baseline": {
+        "genuine_rate": 1.0,
+        "mean_first_death": 168.5,
+        "mean_plateau": 9.5,
+        "mean_coh_r": 0.677
+      },
+      "ablation": {
+        "genuine_rate": 1.0,
+        "mean_first_death": 170.1,
+        "mean_plateau": 9.5,
+        "mean_coh_r": 0.672
+      },
+      "first_death_shift": 1.6,
+      "plateau_gain": 0.0,
+      "genuine_rate_drop": 0.0,
+      "effect_size": "small",
+      "cell_state": "seeding_dominant"
+    },
+    {
+      "context": "medium",
+      "isr": 2.0,
+      "tsse": 2.0,
+      "mitFrag": 1.5,
+      "baseline": {
+        "genuine_rate": 1.0,
+        "mean_first_death": 166.6,
+        "mean_plateau": 8.7,
+        "mean_coh_r": 0.643
+      },
+      "ablation": {
+        "genuine_rate": 1.0,
+        "mean_first_death": 169.5,
+        "mean_plateau": 9.5,
+        "mean_coh_r": 0.703
+      },
+      "first_death_shift": 2.9,
+      "plateau_gain": 0.8,
+      "genuine_rate_drop": 0.0,
+      "effect_size": "small",
+      "cell_state": "seeding_dominant"
+    },
+    {
+      "context": "medium",
+      "isr": 2.0,
+      "tsse": 2.0,
+      "mitFrag": 2.0,
+      "baseline": {
+        "genuine_rate": 1.0,
+        "mean_first_death": 169.3,
+        "mean_plateau": 8.6,
+        "mean_coh_r": 0.658
+      },
+      "ablation": {
+        "genuine_rate": 1.0,
+        "mean_first_death": 170.1,
+        "mean_plateau": 9.6,
+        "mean_coh_r": 0.686
+      },
+      "first_death_shift": 0.8,
+      "plateau_gain": 1.0,
+      "genuine_rate_drop": 0.0,
+      "effect_size": "small",
+      "cell_state": "seeding_dominant"
+    },
+    {
+      "context": "medium",
+      "isr": 2.0,
+      "tsse": 2.0,
+      "mitFrag": 3.0,
+      "baseline": {
+        "genuine_rate": 1.0,
+        "mean_first_death": 161.7,
+        "mean_plateau": 9.5,
+        "mean_coh_r": 0.628
+      },
+      "ablation": {
+        "genuine_rate": 1.0,
+        "mean_first_death": 170.4,
+        "mean_plateau": 9.5,
+        "mean_coh_r": 0.683
+      },
+      "first_death_shift": 8.7,
+      "plateau_gain": 0.0,
+      "genuine_rate_drop": 0.0,
+      "effect_size": "small",
+      "cell_state": "seeding_dominant"
+    },
+    {
+      "context": "medium",
+      "isr": 2.0,
+      "tsse": 2.0,
+      "mitFrag": 4.0,
+      "baseline": {
+        "genuine_rate": 1.0,
+        "mean_first_death": 158.9,
+        "mean_plateau": 9.8,
+        "mean_coh_r": 0.598
+      },
+      "ablation": {
+        "genuine_rate": 1.0,
+        "mean_first_death": 167.5,
+        "mean_plateau": 8.8,
+        "mean_coh_r": 0.684
+      },
+      "first_death_shift": 8.6,
+      "plateau_gain": -1.0,
+      "genuine_rate_drop": 0.0,
+      "effect_size": "small",
+      "cell_state": "seeding_dominant"
+    },
+    {
+      "context": "medium",
+      "isr": 2.0,
+      "tsse": 2.0,
+      "mitFrag": 5.0,
+      "baseline": {
+        "genuine_rate": 1.0,
+        "mean_first_death": 155.3,
+        "mean_plateau": 9.0,
+        "mean_coh_r": 0.565
+      },
+      "ablation": {
+        "genuine_rate": 1.0,
+        "mean_first_death": 170.1,
+        "mean_plateau": 9.7,
+        "mean_coh_r": 0.684
+      },
+      "first_death_shift": 14.8,
+      "plateau_gain": 0.7,
+      "genuine_rate_drop": 0.0,
+      "effect_size": "small",
+      "cell_state": "seeding_dominant"
+    },
+    {
+      "context": "medium",
+      "isr": 2.0,
+      "tsse": 2.0,
+      "mitFrag": 6.0,
+      "baseline": {
+        "genuine_rate": 1.0,
+        "mean_first_death": 152.9,
+        "mean_plateau": 9.1,
+        "mean_coh_r": 0.561
+      },
+      "ablation": {
+        "genuine_rate": 1.0,
+        "mean_first_death": 169.1,
+        "mean_plateau": 9.2,
+        "mean_coh_r": 0.683
+      },
+      "first_death_shift": 16.2,
+      "plateau_gain": 0.1,
+      "genuine_rate_drop": 0.0,
+      "effect_size": "small",
+      "cell_state": "seeding_dominant"
+    },
+    {
+      "context": "medium",
+      "isr": 2.0,
+      "tsse": 2.0,
+      "mitFrag": 8.0,
+      "baseline": {
+        "genuine_rate": 1.0,
+        "mean_first_death": 147.5,
+        "mean_plateau": 9.2,
+        "mean_coh_r": 0.528
+      },
+      "ablation": {
+        "genuine_rate": 1.0,
+        "mean_first_death": 171.0,
+        "mean_plateau": 9.3,
+        "mean_coh_r": 0.683
+      },
+      "first_death_shift": 23.5,
+      "plateau_gain": 0.1,
+      "genuine_rate_drop": 0.0,
+      "effect_size": "medium",
+      "cell_state": "transitional"
+    },
+    {
+      "context": "high",
+      "isr": 5.0,
+      "tsse": 5.0,
+      "mitFrag": 0.3,
+      "baseline": {
+        "genuine_rate": 1.0,
+        "mean_first_death": 99.6,
+        "mean_plateau": 5.4,
+        "mean_coh_r": 0.63
+      },
+      "ablation": {
+        "genuine_rate": 1.0,
+        "mean_first_death": 99.3,
+        "mean_plateau": 5.0,
+        "mean_coh_r": 0.643
+      },
+      "first_death_shift": -0.3,
+      "plateau_gain": -0.4,
+      "genuine_rate_drop": 0.0,
+      "effect_size": "small",
+      "cell_state": "seeding_dominant"
+    },
+    {
+      "context": "high",
+      "isr": 5.0,
+      "tsse": 5.0,
+      "mitFrag": 0.5,
+      "baseline": {
+        "genuine_rate": 1.0,
+        "mean_first_death": 99.5,
+        "mean_plateau": 5.4,
+        "mean_coh_r": 0.634
+      },
+      "ablation": {
+        "genuine_rate": 1.0,
+        "mean_first_death": 99.5,
+        "mean_plateau": 5.3,
+        "mean_coh_r": 0.636
+      },
+      "first_death_shift": 0.0,
+      "plateau_gain": -0.1,
+      "genuine_rate_drop": 0.0,
+      "effect_size": "small",
+      "cell_state": "seeding_dominant"
+    },
+    {
+      "context": "high",
+      "isr": 5.0,
+      "tsse": 5.0,
+      "mitFrag": 1.0,
+      "baseline": {
+        "genuine_rate": 1.0,
+        "mean_first_death": 99.0,
+        "mean_plateau": 5.2,
+        "mean_coh_r": 0.638
+      },
+      "ablation": {
+        "genuine_rate": 1.0,
+        "mean_first_death": 99.2,
+        "mean_plateau": 5.5,
+        "mean_coh_r": 0.635
+      },
+      "first_death_shift": 0.2,
+      "plateau_gain": 0.3,
+      "genuine_rate_drop": 0.0,
+      "effect_size": "small",
+      "cell_state": "seeding_dominant"
+    },
+    {
+      "context": "high",
+      "isr": 5.0,
+      "tsse": 5.0,
+      "mitFrag": 1.5,
+      "baseline": {
+        "genuine_rate": 1.0,
+        "mean_first_death": 99.2,
+        "mean_plateau": 5.3,
+        "mean_coh_r": 0.627
+      },
+      "ablation": {
+        "genuine_rate": 1.0,
+        "mean_first_death": 98.7,
+        "mean_plateau": 5.1,
+        "mean_coh_r": 0.646
+      },
+      "first_death_shift": -0.5,
+      "plateau_gain": -0.2,
+      "genuine_rate_drop": 0.0,
+      "effect_size": "small",
+      "cell_state": "seeding_dominant"
+    },
+    {
+      "context": "high",
+      "isr": 5.0,
+      "tsse": 5.0,
+      "mitFrag": 2.0,
+      "baseline": {
+        "genuine_rate": 1.0,
+        "mean_first_death": 98.9,
+        "mean_plateau": 5.3,
+        "mean_coh_r": 0.621
+      },
+      "ablation": {
+        "genuine_rate": 1.0,
+        "mean_first_death": 99.0,
+        "mean_plateau": 5.5,
+        "mean_coh_r": 0.636
+      },
+      "first_death_shift": 0.1,
+      "plateau_gain": 0.2,
+      "genuine_rate_drop": 0.0,
+      "effect_size": "small",
+      "cell_state": "seeding_dominant"
+    },
+    {
+      "context": "high",
+      "isr": 5.0,
+      "tsse": 5.0,
+      "mitFrag": 3.0,
+      "baseline": {
+        "genuine_rate": 1.0,
+        "mean_first_death": 99.1,
+        "mean_plateau": 5.3,
+        "mean_coh_r": 0.621
+      },
+      "ablation": {
+        "genuine_rate": 1.0,
+        "mean_first_death": 98.8,
+        "mean_plateau": 5.7,
+        "mean_coh_r": 0.632
+      },
+      "first_death_shift": -0.3,
+      "plateau_gain": 0.4,
+      "genuine_rate_drop": 0.0,
+      "effect_size": "small",
+      "cell_state": "seeding_dominant"
+    },
+    {
+      "context": "high",
+      "isr": 5.0,
+      "tsse": 5.0,
+      "mitFrag": 4.0,
+      "baseline": {
+        "genuine_rate": 1.0,
+        "mean_first_death": 99.2,
+        "mean_plateau": 5.6,
+        "mean_coh_r": 0.607
+      },
+      "ablation": {
+        "genuine_rate": 1.0,
+        "mean_first_death": 98.7,
+        "mean_plateau": 5.6,
+        "mean_coh_r": 0.634
+      },
+      "first_death_shift": -0.5,
+      "plateau_gain": 0.0,
+      "genuine_rate_drop": 0.0,
+      "effect_size": "small",
+      "cell_state": "seeding_dominant"
+    },
+    {
+      "context": "high",
+      "isr": 5.0,
+      "tsse": 5.0,
+      "mitFrag": 5.0,
+      "baseline": {
+        "genuine_rate": 1.0,
+        "mean_first_death": 98.8,
+        "mean_plateau": 5.5,
+        "mean_coh_r": 0.602
+      },
+      "ablation": {
+        "genuine_rate": 1.0,
+        "mean_first_death": 99.3,
+        "mean_plateau": 5.3,
+        "mean_coh_r": 0.636
+      },
+      "first_death_shift": 0.5,
+      "plateau_gain": -0.2,
+      "genuine_rate_drop": 0.0,
+      "effect_size": "small",
+      "cell_state": "seeding_dominant"
+    },
+    {
+      "context": "high",
+      "isr": 5.0,
+      "tsse": 5.0,
+      "mitFrag": 6.0,
+      "baseline": {
+        "genuine_rate": 1.0,
+        "mean_first_death": 99.0,
+        "mean_plateau": 5.4,
+        "mean_coh_r": 0.598
+      },
+      "ablation": {
+        "genuine_rate": 1.0,
+        "mean_first_death": 99.2,
+        "mean_plateau": 5.1,
+        "mean_coh_r": 0.639
+      },
+      "first_death_shift": 0.2,
+      "plateau_gain": -0.3,
+      "genuine_rate_drop": 0.0,
+      "effect_size": "small",
+      "cell_state": "seeding_dominant"
+    },
+    {
+      "context": "high",
+      "isr": 5.0,
+      "tsse": 5.0,
+      "mitFrag": 8.0,
+      "baseline": {
+        "genuine_rate": 1.0,
+        "mean_first_death": 97.9,
+        "mean_plateau": 5.5,
+        "mean_coh_r": 0.587
+      },
+      "ablation": {
+        "genuine_rate": 1.0,
+        "mean_first_death": 98.5,
+        "mean_plateau": 5.2,
+        "mean_coh_r": 0.641
+      },
+      "first_death_shift": 0.6,
+      "plateau_gain": -0.3,
+      "genuine_rate_drop": 0.0,
+      "effect_size": "small",
+      "cell_state": "seeding_dominant"
+    }
+  ]
+}

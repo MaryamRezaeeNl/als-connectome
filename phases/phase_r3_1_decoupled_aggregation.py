@@ -1,4 +1,4 @@
-"""Phase 15 -- Decoupled Aggregation Mechanism.
+"""R3.1 -- Decoupled Aggregation Mechanism.
 
 Addresses the v1.0 design limitation: aggregationAmplification controlled
 BOTH intracellular seeding rate AND trans-synaptic spreading efficiency
@@ -47,8 +47,8 @@ Strict tipping criterion (Phase 7B):
 All three must hold in majority of seeds.
 
 Output:
-  results/phase15_decoupled_aggregation/phase15_results.json
-  results/phase15_decoupled_aggregation/phase15_report.md
+  results/phase_r3_1_decoupled_aggregation/phase15_results.json
+  results/phase_r3_1_decoupled_aggregation/phase15_report.md
 """
 
 import json
@@ -348,12 +348,12 @@ STEPS = 500
 
 def run_phase15():
     t0 = time.time()
-    out_dir = Path(__file__).parent.parent / "results" / "phase15_decoupled_aggregation"
+    out_dir = Path(__file__).parent.parent / "results" / "phase_r3_1_decoupled_aggregation"
     out_dir.mkdir(parents=True, exist_ok=True)
 
     total_cells = len(ISR_VALUES) * len(TSSE_VALUES)
     total_runs  = total_cells * (N_SEEDS_BASELINE + 2 * N_SEEDS_ABLATION)
-    print(f"Phase 15: {total_cells} grid cells x "
+    print(f"R3.1: {total_cells} grid cells x "
           f"({N_SEEDS_BASELINE} baseline + 2x{N_SEEDS_ABLATION} ablation) seeds = "
           f"{total_runs} total runs, {STEPS} steps each")
     print(f"ISR  values: {ISR_VALUES}")
@@ -430,7 +430,7 @@ def run_phase15():
     }
 
     output = {
-        "phase":   "Phase 15 -- Decoupled Aggregation Mechanism",
+        "phase":   "R3.1 -- Decoupled Aggregation Mechanism",
         "params": {
             "isr_values": ISR_VALUES,
             "tsse_values": TSSE_VALUES,
@@ -548,7 +548,7 @@ def _build_report(data):
             "coupling masked this symmetry."
         )
 
-    report = f"""# Phase 15 -- Decoupled Aggregation Mechanism
+    report = f"""# R3.1 -- Decoupled Aggregation Mechanism
 
 ## Overview
 
@@ -645,7 +645,7 @@ d_agg = vulnerability * AGG_SEED_RATE * aggAmp * dt
       + oxidativeFeedback * ox * dt
 ```
 
-v1.5 (Phase 15):
+v1.5 (R3.1):
 ```
 d_agg = vulnerability * AGG_SEED_RATE * ISR * dt
       + AGG_SPREAD_RATE * TSSE * agg_spread * dt
@@ -671,7 +671,7 @@ d_agg = vulnerability * AGG_SEED_RATE * ISR * dt
 
 ---
 
-*Phase 15 -- ALS Connectome Degeneration Project*
+*R3.1 -- ALS Connectome Degeneration Project*
 """
     return report
 

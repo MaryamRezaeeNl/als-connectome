@@ -1,4 +1,4 @@
-# Phase 15 -- Decoupled Aggregation Mechanism
+# R3.1 -- Decoupled Aggregation Mechanism
 
 ## Overview
 
@@ -114,7 +114,7 @@ d_agg = vulnerability * AGG_SEED_RATE * aggAmp * dt
       + oxidativeFeedback * ox * dt
 ```
 
-v1.5 (Phase 15):
+v1.5 (R3.1):
 ```
 d_agg = vulnerability * AGG_SEED_RATE * ISR * dt
       + AGG_SPREAD_RATE * TSSE * agg_spread * dt
@@ -140,4 +140,4 @@ d_agg = vulnerability * AGG_SEED_RATE * ISR * dt
 
 ---
 
-*Phase 15 -- ALS Connectome Degeneration Project*
+*R3.1 -- ALS Connectome Degeneration Project*

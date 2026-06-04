@@ -1,5 +1,5 @@
 {
-  "phase": "Phase 16A -- Downstream Causal Power Test",
+  "phase": "R3.2 -- Downstream Causal Power Test",
   "params": {
     "steps": 500,
     "n_baseline_seeds": 10,

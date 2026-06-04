@@ -13,7 +13,7 @@ on the *C. elegans* motor connectome (61 neurons, 127 synapses).
 **[als-connectome-dashboard.vercel.app](https://als-connectome-dashboard.vercel.app)**
 
 Interactive visualization of all phases — from the origin prototypes (Phase 0) through
-Phase 14 and the full Round 2 extension.
+Phase 14 and the full Round 2 + Round 3 extensions.
 
 ---
 
@@ -28,7 +28,7 @@ Aggregation → Mitochondrial damage → ATP collapse → Excitotoxicity → Neu
                                          (prion-like spreading closes the feedback loop)
 ```
 
-Across **Phase 0 (prototypes) + Phases 1–14 + Round 2**, the model:
+Across **Phase 0 (prototypes) + Phases 1–14 + Round 2 + Round 3**, the model:
 
 - Discovers genuine tipping points (triphasic collapse) in 64.7% of parameter space
 - Maps a sharp linear therapeutic boundary (R²=0.98)
@@ -51,6 +51,12 @@ Across **Phase 0 (prototypes) + Phases 1–14 + Round 2**, the model:
 | 6 | **Pre-symptomatic prediction feasible** | 87% simulated accuracy at t=50, before first neuron death |
 | 7 | **Sparse connectivity = more resilient** | sparse chain RES=0.815 vs triangle-rich RES=0.738 |
 | 8 | **86.8% oracle efficiency from 3 biomarkers** | Decision regret: 4.6 neurons (13.2%) |
+| R3.1 | **Decoupled aggregation** — ISR and TSSE are independently load-bearing | ISR more predictive (r=0.586 vs 0.463); medium context (ISR=TSSE=2) → 100% genuine |
+| R3.2 | **Downstream causality** — mitochondria becomes load-bearing only under extreme stress | Mito load-bearing at mitFrag≥4 in low-aggregation context; glutamate/calcium negligible |
+| R3.3 | **Mitochondrial threshold** — near-takeover onset at mitFrag=4.0 | 2/3 strict criteria met (shift+gain); rdrop structurally constrained by low genuine_rate |
+| R3.4 | **Threshold validation** — Phase 16B mitFrag=0.3 signal confirmed artifact | With n=50 seeds: 0/3 criteria at mitFrag=0.3; near-takeover confirmed at mitFrag=4.0 |
+| R3.5 | **Topological necessity** — TSSE is topology-sensitive, ISR is topology-invariant | ISR-dominant: 100% genuine on all 5 topologies; TSSE-dominant: only C. elegans tips |
+| R3.6 | **Seed location** — timing modulator, not tipping determinant | 59/61 neurons fragile; onset range 77–165 steps; AVAL ranks 9th fastest cascade |
 
 ---
 
@@ -97,6 +103,13 @@ als_connectome/
 │   ├── phase_r2_5b_early_prediction.py    R2.5b: pre-symptomatic subtype classification
 │   ├── phase_r2_7_window_prediction.py    R2.7: therapeutic window prediction from t=50
 │   └── phase_r2_8_twe.py                 R2.8: Therapeutic Window Estimator (TWE)
+│
+│   ├── phase_r3_1_decoupled_aggregation.py  R3.1: ISR + TSSE replace aggAmp; decoupled model
+│   ├── phase_r3_2_downstream_causality.py   R3.2: downstream causal power (ablation × 3 regimes)
+│   ├── phase_r3_3_mito_threshold.py         R3.3: mitochondrial takeover threshold grid sweep
+│   ├── phase_r3_4_mito_validation.py        R3.4: validated threshold with strict dual-criterion
+│   ├── phase_r3_5_topology_necessity.py     R3.5: topology necessity test (v2.0 decoupled model)
+│   └── phase_r3_6_seed_location.py          R3.6: seed location sensitivity (all 61 neurons)
 │
 ├── explore/                        Standalone exploration scripts (no ALS prerequisites)
 │   ├── explore_multiseed.py        # Multi-seed exploration
@@ -195,6 +208,16 @@ python phases/phase_r2_7_window_prediction.py      # ~11 min (requires r2_5b)
 python phases/phase_r2_8_twe.py                   # ~3 min  (requires r2_7)
 ```
 
+**Step 6 — Round 3 (requires Steps 1–2; ISR/TSSE decoupled model)**
+```bash
+python phases/phase_r3_1_decoupled_aggregation.py  # ~8 min  → results/r3_1_decoupled_aggregation/
+python phases/phase_r3_2_downstream_causality.py   # ~15 min → results/r3_2_downstream_causality/
+python phases/phase_r3_3_mito_threshold.py         # ~2 min  → results/r3_2_downstream_causality/
+python phases/phase_r3_4_mito_validation.py        # ~2 min  → results/r3_2_downstream_causality/
+python phases/phase_r3_5_topology_necessity.py     # ~11 min → results/r3_5_topology_necessity/
+python phases/phase_r3_6_seed_location.py          # ~9 min  → results/r3_6_seed_location/
+```
+
 ### Phase prerequisites
 
 | Script | Requires |
@@ -208,6 +231,12 @@ python phases/phase_r2_8_twe.py                   # ~3 min  (requires r2_7)
 | `phase_r2_*.py` | `regime_map.json`, `phase7b_strict_criterion.json`, `phase12_validation.json` |
 | `phase_r2_7_window_prediction.py` | above + `r2_early_prediction.json` |
 | `phase_r2_8_twe.py` | above + `r2_window_prediction.json` |
+| `phase_r3_1_decoupled_aggregation.py` | `regime_map.json`, `phase7b_strict_criterion.json` |
+| `phase_r3_2_downstream_causality.py` | `critical_configs.json`, `r3_1_decoupled_aggregation/` |
+| `phase_r3_3_mito_threshold.py` | `critical_configs.json`, `r3_1_decoupled_aggregation/` |
+| `phase_r3_4_mito_validation.py` | `r3_2_downstream_causality/phase16b_results.json` |
+| `phase_r3_5_topology_necessity.py` | `phase7c_topology.json`, `r3_1_decoupled_aggregation/` |
+| `phase_r3_6_seed_location.py` | `critical_configs.json`, `r3_1_decoupled_aggregation/` |
 
 ---
 
@@ -273,6 +302,10 @@ All outputs are written to `results/`. Each phase produces a JSON data file and 
 | `r2_therapeutic_window_estimator.json` | R2.8 | TWE model per-config predictions |
 | `r2_triage_simulation.json` | R2.8 | Virtual triage outcomes |
 | `r2_decision_quality.json` | R2.8 | Uncertainty decomposition + calibration |
+| `r3_1_decoupled_aggregation/` | R3.1 | ISR × TSSE 5×5 grid; 25 cells × 20 seeds |
+| `r3_2_downstream_causality/` | R3.2–R3.4 | Downstream causal power + mito threshold validation |
+| `r3_5_topology_necessity/` | R3.5 | Genuine tipping rates across 5 topologies (v2.0) |
+| `r3_6_seed_location/` | R3.6 | Seed fragility for all 61 neurons |
 
 ---
 

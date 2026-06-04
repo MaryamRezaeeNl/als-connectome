@@ -1,0 +1,1792 @@
+{
+  "phase": "R3.5 -- Topological Necessity Test",
+  "params": {
+    "n_topo_instances": 20,
+    "n_configs": 10,
+    "n_seeds": 10,
+    "steps": 500,
+    "context": "medium (ISR=2.0, TSSE=2.0)",
+    "criterion": {
+      "slope_thr": 4,
+      "coh_thr": 0.3,
+      "silent_min": 50
+    },
+    "configs": [
+      {
+        "id": 0,
+        "label": "base",
+        "isr": 2.0,
+        "tsse": 2.0
+      },
+      {
+        "id": 1,
+        "label": "low_isr",
+        "isr": 1.5,
+        "tsse": 2.0
+      },
+      {
+        "id": 2,
+        "label": "high_isr",
+        "isr": 3.0,
+        "tsse": 2.0
+      },
+      {
+        "id": 3,
+        "label": "low_tsse",
+        "isr": 2.0,
+        "tsse": 1.5
+      },
+      {
+        "id": 4,
+        "label": "high_tsse",
+        "isr": 2.0,
+        "tsse": 3.0
+      },
+      {
+        "id": 5,
+        "label": "low_mito",
+        "isr": 2.0,
+        "tsse": 2.0
+      },
+      {
+        "id": 6,
+        "label": "high_mito",
+        "isr": 2.0,
+        "tsse": 2.0
+      },
+      {
+        "id": 7,
+        "label": "tight_atp",
+        "isr": 2.0,
+        "tsse": 2.0
+      },
+      {
+        "id": 8,
+        "label": "seeding_dom",
+        "isr": 5.0,
+        "tsse": 0.5
+      },
+      {
+        "id": 9,
+        "label": "spread_dom",
+        "isr": 0.5,
+        "tsse": 5.0
+      }
+    ]
+  },
+  "v10_comparison": {
+    "celegans": {
+      "genuine_tipping_rate": 1.0,
+      "mean_spatial_coh": 0.582,
+      "mean_plateau": 11.3,
+      "mean_tipping_step": 219.9
+    },
+    "er": {
+      "genuine_tipping_rate": 0.48,
+      "mean_spatial_coh": 0.295,
+      "mean_plateau": 3.8,
+      "mean_tipping_step": 214.0
+    },
+    "ba": {
+      "genuine_tipping_rate": 0.0,
+      "mean_spatial_coh": -0.104,
+      "mean_plateau": 2.5,
+      "mean_tipping_step": 209.1
+    },
+    "ws": {
+      "genuine_tipping_rate": 0.78,
+      "mean_spatial_coh": 0.423,
+      "mean_plateau": 4.3,
+      "mean_tipping_step": 223.7
+    },
+    "shuffled": {
+      "genuine_tipping_rate": 0.73,
+      "mean_spatial_coh": 0.378,
+      "mean_plateau": 11.9,
+      "mean_tipping_step": 213.8
+    }
+  },
+  "topo_results": {
+    "celegans": {
+      "topo_name": "celegans",
+      "n_instances": 1,
+      "genuine_tipping_rate": 1.0,
+      "genuine_rate_std": 0.0,
+      "mean_first_death_step": 162.2,
+      "mean_plateau_survivors": 9.4,
+      "mean_coherence_r": 0.668,
+      "mean_rank_pres_vuln": 0.728,
+      "per_config_genuine_rates": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "subtype_rank_preservation": 1.0,
+      "subtype_rank_preservation_std": 0.0,
+      "genuine_rate_seeding_dom": 1.0,
+      "genuine_rate_spread_dom": 1.0
+    },
+    "er": {
+      "topo_name": "er",
+      "n_instances": 20,
+      "genuine_tipping_rate": 0.7,
+      "genuine_rate_std": 0.21,
+      "mean_first_death_step": 151.9,
+      "mean_plateau_survivors": 2.2,
+      "mean_coherence_r": 0.396,
+      "mean_rank_pres_vuln": 0.478,
+      "per_config_genuine_rates": [
+        0.8,
+        0.6,
+        1.0,
+        1.0,
+        0.2,
+        0.8,
+        0.8,
+        0.8,
+        1.0,
+        0.0
+      ],
+      "subtype_rank_preservation": 0.399,
+      "subtype_rank_preservation_std": 0.092,
+      "genuine_rate_seeding_dom": 1.0,
+      "genuine_rate_spread_dom": 0.0
+    },
+    "ba": {
+      "topo_name": "ba",
+      "n_instances": 20,
+      "genuine_tipping_rate": 0.105,
+      "genuine_rate_std": 0.022,
+      "mean_first_death_step": 146.4,
+      "mean_plateau_survivors": 1.5,
+      "mean_coherence_r": 0.073,
+      "mean_rank_pres_vuln": 0.095,
+      "per_config_genuine_rates": [
+        0.0,
+        0.0,
+        0.05,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ],
+      "subtype_rank_preservation": 0.02,
+      "subtype_rank_preservation_std": 0.103,
+      "genuine_rate_seeding_dom": 1.0,
+      "genuine_rate_spread_dom": 0.0
+    },
+    "ws": {
+      "topo_name": "ws",
+      "n_instances": 20,
+      "genuine_tipping_rate": 0.87,
+      "genuine_rate_std": 0.064,
+      "mean_first_death_step": 156.6,
+      "mean_plateau_survivors": 1.9,
+      "mean_coherence_r": 0.52,
+      "mean_rank_pres_vuln": 0.622,
+      "per_config_genuine_rates": [
+        1.0,
+        0.95,
+        1.0,
+        1.0,
+        0.7,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        0.05
+      ],
+      "subtype_rank_preservation": 0.497,
+      "subtype_rank_preservation_std": 0.081,
+      "genuine_rate_seeding_dom": 1.0,
+      "genuine_rate_spread_dom": 0.05
+    },
+    "shuffled": {
+      "topo_name": "shuffled",
+      "n_instances": 20,
+      "genuine_tipping_rate": 0.895,
+      "genuine_rate_std": 0.022,
+      "mean_first_death_step": 156.3,
+      "mean_plateau_survivors": 9.5,
+      "mean_coherence_r": 0.466,
+      "mean_rank_pres_vuln": 0.617,
+      "per_config_genuine_rates": [
+        1.0,
+        0.95,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        0.0
+      ],
+      "subtype_rank_preservation": 0.823,
+      "subtype_rank_preservation_std": 0.049,
+      "genuine_rate_seeding_dom": 1.0,
+      "genuine_rate_spread_dom": 0.0
+    }
+  },
+  "topo_per_instance": {
+    "celegans": [
+      {
+        "genuine_rate": 1.0,
+        "mean_first_death_step": 162.2,
+        "mean_plateau_survivors": 9.4,
+        "mean_coherence_r": 0.668,
+        "rank_pres_vuln": 0.728,
+        "per_config_genuine": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    ],
+    "er": [
+      {
+        "genuine_rate": 0.8,
+        "mean_first_death_step": 150.2,
+        "mean_plateau_survivors": 1.4,
+        "mean_coherence_r": 0.443,
+        "rank_pres_vuln": 0.587,
+        "per_config_genuine": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          1,
+          1,
+          1,
+          1,
+          0
+        ]
+      },
+      {
+        "genuine_rate": 0.7,
+        "mean_first_death_step": 158.0,
+        "mean_plateau_survivors": 1.6,
+        "mean_coherence_r": 0.32,
+        "rank_pres_vuln": 0.377,
+        "per_config_genuine": [
+          1,
+          0,
+          1,
+          1,
+          0,
+          1,
+          1,
+          1,
+          1,
+          0
+        ]
+      },
+      {
+        "genuine_rate": 0.7,
+        "mean_first_death_step": 155.7,
+        "mean_plateau_survivors": 1.9,
+        "mean_coherence_r": 0.372,
+        "rank_pres_vuln": 0.431,
+        "per_config_genuine": [
+          1,
+          0,
+          1,
+          1,
+          0,
+          1,
+          1,
+          1,
+          1,
+          0
+        ]
+      },
+      {
+        "genuine_rate": 0.9,
+        "mean_first_death_step": 153.4,
+        "mean_plateau_survivors": 3.1,
+        "mean_coherence_r": 0.5,
+        "rank_pres_vuln": 0.644,
+        "per_config_genuine": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0
+        ]
+      },
+      {
+        "genuine_rate": 0.9,
+        "mean_first_death_step": 154.1,
+        "mean_plateau_survivors": 1.8,
+        "mean_coherence_r": 0.515,
+        "rank_pres_vuln": 0.571,
+        "per_config_genuine": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0
+        ]
+      },
+      {
+        "genuine_rate": 0.3,
+        "mean_first_death_step": 149.8,
+        "mean_plateau_survivors": 3.4,
+        "mean_coherence_r": 0.224,
+        "rank_pres_vuln": 0.335,
+        "per_config_genuine": [
+          0,
+          0,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "genuine_rate": 0.8,
+        "mean_first_death_step": 150.7,
+        "mean_plateau_survivors": 1.2,
+        "mean_coherence_r": 0.421,
+        "rank_pres_vuln": 0.581,
+        "per_config_genuine": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          1,
+          1,
+          1,
+          1,
+          0
+        ]
+      },
+      {
+        "genuine_rate": 0.8,
+        "mean_first_death_step": 149.8,
+        "mean_plateau_survivors": 2.2,
+        "mean_coherence_r": 0.429,
+        "rank_pres_vuln": 0.54,
+        "per_config_genuine": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          1,
+          1,
+          1,
+          1,
+          0
+        ]
+      },
+      {
+        "genuine_rate": 0.7,
+        "mean_first_death_step": 157.4,
+        "mean_plateau_survivors": 2.1,
+        "mean_coherence_r": 0.414,
+        "rank_pres_vuln": 0.522,
+        "per_config_genuine": [
+          1,
+          0,
+          1,
+          1,
+          0,
+          1,
+          1,
+          1,
+          1,
+          0
+        ]
+      },
+      {
+        "genuine_rate": 0.8,
+        "mean_first_death_step": 149.8,
+        "mean_plateau_survivors": 1.6,
+        "mean_coherence_r": 0.41,
+        "rank_pres_vuln": 0.449,
+        "per_config_genuine": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          1,
+          1,
+          1,
+          1,
+          0
+        ]
+      },
+      {
+        "genuine_rate": 0.9,
+        "mean_first_death_step": 147.4,
+        "mean_plateau_survivors": 2.8,
+        "mean_coherence_r": 0.467,
+        "rank_pres_vuln": 0.599,
+        "per_config_genuine": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0
+        ]
+      },
+      {
+        "genuine_rate": 0.8,
+        "mean_first_death_step": 155.6,
+        "mean_plateau_survivors": 2.5,
+        "mean_coherence_r": 0.458,
+        "rank_pres_vuln": 0.529,
+        "per_config_genuine": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          1,
+          1,
+          1,
+          1,
+          0
+        ]
+      },
+      {
+        "genuine_rate": 0.9,
+        "mean_first_death_step": 149.1,
+        "mean_plateau_survivors": 4.0,
+        "mean_coherence_r": 0.561,
+        "rank_pres_vuln": 0.676,
+        "per_config_genuine": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0
+        ]
+      },
+      {
+        "genuine_rate": 0.3,
+        "mean_first_death_step": 154.8,
+        "mean_plateau_survivors": 0.5,
+        "mean_coherence_r": 0.274,
+        "rank_pres_vuln": 0.29,
+        "per_config_genuine": [
+          0,
+          0,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "genuine_rate": 0.8,
+        "mean_first_death_step": 148.7,
+        "mean_plateau_survivors": 3.7,
+        "mean_coherence_r": 0.405,
+        "rank_pres_vuln": 0.484,
+        "per_config_genuine": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          1,
+          1,
+          1,
+          1,
+          0
+        ]
+      },
+      {
+        "genuine_rate": 0.3,
+        "mean_first_death_step": 158.2,
+        "mean_plateau_survivors": 4.5,
+        "mean_coherence_r": 0.293,
+        "rank_pres_vuln": 0.314,
+        "per_config_genuine": [
+          0,
+          0,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "genuine_rate": 0.7,
+        "mean_first_death_step": 152.7,
+        "mean_plateau_survivors": 1.8,
+        "mean_coherence_r": 0.361,
+        "rank_pres_vuln": 0.424,
+        "per_config_genuine": [
+          1,
+          0,
+          1,
+          1,
+          0,
+          1,
+          1,
+          1,
+          1,
+          0
+        ]
+      },
+      {
+        "genuine_rate": 0.8,
+        "mean_first_death_step": 150.5,
+        "mean_plateau_survivors": 1.2,
+        "mean_coherence_r": 0.423,
+        "rank_pres_vuln": 0.53,
+        "per_config_genuine": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          1,
+          1,
+          1,
+          1,
+          0
+        ]
+      },
+      {
+        "genuine_rate": 0.3,
+        "mean_first_death_step": 141.3,
+        "mean_plateau_survivors": 1.6,
+        "mean_coherence_r": 0.199,
+        "rank_pres_vuln": 0.17,
+        "per_config_genuine": [
+          0,
+          0,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "genuine_rate": 0.8,
+        "mean_first_death_step": 150.9,
+        "mean_plateau_survivors": 2.0,
+        "mean_coherence_r": 0.423,
+        "rank_pres_vuln": 0.512,
+        "per_config_genuine": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          1,
+          1,
+          1,
+          1,
+          0
+        ]
+      }
+    ],
+    "ba": [
+      {
+        "genuine_rate": 0.1,
+        "mean_first_death_step": 152.9,
+        "mean_plateau_survivors": 1.4,
+        "mean_coherence_r": -0.09,
+        "rank_pres_vuln": -0.146,
+        "per_config_genuine": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "genuine_rate": 0.1,
+        "mean_first_death_step": 140.6,
+        "mean_plateau_survivors": 1.5,
+        "mean_coherence_r": 0.087,
+        "rank_pres_vuln": 0.146,
+        "per_config_genuine": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "genuine_rate": 0.1,
+        "mean_first_death_step": 152.1,
+        "mean_plateau_survivors": 2.5,
+        "mean_coherence_r": 0.005,
+        "rank_pres_vuln": 0.122,
+        "per_config_genuine": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "genuine_rate": 0.1,
+        "mean_first_death_step": 153.7,
+        "mean_plateau_survivors": 0.3,
+        "mean_coherence_r": 0.067,
+        "rank_pres_vuln": 0.187,
+        "per_config_genuine": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "genuine_rate": 0.1,
+        "mean_first_death_step": 145.1,
+        "mean_plateau_survivors": 2.0,
+        "mean_coherence_r": 0.096,
+        "rank_pres_vuln": 0.204,
+        "per_config_genuine": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "genuine_rate": 0.1,
+        "mean_first_death_step": 136.5,
+        "mean_plateau_survivors": 1.0,
+        "mean_coherence_r": 0.12,
+        "rank_pres_vuln": 0.264,
+        "per_config_genuine": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "genuine_rate": 0.1,
+        "mean_first_death_step": 136.8,
+        "mean_plateau_survivors": 0.7,
+        "mean_coherence_r": -0.049,
+        "rank_pres_vuln": -0.053,
+        "per_config_genuine": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "genuine_rate": 0.1,
+        "mean_first_death_step": 144.9,
+        "mean_plateau_survivors": 0.8,
+        "mean_coherence_r": 0.08,
+        "rank_pres_vuln": 0.025,
+        "per_config_genuine": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "genuine_rate": 0.1,
+        "mean_first_death_step": 149.9,
+        "mean_plateau_survivors": 0.8,
+        "mean_coherence_r": -0.009,
+        "rank_pres_vuln": -0.073,
+        "per_config_genuine": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "genuine_rate": 0.1,
+        "mean_first_death_step": 152.0,
+        "mean_plateau_survivors": 1.6,
+        "mean_coherence_r": 0.113,
+        "rank_pres_vuln": 0.159,
+        "per_config_genuine": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "genuine_rate": 0.1,
+        "mean_first_death_step": 154.7,
+        "mean_plateau_survivors": 1.2,
+        "mean_coherence_r": 0.153,
+        "rank_pres_vuln": 0.14,
+        "per_config_genuine": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "genuine_rate": 0.1,
+        "mean_first_death_step": 134.4,
+        "mean_plateau_survivors": 1.4,
+        "mean_coherence_r": 0.01,
+        "rank_pres_vuln": 0.05,
+        "per_config_genuine": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "genuine_rate": 0.1,
+        "mean_first_death_step": 143.5,
+        "mean_plateau_survivors": 0.5,
+        "mean_coherence_r": 0.137,
+        "rank_pres_vuln": 0.187,
+        "per_config_genuine": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "genuine_rate": 0.2,
+        "mean_first_death_step": 157.4,
+        "mean_plateau_survivors": 1.4,
+        "mean_coherence_r": 0.165,
+        "rank_pres_vuln": 0.223,
+        "per_config_genuine": [
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "genuine_rate": 0.1,
+        "mean_first_death_step": 142.3,
+        "mean_plateau_survivors": 1.9,
+        "mean_coherence_r": -0.097,
+        "rank_pres_vuln": -0.095,
+        "per_config_genuine": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "genuine_rate": 0.1,
+        "mean_first_death_step": 151.8,
+        "mean_plateau_survivors": 0.7,
+        "mean_coherence_r": 0.104,
+        "rank_pres_vuln": 0.073,
+        "per_config_genuine": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "genuine_rate": 0.1,
+        "mean_first_death_step": 139.0,
+        "mean_plateau_survivors": 2.4,
+        "mean_coherence_r": 0.163,
+        "rank_pres_vuln": 0.158,
+        "per_config_genuine": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "genuine_rate": 0.1,
+        "mean_first_death_step": 146.6,
+        "mean_plateau_survivors": 2.4,
+        "mean_coherence_r": 0.186,
+        "rank_pres_vuln": 0.147,
+        "per_config_genuine": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "genuine_rate": 0.1,
+        "mean_first_death_step": 147.7,
+        "mean_plateau_survivors": 2.9,
+        "mean_coherence_r": 0.08,
+        "rank_pres_vuln": 0.041,
+        "per_config_genuine": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "genuine_rate": 0.1,
+        "mean_first_death_step": 146.8,
+        "mean_plateau_survivors": 2.5,
+        "mean_coherence_r": 0.145,
+        "rank_pres_vuln": 0.136,
+        "per_config_genuine": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0
+        ]
+      }
+    ],
+    "ws": [
+      {
+        "genuine_rate": 0.9,
+        "mean_first_death_step": 162.3,
+        "mean_plateau_survivors": 0.9,
+        "mean_coherence_r": 0.571,
+        "rank_pres_vuln": 0.692,
+        "per_config_genuine": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0
+        ]
+      },
+      {
+        "genuine_rate": 0.8,
+        "mean_first_death_step": 147.6,
+        "mean_plateau_survivors": 2.8,
+        "mean_coherence_r": 0.431,
+        "rank_pres_vuln": 0.581,
+        "per_config_genuine": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          1,
+          1,
+          1,
+          1,
+          0
+        ]
+      },
+      {
+        "genuine_rate": 0.9,
+        "mean_first_death_step": 157.1,
+        "mean_plateau_survivors": 0.5,
+        "mean_coherence_r": 0.488,
+        "rank_pres_vuln": 0.591,
+        "per_config_genuine": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0
+        ]
+      },
+      {
+        "genuine_rate": 0.9,
+        "mean_first_death_step": 155.4,
+        "mean_plateau_survivors": 3.1,
+        "mean_coherence_r": 0.64,
+        "rank_pres_vuln": 0.706,
+        "per_config_genuine": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0
+        ]
+      },
+      {
+        "genuine_rate": 0.8,
+        "mean_first_death_step": 153.2,
+        "mean_plateau_survivors": 2.1,
+        "mean_coherence_r": 0.46,
+        "rank_pres_vuln": 0.574,
+        "per_config_genuine": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          1,
+          1,
+          1,
+          1,
+          0
+        ]
+      },
+      {
+        "genuine_rate": 0.9,
+        "mean_first_death_step": 151.6,
+        "mean_plateau_survivors": 0.8,
+        "mean_coherence_r": 0.577,
+        "rank_pres_vuln": 0.634,
+        "per_config_genuine": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0
+        ]
+      },
+      {
+        "genuine_rate": 0.9,
+        "mean_first_death_step": 153.3,
+        "mean_plateau_survivors": 2.6,
+        "mean_coherence_r": 0.512,
+        "rank_pres_vuln": 0.61,
+        "per_config_genuine": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0
+        ]
+      },
+      {
+        "genuine_rate": 0.9,
+        "mean_first_death_step": 154.2,
+        "mean_plateau_survivors": 2.0,
+        "mean_coherence_r": 0.522,
+        "rank_pres_vuln": 0.584,
+        "per_config_genuine": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0
+        ]
+      },
+      {
+        "genuine_rate": 0.9,
+        "mean_first_death_step": 160.8,
+        "mean_plateau_survivors": 1.4,
+        "mean_coherence_r": 0.543,
+        "rank_pres_vuln": 0.662,
+        "per_config_genuine": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0
+        ]
+      },
+      {
+        "genuine_rate": 0.8,
+        "mean_first_death_step": 161.3,
+        "mean_plateau_survivors": 1.6,
+        "mean_coherence_r": 0.419,
+        "rank_pres_vuln": 0.55,
+        "per_config_genuine": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          1,
+          1,
+          1,
+          1,
+          0
+        ]
+      },
+      {
+        "genuine_rate": 0.9,
+        "mean_first_death_step": 159.6,
+        "mean_plateau_survivors": 0.5,
+        "mean_coherence_r": 0.563,
+        "rank_pres_vuln": 0.686,
+        "per_config_genuine": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0
+        ]
+      },
+      {
+        "genuine_rate": 0.8,
+        "mean_first_death_step": 157.7,
+        "mean_plateau_survivors": 0.8,
+        "mean_coherence_r": 0.451,
+        "rank_pres_vuln": 0.53,
+        "per_config_genuine": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          1,
+          1,
+          1,
+          1,
+          0
+        ]
+      },
+      {
+        "genuine_rate": 0.9,
+        "mean_first_death_step": 154.8,
+        "mean_plateau_survivors": 4.1,
+        "mean_coherence_r": 0.601,
+        "rank_pres_vuln": 0.728,
+        "per_config_genuine": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0
+        ]
+      },
+      {
+        "genuine_rate": 0.7,
+        "mean_first_death_step": 153.1,
+        "mean_plateau_survivors": 1.8,
+        "mean_coherence_r": 0.336,
+        "rank_pres_vuln": 0.464,
+        "per_config_genuine": [
+          1,
+          0,
+          1,
+          1,
+          0,
+          1,
+          1,
+          1,
+          1,
+          0
+        ]
+      },
+      {
+        "genuine_rate": 0.8,
+        "mean_first_death_step": 150.9,
+        "mean_plateau_survivors": 1.4,
+        "mean_coherence_r": 0.458,
+        "rank_pres_vuln": 0.554,
+        "per_config_genuine": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          1,
+          1,
+          1,
+          1,
+          0
+        ]
+      },
+      {
+        "genuine_rate": 0.9,
+        "mean_first_death_step": 159.4,
+        "mean_plateau_survivors": 3.0,
+        "mean_coherence_r": 0.507,
+        "rank_pres_vuln": 0.589,
+        "per_config_genuine": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0
+        ]
+      },
+      {
+        "genuine_rate": 0.9,
+        "mean_first_death_step": 162.1,
+        "mean_plateau_survivors": 1.7,
+        "mean_coherence_r": 0.524,
+        "rank_pres_vuln": 0.618,
+        "per_config_genuine": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0
+        ]
+      },
+      {
+        "genuine_rate": 1.0,
+        "mean_first_death_step": 158.1,
+        "mean_plateau_survivors": 3.1,
+        "mean_coherence_r": 0.73,
+        "rank_pres_vuln": 0.811,
+        "per_config_genuine": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "genuine_rate": 0.9,
+        "mean_first_death_step": 164.4,
+        "mean_plateau_survivors": 1.6,
+        "mean_coherence_r": 0.534,
+        "rank_pres_vuln": 0.632,
+        "per_config_genuine": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0
+        ]
+      },
+      {
+        "genuine_rate": 0.9,
+        "mean_first_death_step": 155.1,
+        "mean_plateau_survivors": 2.7,
+        "mean_coherence_r": 0.541,
+        "rank_pres_vuln": 0.647,
+        "per_config_genuine": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0
+        ]
+      }
+    ],
+    "shuffled": [
+      {
+        "genuine_rate": 0.9,
+        "mean_first_death_step": 156.7,
+        "mean_plateau_survivors": 9.4,
+        "mean_coherence_r": 0.414,
+        "rank_pres_vuln": 0.545,
+        "per_config_genuine": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0
+        ]
+      },
+      {
+        "genuine_rate": 0.9,
+        "mean_first_death_step": 154.8,
+        "mean_plateau_survivors": 9.6,
+        "mean_coherence_r": 0.485,
+        "rank_pres_vuln": 0.688,
+        "per_config_genuine": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0
+        ]
+      },
+      {
+        "genuine_rate": 0.9,
+        "mean_first_death_step": 156.8,
+        "mean_plateau_survivors": 9.5,
+        "mean_coherence_r": 0.48,
+        "rank_pres_vuln": 0.669,
+        "per_config_genuine": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0
+        ]
+      },
+      {
+        "genuine_rate": 0.9,
+        "mean_first_death_step": 157.9,
+        "mean_plateau_survivors": 9.3,
+        "mean_coherence_r": 0.446,
+        "rank_pres_vuln": 0.587,
+        "per_config_genuine": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0
+        ]
+      },
+      {
+        "genuine_rate": 0.9,
+        "mean_first_death_step": 158.2,
+        "mean_plateau_survivors": 9.8,
+        "mean_coherence_r": 0.491,
+        "rank_pres_vuln": 0.634,
+        "per_config_genuine": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0
+        ]
+      },
+      {
+        "genuine_rate": 0.9,
+        "mean_first_death_step": 153.6,
+        "mean_plateau_survivors": 9.7,
+        "mean_coherence_r": 0.515,
+        "rank_pres_vuln": 0.643,
+        "per_config_genuine": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0
+        ]
+      },
+      {
+        "genuine_rate": 0.9,
+        "mean_first_death_step": 156.2,
+        "mean_plateau_survivors": 9.5,
+        "mean_coherence_r": 0.507,
+        "rank_pres_vuln": 0.646,
+        "per_config_genuine": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0
+        ]
+      },
+      {
+        "genuine_rate": 0.9,
+        "mean_first_death_step": 155.7,
+        "mean_plateau_survivors": 9.5,
+        "mean_coherence_r": 0.486,
+        "rank_pres_vuln": 0.647,
+        "per_config_genuine": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0
+        ]
+      },
+      {
+        "genuine_rate": 0.9,
+        "mean_first_death_step": 159.7,
+        "mean_plateau_survivors": 9.7,
+        "mean_coherence_r": 0.447,
+        "rank_pres_vuln": 0.537,
+        "per_config_genuine": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0
+        ]
+      },
+      {
+        "genuine_rate": 0.9,
+        "mean_first_death_step": 147.7,
+        "mean_plateau_survivors": 9.9,
+        "mean_coherence_r": 0.435,
+        "rank_pres_vuln": 0.557,
+        "per_config_genuine": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0
+        ]
+      },
+      {
+        "genuine_rate": 0.9,
+        "mean_first_death_step": 159.1,
+        "mean_plateau_survivors": 9.3,
+        "mean_coherence_r": 0.479,
+        "rank_pres_vuln": 0.703,
+        "per_config_genuine": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0
+        ]
+      },
+      {
+        "genuine_rate": 0.9,
+        "mean_first_death_step": 154.2,
+        "mean_plateau_survivors": 9.1,
+        "mean_coherence_r": 0.446,
+        "rank_pres_vuln": 0.594,
+        "per_config_genuine": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0
+        ]
+      },
+      {
+        "genuine_rate": 0.9,
+        "mean_first_death_step": 153.0,
+        "mean_plateau_survivors": 9.3,
+        "mean_coherence_r": 0.41,
+        "rank_pres_vuln": 0.501,
+        "per_config_genuine": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0
+        ]
+      },
+      {
+        "genuine_rate": 0.9,
+        "mean_first_death_step": 158.3,
+        "mean_plateau_survivors": 9.8,
+        "mean_coherence_r": 0.521,
+        "rank_pres_vuln": 0.622,
+        "per_config_genuine": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0
+        ]
+      },
+      {
+        "genuine_rate": 0.9,
+        "mean_first_death_step": 156.6,
+        "mean_plateau_survivors": 9.4,
+        "mean_coherence_r": 0.475,
+        "rank_pres_vuln": 0.689,
+        "per_config_genuine": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0
+        ]
+      },
+      {
+        "genuine_rate": 0.9,
+        "mean_first_death_step": 156.6,
+        "mean_plateau_survivors": 9.2,
+        "mean_coherence_r": 0.504,
+        "rank_pres_vuln": 0.68,
+        "per_config_genuine": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0
+        ]
+      },
+      {
+        "genuine_rate": 0.9,
+        "mean_first_death_step": 156.7,
+        "mean_plateau_survivors": 9.4,
+        "mean_coherence_r": 0.44,
+        "rank_pres_vuln": 0.573,
+        "per_config_genuine": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0
+        ]
+      },
+      {
+        "genuine_rate": 0.9,
+        "mean_first_death_step": 162.2,
+        "mean_plateau_survivors": 9.5,
+        "mean_coherence_r": 0.507,
+        "rank_pres_vuln": 0.704,
+        "per_config_genuine": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0
+        ]
+      },
+      {
+        "genuine_rate": 0.8,
+        "mean_first_death_step": 151.9,
+        "mean_plateau_survivors": 9.8,
+        "mean_coherence_r": 0.42,
+        "rank_pres_vuln": 0.557,
+        "per_config_genuine": [
+          1,
+          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0
+        ]
+      },
+      {
+        "genuine_rate": 0.9,
+        "mean_first_death_step": 161.1,
+        "mean_plateau_survivors": 9.3,
+        "mean_coherence_r": 0.415,
+        "rank_pres_vuln": 0.561,
+        "per_config_genuine": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0
+        ]
+      }
+    ]
+  }
+}

@@ -1,4 +1,4 @@
-# Phase 16A -- Downstream Causal Power Test
+# R3.2 -- Downstream Causal Power Test
 
 ## Overview
 
@@ -120,4 +120,4 @@ The v1.0 single-factor finding (aggregation is the sole load-bearing mechanism) 
 
 ---
 
-*Phase 16A -- ALS Connectome Degeneration Project*
+*R3.2 -- ALS Connectome Degeneration Project*

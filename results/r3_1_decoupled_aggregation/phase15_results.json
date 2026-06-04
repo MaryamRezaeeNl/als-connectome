@@ -1,5 +1,5 @@
 {
-  "phase": "Phase 15 -- Decoupled Aggregation Mechanism",
+  "phase": "R3.1 -- Decoupled Aggregation Mechanism",
   "params": {
     "isr_values": [
       0.05,

@@ -1,4 +1,4 @@
-"""Phase 16A -- Downstream Causal Power Test.
+"""R3.2 -- Downstream Causal Power Test.
 
 Tests whether the downstream cascade pathways (mitochondrial damage,
 glutamate excitotoxicity, calcium/ROS, irreversibility lock) can become
@@ -38,8 +38,8 @@ Key question: under downstream-stressed conditions, can mito/glut/calcium
 become load-bearing, or are they permanently gated by upstream aggregation?
 
 Outputs:
-  results/phase16_downstream_causality/phase16a_results.json
-  results/phase16_downstream_causality/phase16a_report.md
+  results/r3_2_downstream_causality/phase16a_results.json
+  results/r3_2_downstream_causality/phase16a_report.md
 """
 
 import json
@@ -55,7 +55,7 @@ sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), '..'
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 from connectome import NEURON_NAMES, VULNERABILITY
-from phase15_decoupled_aggregation import DecoupledSimulator, _pearson_r
+from phase_r3_1_decoupled_aggregation import DecoupledSimulator, _pearson_r
 
 # ── Strict Phase 7B criterion (shared constants) ────────────────────────────
 _VULN          = np.array([VULNERABILITY[n] for n in NEURON_NAMES])
@@ -223,7 +223,7 @@ N_ABLATION     = _ABLATION_SEEDS
 
 def run_phase16a():
     t0 = time.time()
-    out_dir = Path(__file__).parent.parent / "results" / "phase16_downstream_causality"
+    out_dir = Path(__file__).parent.parent / "results" / "r3_2_downstream_causality"
     out_dir.mkdir(parents=True, exist_ok=True)
 
     results_by_regime = {}
@@ -303,7 +303,7 @@ def run_phase16a():
     causal_table = _build_causal_table(results_by_regime)
 
     output = {
-        "phase": "Phase 16A -- Downstream Causal Power Test",
+        "phase": "R3.2 -- Downstream Causal Power Test",
         "params": {
             "steps": STEPS,
             "n_baseline_seeds": N_BASELINE,
@@ -534,7 +534,7 @@ def _build_report(data):
     total_runs = sum(n_configs[rn] * (N_BASELINE + len(ABLATIONS) * N_ABLATION)
                      for rn in regime_names)
 
-    report = f"""# Phase 16A -- Downstream Causal Power Test
+    report = f"""# R3.2 -- Downstream Causal Power Test
 
 ## Overview
 
@@ -623,7 +623,7 @@ of aggregation.
 
 ---
 
-*Phase 16A -- ALS Connectome Degeneration Project*
+*R3.2 -- ALS Connectome Degeneration Project*
 """
     return report
 
