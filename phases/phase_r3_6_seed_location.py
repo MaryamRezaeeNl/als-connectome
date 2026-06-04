@@ -32,8 +32,8 @@ Condition C rankings:
 Total: ~6700 runs x 500 steps.
 
 Outputs:
-  results/r3_6_seed_location/phase18_results.json
-  results/r3_6_seed_location/phase18_report.md
+  results/r3_6_seed_location/r3_6_results.json
+  results/r3_6_seed_location/r3_6_report.md
 """
 
 import json
@@ -439,13 +439,13 @@ def run_phase18():
         "all_neuron_sweep": all_neuron_results,
     }
 
-    json_path = out_dir / "phase18_results.json"
+    json_path = out_dir / "r3_6_results.json"
     with open(json_path, "w", encoding="utf-8") as f:
         json.dump(output, f, indent=2)
     print(f"Results saved: {json_path}")
 
     report = _build_report(output)
-    rpt_path = out_dir / "phase18_report.md"
+    rpt_path = out_dir / "r3_6_report.md"
     with open(rpt_path, "w", encoding="utf-8") as f:
         f.write(report)
     print(f"Report  saved: {rpt_path}")

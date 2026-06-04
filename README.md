@@ -234,7 +234,7 @@ python phases/phase_r3_6_seed_location.py          # ~9 min  → results/r3_6_se
 | `phase_r3_1_decoupled_aggregation.py` | `regime_map.json`, `phase7b_strict_criterion.json` |
 | `phase_r3_2_downstream_causality.py` | `critical_configs.json`, `r3_1_decoupled_aggregation/` |
 | `phase_r3_3_mito_threshold.py` | `critical_configs.json`, `r3_1_decoupled_aggregation/` |
-| `phase_r3_4_mito_validation.py` | `r3_2_downstream_causality/phase16b_results.json` |
+| `phase_r3_4_mito_validation.py` | `r3_2_downstream_causality/r3_3_results.json` |
 | `phase_r3_5_topology_necessity.py` | `phase7c_topology.json`, `r3_1_decoupled_aggregation/` |
 | `phase_r3_6_seed_location.py` | `critical_configs.json`, `r3_1_decoupled_aggregation/` |
 

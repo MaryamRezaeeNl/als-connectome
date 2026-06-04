@@ -33,9 +33,9 @@ Threshold boundary fit (if threshold varies with ISR/TSSE):
   threshold ~ a * log(ISR * TSSE) + b  (log-linear in combined aggAmp)
 
 Outputs:
-  results/r3_2_downstream_causality/phase16b_results.json
-  results/r3_2_downstream_causality/phase16b_threshold.csv
-  results/r3_2_downstream_causality/phase16b_report.md
+  results/r3_2_downstream_causality/r3_3_results.json
+  results/r3_2_downstream_causality/r3_3_threshold.csv
+  results/r3_2_downstream_causality/r3_3_report.md
 """
 
 import csv
@@ -318,13 +318,13 @@ def run_phase16b():
     }
 
     # ── Save JSON ─────────────────────────────────────────────────────────────
-    json_path = out_dir / "phase16b_results.json"
+    json_path = out_dir / "r3_3_results.json"
     with open(json_path, "w", encoding="utf-8") as f:
         json.dump(output, f, indent=2)
     print(f"\nResults saved: {json_path}")
 
     # ── Save CSV ──────────────────────────────────────────────────────────────
-    csv_path = out_dir / "phase16b_threshold.csv"
+    csv_path = out_dir / "r3_3_threshold.csv"
     with open(csv_path, "w", newline="", encoding="utf-8") as f:
         writer = csv.writer(f)
         writer.writerow([
@@ -347,7 +347,7 @@ def run_phase16b():
 
     # ── Report ────────────────────────────────────────────────────────────────
     report = _build_report(output)
-    rpt_path = out_dir / "phase16b_report.md"
+    rpt_path = out_dir / "r3_3_report.md"
     with open(rpt_path, "w", encoding="utf-8") as f:
         f.write(report)
     print(f"Report  saved: {rpt_path}")

@@ -27,8 +27,8 @@ Metrics:
 Comparison: v1.0 (Phase 7C coupled aggAmp) vs v2.0 (R3.5 decoupled ISR+TSSE)
 
 Outputs:
-  results/r3_5_topology_necessity/phase17_results.json
-  results/r3_5_topology_necessity/phase17_report.md
+  results/r3_5_topology_necessity/r3_5_results.json
+  results/r3_5_topology_necessity/r3_5_report.md
 """
 
 import json
@@ -527,13 +527,13 @@ def run_phase17():
                               for k, v in topo_results.items()},
     }
 
-    json_path = out_dir / "phase17_results.json"
+    json_path = out_dir / "r3_5_results.json"
     with open(json_path, "w", encoding="utf-8") as f:
         json.dump(output, f, indent=2)
     print(f"Results saved: {json_path}")
 
     report = _build_report(output, topo_results)
-    rpt_path = out_dir / "phase17_report.md"
+    rpt_path = out_dir / "r3_5_report.md"
     with open(rpt_path, "w", encoding="utf-8") as f:
         f.write(report)
     print(f"Report  saved: {rpt_path}")

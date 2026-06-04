@@ -38,8 +38,8 @@ Key question: under downstream-stressed conditions, can mito/glut/calcium
 become load-bearing, or are they permanently gated by upstream aggregation?
 
 Outputs:
-  results/r3_2_downstream_causality/phase16a_results.json
-  results/r3_2_downstream_causality/phase16a_report.md
+  results/r3_2_downstream_causality/r3_2_results.json
+  results/r3_2_downstream_causality/r3_2_report.md
 """
 
 import json
@@ -323,13 +323,13 @@ def run_phase16a():
         "regime_results": results_by_regime,
     }
 
-    json_path = out_dir / "phase16a_results.json"
+    json_path = out_dir / "r3_2_results.json"
     with open(json_path, "w", encoding="utf-8") as f:
         json.dump(output, f, indent=2)
     print(f"\nResults saved: {json_path}")
 
     report = _build_report(output)
-    report_path = out_dir / "phase16a_report.md"
+    report_path = out_dir / "r3_2_report.md"
     with open(report_path, "w", encoding="utf-8") as f:
         f.write(report)
     print(f"Report  saved: {report_path}")

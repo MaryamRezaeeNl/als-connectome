@@ -47,8 +47,8 @@ Strict tipping criterion (Phase 7B):
 All three must hold in majority of seeds.
 
 Output:
-  results/phase_r3_1_decoupled_aggregation/phase15_results.json
-  results/phase_r3_1_decoupled_aggregation/phase15_report.md
+  results/phase_r3_1_decoupled_aggregation/r3_1_results.json
+  results/phase_r3_1_decoupled_aggregation/r3_1_report.md
 """
 
 import json
@@ -448,13 +448,13 @@ def run_phase15():
         "grid_results": grid_results,
     }
 
-    json_path = out_dir / "phase15_results.json"
+    json_path = out_dir / "r3_1_results.json"
     with open(json_path, "w", encoding="utf-8") as f:
         json.dump(output, f, indent=2)
     print(f"\nResults saved: {json_path}")
 
     report = _build_report(output)
-    report_path = out_dir / "phase15_report.md"
+    report_path = out_dir / "r3_1_report.md"
     with open(report_path, "w", encoding="utf-8") as f:
         f.write(report)
     print(f"Report  saved: {report_path}")

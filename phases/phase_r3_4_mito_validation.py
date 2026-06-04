@@ -18,8 +18,8 @@ Grid:
 Bootstrap CIs (10,000 resamples) on shift, gain, rdrop for each level.
 
 Outputs:
-  results/r3_2_downstream_causality/phase16c_results.json
-  results/r3_2_downstream_causality/phase16c_report.md
+  results/r3_2_downstream_causality/r3_4_results.json
+  results/r3_2_downstream_causality/r3_4_report.md
 """
 
 import json
@@ -314,7 +314,7 @@ def run_phase16c():
         },
         "validated_threshold":           validated_threshold,
         "near_takeover_threshold":       near_threshold_mf,
-        "phase16b_threshold_claim":      0.3,
+        "r3_3_threshold_claim":      0.3,
         "phase16b_0p3_verdict":          signal_03,
         "phase16b_0p3_16c_criteria_met": row_03["strict_criteria_met"],
         "n_strict_takeover_levels":      sum(1 for r in level_results if r["strict_label"] == "TAKEOVER"),
@@ -337,13 +337,13 @@ def run_phase16c():
         "level_results": level_results,
     }
 
-    json_path = out_dir / "phase16c_results.json"
+    json_path = out_dir / "r3_4_results.json"
     with open(json_path, "w", encoding="utf-8") as f:
         json.dump(output, f, indent=2)
     print(f"\nResults saved: {json_path}")
 
     report = _build_report(output)
-    rpt_path = out_dir / "phase16c_report.md"
+    rpt_path = out_dir / "r3_4_report.md"
     with open(rpt_path, "w", encoding="utf-8") as f:
         f.write(report)
     print(f"Report  saved: {rpt_path}")
@@ -415,7 +415,7 @@ def _build_report(data: dict) -> str:
             f"- rdrop = {thr_row['genuine_rate_drop']:+.3f} "
             f"[95% CI: {ci_thr['rdrop_ci95'][0]:+.3f}, {ci_thr['rdrop_ci95'][1]:+.3f}]\n"
             f"- All 3 strict criteria satisfied.\n\n"
-            f"The R3.3 threshold claim of mitFrag = {s['phase16b_threshold_claim']} "
+            f"The R3.3 threshold claim of mitFrag = {s['r3_3_threshold_claim']} "
             f"is revised upward to **mitFrag = {vt}**."
         )
     elif nt is not None:
