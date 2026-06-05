@@ -57,6 +57,7 @@ Across **Phase 0 (prototypes) + Phases 1–14 + Round 2 + Round 3**, the model:
 | R3.4 | **Threshold validation** — Phase 16B mitFrag=0.3 signal confirmed artifact | With n=50 seeds: 0/3 criteria at mitFrag=0.3; near-takeover confirmed at mitFrag=4.0 |
 | R3.5 | **Topological necessity** — TSSE is topology-sensitive, ISR is topology-invariant | ISR-dominant: 100% genuine on all 5 topologies; TSSE-dominant: only C. elegans tips |
 | R3.6 | **Seed location** — timing modulator, not tipping determinant | 59/61 neurons fragile; onset range 77–165 steps; AVAL ranks 9th fastest cascade |
+| R3.7 | **Vulnerability-topology alignment** — BA rescued to 80% with degree-correlated vulnerability; C. elegans destroyed | Hub-vulnerability misalignment explains BA failure; hub structure routes spread hub-first in all conditions (deg-death r≈0.41) |
 
 ---
 
