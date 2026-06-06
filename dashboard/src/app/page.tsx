@@ -39,6 +39,7 @@ const R3Seed       = dynamic(() => import("@/components/phases/Round3SeedLocatio
 const R3VulnAlign  = dynamic(() => import("@/components/phases/Round3VulnAlignment"),  { ssr: false });
 const R3CombTherapy = dynamic(() => import("@/components/phases/Round3CombinationTherapy"), { ssr: false });
 const R3TherapCliff = dynamic(() => import("@/components/phases/Round3TherapeuticCliff"),   { ssr: false });
+const R3BioMap      = dynamic(() => import("@/components/phases/Round3BiologicalMapping"),  { ssr: false });
 
 // ── Tab registry ─────────────────────────────────────────────────────────────
 const TABS = [
@@ -85,6 +86,7 @@ const TABS = [
   { id: "r3vulnalign",  label: "R3.7: Vuln Alignment",                 icon: "🎯", short: "R3.7 Alignment" },
   { id: "r3combtherapy", label: "R3.8: Combination Therapy",           icon: "💉", short: "R3.8 Combo Rx"  },
   { id: "r3therapcliff", label: "R3.9: Therapeutic Cliff",             icon: "⚡", short: "R3.9 Cliff"     },
+  { id: "r3biomap",      label: "R3.10: Biological Mapping",           icon: "💊", short: "R3.10 Bio Map"  },
 ] as const;
 
 type TabId = typeof TABS[number]["id"];
@@ -97,7 +99,7 @@ const NAV_SECTIONS: { label: string | null; ids: TabId[] }[] = [
   { label: "── Early Phases ──", ids: ["phase1a", "phase1b", "phase1c", "phase2", "phase3", "phase4"] },
   { label: "── Core Findings ──", ids: ["phase5", "phase6", "phase7", "phase8", "phase9", "phase10", "phase12", "phase13"] },
   { label: "── Round 2 ──", ids: ["r2motif", "r2efficiency", "r2therapy", "r2subtype", "r2biomarker", "r2window", "r2twe"] },
-  { label: "── Round 3 ──", ids: ["r3decoupled", "r3downstream", "r3mitothresh", "r3mitovalid", "r3topology", "r3seed", "r3vulnalign", "r3combtherapy", "r3therapcliff"] },
+  { label: "── Round 3 ──", ids: ["r3decoupled", "r3downstream", "r3mitothresh", "r3mitovalid", "r3topology", "r3seed", "r3vulnalign", "r3combtherapy", "r3therapcliff", "r3biomap"] },
 ];
 
 const TAB_MAP = Object.fromEntries(TABS.map(t => [t.id, t])) as Record<TabId, typeof TABS[number]>;
@@ -157,6 +159,11 @@ const R3_FINDINGS = [
     n: "R3.9", title: "Therapeutic Cliff — ISR Dose-Response Shape",
     desc: "ISR suppression exhibits a sharp cliff at 85–90%: a single 5% step drops genuine tipping by 28 pp (0.860→0.580) and raises benefit by +0.131. Below the cliff (0–85%), benefit accrues incrementally. ISR50 = 96.5% [89.3, 97.3]. ISR90 not reached even at 99%. TSSE independently sustains 36–52% residual tipping. Verdict: SHARP_CLIFF.",
     color: "#ef4444",
+  },
+  {
+    n: "R3.10", title: "Biological Mapping — Production vs Spread",
+    desc: "Spread inhibition (TSSE-only) cannot prevent tipping at any dose (100% tipping at 99% suppression). Production suppression (ISR-only) reduces tipping to 50% at 95% strength. Coupled co-suppression achieves 0% tipping above 90%. Bliss synergy +0.47 at 80% (CI [+0.38, +0.53]); onset coincides with R3.9 therapeutic cliff. Verdict: PRODUCTION_DOMINANT.",
+    color: "#a855f7",
   },
 ];
 
@@ -432,6 +439,7 @@ export default function Dashboard() {
           {activeTab === "r3vulnalign"   && <R3VulnAlign />}
           {activeTab === "r3combtherapy" && <R3CombTherapy />}
           {activeTab === "r3therapcliff" && <R3TherapCliff />}
+          {activeTab === "r3biomap"      && <R3BioMap />}
         </main>
       </div>
 
