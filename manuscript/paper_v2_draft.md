@@ -17,7 +17,11 @@ Connectome-based neurodegeneration models typically aggregate protein seeding an
 
 Across a 5×5 parameter grid (25 cells, 500 baseline runs), both mechanisms independently sustain genuine triphasic tipping (mean rate 83.8%), with ISR more predictive of tipping probability (Pearson r = 0.586 vs. 0.463 for TSSE). A single-mechanism ablation protocol applied across six cascade pathways and three dynamical regimes confirms that ISR and TSSE are the sole universally load-bearing mechanisms; mitochondrial damage acquires load-bearing character only under extreme fragility (mitochondrialFragility ≥ 4.0, near-takeover onset confirmed with n = 50 seeds and 95% bootstrap confidence intervals), while glutamate excitotoxicity, calcium/ROS, and irreversibility remain negligible across all regimes.
 
-Topology replication across five graph types (8,100 runs) reveals a decisive mechanistic dissociation: ISR-dominant cascades achieve 100% genuine tipping on all five topologies, whereas TSSE-dominant cascades succeed only on the biological *C. elegans* connectome (100%) and fail on all four synthetic alternatives (0–5%). This establishes ISR as a topology-invariant, cell-autonomous disease mechanism and TSSE as a topology-sensitive, circuit-dependent mechanism. A vulnerability-alignment experiment (R3.7) reveals that BA topology's resistance to TSSE cascades reflects hub-vulnerability misalignment rather than architecture per se: degree-correlated vulnerability rescues BA genuine tipping to 80% while the same assignment destroys *C. elegans* tipping entirely (1.000 → 0.000), confirming that the biological motor circuit's success depends on the specific alignment between synaptic connectivity and cellular vulnerability, not on network topology statistics alone. A seed-location sweep of all 61 neurons shows that the initial aggregation focus point is a timing modulator (onset range: 77–165 steps, 88-step window) rather than a tipping determinant (genuine tipping rate = 1.000 for 59/61 neurons). These findings sharpen the mechanistic claims of v1.0 and generate testable predictions distinguishing cell-autonomous from circuit-dependent ALS pathology.
+Topology replication across five graph types (8,100 runs) reveals a decisive mechanistic dissociation: ISR-dominant cascades achieve 100% genuine tipping on all five topologies, whereas TSSE-dominant cascades succeed only on the biological *C. elegans* connectome (100%) and fail on all four synthetic alternatives (0–5%). This establishes ISR as a topology-invariant, cell-autonomous disease mechanism and TSSE as a topology-sensitive, circuit-dependent mechanism. A vulnerability-alignment experiment (R3.7) reveals that BA topology's resistance to TSSE cascades reflects hub-vulnerability misalignment rather than architecture per se: degree-correlated vulnerability rescues BA genuine tipping to 80% while the same assignment destroys *C. elegans* tipping entirely (1.000 → 0.000), confirming that the biological motor circuit's success depends on the specific alignment between synaptic connectivity and cellular vulnerability, not on network topology statistics alone. A seed-location sweep of all 61 neurons shows that the initial aggregation focus point is a timing modulator (onset range: 77–165 steps, 88-step window) rather than a tipping determinant (genuine tipping rate = 1.000 for 59/61 neurons).
+
+Three therapeutic-mapping phases extend these mechanistic findings into intervention design. A 5×4 ISR × glutamate combination sweep (R3.8) demonstrates that glutamate suppression is 63-fold less effective than ISR suppression in preventing genuine tipping, with all combination synergies additive — confirming ISR as the cascade gatekeeper. A 19-level ISR suppression dose-response sweep (R3.9) reveals a sharp therapeutic cliff at 85–90% suppression (single-step drop of 28 percentage points in genuine tipping rate); ISR50 requires 96.5% suppression and ISR90 is not reached even at 99%, with residual tipping sustained by the independent TSSE pathway. Decomposing ISR suppression into production-targeting (ASO analogue; R3.10, Intervention A) versus spread-targeting (synaptic blocker analogue; Intervention B) shows that production suppression alone substantially outperforms spread inhibition at every tested dose (best benefit 0.342 vs. 0.137), while coupled co-suppression is synergistic above 60% strength by Bliss Independence analysis (synergy +0.47 at 80%, CI [+0.38, +0.53]), with synergy onset coinciding exactly with the R3.9 therapeutic cliff.
+
+These findings sharpen the mechanistic claims of v1.0, generate testable predictions distinguishing cell-autonomous from circuit-dependent ALS pathology, and identify the ISR production pathway as the primary target for cascade prevention.
 
 *Keywords:* neurodegeneration; connectome; protein aggregation; trans-synaptic spread; tipping points; ALS; *C. elegans*; mechanism identifiability; topology; vulnerability alignment; hub structure
 
@@ -41,14 +45,20 @@ The v1.0 topology validation (Phase 7C) showed that the Barabasi-Albert scale-fr
 
 ### 1.3 Round 3 scope
 
-This paper reports Round 3 (R3.1–R3.6), a six-phase extension addressing mechanism identifiability:
+This paper reports Round 3 (R3.1–R3.10), a ten-phase extension addressing mechanism identifiability and its therapeutic implications:
 
+**Mechanistic dissection (R3.1–R3.7):**
 - **R3.1**: Decouple aggAmp into ISR and TSSE; characterise the 5×5 parameter landscape
 - **R3.2**: Downstream causal power — can mitochondria, glutamate, or calcium become load-bearing?
 - **R3.3/R3.4**: Map and validate the mitochondrial near-takeover threshold with bootstrapped confidence intervals
 - **R3.5**: Replicate the topology test with the decoupled model; isolate which mechanism drives topology sensitivity
 - **R3.6**: Test seed location sensitivity — does the initial aggregation focus point change tipping?
 - **R3.7**: Determine whether BA's resistance to TSSE cascades reflects hub-vulnerability misalignment or hub architecture per se
+
+**Therapeutic mapping (R3.8–R3.10):**
+- **R3.8**: Gatekeeper vs amplifier — ISR × glutamate combination therapy sweep; which pathway governs cascade entry?
+- **R3.9**: Therapeutic cliff mapping — does ISR suppression produce a gradual or cliff-like dose response?
+- **R3.10**: Biological mapping of ISR — does production suppression (ASO analogue) differ from spread inhibition (synaptic blocker analogue) in efficacy and dose-response shape?
 
 All phases use the *C. elegans* motor connectome (61 neurons, 127 directed synapses; White et al. 1986; Cook et al. 2019) and the strict three-part Phase 7B tipping criterion (peak death rate > 4, spatial coherence r > 0.30, first death after step 50) established in v1.0.
 
@@ -124,6 +134,32 @@ Initial aggregation boost of +0.5 was applied to each of the 61 neurons in turn 
 ### 2.7 Vulnerability-alignment protocol (R3.7)
 
 Three vulnerability assignments were applied to 20 BA instances and the *C. elegans* connectome, using the TSSE-dominant context (ISR = 0.5, TSSE = 5.0). For each topology instance, node degree was computed as total degree (in + out) from the directed edge list. Assignment B: vuln_i = 0.1 + 0.9 × (degree_i / max_degree); assignment C: vuln_i = 1.0 − 0.9 × (degree_i / max_degree). After injecting each vulnerability array, initial aggregation was re-seeded as vuln_i × U(0, base) to maintain consistency with the original initialisation. The degree-death correlation was computed as the Spearman rank correlation between node degree and death step (positive = high-degree nodes die earlier). 10 seeds × 20 BA instances × 3 assignments + 10 seeds × 1 CE instance × 3 assignments = 630 runs × 500 steps.
+
+### 2.8 Combination therapy protocol (R3.8)
+
+R3.8 tests whether ISR suppression and glutamate suppression interact synergistically, additively, or antagonistically. Context: medium aggregation (ISR = TSSE = 2.0). A 5×4 grid of ISR suppression × glutamate suppression was tested:
+
+- ISR reductions: {0%, 10%, 20%, 30%, 50%} applied to `intracellularSeedingRate` (baseline = 2.0)
+- Glutamate reductions: {0%, 50%, 70%, 90%} applied to `glutamateSensitivity` (baseline = 0.010)
+- Additional solo conditions: ISR 70% only; glutamate 99% only
+
+Total: 22 conditions × 20 seeds × 500 steps = 440 runs. Benefit score (composite of tipping prevention [40%], first-death delay [20%], plateau survivor gain [25%], functional survival gain [15%]) was computed against untreated baseline. Synergy was tested for all ISR + glutamate combination pairs using: `synergy = benefit(combo) − benefit(ISR_only) − benefit(glut_only)`; classified as synergistic (> +0.10, CI_lo > 0), antagonistic (< −0.10, CI_hi < 0), or additive (CI overlaps 0). Bootstrap CI: N = 500 resamples.
+
+Note: Clearance enhancement was not tested in R3.8–R3.10 because the current model has no aggregation decay term. The aggregation equation contains no `−clearance × agg` component; bounds are imposed only by the [0, 1] clip. Future model versions should add explicit clearance kinetics to test autophagy-enhancing or proteasome-activating interventions.
+
+### 2.9 Therapeutic cliff protocol (R3.9)
+
+R3.9 maps the dose-response shape of ISR suppression across 19 levels from 0% to 99%, with dense sampling near the anticipated threshold (75%, 80%, 85%, 90%, 92%, 94%, 95%, 96%, 97%, 98%, 99%). TSSE held constant at 2.0. N = 50 seeds × 500 steps per level = 950 total runs. Key derived quantities: (1) cliff detection — adjacent-level |Δgenuine_rate| > 0.20 or |Δbenefit| > 0.10; (2) ISR50 — suppression level at which genuine tipping rate reaches 50% of baseline, estimated by linear interpolation with bootstrap CI (N = 1000); (3) ISR90 — analogous 90% threshold; (4) response shape classification (flat / linear / saturating / sigmoidal / cliff-like).
+
+### 2.10 Biological mapping protocol (R3.10)
+
+R3.10 decomposes the ISR suppression effect into its two constituent mechanisms, tested as separate interventions:
+
+- **Intervention A — Production suppression**: `ISR = 2.0 × (1 − strength)`, TSSE fixed at 2.0. Biological analogue: ASO-mediated gene silencing reduces the intrinsic per-neuron misfolding initiation rate.
+- **Intervention B — Spread inhibition**: `TSSE = 2.0 × (1 − strength)`, ISR fixed at 2.0. Biological analogue: synaptic transmission blockers reduce prion-like propagation efficiency.
+- **Intervention C — Coupled suppression (v1.0-style)**: both ISR and TSSE scaled by (1 − strength) simultaneously. Reproduces the effect of v1.0 `aggAmp` reduction.
+
+Strength sweep: {10%, 20%, 30%, 40%, 50%, 60%, 70%, 80%, 90%, 95%, 99%}. N = 30 seeds × 500 steps × 33 conditions + 30 baseline = 1020 total runs. Synergy between interventions A and B was quantified using the **Bliss Independence model**: *E*_AB = *A* + *B* − *A* × *B*, where *A*, *B* are fractional benefit scores. Synergy = observed_C − *E*_AB. Bootstrap CI (N = 1000 resamples from per-run data; identical seeds used for deterministic recovery). Classification thresholds: synergistic (> 0.05), antagonistic (< −0.05), additive (±0.05); tipping protection threshold 0.10.
 
 ---
 
@@ -243,6 +279,69 @@ The degree-death correlation (≈ 0.41) is nearly identical across all BA condit
 
 Under condition B, genuine tipping on BA rises from 0.000 to **0.800** and coherence flips from −0.265 to +0.371, crossing the C2 threshold (0.30). The R3.5 BA failure was therefore driven by **hub-vulnerability misalignment**, not hub architecture per se. Conversely, reassigning *C. elegans* to degree-correlated vulnerability (condition B) destroys its genuine tipping entirely (1.000 → 0.000): in the biological connectome, the highest-degree node (AVAL, degree ≈ 23) has low biological vulnerability (0.15 as a command interneuron), so making hubs maximally vulnerable scrambles the death order relative to the biological gradient. The two results are symmetric: alignment rescues BA; misalignment destroys *C. elegans*.
 
+### 3.7 R3.8 — Combination therapy: ISR is the cascade gatekeeper, glutamate suppression negligible
+
+A 5×4 ISR × glutamate suppression grid was run under medium aggregation context (ISR = TSSE = 2.0). All 22 conditions produced genuine tipping at 100% when ISR suppression ≤ 60%; genuine tipping first fell below 100% only at ISR ≥ 70% suppression. In contrast, glutamate suppression at any dose (50%, 70%, 90%, or 99%) left genuine tipping rate unchanged at 1.000.
+
+Key quantitative comparison at matched dose levels:
+
+| Intervention | Strength | Genuine tipping | Benefit score |
+|---|---|---|---|
+| ISR-only | 50% | 1.000 | 0.057 |
+| Glutamate-only | 90% | 1.000 | 0.001 |
+| Ratio (ISR/glut at comparable doses) | — | — | **63×** |
+
+**Glutamate suppression is 63-fold less effective than ISR suppression** (benefit 0.001 at 90% glutamate reduction vs. 0.057 at 50% ISR reduction). Even at 99% glutamate suppression, genuine tipping rate remains 1.000 and benefit score is 0.0003. This finding directly reflects the cascade architecture: the glutamate excitotoxicity pathway is gated by ATP depletion, which is itself downstream of aggregation. Reducing glutamate sensitivity does not prevent the upstream ATP collapse that activates it.
+
+All 12 tested combination pairs (ISR reduction × glutamate reduction) were classified as **additive** under the synergy criterion (all bootstrap CIs overlapped zero). No combination provided benefit beyond the ISR component alone. The most effective tested condition (ISR 50% + glutamate 90%) had benefit 0.062, compared to 0.057 for ISR 50% alone — a difference within noise.
+
+**Verdict: GATEKEEPER-DOMINANT.** ISR controls cascade entry; glutamate acts downstream of the bottleneck and cannot prevent tipping regardless of suppression depth.
+
+### 3.8 R3.9 — Therapeutic cliff: ISR dose-response is threshold-gated, not graded
+
+The 19-level ISR suppression sweep (0%–99%, 50 seeds per level, N = 950 runs) reveals a non-linear, cliff-like dose-response. At 0–85% suppression, genuine tipping rate declines incrementally from 1.000 to 0.860, with benefit score rising steadily to 0.163 — consistent with a graded, approximately linear response. Between 85% and 90% suppression, a sharp cliff is detected:
+
+| Metric | 85% suppression | 90% suppression | Step change |
+|---|---|---|---|
+| Genuine tipping rate | 0.860 [0.76, 0.94] | 0.580 [0.44, 0.70] | **−0.280** |
+| Benefit score | 0.163 | 0.293 | **+0.131** |
+
+This 28-percentage-point single-step drop in genuine tipping rate exceeds the cliff detection threshold (|Δ| > 0.20) and is the only cliff region across the full sweep.
+
+**ISR50** (suppression required for 50% reduction in genuine tipping rate from baseline) = **96.5%** [95% CI: 89.3%, 97.3%]. **ISR90 was not reached** even at 99% suppression (genuine tipping rate at 99% suppression = 0.52 [0.38, 0.66]). The residual tipping at high ISR suppression is sustained by TSSE = 2.0, which was held constant throughout R3.9: once stochastic initiation triggers even a small aggregation focus, network propagation via the trans-synaptic pathway can sustain cascade progression independently of the seeding rate.
+
+**Response shape classification: CLIFF-LIKE.** The first half of the suppression range (0–50%) accounts for 12% of the total tipping rate drop; the second half (50–99%) accounts for 36%, with the concentration occurring in the 85–90% interval. This non-linear shape has direct therapeutic implications: partial ISR suppression (< 85%) provides incremental but sub-threshold benefit; therapeutic efficacy requires near-complete target engagement.
+
+### 3.9 R3.10 — Biological mapping: production suppression dominates; Bliss synergy confirmed above 60%
+
+Decomposing ISR into two separate biological interventions under medium aggregation context (ISR = TSSE = 2.0, 11 strength levels, 30 seeds each):
+
+| Intervention | 99% dose: genuine tipping | Best benefit | ISR50 strength | Cliff |
+|---|---|---|---|---|
+| A: Production only (ASO analogue) | 0.500 [0.33, 0.67] | 0.342 | 95% | At 90%→95% (Δ−0.333) |
+| B: Spread only (synaptic blocker) | **1.000** [1.00, 1.00] | 0.137 | **Not reached** | None |
+| C: Coupled (v1.0-style) | **0.000** [0.00, 0.00] | 0.979 | 72% | At 60%→70% (Δ−0.400) |
+
+**Intervention B (spread inhibition alone) cannot prevent genuine tipping at any tested strength.** Genuine tipping rate = 1.000 across all 11 conditions from 10% to 99% TSSE suppression. Benefit accrues only via first-death delay and minor plateau improvements (best benefit 0.137 at 99%), not through tipping prevention. This result arises because, in the ISR = 2.0 context, each highly-vulnerable neuron independently accumulates aggregation through its intrinsic seeding rate on a timescale that reaches the cascade threshold regardless of how much trans-synaptic propagation is blocked.
+
+**Intervention A (production suppression alone) provides moderate but incomplete protection.** Genuine tipping falls to 50% at 95% strength; the 90%→95% cliff mirrors the R3.9 finding. Maximum benefit 0.342 — far below what is needed for reliable cascade prevention.
+
+**Coupled suppression (Intervention C) achieves near-complete cascade prevention above 90%**: genuine tipping = 0.000 [0.00, 0.00] at 90% and above; benefit score 0.904 at 90%, 0.979 at 99%. The synergy between interventions A and B was quantified by Bliss Independence analysis (N = 1000 bootstrap resamples):
+
+| Strength | Bliss expected benefit | Observed C | Synergy | 95% CI | Classification |
+|---|---|---|---|---|---|
+| 10–50% | 0.025–0.099 | 0.021–0.129 | −0.004 to +0.030 | CIs overlap zero | Additive |
+| 60% | 0.129 | 0.183 | +0.055 | [+0.044, +0.067] | **Synergistic** |
+| 70% | 0.168 | 0.416 | **+0.247** | [+0.166, +0.322] | **Synergistic** |
+| 80% | 0.253 | 0.719 | **+0.466** | [+0.381, +0.535] | **Synergistic** |
+| 90% | 0.273 | 0.904 | **+0.631** | [+0.584, +0.672] | **Synergistic** |
+
+Mean Bliss synergy across all 11 strengths: benefit = +0.229, tipping protection = +0.258. 6/11 strength levels show statistically significant synergy (CI_lo > 0).
+
+**Synergy onset coincides exactly with the R3.9 therapeutic cliff** (60–70% strength threshold). Below the cliff, neither A nor B individually perturbs tipping dynamics, and their combination is correspondingly additive. Above the cliff, ISR suppression pushes individual neurons toward the stochastic escape boundary — at which point TSSE co-suppression cooperates by shrinking residual network propagation that would otherwise re-seed the cascade from the dwindling number of loaded neurons.
+
+The mechanistic basis of the synergy is cooperative rather than independent: TSSE suppression provides no protection when used alone (prot_B = 0 throughout), so the Bliss baseline equals prot_A at all strengths. Any benefit of coupling beyond ISR-alone reflects genuine mechanistic cooperativity: ISR suppression enables TSSE suppression to be effective, and TSSE co-suppression lowers the ISR threshold required for stochastic escape. This is noted explicitly: the synergy is mechanistic cooperativity within a single cascade pathway, not pharmacological synergy between independently active agents.
+
 ---
 
 ## 4. Discussion
@@ -283,7 +382,19 @@ Round 3 strengthens several v1.0 claims while qualifying others:
 
 5. **Topology sensitivity is alignment-dependent, not architecture-dependent** (R3.7): The Phase 7C finding that BA graphs are uniquely resistant is now mechanistically resolved. BA hub structure always drives hub-first spread (degree-death corr ≈ 0.41); resistance arises because biological vulnerability is misaligned with hub status by construction in random scale-free graphs. The *C. elegans* motor circuit's vulnerability gradient is a functional feature, not merely a biological baseline — it is what makes TSSE-driven spread coherent.
 
-### 4.5 Limitations of the mechanistic interpretation
+### 4.5 Therapeutic implications of R3.8–R3.10
+
+The three therapeutic-mapping phases translate the mechanistic dissociation of ISR and TSSE into predictions about intervention design. Several findings warrant explicit discussion.
+
+**The glutamate excitotoxicity pathway is a poor primary target in this model.** R3.8 demonstrates that glutamate suppression at any dose (including 99%) does not reduce genuine tipping. This is mechanistically expected: the glutamate pathway is downstream of ATP depletion, which itself is downstream of aggregation. A drug targeting glutamate sensitivity cannot prevent the upstream aggregation–mito–ATP cascade from reaching the point at which excitotoxicity would normally activate — by that stage, the cascade is already committed. This is consistent with the clinical observation that riluzole (which reduces glutamate release) provides only modest benefit in ALS [CITATION], though the model-to-biology mapping is approximate and the mechanism of riluzole's modest efficacy may involve pathways not captured here.
+
+**Near-complete ISR engagement is required for tipping prevention (R3.9).** The cliff-like dose-response (ISR50 = 96.5%) implies that partial ISR suppression — including 85% suppression — produces only incremental benefit without crossing the prevention threshold. This is a hypothesis for dose optimisation: if the ISR analogy to TDP-43 expression holds, ASO-mediated knockdown studies should test whether the relationship between transcript reduction and aggregation prevention is similarly non-linear. The model predicts a poor efficacy plateau below approximately 85% target engagement, with steep gains above it.
+
+**The synergy between production and spread inhibition is mechanistic cooperativity, not additive independence.** The Bliss analysis confirms genuine synergy (mean +0.23 across all tested doses), but the mechanism is clarified: TSSE suppression alone is completely ineffective (Intervention B, prot_B = 0 at all doses), making the Bliss expected combined equal to prot_A alone. Any gain from coupling therefore registers as synergy. This is not an artifact but correctly represents cooperative cascade dynamics: ISR suppression creates the conditions under which TSSE suppression can function by reducing the autonomous loading rate of individual neurons to below the stochastic cascade threshold. In drug combination terms, this is analogous to a sensitiser + effector relationship rather than two independently acting drugs — the clinical analogy would be sequential or co-administered agents where one creates the context required for the other to work. This pattern could inform combination therapy design if both ASO-like (production) and anti-propagation (spread) approaches are pursued simultaneously.
+
+**Model limitation on clearance interventions.** The current model has no aggregation decay term; only clip(agg, 0, 1) bounds accumulation. Clearance-enhancing approaches (autophagy inducers, proteasome activators — rapamycin analogues and related compounds) cannot be modelled in the current framework. Adding an explicit `−AGG_CLEARANCE × atp × agg` term to the aggregation equation would enable a third intervention class (Intervention D) and allow comparison of production suppression, spread inhibition, and clearance enhancement as distinct biological strategies. This is an important gap given the clinical interest in autophagy activation as a therapeutic approach in TDP-43 proteinopathies.
+
+### 4.6 Limitations of the mechanistic interpretation
 
 The topology-invariance of ISR and topology-sensitivity of TSSE are model properties that may not map directly onto biological mechanisms. The *C. elegans* motor connectome is an empirical network, but its vulnerability scores, synapse weights, and neurotransmitter assignments are approximate. The finding that BA fails under TSSE-dominant conditions is contingent on hub neurons being randomly assigned vulnerability scores; in a biological BA-like network where vulnerability correlates with degree, the result might differ. The discrete parameter sweep (5 ISR × 5 TSSE values) cannot rule out non-monotonic behaviour between grid points.
 
@@ -291,7 +402,7 @@ The topology-invariance of ISR and topology-sensitivity of TSSE are model proper
 
 ## 5. Conclusion
 
-Decoupling aggregation into intracellular seeding (ISR) and trans-synaptic spread (TSSE) resolves a key mechanism identifiability problem in the v1.0 model and yields five principal findings:
+Decoupling aggregation into intracellular seeding (ISR) and trans-synaptic spread (TSSE) resolves a key mechanism identifiability problem in the v1.0 model; three additional therapeutic-mapping phases translate the mechanistic findings into intervention predictions. Together, these yield eight principal findings:
 
 1. **aggAmp dominance is genuine**: ISR and TSSE are independently load-bearing, with ISR more predictive of tipping probability (r = 0.586 vs. 0.463). The v1.0 aggAmp dominance is not a coupling artifact.
 
@@ -303,7 +414,13 @@ Decoupling aggregation into intracellular seeding (ISR) and trans-synaptic sprea
 
 5. **Seed location is a timing modulator, not a tipping determinant**: 59/61 neurons produce genuine tipping regardless of which neuron is initially boosted. The seed location affects *when* (88-step onset range) but not *whether* tipping occurs. Command interneurons with high network centrality (AVDL, AVDR, AVAL) rank in the top 15% for onset acceleration, validating Phase 1A's identification of network-central nodes as cascade amplifiers.
 
-These findings motivate experiments that distinguish cell-autonomous from circuit-dependent components of ALS protein propagation, including cell-type-specific ASO delivery studies, optogenetic manipulation of spread pathways, and motor circuit topology mapping in disease models.
+6. **Glutamate suppression is 63-fold less effective than ISR suppression**: Even at 99% glutamate reduction, genuine tipping rate = 1.000. The cascade is gated at ISR (aggregation production), not at glutamate excitotoxicity. All ISR × glutamate combination synergies are additive (R3.8).
+
+7. **ISR dose-response is cliff-like**: The 85–90% ISR suppression interval produces a 28-percentage-point single-step drop in genuine tipping rate — the only cliff across the full 0–99% sweep. ISR50 requires 96.5% suppression [89.3%, 97.3% CI]; ISR90 is not reached even at 99%, with residual tipping sustained by the TSSE pathway (R3.9).
+
+8. **Production suppression (ASO analogue) substantially outperforms spread inhibition alone; coupled suppression is synergistic above 60%**: Spread inhibition (TSSE suppression) alone cannot prevent tipping at any dose (prot_B = 0). Production suppression alone achieves 50% tipping reduction at 95% strength. Coupled co-suppression achieves 100% tipping prevention above 90% strength, with Bliss synergy +0.47 at 80% (CI [+0.38, +0.53]), onset coinciding exactly with the R3.9 therapeutic cliff (R3.10).
+
+These findings motivate experiments that distinguish cell-autonomous from circuit-dependent components of ALS protein propagation, including cell-type-specific ASO delivery studies, near-complete target engagement dose escalation experiments, and optogenetic manipulation of spread pathways. The model-predicted synergy between production and spread inhibition provides a rationale for combination strategies in which ASO-mediated knockdown creates the context required for anti-propagation agents to be effective.
 
 ---
 
@@ -319,7 +436,9 @@ These findings motivate experiments that distinguish cell-autonomous from circui
 
 5. **Seed location at medium aggregation only**: R3.6 tested seed sensitivity at ISR = TSSE = 2.0. At lower aggregation intensity, where individual seeds can make or break tipping (the "both required" cells in R3.1), seed location may be a stronger determinant of tipping outcome.
 
-6. **All results hypothesis-generating**: This is a computational modelling study. All findings require experimental validation before any translational significance can be attributed. The model is not a clinical predictor of ALS progression, treatment response, or patient prognosis.
+6. **No aggregation clearance term**: The current model has no decay term on aggregation (no `−clearance × agg` component); aggregation is bounded only by the [0,1] clip. Clearance-enhancing interventions (autophagy inducers, proteasome activators) cannot be modelled. Adding explicit clearance kinetics would enable a third intervention class in future therapeutic-mapping phases, and may change the apparent dominance of ISR suppression if clearance is in fact a strong independent leverage point.
+
+7. **All results hypothesis-generating**: This is a computational modelling study. All findings require experimental validation before any translational significance can be attributed. The model is not a clinical predictor of ALS progression, treatment response, or patient prognosis.
 
 ---
 

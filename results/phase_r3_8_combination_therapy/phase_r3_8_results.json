@@ -1,0 +1,577 @@
+{
+  "phase": "R3.8 -- Gatekeeper vs Amplifier Combination Therapy Sweep",
+  "params": {
+    "baseline_isr": 2.0,
+    "baseline_tsse": 2.0,
+    "baseline_glut": 0.01,
+    "n_seeds": 20,
+    "steps": 500,
+    "n_bootstrap": 500,
+    "benefit_weights": {
+      "tipping": 0.4,
+      "delay": 0.2,
+      "plateau": 0.25,
+      "survival": 0.15
+    },
+    "criterion": {
+      "slope_thr": 4,
+      "coh_thr": 0.3,
+      "silent_min": 50
+    },
+    "isr_reductions": [
+      0.0,
+      0.1,
+      0.2,
+      0.3,
+      0.5
+    ],
+    "glut_reductions": [
+      0.0,
+      0.5,
+      0.7,
+      0.9
+    ],
+    "extra_a": [
+      0.7,
+      0.0
+    ],
+    "extra_b": [
+      0.0,
+      0.99
+    ]
+  },
+  "verdict": "gatekeeper_dominant",
+  "verdict_metrics": {
+    "benefit_isr_50pct": 0.0569,
+    "benefit_isr_70pct": 0.1111,
+    "benefit_glut_90pct": 0.0009,
+    "benefit_glut_99pct": 0.0003,
+    "benefit_best_combo": 0.0617,
+    "best_synergy_cell": "(0.5, 0.9)",
+    "best_synergy_value": 0.0039,
+    "best_synergy_ci": [
+      -0.0068,
+      0.0083
+    ],
+    "best_synergy_class": "additive"
+  },
+  "baseline_stats": {
+    "genuine_tipping_rate": 1.0,
+    "first_death_step": 168.0,
+    "plateau_survivors": 9.0,
+    "mean_spatial_coherence_r": 0.673,
+    "peak_death_slope": 10.5,
+    "functional_survival_duration": 226.0,
+    "benefit_score": 0.0
+  },
+  "key_scenarios": {
+    "Baseline": {
+      "genuine_tipping_rate": 1.0,
+      "first_death_step": 168.0,
+      "plateau_survivors": 9.0,
+      "mean_spatial_coherence_r": 0.673,
+      "peak_death_slope": 10.5,
+      "functional_survival_duration": 226.0,
+      "benefit_score": 0.0,
+      "synergy_analysis": {
+        "synergy": 0.0,
+        "synergy_boot": 0.0,
+        "ci_lo": 0.0,
+        "ci_hi": 0.0,
+        "classification": "n/a"
+      }
+    },
+    "ISR 50%": {
+      "genuine_tipping_rate": 1.0,
+      "first_death_step": 195.0,
+      "plateau_survivors": 12.5,
+      "mean_spatial_coherence_r": 0.559,
+      "peak_death_slope": 9.0,
+      "functional_survival_duration": 269.5,
+      "benefit_score": 0.0569,
+      "synergy_analysis": {
+        "synergy": 0.0,
+        "synergy_boot": 0.0,
+        "ci_lo": 0.0,
+        "ci_hi": 0.0,
+        "classification": "n/a"
+      }
+    },
+    "Glut 90%": {
+      "genuine_tipping_rate": 1.0,
+      "first_death_step": 169.5,
+      "plateau_survivors": 9.0,
+      "mean_spatial_coherence_r": 0.666,
+      "peak_death_slope": 10.0,
+      "functional_survival_duration": 224.5,
+      "benefit_score": 0.0009,
+      "synergy_analysis": {
+        "synergy": 0.0,
+        "synergy_boot": 0.0,
+        "ci_lo": 0.0,
+        "ci_hi": 0.0,
+        "classification": "n/a"
+      }
+    },
+    "ISR20%+Glut50%": {
+      "genuine_tipping_rate": 1.0,
+      "first_death_step": 179.5,
+      "plateau_survivors": 10.5,
+      "mean_spatial_coherence_r": 0.644,
+      "peak_death_slope": 10.5,
+      "functional_survival_duration": 237.5,
+      "benefit_score": 0.0204,
+      "synergy_analysis": {
+        "synergy": -0.0078,
+        "synergy_boot": -0.0096,
+        "ci_lo": -0.0189,
+        "ci_hi": 0.0027,
+        "classification": "additive"
+      }
+    },
+    "ISR30%+Glut70%": {
+      "genuine_tipping_rate": 1.0,
+      "first_death_step": 183.5,
+      "plateau_survivors": 12.0,
+      "mean_spatial_coherence_r": 0.61,
+      "peak_death_slope": 9.5,
+      "functional_survival_duration": 250.5,
+      "benefit_score": 0.0372,
+      "synergy_analysis": {
+        "synergy": -0.0017,
+        "synergy_boot": -0.0026,
+        "ci_lo": -0.0136,
+        "ci_hi": 0.006,
+        "classification": "additive"
+      }
+    }
+  },
+  "all_conditions": [
+    {
+      "isr_reduction": 0.0,
+      "glut_reduction": 0.0,
+      "isr_value": 2.0,
+      "glut_value": 0.01,
+      "genuine_tipping_rate": 1.0,
+      "first_death_step": 168.0,
+      "plateau_survivors": 9.0,
+      "mean_spatial_coherence_r": 0.673,
+      "peak_death_slope": 10.5,
+      "functional_survival_duration": 226.0,
+      "benefit_score": 0.0,
+      "synergy_analysis": {
+        "synergy": 0.0,
+        "synergy_boot": 0.0,
+        "ci_lo": 0.0,
+        "ci_hi": 0.0,
+        "classification": "n/a"
+      }
+    },
+    {
+      "isr_reduction": 0.0,
+      "glut_reduction": 0.5,
+      "isr_value": 2.0,
+      "glut_value": 0.005,
+      "genuine_tipping_rate": 1.0,
+      "first_death_step": 169.5,
+      "plateau_survivors": 9.0,
+      "mean_spatial_coherence_r": 0.678,
+      "peak_death_slope": 10.0,
+      "functional_survival_duration": 227.0,
+      "benefit_score": 0.0015,
+      "synergy_analysis": {
+        "synergy": 0.0,
+        "synergy_boot": 0.0,
+        "ci_lo": 0.0,
+        "ci_hi": 0.0,
+        "classification": "n/a"
+      }
+    },
+    {
+      "isr_reduction": 0.0,
+      "glut_reduction": 0.7,
+      "isr_value": 2.0,
+      "glut_value": 0.003,
+      "genuine_tipping_rate": 1.0,
+      "first_death_step": 168.5,
+      "plateau_survivors": 9.5,
+      "mean_spatial_coherence_r": 0.676,
+      "peak_death_slope": 10.0,
+      "functional_survival_duration": 225.0,
+      "benefit_score": 0.0027,
+      "synergy_analysis": {
+        "synergy": 0.0,
+        "synergy_boot": 0.0,
+        "ci_lo": 0.0,
+        "ci_hi": 0.0,
+        "classification": "n/a"
+      }
+    },
+    {
+      "isr_reduction": 0.0,
+      "glut_reduction": 0.9,
+      "isr_value": 2.0,
+      "glut_value": 0.001,
+      "genuine_tipping_rate": 1.0,
+      "first_death_step": 169.5,
+      "plateau_survivors": 9.0,
+      "mean_spatial_coherence_r": 0.666,
+      "peak_death_slope": 10.0,
+      "functional_survival_duration": 224.5,
+      "benefit_score": 0.0009,
+      "synergy_analysis": {
+        "synergy": 0.0,
+        "synergy_boot": 0.0,
+        "ci_lo": 0.0,
+        "ci_hi": 0.0,
+        "classification": "n/a"
+      }
+    },
+    {
+      "isr_reduction": 0.0,
+      "glut_reduction": 0.99,
+      "isr_value": 2.0,
+      "glut_value": 0.0001,
+      "genuine_tipping_rate": 1.0,
+      "first_death_step": 168.5,
+      "plateau_survivors": 9.0,
+      "mean_spatial_coherence_r": 0.68,
+      "peak_death_slope": 10.0,
+      "functional_survival_duration": 225.5,
+      "benefit_score": 0.0003
+    },
+    {
+      "isr_reduction": 0.1,
+      "glut_reduction": 0.0,
+      "isr_value": 1.8,
+      "glut_value": 0.01,
+      "genuine_tipping_rate": 1.0,
+      "first_death_step": 174.0,
+      "plateau_survivors": 10.0,
+      "mean_spatial_coherence_r": 0.65,
+      "peak_death_slope": 10.0,
+      "functional_survival_duration": 231.0,
+      "benefit_score": 0.0112,
+      "synergy_analysis": {
+        "synergy": 0.0,
+        "synergy_boot": 0.0,
+        "ci_lo": 0.0,
+        "ci_hi": 0.0,
+        "classification": "n/a"
+      }
+    },
+    {
+      "isr_reduction": 0.1,
+      "glut_reduction": 0.5,
+      "isr_value": 1.8,
+      "glut_value": 0.005,
+      "genuine_tipping_rate": 1.0,
+      "first_death_step": 172.0,
+      "plateau_survivors": 10.0,
+      "mean_spatial_coherence_r": 0.641,
+      "peak_death_slope": 10.0,
+      "functional_survival_duration": 232.5,
+      "benefit_score": 0.0108,
+      "synergy_analysis": {
+        "synergy": -0.0019,
+        "synergy_boot": -0.0032,
+        "ci_lo": -0.0123,
+        "ci_hi": 0.0056,
+        "classification": "additive"
+      }
+    },
+    {
+      "isr_reduction": 0.1,
+      "glut_reduction": 0.7,
+      "isr_value": 1.8,
+      "glut_value": 0.003,
+      "genuine_tipping_rate": 1.0,
+      "first_death_step": 174.0,
+      "plateau_survivors": 11.0,
+      "mean_spatial_coherence_r": 0.652,
+      "peak_death_slope": 10.0,
+      "functional_survival_duration": 231.0,
+      "benefit_score": 0.016,
+      "synergy_analysis": {
+        "synergy": 0.0021,
+        "synergy_boot": -0.0005,
+        "ci_lo": -0.0093,
+        "ci_hi": 0.0065,
+        "classification": "additive"
+      }
+    },
+    {
+      "isr_reduction": 0.1,
+      "glut_reduction": 0.9,
+      "isr_value": 1.8,
+      "glut_value": 0.001,
+      "genuine_tipping_rate": 1.0,
+      "first_death_step": 173.0,
+      "plateau_survivors": 11.0,
+      "mean_spatial_coherence_r": 0.65,
+      "peak_death_slope": 9.0,
+      "functional_survival_duration": 232.0,
+      "benefit_score": 0.0159,
+      "synergy_analysis": {
+        "synergy": 0.0038,
+        "synergy_boot": 0.0005,
+        "ci_lo": -0.0083,
+        "ci_hi": 0.0072,
+        "classification": "additive"
+      }
+    },
+    {
+      "isr_reduction": 0.2,
+      "glut_reduction": 0.0,
+      "isr_value": 1.6,
+      "glut_value": 0.01,
+      "genuine_tipping_rate": 1.0,
+      "first_death_step": 180.5,
+      "plateau_survivors": 11.0,
+      "mean_spatial_coherence_r": 0.653,
+      "peak_death_slope": 9.5,
+      "functional_survival_duration": 243.5,
+      "benefit_score": 0.0267,
+      "synergy_analysis": {
+        "synergy": 0.0,
+        "synergy_boot": 0.0,
+        "ci_lo": 0.0,
+        "ci_hi": 0.0,
+        "classification": "n/a"
+      }
+    },
+    {
+      "isr_reduction": 0.2,
+      "glut_reduction": 0.5,
+      "isr_value": 1.6,
+      "glut_value": 0.005,
+      "genuine_tipping_rate": 1.0,
+      "first_death_step": 179.5,
+      "plateau_survivors": 10.5,
+      "mean_spatial_coherence_r": 0.644,
+      "peak_death_slope": 10.5,
+      "functional_survival_duration": 237.5,
+      "benefit_score": 0.0204,
+      "synergy_analysis": {
+        "synergy": -0.0078,
+        "synergy_boot": -0.0096,
+        "ci_lo": -0.0189,
+        "ci_hi": 0.0027,
+        "classification": "additive"
+      }
+    },
+    {
+      "isr_reduction": 0.2,
+      "glut_reduction": 0.7,
+      "isr_value": 1.6,
+      "glut_value": 0.003,
+      "genuine_tipping_rate": 1.0,
+      "first_death_step": 176.0,
+      "plateau_survivors": 11.0,
+      "mean_spatial_coherence_r": 0.636,
+      "peak_death_slope": 9.0,
+      "functional_survival_duration": 241.0,
+      "benefit_score": 0.0226,
+      "synergy_analysis": {
+        "synergy": -0.0068,
+        "synergy_boot": -0.0076,
+        "ci_lo": -0.0175,
+        "ci_hi": 0.0022,
+        "classification": "additive"
+      }
+    },
+    {
+      "isr_reduction": 0.2,
+      "glut_reduction": 0.9,
+      "isr_value": 1.6,
+      "glut_value": 0.001,
+      "genuine_tipping_rate": 1.0,
+      "first_death_step": 179.0,
+      "plateau_survivors": 11.0,
+      "mean_spatial_coherence_r": 0.653,
+      "peak_death_slope": 9.5,
+      "functional_survival_duration": 244.0,
+      "benefit_score": 0.0261,
+      "synergy_analysis": {
+        "synergy": -0.0015,
+        "synergy_boot": -0.0037,
+        "ci_lo": -0.016,
+        "ci_hi": 0.0087,
+        "classification": "additive"
+      }
+    },
+    {
+      "isr_reduction": 0.3,
+      "glut_reduction": 0.0,
+      "isr_value": 1.4,
+      "glut_value": 0.01,
+      "genuine_tipping_rate": 1.0,
+      "first_death_step": 180.5,
+      "plateau_survivors": 12.0,
+      "mean_spatial_coherence_r": 0.619,
+      "peak_death_slope": 9.0,
+      "functional_survival_duration": 252.0,
+      "benefit_score": 0.0362,
+      "synergy_analysis": {
+        "synergy": 0.0,
+        "synergy_boot": 0.0,
+        "ci_lo": 0.0,
+        "ci_hi": 0.0,
+        "classification": "n/a"
+      }
+    },
+    {
+      "isr_reduction": 0.3,
+      "glut_reduction": 0.5,
+      "isr_value": 1.4,
+      "glut_value": 0.005,
+      "genuine_tipping_rate": 1.0,
+      "first_death_step": 186.5,
+      "plateau_survivors": 12.0,
+      "mean_spatial_coherence_r": 0.624,
+      "peak_death_slope": 9.5,
+      "functional_survival_duration": 248.5,
+      "benefit_score": 0.0379,
+      "synergy_analysis": {
+        "synergy": 0.0002,
+        "synergy_boot": 0.0021,
+        "ci_lo": -0.0079,
+        "ci_hi": 0.0108,
+        "classification": "additive"
+      }
+    },
+    {
+      "isr_reduction": 0.3,
+      "glut_reduction": 0.7,
+      "isr_value": 1.4,
+      "glut_value": 0.003,
+      "genuine_tipping_rate": 1.0,
+      "first_death_step": 183.5,
+      "plateau_survivors": 12.0,
+      "mean_spatial_coherence_r": 0.61,
+      "peak_death_slope": 9.5,
+      "functional_survival_duration": 250.5,
+      "benefit_score": 0.0372,
+      "synergy_analysis": {
+        "synergy": -0.0017,
+        "synergy_boot": -0.0026,
+        "ci_lo": -0.0136,
+        "ci_hi": 0.006,
+        "classification": "additive"
+      }
+    },
+    {
+      "isr_reduction": 0.3,
+      "glut_reduction": 0.9,
+      "isr_value": 1.4,
+      "glut_value": 0.001,
+      "genuine_tipping_rate": 1.0,
+      "first_death_step": 182.0,
+      "plateau_survivors": 11.5,
+      "mean_spatial_coherence_r": 0.625,
+      "peak_death_slope": 9.0,
+      "functional_survival_duration": 245.0,
+      "benefit_score": 0.0309,
+      "synergy_analysis": {
+        "synergy": -0.0062,
+        "synergy_boot": -0.0059,
+        "ci_lo": -0.0151,
+        "ci_hi": 0.0036,
+        "classification": "additive"
+      }
+    },
+    {
+      "isr_reduction": 0.5,
+      "glut_reduction": 0.0,
+      "isr_value": 1.0,
+      "glut_value": 0.01,
+      "genuine_tipping_rate": 1.0,
+      "first_death_step": 195.0,
+      "plateau_survivors": 12.5,
+      "mean_spatial_coherence_r": 0.559,
+      "peak_death_slope": 9.0,
+      "functional_survival_duration": 269.5,
+      "benefit_score": 0.0569,
+      "synergy_analysis": {
+        "synergy": 0.0,
+        "synergy_boot": 0.0,
+        "ci_lo": 0.0,
+        "ci_hi": 0.0,
+        "classification": "n/a"
+      }
+    },
+    {
+      "isr_reduction": 0.5,
+      "glut_reduction": 0.5,
+      "isr_value": 1.0,
+      "glut_value": 0.005,
+      "genuine_tipping_rate": 1.0,
+      "first_death_step": 197.0,
+      "plateau_survivors": 13.0,
+      "mean_spatial_coherence_r": 0.53,
+      "peak_death_slope": 9.0,
+      "functional_survival_duration": 265.0,
+      "benefit_score": 0.0581,
+      "synergy_analysis": {
+        "synergy": -0.0003,
+        "synergy_boot": -0.0022,
+        "ci_lo": -0.0131,
+        "ci_hi": 0.0067,
+        "classification": "additive"
+      }
+    },
+    {
+      "isr_reduction": 0.5,
+      "glut_reduction": 0.7,
+      "isr_value": 1.0,
+      "glut_value": 0.003,
+      "genuine_tipping_rate": 1.0,
+      "first_death_step": 197.5,
+      "plateau_survivors": 13.0,
+      "mean_spatial_coherence_r": 0.563,
+      "peak_death_slope": 8.5,
+      "functional_survival_duration": 266.0,
+      "benefit_score": 0.0589,
+      "synergy_analysis": {
+        "synergy": -0.0007,
+        "synergy_boot": -0.0003,
+        "ci_lo": -0.0103,
+        "ci_hi": 0.0089,
+        "classification": "additive"
+      }
+    },
+    {
+      "isr_reduction": 0.5,
+      "glut_reduction": 0.9,
+      "isr_value": 1.0,
+      "glut_value": 0.001,
+      "genuine_tipping_rate": 1.0,
+      "first_death_step": 199.0,
+      "plateau_survivors": 13.0,
+      "mean_spatial_coherence_r": 0.55,
+      "peak_death_slope": 9.0,
+      "functional_survival_duration": 269.5,
+      "benefit_score": 0.0617,
+      "synergy_analysis": {
+        "synergy": 0.0039,
+        "synergy_boot": 0.0007,
+        "ci_lo": -0.0068,
+        "ci_hi": 0.0083,
+        "classification": "additive"
+      }
+    },
+    {
+      "isr_reduction": 0.7,
+      "glut_reduction": 0.0,
+      "isr_value": 0.6,
+      "glut_value": 0.01,
+      "genuine_tipping_rate": 0.95,
+      "first_death_step": 218.0,
+      "plateau_survivors": 14.0,
+      "mean_spatial_coherence_r": 0.464,
+      "peak_death_slope": 8.0,
+      "functional_survival_duration": 293.5,
+      "benefit_score": 0.1111
+    }
+  ]
+}

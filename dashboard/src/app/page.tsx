@@ -37,6 +37,8 @@ const R3MitoValid  = dynamic(() => import("@/components/phases/Round3MitoValidat
 const R3Topology   = dynamic(() => import("@/components/phases/Round3Topology"),       { ssr: false });
 const R3Seed       = dynamic(() => import("@/components/phases/Round3SeedLocation"),   { ssr: false });
 const R3VulnAlign  = dynamic(() => import("@/components/phases/Round3VulnAlignment"),  { ssr: false });
+const R3CombTherapy = dynamic(() => import("@/components/phases/Round3CombinationTherapy"), { ssr: false });
+const R3TherapCliff = dynamic(() => import("@/components/phases/Round3TherapeuticCliff"),   { ssr: false });
 
 // ── Tab registry ─────────────────────────────────────────────────────────────
 const TABS = [
@@ -81,6 +83,8 @@ const TABS = [
   { id: "r3topology",   label: "R3.5: Topological Necessity",          icon: "🕸️", short: "R3.5 Topology"  },
   { id: "r3seed",       label: "R3.6: Seed Location",                  icon: "🌱", short: "R3.6 Seed Loc." },
   { id: "r3vulnalign",  label: "R3.7: Vuln Alignment",                 icon: "🎯", short: "R3.7 Alignment" },
+  { id: "r3combtherapy", label: "R3.8: Combination Therapy",           icon: "💉", short: "R3.8 Combo Rx"  },
+  { id: "r3therapcliff", label: "R3.9: Therapeutic Cliff",             icon: "⚡", short: "R3.9 Cliff"     },
 ] as const;
 
 type TabId = typeof TABS[number]["id"];
@@ -93,7 +97,7 @@ const NAV_SECTIONS: { label: string | null; ids: TabId[] }[] = [
   { label: "── Early Phases ──", ids: ["phase1a", "phase1b", "phase1c", "phase2", "phase3", "phase4"] },
   { label: "── Core Findings ──", ids: ["phase5", "phase6", "phase7", "phase8", "phase9", "phase10", "phase12", "phase13"] },
   { label: "── Round 2 ──", ids: ["r2motif", "r2efficiency", "r2therapy", "r2subtype", "r2biomarker", "r2window", "r2twe"] },
-  { label: "── Round 3 ──", ids: ["r3decoupled", "r3downstream", "r3mitothresh", "r3mitovalid", "r3topology", "r3seed", "r3vulnalign"] },
+  { label: "── Round 3 ──", ids: ["r3decoupled", "r3downstream", "r3mitothresh", "r3mitovalid", "r3topology", "r3seed", "r3vulnalign", "r3combtherapy", "r3therapcliff"] },
 ];
 
 const TAB_MAP = Object.fromEntries(TABS.map(t => [t.id, t])) as Record<TabId, typeof TABS[number]>;
@@ -143,6 +147,16 @@ const R3_FINDINGS = [
     n: "R3.7", title: "Vulnerability-Hub Alignment",
     desc: "BA rescued from 0%→80% genuine tipping by degree-correlated vulnerability. Same assignment destroys C. elegans (100%→0%). TSSE requires hub-vulnerability alignment, not specific architecture. Degree-death corr ≈0.41 is stable — hubs always die first; coherence only follows when alignment is correct.",
     color: "#f97316",
+  },
+  {
+    n: "R3.8", title: "Gatekeeper vs Amplifier — Combination Therapy",
+    desc: "Glutamate suppression (riluzole-like) has negligible effect in this model: 90% reduction yields benefit 0.001, genuine tipping stays at 100%. ISR 50% suppression yields benefit 0.057 (63x higher). All combination synergies are additive. Verdict: GATEKEEPER-DOMINANT.",
+    color: "#22d3ee",
+  },
+  {
+    n: "R3.9", title: "Therapeutic Cliff — ISR Dose-Response Shape",
+    desc: "ISR suppression exhibits a sharp cliff at 85–90%: a single 5% step drops genuine tipping by 28 pp (0.860→0.580) and raises benefit by +0.131. Below the cliff (0–85%), benefit accrues incrementally. ISR50 = 96.5% [89.3, 97.3]. ISR90 not reached even at 99%. TSSE independently sustains 36–52% residual tipping. Verdict: SHARP_CLIFF.",
+    color: "#ef4444",
   },
 ];
 
@@ -415,7 +429,9 @@ export default function Dashboard() {
           {activeTab === "r3mitovalid"  && <R3MitoValid />}
           {activeTab === "r3topology"   && <R3Topology />}
           {activeTab === "r3seed"       && <R3Seed />}
-          {activeTab === "r3vulnalign"  && <R3VulnAlign />}
+          {activeTab === "r3vulnalign"   && <R3VulnAlign />}
+          {activeTab === "r3combtherapy" && <R3CombTherapy />}
+          {activeTab === "r3therapcliff" && <R3TherapCliff />}
         </main>
       </div>
 

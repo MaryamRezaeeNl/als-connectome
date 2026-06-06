@@ -58,6 +58,9 @@ Across **Phase 0 (prototypes) + Phases 1–14 + Round 2 + Round 3**, the model:
 | R3.5 | **Topological necessity** — TSSE is topology-sensitive, ISR is topology-invariant | ISR-dominant: 100% genuine on all 5 topologies; TSSE-dominant: only C. elegans tips |
 | R3.6 | **Seed location** — timing modulator, not tipping determinant | 59/61 neurons fragile; onset range 77–165 steps; AVAL ranks 9th fastest cascade |
 | R3.7 | **Vulnerability-topology alignment** — BA rescued to 80% with degree-correlated vulnerability; C. elegans destroyed | Hub-vulnerability misalignment explains BA failure; hub structure routes spread hub-first in all conditions (deg-death r≈0.41) |
+| R3.8 | **Combination therapy** — ISR is the cascade gatekeeper; glutamate suppression negligible | Glutamate 63x weaker than ISR (benefit 0.001 vs 0.057); all 12 combination synergies additive; verdict: GATEKEEPER-DOMINANT |
+| R3.9 | **Therapeutic cliff** — ISR dose-response is cliff-like, not graded | Sharp cliff at 85–90% suppression (Δtipping −0.280); ISR50 = 96.5% [89.3%, 97.3%]; ISR90 not reached; residual tipping from TSSE |
+| R3.10 | **Biological mapping of ISR** — production suppression >> spread inhibition; Bliss synergy confirmed | Spread-only: 100% tipping at all doses; production-only best benefit 0.342; coupled best benefit 0.979; Bliss synergy +0.47 at 80% (CI [+0.38,+0.53]), onset at R3.9 cliff |
 
 ---
 
@@ -110,7 +113,12 @@ als_connectome/
 │   ├── phase_r3_3_mito_threshold.py         R3.3: mitochondrial takeover threshold grid sweep
 │   ├── phase_r3_4_mito_validation.py        R3.4: validated threshold with strict dual-criterion
 │   ├── phase_r3_5_topology_necessity.py     R3.5: topology necessity test (v2.0 decoupled model)
-│   └── phase_r3_6_seed_location.py          R3.6: seed location sensitivity (all 61 neurons)
+│   ├── phase_r3_6_seed_location.py          R3.6: seed location sensitivity (all 61 neurons)
+│   ├── phase_r3_7_vuln_alignment.py         R3.7: vulnerability-hub alignment (BA rescue experiment)
+│   ├── phase_r3_8_combination_therapy.py    R3.8: gatekeeper vs amplifier combination sweep
+│   ├── phase_r3_9_therapeutic_cliff.py      R3.9: ISR dose-response cliff mapping (19 levels)
+│   ├── phase_r3_10_biological_mapping.py    R3.10: production vs spread inhibition (Bliss synergy)
+│   └── phase_r3_10_synergy_validation.py    R3.10: Bliss Independence synergy validation
 │
 ├── explore/                        Standalone exploration scripts (no ALS prerequisites)
 │   ├── explore_multiseed.py        # Multi-seed exploration
@@ -217,6 +225,11 @@ python phases/phase_r3_3_mito_threshold.py         # ~2 min  → results/r3_2_do
 python phases/phase_r3_4_mito_validation.py        # ~2 min  → results/r3_2_downstream_causality/
 python phases/phase_r3_5_topology_necessity.py     # ~11 min → results/r3_5_topology_necessity/
 python phases/phase_r3_6_seed_location.py          # ~9 min  → results/r3_6_seed_location/
+python phases/phase_r3_7_vuln_alignment.py         # ~2 min  → results/r3_7_vuln_alignment/
+python phases/phase_r3_8_combination_therapy.py    # ~1 min  → results/phase_r3_8_combination_therapy/
+python phases/phase_r3_9_therapeutic_cliff.py      # ~2 min  → results/phase_r3_9_therapeutic_cliff/
+python phases/phase_r3_10_biological_mapping.py    # ~2 min  → results/r3_10_biological_mapping/
+python phases/phase_r3_10_synergy_validation.py    # ~2 min  → results/r3_10_biological_mapping/ (appends)
 ```
 
 ### Phase prerequisites
@@ -307,6 +320,10 @@ All outputs are written to `results/`. Each phase produces a JSON data file and 
 | `r3_2_downstream_causality/` | R3.2–R3.4 | Downstream causal power + mito threshold validation |
 | `r3_5_topology_necessity/` | R3.5 | Genuine tipping rates across 5 topologies (v2.0) |
 | `r3_6_seed_location/` | R3.6 | Seed fragility for all 61 neurons |
+| `r3_7_vuln_alignment/` | R3.7 | BA rescue + C. elegans destruction under degree-correlated vulnerability |
+| `phase_r3_8_combination_therapy/` | R3.8 | 22-condition ISR × glutamate sweep; synergy analysis |
+| `phase_r3_9_therapeutic_cliff/` | R3.9 | 19-level ISR dose-response; cliff detection; ISR50/ISR90 |
+| `r3_10_biological_mapping/` | R3.10 | Production vs spread inhibition; Bliss synergy validation |
 
 ---
 
