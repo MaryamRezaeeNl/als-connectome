@@ -40,6 +40,7 @@ const R3VulnAlign  = dynamic(() => import("@/components/phases/Round3VulnAlignme
 const R3CombTherapy = dynamic(() => import("@/components/phases/Round3CombinationTherapy"), { ssr: false });
 const R3TherapCliff = dynamic(() => import("@/components/phases/Round3TherapeuticCliff"),   { ssr: false });
 const R3BioMap      = dynamic(() => import("@/components/phases/Round3BiologicalMapping"),  { ssr: false });
+const R4DynWindow   = dynamic(() => import("@/components/phases/Round4DynamicWindow"),       { ssr: false });
 
 // ── Tab registry ─────────────────────────────────────────────────────────────
 const TABS = [
@@ -87,6 +88,8 @@ const TABS = [
   { id: "r3combtherapy", label: "R3.8: Combination Therapy",           icon: "💉", short: "R3.8 Combo Rx"  },
   { id: "r3therapcliff", label: "R3.9: Therapeutic Cliff",             icon: "⚡", short: "R3.9 Cliff"     },
   { id: "r3biomap",      label: "R3.10: Biological Mapping",           icon: "💊", short: "R3.10 Bio Map"  },
+  // Round 4
+  { id: "r4dynwindow",   label: "R4.1: Dynamic Therapeutic Window",    icon: "⏱️", short: "R4.1 Dyn Win"   },
 ] as const;
 
 type TabId = typeof TABS[number]["id"];
@@ -100,6 +103,7 @@ const NAV_SECTIONS: { label: string | null; ids: TabId[] }[] = [
   { label: "── Core Findings ──", ids: ["phase5", "phase6", "phase7", "phase8", "phase9", "phase10", "phase12", "phase13"] },
   { label: "── Round 2 ──", ids: ["r2motif", "r2efficiency", "r2therapy", "r2subtype", "r2biomarker", "r2window", "r2twe"] },
   { label: "── Round 3 ──", ids: ["r3decoupled", "r3downstream", "r3mitothresh", "r3mitovalid", "r3topology", "r3seed", "r3vulnalign", "r3combtherapy", "r3therapcliff", "r3biomap"] },
+  { label: "── Round 4 ──", ids: ["r4dynwindow"] },
 ];
 
 const TAB_MAP = Object.fromEntries(TABS.map(t => [t.id, t])) as Record<TabId, typeof TABS[number]>;
@@ -164,6 +168,14 @@ const R3_FINDINGS = [
     n: "R3.10", title: "Biological Mapping — Production vs Spread",
     desc: "Spread inhibition (TSSE-only) cannot prevent tipping at any dose (100% tipping at 99% suppression). Production suppression (ISR-only) reduces tipping to 50% at 95% strength. Coupled co-suppression achieves 0% tipping above 90%. Bliss synergy +0.47 at 80% (CI [+0.38, +0.53]); onset coincides with R3.9 therapeutic cliff. Verdict: PRODUCTION_DOMINANT.",
     color: "#a855f7",
+  },
+];
+
+const R4_FINDINGS = [
+  {
+    n: "R4.1", title: "Dynamic Therapeutic Window — Late Rescue",
+    desc: "90% coupled suppression has a narrow rescue window in this model (T50=73 steps). Point of no return at step 100; cliff-like response (Δ=0.42 at T75→100). Best predictor of rescue failure: mean ATP depletion (r=−0.77). Both potency (R3.9 cliff at 96.5%) and timing (R4.1 PONR at step 100) impose independent constraints. Verdict: NARROW_RESCUE_WINDOW.",
+    color: "#f59e0b",
   },
 ];
 
@@ -309,6 +321,27 @@ function OverviewPanel() {
         </div>
       </div>
 
+      {/* Round 4 findings */}
+      <div>
+        <h3 className="text-sm font-bold text-gray-400 uppercase tracking-widest mb-2">Round 4 — Dynamic Therapeutic Window</h3>
+        <p className="text-xs text-gray-500 mb-3">
+          Round 4 tests whether the strongest R3.10 therapy (90% coupled suppression) can rescue the
+          cascade when applied late, and identifies the timing constraints on efficacy.
+        </p>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
+          {R4_FINDINGS.map(f => (
+            <div key={f.n} className="bg-gray-900 border border-gray-700 rounded-xl p-4 flex gap-3">
+              <span className="w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold flex-shrink-0 mt-0.5"
+                style={{ background: f.color, color: "#000" }}>{f.n}</span>
+              <div>
+                <div className="text-sm font-semibold text-gray-200 mb-1">{f.title}</div>
+                <div className="text-xs text-gray-400">{f.desc}</div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
       {/* Cascade diagram */}
       <div className="bg-gray-900 border border-gray-700 rounded-xl p-5">
         <h3 className="text-sm font-bold text-gray-400 uppercase tracking-widest mb-3">Excitotoxic Feedback Cascade</h3>
@@ -347,7 +380,7 @@ export default function Dashboard() {
             <span className="text-lg">🧬</span>
             <div>
               <h1 className="text-sm font-bold text-white leading-tight">ALS Connectome Dashboard</h1>
-              <p className="text-xs text-gray-500">C. elegans · 61 neurons · 127 synapses · Phase 0 → Phase 14 + Round 2 + Round 3</p>
+              <p className="text-xs text-gray-500">C. elegans · 61 neurons · 127 synapses · Phase 0 → Phase 14 + Round 2 + Round 3 + Round 4</p>
             </div>
           </div>
           <span className="hidden sm:inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-gray-800 border border-gray-700 text-xs text-gray-400">
@@ -440,6 +473,7 @@ export default function Dashboard() {
           {activeTab === "r3combtherapy" && <R3CombTherapy />}
           {activeTab === "r3therapcliff" && <R3TherapCliff />}
           {activeTab === "r3biomap"      && <R3BioMap />}
+          {activeTab === "r4dynwindow"   && <R4DynWindow />}
         </main>
       </div>
 
