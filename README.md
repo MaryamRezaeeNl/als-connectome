@@ -62,6 +62,7 @@ Across **Phase 0 (prototypes) + Phases 1–14 + Round 2 + Round 3**, the model:
 | R3.9 | **Therapeutic cliff** — ISR dose-response is cliff-like, not graded | Sharp cliff at 85–90% suppression (Δtipping −0.280); ISR50 = 96.5% [89.3%, 97.3%]; ISR90 not reached; residual tipping from TSSE |
 | R3.10 | **Biological mapping of ISR** — production suppression >> spread inhibition; Bliss synergy confirmed | Spread-only: 100% tipping at all doses; production-only best benefit 0.342; coupled best benefit 0.979; Bliss synergy +0.47 at 80% (CI [+0.38,+0.53]), onset at R3.9 cliff |
 | R4.1 | **Dynamic therapeutic window** — rescue probability is steep and narrow; T50_rescue=73 steps | CLIFF-LIKE rescue response (max step Δ=0.42); point of no return at step 100; best predictor: mean ATP (r=−0.77); both potency (R3.9) and timing (R4.1) impose independent constraints |
+| R4.2 | **ATP is a marker, not a bottleneck** — full ATP restoration at T=150 has zero effect on rescue | Genuine tipping rate = 1.000 at all 11 restore levels (0%–100%); true barrier is accumulated aggregation (atp_target = 1−1.10×agg); R4.1's ATP predictor was a proxy for agg accumulation |
 
 ---
 
@@ -121,7 +122,8 @@ als_connectome/
 │   ├── phase_r3_10_biological_mapping.py    R3.10: production vs spread inhibition (Bliss synergy)
 │   └── phase_r3_10_synergy_validation.py    R3.10: Bliss Independence synergy validation
 │
-│   └── phase_r4_1_dynamic_therapeutic_window.py  R4.1: rescue probability vs treatment onset (600 runs)
+│   ├── phase_r4_1_dynamic_therapeutic_window.py  R4.1: rescue probability vs treatment onset (600 runs)
+│   └── phase_r4_2_reopen_rescue_window.py        R4.2: ATP restoration vs rescue at T=150 (550 runs)
 │
 ├── explore/                        Standalone exploration scripts (no ALS prerequisites)
 │   ├── explore_multiseed.py        # Multi-seed exploration
@@ -241,6 +243,7 @@ python phases/phase_r3_10_synergy_validation.py    # ~2 min  → results/r3_10_b
 **Step 7 — Round 4 (requires Steps 1–2; uses R3.1 DecoupledSimulator)**
 ```bash
 python phases/phase_r4_1_dynamic_therapeutic_window.py  # ~55 sec → results/r4_1_dynamic_therapeutic_window/
+python phases/phase_r4_2_reopen_rescue_window.py        # ~46 sec → results/r4_2_reopen_rescue_window/
 ```
 
 ### Phase prerequisites
@@ -336,6 +339,7 @@ All outputs are written to `results/`. Each phase produces a JSON data file and 
 | `phase_r3_9_therapeutic_cliff/` | R3.9 | 19-level ISR dose-response; cliff detection; ISR50/ISR90 |
 | `r3_10_biological_mapping/` | R3.10 | Production vs spread inhibition; Bliss synergy validation |
 | `r4_1_dynamic_therapeutic_window/` | R4.1 | Rescue probability vs T_start; state at intervention; feature importance |
+| `r4_2_reopen_rescue_window/`       | R4.2 | ATP restoration vs rescue at T=150; null result; mechanistic classification |
 
 ---
 

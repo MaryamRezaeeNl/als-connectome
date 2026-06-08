@@ -41,6 +41,7 @@ const R3CombTherapy = dynamic(() => import("@/components/phases/Round3Combinatio
 const R3TherapCliff = dynamic(() => import("@/components/phases/Round3TherapeuticCliff"),   { ssr: false });
 const R3BioMap      = dynamic(() => import("@/components/phases/Round3BiologicalMapping"),  { ssr: false });
 const R4DynWindow   = dynamic(() => import("@/components/phases/Round4DynamicWindow"),       { ssr: false });
+const R4ReopenRescue = dynamic(() => import("@/components/phases/Round4ReopenRescue"),       { ssr: false });
 
 // ── Tab registry ─────────────────────────────────────────────────────────────
 const TABS = [
@@ -90,6 +91,7 @@ const TABS = [
   { id: "r3biomap",      label: "R3.10: Biological Mapping",           icon: "💊", short: "R3.10 Bio Map"  },
   // Round 4
   { id: "r4dynwindow",   label: "R4.1: Dynamic Therapeutic Window",    icon: "⏱️", short: "R4.1 Dyn Win"   },
+  { id: "r4reopenrescue", label: "R4.2: Reopen the Rescue Window",     icon: "🔓", short: "R4.2 Reopen"    },
 ] as const;
 
 type TabId = typeof TABS[number]["id"];
@@ -103,7 +105,7 @@ const NAV_SECTIONS: { label: string | null; ids: TabId[] }[] = [
   { label: "── Core Findings ──", ids: ["phase5", "phase6", "phase7", "phase8", "phase9", "phase10", "phase12", "phase13"] },
   { label: "── Round 2 ──", ids: ["r2motif", "r2efficiency", "r2therapy", "r2subtype", "r2biomarker", "r2window", "r2twe"] },
   { label: "── Round 3 ──", ids: ["r3decoupled", "r3downstream", "r3mitothresh", "r3mitovalid", "r3topology", "r3seed", "r3vulnalign", "r3combtherapy", "r3therapcliff", "r3biomap"] },
-  { label: "── Round 4 ──", ids: ["r4dynwindow"] },
+  { label: "── Round 4 ──", ids: ["r4dynwindow", "r4reopenrescue"] },
 ];
 
 const TAB_MAP = Object.fromEntries(TABS.map(t => [t.id, t])) as Record<TabId, typeof TABS[number]>;
@@ -176,6 +178,11 @@ const R4_FINDINGS = [
     n: "R4.1", title: "Dynamic Therapeutic Window — Late Rescue",
     desc: "90% coupled suppression has a narrow rescue window in this model (T50=73 steps). Point of no return at step 100; cliff-like response (Δ=0.42 at T75→100). Best predictor of rescue failure: mean ATP depletion (r=−0.77). Both potency (R3.9 cliff at 96.5%) and timing (R4.1 PONR at step 100) impose independent constraints. Verdict: NARROW_RESCUE_WINDOW.",
     color: "#f59e0b",
+  },
+  {
+    n: "R4.2", title: "ATP Is a Marker — Aggregation Is the True Barrier",
+    desc: "100% ATP restoration at T=150 (after PONR) produced zero improvement in rescue. ATP is a proxy for accumulated aggregation (atp_target = 1−1.10×agg = 0.729 at T=150). With no aggregation decay term, existing agg=0.246 sustains the cascade regardless of ATP boost. R4.1's ATP predictor (r=−0.77) was a proxy for aggregation accumulation. Verdict: ATP_IS_MARKER.",
+    color: "#22c55e",
   },
 ];
 
@@ -473,7 +480,8 @@ export default function Dashboard() {
           {activeTab === "r3combtherapy" && <R3CombTherapy />}
           {activeTab === "r3therapcliff" && <R3TherapCliff />}
           {activeTab === "r3biomap"      && <R3BioMap />}
-          {activeTab === "r4dynwindow"   && <R4DynWindow />}
+          {activeTab === "r4dynwindow"    && <R4DynWindow />}
+          {activeTab === "r4reopenrescue" && <R4ReopenRescue />}
         </main>
       </div>
 
