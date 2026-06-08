@@ -589,6 +589,25 @@ zero). No combination provided benefit beyond the ISR component alone.
 \textbf{Verdict: GATEKEEPER-DOMINANT.} ISR controls cascade entry; glutamate acts downstream
 of the bottleneck and cannot prevent tipping regardless of suppression depth.
 
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.82\textwidth]{figures/heatmap_tipping_rate.png}
+\caption{R3.8 --- Genuine tipping rate across the $5{\times}4$ ISR $\times$ glutamate
+suppression grid. Each cell shows the fraction of 20 seeds satisfying the Phase~7B criterion.
+Tipping remains at 100\% for all cells with ISR suppression $\leq\!60\%$, regardless of
+glutamate dose. Genuine tipping first falls below 100\% only in the top rows (ISR $\geq\!70\%$).}
+\label{fig:r38_heatmap}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.82\textwidth]{figures/bar_chart_key_scenarios.png}
+\caption{R3.8 --- Benefit score for key therapy scenarios. ISR suppression (blue) dominates
+all glutamate-only (orange) and combination conditions. The 63$\times$ benefit ratio between
+ISR~50\% and glutamate~90\% is visible directly.}
+\label{fig:r38_bar}
+\end{figure}
+
 \subsection{R3.9 --- Therapeutic cliff: dose-response is threshold-gated}
 
 The 19-level ISR suppression sweep (0\%--99\%, $N = 950$ runs) reveals a cliff-like
@@ -613,6 +632,24 @@ $\mathrm{ISR}_{50} = 96.5\%$ [95\% CI: 89.3\%, 97.3\%]. $\mathrm{ISR}_{90}$ was 
 reached} at 99\% suppression (genuine tipping at 99\% $= 0.52$ [0.38, 0.66]). Residual
 tipping is sustained by TSSE $= 2.0$, held constant throughout R3.9. \textbf{Response shape
 classification: CLIFF-LIKE.}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.82\textwidth]{figures/fig1_tipping_rate.png}
+\caption{R3.9 --- Genuine tipping rate vs.\ ISR suppression level (19 levels, $N=50$ seeds
+each). The steep drop between 85\% and 90\% is the sole cliff across the full dose-response
+curve. Shaded band: 95\% bootstrap CI. Dashed line indicates $\mathrm{ISR}_{50} = 96.5\%$.}
+\label{fig:r39_tipping}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.82\textwidth]{figures/fig5_cliff_detection.png}
+\caption{R3.9 --- Step-wise change in genuine tipping rate between adjacent suppression levels.
+The single exceedance of the cliff threshold ($|\Delta| > 0.20$) at the 85\%$\to$90\% transition
+confirms the CLIFF-LIKE classification.}
+\label{fig:r39_cliff}
+\end{figure}
 
 \subsection{R3.10 --- Biological mapping: production suppression dominates; synergy above 60\%}
 
@@ -663,14 +700,7 @@ independently active agents.
 
 \begin{figure}[H]
 \centering
-\fbox{\parbox{0.80\textwidth}{%
-  \centering\vspace{2.2cm}
-  \textit{[Figure placeholder: R3.10 intervention comparison + synergy.}\\
-  \textit{Left: genuine tipping rate vs.\ strength for A, B, C.}\\
-  \textit{Right: Bliss synergy score per strength level.}\\
-  \textit{Source: results/r3\_10\_biological\_mapping/]}
-  \vspace{2.2cm}%
-}}
+\includegraphics[width=0.9\textwidth]{figures/fig1_comparison.png}
 \caption{(Left) Genuine tipping rate vs.\ intervention strength for production suppression (A,
 cyan), spread inhibition (B, orange), and coupled co-suppression (C, purple). Spread inhibition
 alone cannot reduce tipping below 100\% at any tested dose. (Right) Bliss synergy score
