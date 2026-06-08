@@ -7,21 +7,50 @@
 
 ## Summary
 
-- **Verdict**: ATP_IS_MARKER
-- **ATP role**: MARKER_ONLY
+- **Verdict**: DESIGN LIMITATION CONFIRMED (see below)
 - **Max tipping rate reduction**: 0.000 pp (from 1.000 at 0% to 1.000 at 100%)
-- **ATP50_recovery**: not reached (>100%)
-  — restoration strength needed for 50% genuine tipping rate at T=150
-- **Rescue reopened** (genuine rate <= 0.50 at 100% restore): False
-- **PONR defeated** (>10 pp improvement at 100% restore): False
+- **ATP50_recovery**: not reached
+- **Rescue reopened**: False
 - **Benefit gain** (100% vs 0% restore): -0.002
+
+## DESIGN LIMITATION CONFIRMED
+
+This experiment reveals a known architectural constraint of the current model:
+the aggregation growth equation (`d_agg`) has **no ATP feedback term** (`simulator.py`
+lines 97–100):
+
+```python
+d_agg = (self.vulnerability * self.AGG_SEED_RATE * dt
+         + self.AGG_SPREAD_RATE * agg_spread * dt
+         + noise)
+```
+
+ATP restoration cannot slow aggregation because the aggregation equation is
+**ATP-independent by design**. The null result is therefore an expected consequence
+of model architecture, not a biological finding.
+
+**This result does not establish that ATP is a marker in biological ALS.** It
+establishes that ATP cannot rescue the cascade in a model where aggregation is
+self-driving. A model with bidirectional coupling — e.g. a chaperone term
+`−CHAPERONE_RATE × atp × agg` in `d_agg` — would produce a qualitatively
+different outcome.
+
+**R4.1 timing cliff remains valid**: it reflects genuine nonlinear dynamics
+of the cascade under the current model architecture. R4.2 should not be
+cited as a mechanistic finding.
+
+Future versions should implement bidirectional coupling: `d_agg` should include
+a term proportional to ATP-dependent chaperone activity
+(`−CHAPERONE_RATE * atp * agg`).
 
 ## Scientific Question
 
 R4.1 found that mean ATP at intervention time is the strongest predictor
-of rescue failure (r = -0.77). R4.2 tests whether ATP depletion is:
-- **Causal** (a bottleneck that, if reversed, re-opens the rescue window), OR
-- **Correlational** (a marker of other irreversible damage that cannot be undone)
+of rescue failure (r = -0.77). R4.2 was intended to test whether ATP depletion
+is causal or correlational. **The experiment is underpowered to answer this
+question** because the current model architecture prevents ATP from influencing
+aggregation by design. The question remains open and requires a model revision
+before it can be tested.
 
 ## System State at T=150
 
@@ -89,12 +118,11 @@ PONR defeated (>10 pp improvement): **False**
 ### 4. Mechanistic Classification
 Max genuine rate reduction = 0.000 pp across all restoration levels.
 
-Criteria (model-internal):
-- >= 50 pp reduction: ATP is DOMINANT_BOTTLENECK
-- 10-50 pp reduction: ATP is PARTIAL_BOTTLENECK
-- < 10 pp reduction: ATP is MARKER_ONLY
-
-**Result: MARKER_ONLY**
+**Result: NOT APPLICABLE** — the classification criteria assume the model
+has ATP feedback on aggregation. Because `d_agg` is ATP-independent by design,
+no restoration level can separate "marker" from "bottleneck" in the current
+architecture. Applying the criteria would produce a misleading "MARKER_ONLY"
+label that carries unwarranted biological interpretation.
 
 ### 5. Comparison with R4.1 + Mechanistic Reanalysis
 
@@ -125,38 +153,37 @@ already passed the self-sustaining threshold by T=150.
 for mean aggregation at T_start (via atp = 1 - scale*agg + lag). The true causal
 predictor of rescue failure is accumulated aggregation, not ATP depletion.
 
-## Key Questions Answered
+## Key Questions — Status After Audit
 
 1. **Can ATP restoration reopen the rescue window?**
-   No — zero improvement across all 11 restoration levels (0% to 100%).
-   The rescue window cannot be reopened by ATP restoration alone at T=150.
+   Unanswerable with current model. The null result reflects the absence of
+   ATP feedback in `d_agg`, not a biological property of the cascade.
 
 2. **Is ATP depletion causal or merely correlated?**
-   Within this model: **MARKER ONLY**. ATP depletion is a downstream proxy for
-   accumulated aggregation. Restoring ATP without removing accumulated aggregation
-   has no effect on cascade outcome.
+   Unanswerable with current model. A model without ATP feedback on aggregation
+   cannot distinguish these two hypotheses. Requires v3.0 with chaperone kinetics.
 
 3. **Is there an ATP rescue threshold?**
-   Not applicable — even 100% restore yielded zero gain. No threshold exists
-   within the tested range.
+   Unanswerable with current model for the same reason.
 
-4. **How much rescue potential can be recovered?** Zero within this model.
-   The true barrier to late rescue is accumulated aggregation, which this
-   intervention does not address.
+4. **What does the R4.2 result validly show?**
+   That `sim.atp` modification at T=150 has no downstream path to `d_agg` in the
+   current architecture. This is a model audit finding, not a cascade dynamics finding.
 
-5. **Does ATP act as the final bottleneck?**
-   No. Within this model, ATP is a passive readout of aggregation state.
-   The final bottleneck is accumulated aggregation (no decay term in model),
-   which continues driving the cascade even after ATP is restored and therapy applied.
+5. **Should R4.2 be cited alongside R3.9 and R4.1?**
+   No. R3.9 (potency cliff) and R4.1 (timing cliff) reflect genuine emergent
+   nonlinear dynamics. R4.2 reflects a missing model term. They are not comparable.
 
 ## Limitations
 
+- **Primary limitation**: `d_agg` has no ATP feedback term (`simulator.py` lines
+  97–100). ATP restoration experiments are uninformative about the causal role
+  of ATP until this is addressed in a future model version.
 - ATP restoration is a model-level state modification, NOT a representation
-  of any real therapeutic intervention (mitochondrial rescue, NAD+ repletion, etc.).
-- The irreversibility cap (0.225) prevents full benefit for already-flagged neurons.
-- No pharmacokinetics, drug distribution, or off-target effects are modeled.
-- The C. elegans motor circuit is a simplified substrate; results may not
-  generalize to mammalian disease biology.
-- Not peer-reviewed. Results are hypothesis-generating computational observations.
+  of any real therapeutic intervention.
+- R4.2 should not be cited as a biological or mechanistic finding.
+- R4.1 results are unaffected by this limitation; the timing cliff is a valid
+  emergent property of the current model dynamics.
+- Not peer-reviewed.
 
 *Generated: Phase R4.2 | Runtime: 45.5s*
