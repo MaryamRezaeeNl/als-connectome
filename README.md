@@ -130,10 +130,13 @@ als_connectome/
 │   └── rezaee_2026_als_connectome.pdf  Published preprint PDF
 │
 ├── manuscript/                        Manuscript submission package
-│   ├── main.tex                    LaTeX source (compiled with pdflatex, TeX Live 2026)
-│   ├── references.bib              BibTeX bibliography (14 entries)
-│   ├── rezaee_2026_als_connectome.pdf  Compiled PDF (39 pages)
-│   └── figures/                    16 PNG figures (fig1–fig16)
+│   ├── main.tex                    LaTeX source v1.0 (pdflatex, TeX Live 2026)
+│   ├── main_v2.tex                 LaTeX source v2.0 (Round 3, R3.1-R3.10)
+│   ├── references.bib              BibTeX bibliography v1.0
+│   ├── references_v2.bib           BibTeX bibliography v2.0
+│   ├── rezaee_2026_als_connectome.pdf     Final PDF v1.0 (39 pages)
+│   ├── rezaee_2026_als_connectome_v2.pdf  Final PDF v2.0 (21 pages, 928 KB)
+│   └── figures/                    28 PNG figures (v1 fig1-fig16 + R3 figures)
 │
 ├── dashboard/                      Next.js 16 interactive dashboard (Vercel-deployed)
 ├── figures/                        16 static PNG figures for the manuscript (fig1–fig16)
@@ -352,6 +355,20 @@ npm run build      # production build
 All simulation outputs are committed to `results/`. No external datasets are required —
 the connectome topology is fully defined in `src/connectome.py`. All random seeds are
 deterministic and specified within each phase script.
+
+---
+
+## Papers / Manuscripts
+
+**Paper v1.0** (Phases 0–14, Round 2 — cascade criticality, therapeutic windows, early-warning signals):
+- LaTeX source: `manuscript/main.tex`
+- PDF: `manuscript/rezaee_2026_als_connectome.pdf` (39 pages)
+- DOI: https://doi.org/10.5281/zenodo.20528826
+
+**Paper v2.0** (Round 3 — Mechanism Identifiability, R3.1–R3.10):
+- LaTeX source: `manuscript/main_v2.tex`
+- PDF: `manuscript/rezaee_2026_als_connectome_v2.pdf` (21 pages, 928 KB)
+- DOI: https://doi.org/10.5281/zenodo.20592681
 
 ---
 
