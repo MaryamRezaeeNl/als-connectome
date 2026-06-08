@@ -451,7 +451,12 @@ export default function Dashboard() {
             <div className="flex flex-wrap items-center justify-center sm:justify-start gap-2">
               <a href="https://doi.org/10.5281/zenodo.20528826" target="_blank" rel="noopener noreferrer"
                 className="hover:text-gray-400 transition-colors">
-                📄 Zenodo DOI
+                📄 Zenodo v1.0
+              </a>
+              <span className="text-gray-800">·</span>
+              <a href="https://doi.org/10.5281/zenodo.20592681" target="_blank" rel="noopener noreferrer"
+                className="hover:text-gray-400 transition-colors">
+                📄 Zenodo v2.0
               </a>
               <span className="text-gray-800">·</span>
               <a href="https://github.com/MaryamRezaeeNl/als-connectome" target="_blank" rel="noopener noreferrer"

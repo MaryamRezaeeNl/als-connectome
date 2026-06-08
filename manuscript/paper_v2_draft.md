@@ -13,7 +13,7 @@ June 2026
 
 ## Abstract
 
-Connectome-based neurodegeneration models typically aggregate protein seeding and synaptic spread into a single amplification parameter, leaving the relative causal roles of cell-autonomous and circuit-dependent mechanisms unresolved. We address this identifiability problem by extending a previously validated *C. elegans* motor-circuit cascade model (v1.0, Rezaee 2026, https://doi.org/10.5281/zenodo.20528826) to decouple intracellular seeding rate (ISR) from trans-synaptic spread efficiency (TSSE).
+Connectome-based neurodegeneration models typically aggregate protein seeding and synaptic spread into a single amplification parameter, leaving the relative causal roles of cell-autonomous and circuit-dependent mechanisms unresolved. We address this identifiability problem by extending a previously validated *C. elegans* motor-circuit cascade model (v1.0: https://doi.org/10.5281/zenodo.20528826; v2.0: https://doi.org/10.5281/zenodo.20592681) to decouple intracellular seeding rate (ISR) from trans-synaptic spread efficiency (TSSE).
 
 Across a 5×5 parameter grid (25 cells, 500 baseline runs), both mechanisms independently sustain genuine triphasic tipping (mean rate 83.8%), with ISR more predictive of tipping probability (Pearson r = 0.586 vs. 0.463 for TSSE). A single-mechanism ablation protocol applied across six cascade pathways and three dynamical regimes confirms that ISR and TSSE are the sole universally load-bearing mechanisms; mitochondrial damage acquires load-bearing character only under extreme fragility (mitochondrialFragility ≥ 4.0, near-takeover onset confirmed with n = 50 seeds and 95% bootstrap confidence intervals), while glutamate excitotoxicity, calcium/ROS, and irreversibility remain negligible across all regimes.
 
@@ -445,6 +445,8 @@ These findings motivate experiments that distinguish cell-autonomous from circui
 ## References
 
 Rezaee, M. (2026). *Cascade criticality, therapeutic window emergence, and pre-symptomatic early-warning signals in a connectome-based neurodegeneration framework: an ALS-motivated study on the C. elegans motor circuit*. Zenodo. https://doi.org/10.5281/zenodo.20528826
+
+Rezaee, M. (2026). *ALS Connectome Degeneration Project v2.0.0 — Mechanism identifiability: decoupled aggregation, topological necessity, and biological mapping of ISR*. Zenodo. https://doi.org/10.5281/zenodo.20592681
 
 White, J. G., Southgate, E., Thomson, J. N., & Brenner, S. (1986). The structure of the nervous system of the nematode *Caenorhabditis elegans*. *Philosophical Transactions of the Royal Society B*, 314(1165), 1–340.
 

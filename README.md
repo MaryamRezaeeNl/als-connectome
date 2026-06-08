@@ -357,10 +357,15 @@ deterministic and specified within each phase script.
 
 ## Citation
 
-If you use this code or data, please cite:
+If you use this code or data, please cite the relevant version:
 
+**v1.0** (Phases 0–14, Round 2):
 > Rezaee, M. (2026). ALS Connectome Degeneration Project.
 > Zenodo. https://doi.org/10.5281/zenodo.20528826
+
+**v2.0** (Round 3 — R3.1–R3.10, mechanism identifiability):
+> Rezaee, M. (2026). ALS Connectome Degeneration Project v2.0.0.
+> Zenodo. https://doi.org/10.5281/zenodo.20592681
 
 ---
 
